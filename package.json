@@ -1,8 +1,11 @@
 {
   "name": "ai-workshop-studio",
   "version": "1.0.0",
-  "description": "AI With Hippolyte — episode renderer",
-  "repository": {},
+  "description": "AI Workshop Studio: turn a topic into a short animated lesson (script, voice, captions, render) with a web UI and a local model",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hfasah/ai-workshop-studio"
+  },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -35,7 +38,10 @@
     "lint": "eslint src && tsc",
     "api": "node scripts/api.mjs",
     "studio": "npm --prefix studio run dev",
-    "studio:build": "npm --prefix studio run build"
+    "studio:build": "npm --prefix studio run build",
+    "setup": "node scripts/setup.mjs",
+    "doctor": "node scripts/setup.mjs --check",
+    "start": "node scripts/start.mjs"
   },
   "sideEffects": [
     "*.css"
