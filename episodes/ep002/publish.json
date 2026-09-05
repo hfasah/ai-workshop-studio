@@ -1,0 +1,162 @@
+{
+  "youtube": {
+    "titles": [
+      "What Really Happens When You Ask AI?",
+      "AI's Secret Behind Your Questions",
+      "How Chatbots Answer Without Knowing"
+    ],
+    "description": "Ebot grows cocoa near Kumba, Cameroon. After heavy rains, her pods turn brown. A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is. What really happens when you ask AI a question? Learn the mechanics and how to build reliable systems.\n\nChapters:\n0:00 Hook\n0:20 Listening\n0:46 Decide: what AI should and should not do\n1:10 Decide: what happens when you ask\n1:37 Build\n2:07 Constraint and fix: the confident guess\n2:32 Constraint and fix: when the network is down\n2:48 User test\n3:05 Ownership\n3:31 Take action\n\nFictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "aiwithhippolyte",
+      "africaimoment",
+      "cameroon",
+      "cocoa",
+      "agriculture",
+      "chatbot",
+      "artificialintelligence",
+      "reliableai"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "AI's Confident Guess",
+      "When Chatbots Go Wrong",
+      "Reliable AI Answers"
+    ],
+    "description": "Ebot's chatbot gives advice without knowing her farm. What happens when you ask AI a question? Learn the mechanics and how to build reliable systems.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ReliableAI"
+    ]
+  },
+  "instagram": {
+    "caption": "Ebot grows cocoa near Kumba, Cameroon. After heavy rains, her pods turn brown. A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is. What really happens when you ask AI a question?   \n\nLearn the mechanics and how to build reliable systems.\n\nWhat do you think about this system?",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ReliableAI",
+      "#ContextEngineering",
+      "#BuildingAI"
+    ]
+  },
+  "facebook": {
+    "caption": "Ebot grows cocoa near Kumba, Cameroon. After heavy rains, her pods turn brown. A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is. What really happens when you ask AI a question? Learn the mechanics and how to build reliable systems.\n\n#AIWithHippolyte #AfricaAIMoment",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "Ebot's chatbot gives advice without knowing her farm. What really happens when you ask AI a question? Learn the mechanics and how to build reliable",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ReliableAI",
+      "#ContextEngineering"
+    ]
+  },
+  "linkedin": {
+    "post": "Ebot grows cocoa near Kumba, Cameroon. After heavy rains, her pods turn brown. A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is. What really happens when you ask AI a question? Learn the mechanics and how to build reliable systems.",
+    "hashtags": []
+  },
+  "thumbnailText": "Ask AI",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#ReliableAI",
+    "#ContextEngineering",
+    "#BuildingAI",
+    "#AgricultureTech",
+    "#CameroonCocoa",
+    "#ChatbotMechanics",
+    "#AgriTech",
+    "#FarmersAI",
+    "#DataPrivacy",
+    "#HumanApproval",
+    "#MachineLearning",
+    "#EthicalAI",
+    "#ResponsibleDeployment"
+  ],
+  "generatedAt": "2026-09-05T01:00:36.931Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:20",
+      "label": "Listening"
+    },
+    {
+      "at": "0:46",
+      "label": "Decide: what AI should and should not do"
+    },
+    {
+      "at": "1:10",
+      "label": "Decide: what happens when you ask"
+    },
+    {
+      "at": "1:37",
+      "label": "Build"
+    },
+    {
+      "at": "2:07",
+      "label": "Constraint and fix: the confident guess"
+    },
+    {
+      "at": "2:32",
+      "label": "Constraint and fix: when the network is down"
+    },
+    {
+      "at": "2:48",
+      "label": "User test"
+    },
+    {
+      "at": "3:05",
+      "label": "Ownership"
+    },
+    {
+      "at": "3:31",
+      "label": "Take action"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}

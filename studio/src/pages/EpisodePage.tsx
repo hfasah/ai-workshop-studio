@@ -156,7 +156,7 @@ export const EpisodePage = () => {
 
       {tab === "build" && <BuildRender episodeId={id} episode={episode} build={build} outputs={outputs} activeJob={activeJob} stream={stream} onJobStarted={onJobStarted} onOutputs={(o: Output[]) => setDetail({...detail, outputs: o})} />}
 
-      {tab === "publish" && <PublishTab episodeId={id} status={status} publishMd={doc("publish.md")} qualityMd={doc("quality-report.md")} hasBuild={hasBuild} running={jobRunning} onJobStarted={onJobStarted} onStatus={(s: Status) => setDetail({...detail, status: s, stage: s.publication && s.publication.plan !== "Hold" ? "published" : detail.stage})} />}
+      {tab === "publish" && <PublishTab episodeId={id} status={status} publishKit={detail.publishKit} schedule={detail.schedule} onReload={load} publishMd={doc("publish.md")} qualityMd={doc("quality-report.md")} hasBuild={hasBuild} running={jobRunning} onJobStarted={onJobStarted} onStatus={(s: Status) => setDetail({...detail, status: s, stage: s.publication && s.publication.plan !== "Hold" ? "published" : detail.stage})} />}
 
       {jobId && tab !== "build" && (
         <div className="job-dock">

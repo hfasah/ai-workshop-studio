@@ -106,6 +106,113 @@ export type Job = {
 
 export type JobLine = {line: string; stream: "stdout" | "stderr"; at: number; progress?: boolean; replace?: boolean};
 
+// ---------- publishing (scripts/publish.mjs) ----------
+export const PLATFORM_IDS = ["youtube", "shorts", "instagram", "facebook", "facebook_reel", "tiktok", "linkedin", "manual"] as const;
+export type PlatformId = (typeof PLATFORM_IDS)[number];
+export type PlatformDef = {label: string; aspect: "16:9" | "9:16" | null; direct: "youtube" | "facebook" | null; blotato: string | null; titleMax: number; textMax: number};
+export const VIAS = ["direct", "blotato", "manual"] as const;
+export type Via = (typeof VIAS)[number];
+export const ENTRY_STATUSES = ["draft", "scheduled", "uploading", "published", "failed", "needs_url", "due"] as const;
+export type EntryStatus = (typeof ENTRY_STATUSES)[number];
+
+// Badge letters and colours for chips; labels come from /api/connections.platforms.
+export const PLATFORM_META: Record<PlatformId, {short: string; color: string; label: string}> = {
+  youtube: {short: "YT", color: "#e11d48", label: "YouTube"},
+  shorts: {short: "SH", color: "#be123c", label: "YouTube Shorts"},
+  instagram: {short: "IG", color: "#c026d3", label: "Instagram Reel"},
+  facebook: {short: "FB", color: "#1d4ed8", label: "Facebook Page video"},
+  facebook_reel: {short: "FR", color: "#3b82f6", label: "Facebook Reel (beta)"},
+  tiktok: {short: "TT", color: "#0f172a", label: "TikTok"},
+  linkedin: {short: "LI", color: "#0369a1", label: "LinkedIn"},
+  manual: {short: "MN", color: "#64748b", label: "Manual"},
+};
+
+export type ScheduleEntry = {
+  id: string;
+  episodeId: string;
+  platform: PlatformId;
+  via: Via;
+  asset: string;
+  title: string;
+  description: string;
+  hashtags: string[];
+  tags?: string[];
+  publicUrl: string;
+  scheduledAt: string;
+  status: EntryStatus;
+  note?: string;
+  remoteId?: string;
+  remoteUrl?: string;
+  remoteAccount?: string;
+  error?: string;
+  createdAt: string;
+  updatedAt?: string;
+  publishedAt?: string;
+  sentAt?: string;
+  postedBy?: string;
+  scheduledNatively?: boolean;
+  episodeTitle: string;
+  assetUrl: string;
+  caption: string;
+};
+
+export type ScheduleInput = {
+  episodeId: string;
+  platform: PlatformId;
+  via: Via;
+  asset: string;
+  title?: string;
+  description?: string;
+  hashtags?: string[];
+  tags?: string[];
+  publicUrl?: string;
+  scheduledAt: string;
+  note?: string;
+  status?: "draft" | "scheduled";
+};
+
+export type ConnectionStatus = "connected" | "not configured" | "needs auth" | "error";
+export type BlotatoAccount = {id: string; platform: string; username: string; fullname: string; pages?: {id: string; name: string}[]};
+export type Connections = {
+  youtube: {status: ConnectionStatus; clientId: string; hasSecret: boolean; channelTitle: string; channelId: string; connectedAt: string | null; testedAt: string | null; error: string | null; redirectUri: string};
+  facebook: {status: ConnectionStatus; pageId: string; hasToken: boolean; pageName: string; testedAt: string | null; error: string | null};
+  blotato: {status: ConnectionStatus; hasKey: boolean; accounts: BlotatoAccount[]; testedAt: string | null; error: string | null};
+  mediaHost: {baseUrl: string; uploadCommand: string};
+  platforms: Record<PlatformId, PlatformDef>;
+  vias: Via[];
+  statuses: EntryStatus[];
+  fixedTags: string[];
+  defaults: Record<string, string>;
+};
+export type ConnectionsPatch = {
+  youtube?: {clientId?: string; clientSecret?: string; disconnect?: boolean};
+  facebook?: {pageId?: string; pageToken?: string};
+  blotato?: {apiKey?: string};
+  mediaHost?: {baseUrl?: string; uploadCommand?: string};
+};
+
+export type Asset = {name: string; asset: string; url: string; size: number; mtime: string; preview: boolean; width: number | null; height: number | null; durationMs: number | null; aspect: "16:9" | "9:16" | "1:1" | null};
+
+export type PublishKit = {
+  youtube: {titles: string[]; description: string; tags: string[]; hashtags: string[]};
+  shorts: {titles: string[]; description: string; hashtags: string[]};
+  instagram: {caption: string; hashtags: string[]};
+  facebook: {caption: string; hashtags: string[]};
+  tiktok: {caption: string; hashtags: string[]};
+  linkedin: {post: string; hashtags: string[]};
+  thumbnailText: string;
+  hashtagBank: string[];
+  generatedAt?: string;
+  engine?: string | null;
+  model?: string | null;
+  chapters?: {at: string; label: string}[];
+  disclosure?: string;
+};
+
+export type EpisodeSchedule = {count: number; published: number; next: {id: string; platform: PlatformId; via: Via; scheduledAt: string; status: EntryStatus} | null};
+
+export type LogLine = {at: string; action: string; entryId?: string; episodeId?: string; platform?: string; via?: string; detail?: string; error?: string; remoteUrl?: string; [k: string]: unknown};
+
 export type EpisodeSummary = {
   id: string;
   title: string;
@@ -124,6 +231,7 @@ export type EpisodeSummary = {
   cost: {script_usd: number; publish_usd: number; other_usd: number};
   engine: EngineRef | null;
   job: Job | null;
+  schedule: EpisodeSchedule;
 };
 
 export type BuildSummary = {
@@ -148,6 +256,8 @@ export type EpisodeDetail = {
   outputs: Output[];
   cast: string[];
   job: Job | null;
+  publishKit: PublishKit | null;
+  schedule: ScheduleEntry[];
 };
 
 export type Validation = {ok: boolean; exitCode: number | null; output: string; errors: string[]; warnings: string[]};
@@ -214,7 +324,38 @@ export const api = {
   publication: (id: string, plan: Plan, date: string, note: string) => request<Status>(`/api/episodes/${id}/publication`, {method: "POST", body: JSON.stringify({plan, date, note})}),
   job: (jobId: string) => request<Job & {lines: JobLine[]}>(`/api/jobs/${jobId}`),
   cancelJob: (jobId: string) => request<Job>(`/api/jobs/${jobId}/cancel`, {method: "POST"}),
+  // publishing
+  connections: () => request<Connections>("/api/connections"),
+  setConnections: (patch: ConnectionsPatch) => request<Connections>("/api/connections", {method: "PUT", body: JSON.stringify(patch)}),
+  testConnection: (platform: "youtube" | "facebook" | "blotato") => request<{ok: boolean; channelTitle?: string; pageName?: string; accounts?: BlotatoAccount[]; connections: Connections}>(`/api/connections/${platform}/test`, {method: "POST"}),
+  youtubeAuthUrl: () => request<{url: string; redirectUri: string}>("/api/connections/youtube/auth-url"),
+  schedule: () => request<ScheduleEntry[]>("/api/schedule"),
+  addSchedule: (input: ScheduleInput) => request<ScheduleEntry>("/api/schedule", {method: "POST", body: JSON.stringify(input)}),
+  updateSchedule: (id: string, patch: Partial<ScheduleInput> & {remoteUrl?: string}) => request<ScheduleEntry>(`/api/schedule/${id}`, {method: "PUT", body: JSON.stringify(patch)}),
+  deleteSchedule: (id: string) => request<{deleted: boolean; warning: string | null}>(`/api/schedule/${id}`, {method: "DELETE"}),
+  publishNow: (id: string) => request<ScheduleEntry>(`/api/schedule/${id}/publish-now`, {method: "POST"}),
+  markPosted: (id: string, url: string) => request<ScheduleEntry>(`/api/schedule/${id}/posted`, {method: "POST", body: JSON.stringify({url})}),
+  assets: (id: string) => request<Asset[]>(`/api/episodes/${id}/assets`),
+  savePublishKit: (id: string, kit: PublishKit) => request<PublishKit>(`/api/episodes/${id}/publish-kit`, {method: "PUT", body: JSON.stringify(kit)}),
+  publishLog: (limit = 100) => request<LogLine[]>(`/api/publish-log?limit=${limit}`),
 };
+
+// datetime-local <-> ISO. The API stores whatever instant it receives with the machine's local offset.
+export const toLocalInput = (iso: string) => {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  const p = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`;
+};
+export const fromLocalInput = (s: string) => (s ? new Date(s).toISOString() : "");
+export const fmtWhen = (iso: string) => {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleString(undefined, {weekday: "short", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"});
+};
+export const fmtTime = (iso: string) => new Date(iso).toLocaleTimeString(undefined, {hour: "2-digit", minute: "2-digit"});
+export const statusChip = (s: EntryStatus): string => ({draft: "other", scheduled: "blue", uploading: "pending", published: "approved", failed: "changes", needs_url: "pending", due: "pending"})[s] ?? "other";
+export const splitTags = (s: string) => s.split(/[\s,]+/).map((t) => t.trim()).filter(Boolean).map((t) => (t.startsWith("#") ? t : `#${t}`));
 
 export const fmtDuration = (ms: number | null | undefined) => {
   if (!ms) return "–";

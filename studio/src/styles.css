@@ -906,3 +906,221 @@ details.downloads > summary.btn.disabled {
   color: #065f56;
   font-weight: 700;
 }
+
+/* publishing: platform badges, calendar, connections, schedule entries, platform cards */
+.pbadge {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  flex: none;
+  line-height: 1;
+}
+.pub-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(320px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.cal-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+.cal-day {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  min-height: 220px;
+  padding: 6px;
+  min-width: 0;
+}
+.cal-day.weekend {
+  background: var(--bg2);
+}
+.cal-day.today {
+  border-color: var(--accent);
+}
+.cal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.cal-head strong {
+  font-size: 14px;
+  color: var(--ink);
+}
+.cal-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-left-width: 4px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin-bottom: 4px;
+  background: var(--bg);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+.cal-chip .t {
+  color: var(--muted);
+  flex: none;
+}
+.cal-chip .n {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.cal-chip.blue {
+  border-left-color: var(--blue);
+}
+.cal-chip.approved {
+  border-left-color: var(--teal);
+  background: #f0fdfa;
+}
+.cal-chip.pending {
+  border-left-color: var(--accent);
+  background: #fffbeb;
+}
+.cal-chip.changes {
+  border-left-color: var(--coral);
+  background: #fff1f2;
+}
+.cal-chip.other {
+  border-left-color: var(--faint);
+  color: var(--muted);
+}
+.cal-chip.selected {
+  border-color: var(--ink);
+  border-left-color: var(--ink);
+}
+.cal-empty {
+  min-height: 8px;
+}
+.conn-panel .conn-card + .conn-card {
+  margin-top: 10px;
+}
+.conn-card label.field {
+  margin-bottom: 8px;
+}
+.conn-card label.field > span {
+  margin-bottom: 2px;
+}
+.conn-card input,
+.conn-card select {
+  padding: 6px 9px;
+  font-size: 13px;
+}
+.conn-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.conn-head h3 {
+  margin: 0;
+}
+.entry {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: var(--bg);
+}
+.entry.selected {
+  border-color: var(--ink);
+}
+.entry.status-failed {
+  border-color: var(--coral-soft);
+}
+.entry.status-needs_url,
+.entry.status-due {
+  border-color: var(--accent-soft);
+}
+.entry-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.entry-main {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+.entry-actions {
+  flex: none;
+  justify-content: flex-end;
+}
+.entry-editor {
+  margin-top: 10px;
+  padding: 12px;
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+}
+.caption-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: var(--font);
+  font-size: 13px;
+  max-height: 200px;
+  overflow: auto;
+  margin: 0 0 8px;
+}
+.counter {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.counter.warn {
+  color: var(--accent-ink);
+}
+.counter.over {
+  color: #9f1239;
+  font-weight: 700;
+}
+.pcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+.pcard label.field {
+  margin-bottom: 10px;
+}
+.pcard textarea {
+  font-size: 13px;
+}
+@media (max-width: 1000px) {
+  .pub-layout {
+    grid-template-columns: 1fr;
+  }
+  .cal-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

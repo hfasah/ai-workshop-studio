@@ -77,7 +77,8 @@
   },
   "cost": {
     "script_usd": 0,
-    "other_usd": 0
+    "other_usd": 0,
+    "publish_usd": 0
   },
   "cuts": [
     "short1"
@@ -86,5 +87,9 @@
     "safe": 22,
     "recheck": 10,
     "blocked": 3
+  },
+  "engine": {
+    "name": "ollama",
+    "model": "qwen2.5:14b"
   }
 }

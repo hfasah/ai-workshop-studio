@@ -5,6 +5,7 @@ import {App} from "./App";
 import {Episodes} from "./pages/Episodes";
 import {NewEpisode} from "./pages/NewEpisode";
 import {EpisodePage} from "./pages/EpisodePage";
+import {Publishing} from "./pages/Publishing";
 import "./styles.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
           <Route index element={<Episodes />} />
           <Route path="new" element={<NewEpisode />} />
           <Route path="ep/:id" element={<EpisodePage />} />
+          <Route path="publishing" element={<Publishing />} />
         </Route>
       </Routes>
     </BrowserRouter>

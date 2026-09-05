@@ -12,6 +12,7 @@ export const App = () => (
           Episodes
         </NavLink>
         <NavLink to="/new">New episode</NavLink>
+        <NavLink to="/publishing">Publishing</NavLink>
       </nav>
     </header>
     <main className="page">

@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import {api, engineLabel, fmtDuration, FORMAT_LABELS, gateState, GATES, STAGES, type EpisodeSummary, type Stage} from "../api";
+import {api, engineLabel, fmtDuration, fmtWhen, FORMAT_LABELS, gateState, GATES, PLATFORM_META, STAGES, type EpisodeSummary, type Stage} from "../api";
+import {PlatformBadge} from "../components/Schedule";
 
 // Script + kit spend. $0.00 in green when the episode was written by the local engine.
 const CostCell = ({e}: {e: EpisodeSummary}) => {
@@ -122,7 +123,23 @@ export const Episodes = () => {
                   <CostCell e={e} />
                 </td>
                 <td>
-                  {e.publication ? (
+                  {e.schedule?.next ? (
+                    <>
+                      <span style={{display: "inline-flex", alignItems: "center", gap: 6}}>
+                        <PlatformBadge platform={e.schedule.next.platform} size={18} />
+                        <strong>{PLATFORM_META[e.schedule.next.platform]?.label ?? e.schedule.next.platform}</strong>
+                      </span>
+                      <div className="small muted">
+                        {fmtWhen(e.schedule.next.scheduledAt)} · {e.schedule.next.status.replace("_", " ")}
+                        {e.schedule.count > 1 ? ` · ${e.schedule.count} entries` : ""}
+                      </div>
+                    </>
+                  ) : e.schedule?.published ? (
+                    <>
+                      <strong>Published</strong>
+                      <div className="small muted">{e.schedule.published} posts</div>
+                    </>
+                  ) : e.publication ? (
                     <>
                       <strong>{e.publication.plan}</strong>
                       {e.publication.date ? <div className="small muted">{e.publication.date}</div> : null}
