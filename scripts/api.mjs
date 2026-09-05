@@ -33,7 +33,7 @@ const PLANS = ["YouTube", "Shorts", "LinkedIn", "Hold"];
 const OUTPUT_EXT = /\.(mp4|srt|vtt)$/;
 
 // ---------- helpers ----------
-const isEpisodeId = (id) => /^ep\d{3,}$/.test(id);
+const isEpisodeId = (id) => /^ep\d{3,}(-[a-z0-9-]+)?$/.test(id);
 const episodeDir = (id) => path.join(EPISODES, id);
 const exists = (p) => fs.existsSync(p);
 const safeJson = (p) => {
@@ -133,7 +133,7 @@ const episodeIds = () =>
     : [];
 
 const nextEpisodeNumber = () => {
-  const nums = exists(EPISODES) ? fs.readdirSync(EPISODES).map((d) => (isEpisodeId(d) ? Number(d.slice(2)) : 0)) : [];
+  const nums = exists(EPISODES) ? fs.readdirSync(EPISODES).map((d) => (isEpisodeId(d) ? parseInt(d.slice(2), 10) || 0 : 0)) : [];
   return (nums.length ? Math.max(...nums) : 0) + 1;
 };
 

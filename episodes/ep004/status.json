@@ -4,12 +4,12 @@
   "version": 1,
   "format": "build",
   "gates": {
-    "brief": "pending",
-    "story": "pending",
-    "script": "pending",
-    "storyboard": "pending",
-    "preview": "pending",
-    "publication": "pending"
+    "brief": "approved",
+    "story": "approved",
+    "script": "approved",
+    "storyboard": "approved",
+    "preview": "approved",
+    "publication": "approved"
   },
   "disclosure": "fictional",
   "setting": {
@@ -19,7 +19,50 @@
     "languages": [],
     "reviewer": ""
   },
-  "approvals": [],
+  "approvals": [
+    {
+      "gate": "brief",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:18.579Z",
+      "note": ""
+    },
+    {
+      "gate": "story",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:21.037Z",
+      "note": ""
+    },
+    {
+      "gate": "script",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:23.203Z",
+      "note": ""
+    },
+    {
+      "gate": "storyboard",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:25.303Z",
+      "note": ""
+    },
+    {
+      "gate": "preview",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:27.477Z",
+      "note": ""
+    },
+    {
+      "gate": "publication",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T01:13:29.762Z",
+      "note": ""
+    }
+  ],
   "assets": [],
   "voices": {
     "tanyi": "en-US-AndrewNeural (stock)",
