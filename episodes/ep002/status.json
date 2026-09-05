@@ -1,0 +1,90 @@
+{
+  "id": "ep002",
+  "title": "What Really Happens When You Ask AI a Question?",
+  "version": 2,
+  "gates": {
+    "brief": "approved",
+    "story": "approved",
+    "script": "approved",
+    "storyboard": "approved",
+    "preview": "approved",
+    "publication": "approved"
+  },
+  "approvals": [
+    {
+      "gate": "brief",
+      "by": "Hippolyte",
+      "at": "2026-09-04T06:36:56Z",
+      "note": "Setting: South-West region, English/Pidgin (verify security context). Cut: wrong answer + fix. Keep working title."
+    },
+    {
+      "gate": "story",
+      "by": "Hippolyte",
+      "at": "2026-09-04T06:48:46Z",
+      "note": "Insecurity: outages line only (B12), no conflict mention. Hippolyte reviews names, cooperative style and pronunciations himself at gate 3."
+    },
+    {
+      "gate": "script",
+      "by": "Hippolyte",
+      "at": "2026-09-04T17:26:18Z",
+      "note": "Script v2 approved. Names Ebot, Njume, Kumba, Meme and 'Meme Cocoa Farmers Cooperative Society' confirmed by Hippolyte as South-West reviewer. Cut stays hook + constraint-fix + outro."
+    },
+    {
+      "gate": "storyboard",
+      "by": "Hippolyte",
+      "at": "2026-09-04T18:01:55Z",
+      "note": "Storyboard v2 approved from contact sheets. Compare 3 rows, ownership 4 bullets, stage crowding fix accepted."
+    },
+    {
+      "gate": "preview",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-04T18:38:00.444Z",
+      "note": ""
+    },
+    {
+      "gate": "publication",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-04T18:38:04.594Z",
+      "note": ""
+    },
+    {
+      "gate": "preview",
+      "by": "Hippolyte",
+      "at": "2026-09-04T19:05:38Z",
+      "note": "Preview approved from half-resolution renders; names confirmed by ear; finals authorized. Quality verdict: APPROVE WITH MINOR FIXES, fixes applied (caption clear, stage spacing, gesture)."
+    }
+  ],
+  "disclosure": "fictional: Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+  "setting": {
+    "country": "Cameroon",
+    "place": "cocoa belt around Kumba, Meme division, South-West region",
+    "community": "Meme Cocoa Farmers Cooperative Society (fictional)",
+    "languages": [
+      "English",
+      "Cameroon Pidgin (Kamtok), not scripted"
+    ],
+    "reviewer": "Hippolyte reviewed names and pronunciations at gate 3: confirmed"
+  },
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ],
+  "claims": {
+    "safe": 22,
+    "recheck": 10,
+    "blocked": 3
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Learning Designer"
+  short_description: "Turn AI concepts into memorable visual lessons"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-learning-designer to turn this evidence pack into a focused animated learning experience."

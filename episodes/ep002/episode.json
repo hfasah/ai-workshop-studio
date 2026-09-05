@@ -1,0 +1,671 @@
+{
+  "id": "ep002",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 2,
+  "title": "What Really Happens When You Ask AI a Question?",
+  "disclosure": "Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Brown cocoa pods near Kumba. The chatbot: “Spray product X at dose Y.”",
+        "emphasis": "No question about her farm. No source."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ebot grows cocoa near Kumba, in Cameroon's South-West. After heavy rains, her pods turn brown.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is.",
+          "expression": "surprised",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "What Really Happens When You Ask AI a Question?",
+        "subtitle": "Tokens · prediction · context · tools. Built with a cocoa cooperative near Kumba."
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Meme Cocoa Farmers Cooperative Society · Messages",
+        "steps": [
+          {
+            "title": "Ebot, member",
+            "detail": "Her message to the cooperative",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ebot: Brown pods since the rains. Njume comes next week. What do I spray?"
+                },
+                {
+                  "from": "user",
+                  "text": "Ebot: Ask about my farm before you answer. And say where the advice comes from."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Njume, field agent",
+            "detail": "His rules for any assistant",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Njume: I cover all the member farms alone. Many farmers here never see an extension officer."
+                },
+                {
+                  "from": "agent",
+                  "text": "Njume: I keep the cooperative's advice sheet. Questions come faster than I can visit."
+                },
+                {
+                  "from": "agent",
+                  "text": "Njume: Products and doses come to me, not from a machine."
+                }
+              ]
+            }
+          },
+          {
+            "title": "The gap",
+            "detail": "Ebot and Njume set the spec",
+            "ui": {
+              "kind": "text",
+              "title": "What the chatbot had",
+              "lines": [
+                "Her farm: unknown",
+                "Source: none",
+                "Product and dose: named anyway"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, Ebot's message: brown pods since the rains, the field agent comes next week, what do I spray?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "Njume, the only field agent, keeps a checked guidance sheet. His rule: products and doses come to him, not from a machine.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "No context about her farm, no source. Ebot and Njume told us what they need. We build to that.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: what AI should and should not do",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "General chatbot",
+          "items": [
+            "Her farm: unknown to it",
+            "Predicts a fluent answer",
+            "No source, names a product anyway"
+          ]
+        },
+        "right": {
+          "title": "Cooperative assistant",
+          "items": [
+            "Asks about her farm first",
+            "Reads only Njume's sheet, shows source",
+            "Product and dose: to Njume, never the model"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A general chatbot knows nothing about Ebot's farm. It predicts a fluent answer, no source.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Ebot's rule: ask about her farm first. Njume's rule: answer only from his sheet, and show the source.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Njume's hard rule becomes ours. No product name, no dose, ever comes from the model. Those go to him.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "decide-flow",
+      "type": "flow",
+      "label": "Decide: what happens when you ask",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "From your question to its answer",
+        "nodes": [
+          {
+            "label": "Tokens",
+            "icon": "type",
+            "sub": "Words, parts, characters"
+          },
+          {
+            "label": "Predict",
+            "icon": "dices",
+            "sub": "Guesses the next word"
+          },
+          {
+            "label": "Context",
+            "icon": "brain",
+            "sub": "All it can see right now"
+          },
+          {
+            "label": "Tool",
+            "icon": "search",
+            "sub": "Pulls in a checked page"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "First, tokens. Your question is cut into pieces: words, parts of words, sometimes single characters.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Then it predicts: it was trained to guess the next word from the words before it.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Its context is its working memory. Anything not in there, it does not know.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Alone, it cannot check anything. With a tool, it asks, your software fetches a checked page into its context.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito builds the cooperative assistant",
+        "app": "Meme Cocoa Farmers Cooperative Society · Assistant",
+        "steps": [
+          {
+            "title": "Ask first",
+            "detail": "Four questions before any answer",
+            "ui": {
+              "kind": "list",
+              "title": "Context form",
+              "items": [
+                {
+                  "text": "Crop stage: pods ripening",
+                  "done": true
+                },
+                {
+                  "text": "Where: Meme division, near Kumba",
+                  "done": true
+                },
+                {
+                  "text": "When: heavy rain for weeks",
+                  "done": true
+                },
+                {
+                  "text": "What she sees: brown patches on pods",
+                  "done": true
+                }
+              ]
+            }
+          },
+          {
+            "title": "Njume's guidance sheet",
+            "detail": "Read-only for the assistant",
+            "ui": {
+              "kind": "list",
+              "title": "Guidance sheet · maintained by Njume",
+              "items": [
+                {
+                  "text": "3 · Prune on time, before the rains",
+                  "done": false
+                },
+                {
+                  "text": "4 · Black pod after heavy rain: take off diseased pods, keep the farm clear, spray on the cooperative's schedule",
+                  "done": true
+                },
+                {
+                  "text": "5 · Products and doses: ask Njume",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Retrieval",
+            "detail": "Tool call: sheet.search(question, farm)",
+            "ui": {
+              "kind": "text",
+              "title": "Context sent to the model",
+              "lines": [
+                "Question: brown pods, what to spray?",
+                "Farm: near Kumba · ripening · heavy rain",
+                "Retrieved: guidance sheet, entry 4",
+                "Rule: no products, no doses"
+              ]
+            }
+          },
+          {
+            "title": "Answer with source",
+            "detail": "Plain words, one source line",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Brown pods since the rains. What do I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Take off the diseased pods, keep the farm clear, spray on the cooperative's schedule."
+                },
+                {
+                  "from": "agent",
+                  "text": "Source: Guidance sheet, entry 4, updated by Njume."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I ask before I answer: crop stage, where, when the rains came, what Ebot sees.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "Njume's guidance sheet. Kito, why his sheet and not the whole internet?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "My answer is only as good as the page I read. Retrieval puts the matching entry, entry four, into my context.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Then I answer plainly and show the source: guidance sheet, entry four, updated by Njume.",
+          "expression": "happy",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix: the confident guess",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same question, two answers",
+        "app": "Assistant · test run",
+        "steps": [
+          {
+            "title": "The confident guess",
+            "detail": "No source, no question about her farm",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Which product and what dose should I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Spray product X at dose Y every week. Problem solved."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the sheet",
+            "detail": "Not covered: escalate, never guess",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Which product and what dose should I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Product and dose: not covered by the guidance sheet. Sent to Njume, who will reply."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Why the guess sounds sure",
+            "detail": "Confidence is style, not evidence",
+            "ui": {
+              "kind": "text",
+              "title": "Why a wrong answer can sound so sure",
+              "lines": [
+                "Rewarded in training: a confident guess",
+                "“I don't know” scores nothing",
+                "Registered products, labels, safety: unchecked",
+                "Fluent is not the same as right"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Simple. Spray product X at dose Y every week, and your problem is solved.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "No product entry in my sheet, so I will not guess. Not covered, sent to Njume.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "That is a hallucination: a fluent answer that is wrong. OpenAI researchers showed that training and testing reward a confident guess over saying I don't know.",
+          "expression": "serious",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-outage",
+      "type": "demo",
+      "label": "Constraint and fix: when the network is down",
+      "characters": [
+        "tanyi",
+        "kito"
+      ],
+      "onScreen": {
+        "title": "When the network is down",
+        "app": "Assistant · offline",
+        "steps": [
+          {
+            "title": "A documented constraint",
+            "detail": "Networks fail. The tool must not.",
+            "ui": {
+              "kind": "text",
+              "title": "Connectivity",
+              "lines": [
+                "Documented: months without internet in this region (2017)",
+                "Design rule: it must work when the network does not"
+              ]
+            }
+          },
+          {
+            "title": "Queue and fallback",
+            "detail": "Nothing is lost; a person always answers",
+            "ui": {
+              "kind": "list",
+              "title": "Queue · offline",
+              "items": [
+                {
+                  "text": "Ebot · brown pods · queued on the phone",
+                  "done": false
+                },
+                {
+                  "text": "Sends when the network returns",
+                  "done": false
+                },
+                {
+                  "text": "Unanswered → Njume by text or visit",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "In twenty seventeen, the two English-speaking regions lost the internet for three months. Kito, this must work offline.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "I queue questions on the phone. Unanswered ones reach Njume by text or a visit.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Ebot tries the assistant",
+        "app": "Meme Cocoa Farmers Cooperative Society · Assistant",
+        "steps": [
+          {
+            "title": "Ask first, then answer",
+            "detail": "Context, then a sourced answer",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Brown pods since the rains. What do I do?"
+                },
+                {
+                  "from": "agent",
+                  "text": "First: pod stage, where is the farm, what do you see?"
+                },
+                {
+                  "from": "user",
+                  "text": "Ripening, near Kumba, brown patches spreading."
+                },
+                {
+                  "from": "agent",
+                  "text": "Take off diseased pods, keep the farm clear, spray on the cooperative's schedule. Source: entry 4, by Njume."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Escalate to Njume",
+            "detail": "Approval card: hand-off to a person",
+            "ui": {
+              "kind": "approval",
+              "title": "Product and dose: send to Njume",
+              "summary": [
+                "Ebot asks: which product, what dose?",
+                "Not covered by the guidance sheet",
+                "Njume replies by message or visit"
+              ],
+              "approve": "Send to Njume",
+              "reject": "Hold for Njume's visit",
+              "clickAt": 2.2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Ebot asks again. I ask stage, place, what she sees, then answer from entry four with its source.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Product and dose? Not from the model. Send to Njume. A person answers that.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this assistant?",
+        "items": [
+          "The cooperative owns sheet and assistant",
+          "Njume writes the sheet; the AI only reads",
+          "Questions, locations, value stay with members",
+          "Accountable: the cooperative and its agent"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The cooperative owns the sheet and the assistant. Njume maintains it; the assistant only reads. Questions, locations and any value stay with the members.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "If advice is wrong, the cooperative and its agent answer for it, not the AI. Tokens, prediction, context, tool. Right context, a checked source, a person to escalate to.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Pick one question you ask AI at work",
+          "Write down the context it needs",
+          "Add: “tell me where this comes from”",
+          "Compare the two answers"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Build challenge: take one question you ask AI at work. Write down the context it needs. Add: tell me where this comes from. Compare the answers.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next episode: Prompting vs. Context Engineering"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: prompting versus context engineering.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 45,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "ep005",
+  "title": "What Is MCP?",
+  "version": 1,
+  "format": "short",
+  "gates": {
+    "brief": "approved",
+    "story": "approved",
+    "script": "approved",
+    "storyboard": "approved",
+    "preview": "approved",
+    "publication": "approved"
+  },
+  "disclosure": "fictional",
+  "setting": {
+    "country": "",
+    "place": "",
+    "community": "",
+    "languages": [],
+    "reviewer": ""
+  },
+  "approvals": [
+    {
+      "gate": "brief",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:27:55.267Z",
+      "note": ""
+    },
+    {
+      "gate": "story",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:27:58.400Z",
+      "note": ""
+    },
+    {
+      "gate": "script",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:28:11.443Z",
+      "note": ""
+    },
+    {
+      "gate": "storyboard",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:28:15.068Z",
+      "note": ""
+    },
+    {
+      "gate": "preview",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:28:18.361Z",
+      "note": ""
+    },
+    {
+      "gate": "publication",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T00:28:22.059Z",
+      "note": ""
+    }
+  ],
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ],
+  "auto": true,
+  "storyline": "1-Minute Lesson Script: What Is MCP?\n\nThink of an AI model as a talented employee. It can reason, write, and analyze—but without access to your business tools, it cannot do much in the real world.\n\nThat is where MCP, or Model Context Protocol, comes in.\n\nMCP is a standard way for AI systems to securely connect with external tools and information—such as Google Drive, Slack, databases, calendars, CRMs, and internal business applications.\n\nInstead of building a different custom connection for every AI model and every tool, developers can use one common protocol. Think of MCP as a universal adapter for AI.\n\nThrough MCP, an AI agent can find a document, check a customer record, query a database, or schedule a meeting—depending on the permissions it has been given.\n\nMCP does not make AI automatically trustworthy or secure. Organizations still need authentication, access controls, approvals, monitoring, and audit logs.\n\nThe key takeaway is simple: the model provides the intelligence, MCP provides the connection, and your guardrails provide the control.",
+  "engine": {
+    "name": "ollama",
+    "model": "qwen2.5:14b"
+  }
+}

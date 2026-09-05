@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Animation Scriptwriter"
+  short_description: "Write narration and dialogue for animated lessons"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-animation-scriptwriter to write a timed AI With Hippolyte animation script from the approved lesson design."

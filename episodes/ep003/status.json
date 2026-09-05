@@ -1,0 +1,37 @@
+{
+  "id": "ep003",
+  "title": "API or MCP: How an AI Tutor Reaches the School's Lessons",
+  "version": 1,
+  "gates": {
+    "brief": "pending",
+    "story": "pending",
+    "script": "pending",
+    "storyboard": "pending",
+    "preview": "pending",
+    "publication": "pending"
+  },
+  "disclosure": "fictional",
+  "setting": {
+    "country": "",
+    "place": "",
+    "community": "",
+    "languages": [],
+    "reviewer": ""
+  },
+  "approvals": [],
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 1.4424,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ]
+}

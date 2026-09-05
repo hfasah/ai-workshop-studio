@@ -1,0 +1,503 @@
+{
+  "id": "ep004",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 4,
+  "title": "How an API Makes Your Chatbot Smarter",
+  "disclosure": "Fictional teaching scenario based on researched conditions",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "An AI agent can answer questions about your business.",
+        "emphasis": "But it needs an API to do that."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Imagine you have a chatbot for customer service. It can answer basic questions, but it doesn't know anything specific about your company's products or services.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "But what if you could make it smarter? What if it could answer detailed questions and even help with tasks?",
+          "expression": "serious",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "onScreen": {
+        "title": "How an API Makes Your Chatbot Smarter",
+        "subtitle": "Connecting your chatbot to business data"
+      }
+    },
+    {
+      "id": "listening",
+      "type": "dialogue",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "caption": "A familiar situation"
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, I asked our chatbot about the latest product features. It just said it didn't know.",
+          "expression": "confused",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Right. That's because the chatbot doesn't have access to your company's data. But with an API, we can change that.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Chatbot without API",
+          "items": [
+            "Answers basic questions only",
+            "No business data access"
+          ]
+        },
+        "right": {
+          "title": "Chatbot with API",
+          "items": [
+            "Accesses product details",
+            "Helps with tasks and support"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot without an API can answer basic questions but doesn't have access to your business data.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "With an API, the chatbot can connect to your CRM or knowledge base and provide detailed answers and even help with tasks.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito"
+      ],
+      "onScreen": {
+        "title": "Connecting the chatbot to an API",
+        "app": "Kito · Customer Support Assistant",
+        "steps": [
+          {
+            "title": "Amara asks about a product feature",
+            "detail": "What is the latest update for Product X?",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What's the latest update for Product X?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking the API..."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito queries the product database",
+            "detail": "Tool: api.query",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "The latest update for Product X is a new feature called AutoSync."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito provides the answer",
+            "detail": "Tool: chatbot.respond",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "The latest update for Product X is a new feature called AutoSync."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, can you tell me about the latest update for Product X?",
+          "expression": "neutral",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking the API...",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "The latest update for Product X is a new feature called AutoSync.",
+          "expression": "happy",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "constraint_and_fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Securing the API connection",
+        "app": "Kito · Customer Support Assistant",
+        "steps": [
+          {
+            "title": "Amara asks about a customer's order status",
+            "detail": "What is the status of Order 1234?",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What is the status of Order 1234?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking the API..."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito queries the order database",
+            "detail": "Tool: api.query",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Gatekeeper checks permissions",
+            "detail": "Tool: gatekeeper.checkPermissions",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "I need to verify your permissions before I can share this information."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito waits for human approval",
+            "detail": "Nothing is shared until a person says yes.",
+            "ui": {
+              "kind": "approval",
+              "title": "Kito wants to send an email",
+              "summary": [
+                "To: customer@example.com",
+                "Order 1234, in transit"
+              ],
+              "approve": "Approve and share",
+              "reject": "Reject",
+              "clickAt": 2.2
+            }
+          },
+          {
+            "title": "Kito provides the answer",
+            "detail": "Tool: chatbot.respond",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, what's the status of Order 1234?",
+          "expression": "neutral",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking the API...",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "I need to verify your permissions before I can share this information.",
+          "expression": "serious",
+          "gesture": "warning"
+        },
+        {
+          "speaker": "kito",
+          "text": "Order 1234 is currently in transit. Approved by a human.",
+          "expression": "happy",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "user_test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Customer satisfaction with the chatbot",
+        "app": "Kito · Customer Support Assistant",
+        "steps": [
+          {
+            "title": "Amara asks about a customer's order status again",
+            "detail": "What is the status of Order 1234?",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What is the status of Order 1234?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking the API..."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito queries the order database again",
+            "detail": "Tool: api.query",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Gatekeeper checks permissions again",
+            "detail": "Tool: gatekeeper.checkPermissions",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "I need to verify your permissions before I can share this information."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito waits for human approval again",
+            "detail": "Nothing is shared until a person says yes.",
+            "ui": {
+              "kind": "approval",
+              "title": "Kito wants to send an email",
+              "summary": [
+                "To: customer@example.com",
+                "Order 1234, in transit"
+              ],
+              "approve": "Approve and share",
+              "reject": "Reject",
+              "clickAt": 2.2
+            }
+          },
+          {
+            "title": "Kito provides the answer again",
+            "detail": "Tool: chatbot.respond",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Customer satisfaction with the chatbot",
+            "detail": "Tool: survey.respond",
+            "ui": {
+              "kind": "list",
+              "title": "Customer Satisfaction Survey",
+              "items": [
+                {
+                  "text": "Very satisfied",
+                  "done": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, what's the status of Order 1234 again?",
+          "expression": "neutral",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking the API...",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "I need to verify your permissions before I can share this information.",
+          "expression": "serious",
+          "gesture": "warning"
+        },
+        {
+          "speaker": "kito",
+          "text": "Order 1234 is currently in transit. Approved by a human.",
+          "expression": "happy",
+          "gesture": "neutral"
+        },
+        {
+          "speaker": "amara",
+          "text": "Thank you, Kito! That was very helpful.",
+          "expression": "happy",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who maintains the system?",
+        "items": [
+          "Kito: Maintains and updates the chatbot",
+          "Gatekeeper: Ensures data security and permissions",
+          "Amara: Uses the chatbot for customer support"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Maintaining an API-connected chatbot requires a team. Kito updates the system, I ensure data security, and Amara uses it to help customers.",
+          "expression": "serious",
+          "gesture": "neutral"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And remember, who owns the data? Who receives the value from this system?",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "build_challenge_and_closing",
+      "type": "outro",
+      "label": "Build challenge and closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Try this today",
+        "emphasis": "Connect your chatbot to a business API. Start with product details or order status.",
+        "cta": "Don't just use AI."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Here's one thing you can try today: Connect your chatbot to a business API. Start with product details or order status.",
+          "expression": "happy",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 45,
+      "scenes": [
+        "hook",
+        "decide",
+        "constraint_and_fix",
+        "build_challenge_and_closing"
+      ]
+    }
+  ],
+  "format": "build"
+}

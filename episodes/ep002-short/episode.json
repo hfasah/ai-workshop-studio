@@ -1,0 +1,311 @@
+{
+  "id": "ep002-short",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 2,
+  "format": "short",
+  "title": "Your chatbot is not looking anything up",
+  "disclosure": "Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Your chatbot is not looking anything up.",
+        "emphasis": "It is guessing the next word.",
+        "illustration": "chat"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your chatbot is not looking anything up. It is guessing the next word.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "type": "demo",
+      "label": "The wrong answer",
+      "characters": [
+        "hallucinator",
+        "kito"
+      ],
+      "onScreen": {
+        "title": "Ebot, cocoa farmer near Kumba, asks about brown pods",
+        "app": "General chatbot",
+        "steps": [
+          {
+            "title": "The confident guess",
+            "detail": "No question about her farm",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Brown pods since the rains. What do I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Spray product X at dose Y every week. Problem solved."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks",
+            "detail": "No source, no context",
+            "ui": {
+              "kind": "text",
+              "title": "What that answer was built from",
+              "lines": [
+                "Her farm: unknown to it",
+                "Source: none",
+                "Product and dose: named anyway"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Spray product X at dose Y every week. Problem solved.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "It never asked where her farm is, and it has no source.",
+          "expression": "serious",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Why",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What happens when you ask",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "you",
+            "label": "Your question",
+            "sub": "becomes tokens",
+            "icon": "message-square",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "model",
+            "label": "The model",
+            "sub": "predicts the next word",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "ctx",
+            "label": "Context",
+            "sub": "all it can see",
+            "icon": "layers",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "sub": "fetches a checked page",
+            "icon": "search",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "id": "internet",
+            "label": "The internet",
+            "sub": "not consulted",
+            "icon": "globe",
+            "col": 2,
+            "row": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "you",
+            "to": "model"
+          },
+          {
+            "from": "ctx",
+            "to": "model",
+            "label": "only this"
+          },
+          {
+            "from": "model",
+            "to": "internet",
+            "kind": "x",
+            "style": "dashed"
+          },
+          {
+            "from": "tool",
+            "to": "ctx",
+            "label": "adds a page"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your question becomes tokens, and the model predicts the next word from patterns.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "It is not on the internet. It only knows what is in its context.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A tool can fetch a checked page into that context. Nothing else gets in.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "type": "demo",
+      "label": "The fix",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "The cooperative's assistant",
+        "app": "Meme Cocoa Farmers Cooperative Society · Assistant",
+        "steps": [
+          {
+            "title": "Asks first, cites the sheet",
+            "detail": "Njume's guidance sheet, entry 4",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Where is the farm, and what do you see?"
+                },
+                {
+                  "from": "user",
+                  "text": "Near Kumba. Brown patches spreading."
+                },
+                {
+                  "from": "agent",
+                  "text": "Take off the diseased pods, keep the farm clear. Source: guidance sheet, entry 4."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Products go to a person",
+            "detail": "Njume, the field agent",
+            "ui": {
+              "kind": "approval",
+              "title": "Product and dose: send to Njume",
+              "summary": [
+                "Not covered by the guidance sheet",
+                "A person answers that"
+              ],
+              "approve": "Send to Njume",
+              "reject": "Hold for Njume's visit",
+              "clickAt": 1.6
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "So the cooperative's assistant asks first, and answers only from Njume's checked sheet, with the source.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Products and doses? Never from the model. Those go to Njume.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this matters",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same fix, any job",
+        "items": [
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Answer candidates from your policy, not a guess"
+          },
+          {
+            "icon": "headset",
+            "label": "Customer service",
+            "text": "Reply from the product manual, with the source"
+          },
+          {
+            "icon": "truck",
+            "label": "Logistics",
+            "text": "Quote from live delivery data, not old patterns"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same fix at work: recruiting answers from your policy, support from the manual, logistics from live data. Always with the source.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Add to your next question:",
+        "emphasis": "\"Tell me where this comes from.\"",
+        "cta": "Build it to work reliably."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ask AI anything, then add: tell me where this comes from. Don't just use AI. Build it to work reliably.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": []
+}

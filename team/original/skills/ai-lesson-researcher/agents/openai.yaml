@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Lesson Researcher"
+  short_description: "Research and verify claims for an AI lesson"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-lesson-researcher to build a sourced evidence pack for this animated AI lesson."

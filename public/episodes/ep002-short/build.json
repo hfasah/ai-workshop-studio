@@ -1,0 +1,2340 @@
+{
+  "id": "ep002-short",
+  "fps": 30,
+  "builtAt": "2026-09-05T00:40:54.635Z",
+  "episode": {
+    "id": "ep002-short",
+    "series": "AI With Hippolyte",
+    "tagline": "Complex AI. Explained visually. Built practically.",
+    "episode": 2,
+    "format": "short",
+    "title": "Your chatbot is not looking anything up",
+    "disclosure": "Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+    "background": "workshop",
+    "cuts": []
+  },
+  "totalMs": 60112,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Your chatbot is not looking anything up.",
+        "emphasis": "It is guessing the next word.",
+        "illustration": "chat"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your chatbot is not looking anything up. It is guessing the next word.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep002-short/audio/hook-0-59f2cc982d.mp3",
+          "startMs": 200,
+          "durationMs": 3984,
+          "words": [
+            {
+              "text": "Your",
+              "startMs": 103,
+              "endMs": 180
+            },
+            {
+              "text": "chatbot",
+              "startMs": 193,
+              "endMs": 670
+            },
+            {
+              "text": "is",
+              "startMs": 722,
+              "endMs": 812
+            },
+            {
+              "text": "not",
+              "startMs": 825,
+              "endMs": 1083
+            },
+            {
+              "text": "looking",
+              "startMs": 1095,
+              "endMs": 1379
+            },
+            {
+              "text": "anything",
+              "startMs": 1392,
+              "endMs": 1765
+            },
+            {
+              "text": "up.",
+              "startMs": 1778,
+              "endMs": 2010
+            },
+            {
+              "text": "It",
+              "startMs": 2436,
+              "endMs": 2513
+            },
+            {
+              "text": "is",
+              "startMs": 2526,
+              "endMs": 2629
+            },
+            {
+              "text": "guessing",
+              "startMs": 2642,
+              "endMs": 2925
+            },
+            {
+              "text": "the",
+              "startMs": 2938,
+              "endMs": 3003
+            },
+            {
+              "text": "next",
+              "startMs": 3015,
+              "endMs": 3273
+            },
+            {
+              "text": "word.",
+              "startMs": 3286,
+              "endMs": 3595
+            }
+          ]
+        }
+      ],
+      "index": 0,
+      "startMs": 0,
+      "durationMs": 4564
+    },
+    {
+      "id": "turn",
+      "type": "demo",
+      "label": "The wrong answer",
+      "characters": [
+        "hallucinator",
+        "kito"
+      ],
+      "onScreen": {
+        "title": "Ebot, cocoa farmer near Kumba, asks about brown pods",
+        "app": "General chatbot",
+        "steps": [
+          {
+            "title": "The confident guess",
+            "detail": "No question about her farm",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Brown pods since the rains. What do I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Spray product X at dose Y every week. Problem solved."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks",
+            "detail": "No source, no context",
+            "ui": {
+              "kind": "text",
+              "title": "What that answer was built from",
+              "lines": [
+                "Her farm: unknown to it",
+                "Source: none",
+                "Product and dose: named anyway"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Spray product X at dose Y every week. Problem solved.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep002-short/audio/turn-0-f3518e1e6d.mp3",
+          "startMs": 4764,
+          "durationMs": 5064,
+          "words": [
+            {
+              "text": "Spray",
+              "startMs": 98,
+              "endMs": 443
+            },
+            {
+              "text": "product",
+              "startMs": 455,
+              "endMs": 871
+            },
+            {
+              "text": "X",
+              "startMs": 895,
+              "endMs": 1098
+            },
+            {
+              "text": "at",
+              "startMs": 1121,
+              "endMs": 1193
+            },
+            {
+              "text": "dose",
+              "startMs": 1217,
+              "endMs": 1502
+            },
+            {
+              "text": "Y",
+              "startMs": 1526,
+              "endMs": 1693
+            },
+            {
+              "text": "every",
+              "startMs": 1717,
+              "endMs": 1979
+            },
+            {
+              "text": "week.",
+              "startMs": 2002,
+              "endMs": 2348
+            },
+            {
+              "text": "Problem",
+              "startMs": 3179,
+              "endMs": 3643
+            },
+            {
+              "text": "solved.",
+              "startMs": 3667,
+              "endMs": 4226
+            }
+          ]
+        },
+        {
+          "speaker": "kito",
+          "text": "It never asked where her farm is, and it has no source.",
+          "expression": "serious",
+          "gesture": "point_left",
+          "audio": "episodes/ep002-short/audio/turn-1-828abf2f95.mp3",
+          "startMs": 10048,
+          "durationMs": 4416,
+          "words": [
+            {
+              "text": "It",
+              "startMs": 95,
+              "endMs": 243
+            },
+            {
+              "text": "never",
+              "startMs": 255,
+              "endMs": 664
+            },
+            {
+              "text": "asked",
+              "startMs": 675,
+              "endMs": 1039
+            },
+            {
+              "text": "where",
+              "startMs": 1050,
+              "endMs": 1220
+            },
+            {
+              "text": "her",
+              "startMs": 1232,
+              "endMs": 1380
+            },
+            {
+              "text": "farm",
+              "startMs": 1391,
+              "endMs": 1732
+            },
+            {
+              "text": "is,",
+              "startMs": 1743,
+              "endMs": 2050
+            },
+            {
+              "text": "and",
+              "startMs": 2334,
+              "endMs": 2482
+            },
+            {
+              "text": "it",
+              "startMs": 2493,
+              "endMs": 2595
+            },
+            {
+              "text": "has",
+              "startMs": 2607,
+              "endMs": 2857
+            },
+            {
+              "text": "no",
+              "startMs": 2868,
+              "endMs": 3084
+            },
+            {
+              "text": "source.",
+              "startMs": 3095,
+              "endMs": 3630
+            }
+          ]
+        }
+      ],
+      "index": 1,
+      "startMs": 4564,
+      "durationMs": 10280
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Why",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What happens when you ask",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "you",
+            "label": "Your question",
+            "sub": "becomes tokens",
+            "icon": "message-square",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "model",
+            "label": "The model",
+            "sub": "predicts the next word",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "ctx",
+            "label": "Context",
+            "sub": "all it can see",
+            "icon": "layers",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "sub": "fetches a checked page",
+            "icon": "search",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "id": "internet",
+            "label": "The internet",
+            "sub": "not consulted",
+            "icon": "globe",
+            "col": 2,
+            "row": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "you",
+            "to": "model"
+          },
+          {
+            "from": "ctx",
+            "to": "model",
+            "label": "only this"
+          },
+          {
+            "from": "model",
+            "to": "internet",
+            "kind": "x",
+            "style": "dashed"
+          },
+          {
+            "from": "tool",
+            "to": "ctx",
+            "label": "adds a page"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your question becomes tokens, and the model predicts the next word from patterns.",
+          "expression": "neutral",
+          "gesture": "point_left",
+          "audio": "episodes/ep002-short/audio/mechanism-0-c6aa416545.mp3",
+          "startMs": 15044,
+          "durationMs": 5112,
+          "words": [
+            {
+              "text": "Your",
+              "startMs": 116,
+              "endMs": 245
+            },
+            {
+              "text": "question",
+              "startMs": 258,
+              "endMs": 760
+            },
+            {
+              "text": "becomes",
+              "startMs": 773,
+              "endMs": 1198
+            },
+            {
+              "text": "tokens,",
+              "startMs": 1211,
+              "endMs": 1817
+            },
+            {
+              "text": "and",
+              "startMs": 2075,
+              "endMs": 2165
+            },
+            {
+              "text": "the",
+              "startMs": 2178,
+              "endMs": 2255
+            },
+            {
+              "text": "model",
+              "startMs": 2268,
+              "endMs": 2603
+            },
+            {
+              "text": "predicts",
+              "startMs": 2616,
+              "endMs": 3131
+            },
+            {
+              "text": "the",
+              "startMs": 3144,
+              "endMs": 3247
+            },
+            {
+              "text": "next",
+              "startMs": 3260,
+              "endMs": 3647
+            },
+            {
+              "text": "word",
+              "startMs": 3660,
+              "endMs": 3918
+            },
+            {
+              "text": "from",
+              "startMs": 3930,
+              "endMs": 4098
+            },
+            {
+              "text": "patterns.",
+              "startMs": 4111,
+              "endMs": 4729
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "It is not on the internet. It only knows what is in its context.",
+          "expression": "confident",
+          "gesture": "point_left",
+          "audio": "episodes/ep002-short/audio/mechanism-1-11c6abd137.mp3",
+          "startMs": 20376,
+          "durationMs": 3984,
+          "words": [
+            {
+              "text": "It",
+              "startMs": 103,
+              "endMs": 180
+            },
+            {
+              "text": "is",
+              "startMs": 193,
+              "endMs": 296
+            },
+            {
+              "text": "not",
+              "startMs": 309,
+              "endMs": 554
+            },
+            {
+              "text": "on",
+              "startMs": 567,
+              "endMs": 657
+            },
+            {
+              "text": "the",
+              "startMs": 670,
+              "endMs": 747
+            },
+            {
+              "text": "internet.",
+              "startMs": 760,
+              "endMs": 1289
+            },
+            {
+              "text": "It",
+              "startMs": 1714,
+              "endMs": 1817
+            },
+            {
+              "text": "only",
+              "startMs": 1830,
+              "endMs": 2062
+            },
+            {
+              "text": "knows",
+              "startMs": 2075,
+              "endMs": 2384
+            },
+            {
+              "text": "what",
+              "startMs": 2397,
+              "endMs": 2539
+            },
+            {
+              "text": "is",
+              "startMs": 2552,
+              "endMs": 2668
+            },
+            {
+              "text": "in",
+              "startMs": 2680,
+              "endMs": 2758
+            },
+            {
+              "text": "its",
+              "startMs": 2771,
+              "endMs": 2887
+            },
+            {
+              "text": "context.",
+              "startMs": 2900,
+              "endMs": 3595
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A tool can fetch a checked page into that context. Nothing else gets in.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep002-short/audio/mechanism-2-3ea626e824.mp3",
+          "startMs": 24580,
+          "durationMs": 4440,
+          "words": [
+            {
+              "text": "A",
+              "startMs": 103,
+              "endMs": 155
+            },
+            {
+              "text": "tool",
+              "startMs": 168,
+              "endMs": 412
+            },
+            {
+              "text": "can",
+              "startMs": 425,
+              "endMs": 567
+            },
+            {
+              "text": "fetch",
+              "startMs": 580,
+              "endMs": 876
+            },
+            {
+              "text": "a",
+              "startMs": 889,
+              "endMs": 941
+            },
+            {
+              "text": "checked",
+              "startMs": 954,
+              "endMs": 1302
+            },
+            {
+              "text": "page",
+              "startMs": 1314,
+              "endMs": 1727
+            },
+            {
+              "text": "into",
+              "startMs": 1740,
+              "endMs": 1907
+            },
+            {
+              "text": "that",
+              "startMs": 1920,
+              "endMs": 2100
+            },
+            {
+              "text": "context.",
+              "startMs": 2113,
+              "endMs": 2809
+            },
+            {
+              "text": "Nothing",
+              "startMs": 3235,
+              "endMs": 3466
+            },
+            {
+              "text": "else",
+              "startMs": 3479,
+              "endMs": 3621
+            },
+            {
+              "text": "gets",
+              "startMs": 3634,
+              "endMs": 3853
+            },
+            {
+              "text": "in.",
+              "startMs": 3866,
+              "endMs": 4059
+            }
+          ]
+        }
+      ],
+      "index": 2,
+      "startMs": 14844,
+      "durationMs": 14556
+    },
+    {
+      "id": "fix",
+      "type": "demo",
+      "label": "The fix",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "The cooperative's assistant",
+        "app": "Meme Cocoa Farmers Cooperative Society · Assistant",
+        "steps": [
+          {
+            "title": "Asks first, cites the sheet",
+            "detail": "Njume's guidance sheet, entry 4",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Where is the farm, and what do you see?"
+                },
+                {
+                  "from": "user",
+                  "text": "Near Kumba. Brown patches spreading."
+                },
+                {
+                  "from": "agent",
+                  "text": "Take off the diseased pods, keep the farm clear. Source: guidance sheet, entry 4."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Products go to a person",
+            "detail": "Njume, the field agent",
+            "ui": {
+              "kind": "approval",
+              "title": "Product and dose: send to Njume",
+              "summary": [
+                "Not covered by the guidance sheet",
+                "A person answers that"
+              ],
+              "approve": "Send to Njume",
+              "reject": "Hold for Njume's visit",
+              "clickAt": 1.6
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "So the cooperative's assistant asks first, and answers only from Njume's checked sheet, with the source.",
+          "expression": "happy",
+          "gesture": "point_left",
+          "audio": "episodes/ep002-short/audio/fix-0-71947af42d.mp3",
+          "startMs": 29600,
+          "durationMs": 7440,
+          "words": [
+            {
+              "text": "So",
+              "startMs": 95,
+              "endMs": 323
+            },
+            {
+              "text": "the",
+              "startMs": 334,
+              "endMs": 448
+            },
+            {
+              "text": "cooperative's",
+              "startMs": 459,
+              "endMs": 1232
+            },
+            {
+              "text": "assistant",
+              "startMs": 1243,
+              "endMs": 1800
+            },
+            {
+              "text": "asks",
+              "startMs": 1811,
+              "endMs": 2186
+            },
+            {
+              "text": "first,",
+              "startMs": 2198,
+              "endMs": 2641
+            },
+            {
+              "text": "and",
+              "startMs": 2902,
+              "endMs": 3073
+            },
+            {
+              "text": "answers",
+              "startMs": 3084,
+              "endMs": 3618
+            },
+            {
+              "text": "only",
+              "startMs": 3630,
+              "endMs": 3959
+            },
+            {
+              "text": "from",
+              "startMs": 3970,
+              "endMs": 4175
+            },
+            {
+              "text": "Njume's",
+              "startMs": 4186,
+              "endMs": 4891
+            },
+            {
+              "text": "checked",
+              "startMs": 4902,
+              "endMs": 5220
+            },
+            {
+              "text": "sheet,",
+              "startMs": 5232,
+              "endMs": 5584
+            },
+            {
+              "text": "with",
+              "startMs": 5857,
+              "endMs": 6016
+            },
+            {
+              "text": "the",
+              "startMs": 6027,
+              "endMs": 6118
+            },
+            {
+              "text": "source.",
+              "startMs": 6130,
+              "endMs": 6652
+            }
+          ]
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Products and doses? Never from the model. Those go to Njume.",
+          "expression": "serious",
+          "gesture": "warning",
+          "audio": "episodes/ep002-short/audio/fix-1-c43fb79fd4.mp3",
+          "startMs": 37260,
+          "durationMs": 5784,
+          "words": [
+            {
+              "text": "Products",
+              "startMs": 101,
+              "endMs": 693
+            },
+            {
+              "text": "and",
+              "startMs": 707,
+              "endMs": 851
+            },
+            {
+              "text": "doses?",
+              "startMs": 864,
+              "endMs": 1641
+            },
+            {
+              "text": "Never",
+              "startMs": 2066,
+              "endMs": 2513
+            },
+            {
+              "text": "from",
+              "startMs": 2526,
+              "endMs": 2763
+            },
+            {
+              "text": "the",
+              "startMs": 2776,
+              "endMs": 2868
+            },
+            {
+              "text": "model.",
+              "startMs": 2882,
+              "endMs": 3408
+            },
+            {
+              "text": "Those",
+              "startMs": 3788,
+              "endMs": 4169
+            },
+            {
+              "text": "go",
+              "startMs": 4182,
+              "endMs": 4432
+            },
+            {
+              "text": "to",
+              "startMs": 4445,
+              "endMs": 4630
+            },
+            {
+              "text": "Njume.",
+              "startMs": 4643,
+              "endMs": 5366
+            }
+          ]
+        }
+      ],
+      "index": 3,
+      "startMs": 29400,
+      "durationMs": 14024
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this matters",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same fix, any job",
+        "items": [
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Answer candidates from your policy, not a guess"
+          },
+          {
+            "icon": "headset",
+            "label": "Customer service",
+            "text": "Reply from the product manual, with the source"
+          },
+          {
+            "icon": "truck",
+            "label": "Logistics",
+            "text": "Quote from live delivery data, not old patterns"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same fix at work: recruiting answers from your policy, support from the manual, logistics from live data. Always with the source.",
+          "expression": "confident",
+          "gesture": "point_left",
+          "audio": "episodes/ep002-short/audio/examples-0-279f592804.mp3",
+          "startMs": 43624,
+          "durationMs": 8376,
+          "words": [
+            {
+              "text": "Same",
+              "startMs": 116,
+              "endMs": 412
+            },
+            {
+              "text": "fix",
+              "startMs": 425,
+              "endMs": 773
+            },
+            {
+              "text": "at",
+              "startMs": 786,
+              "endMs": 902
+            },
+            {
+              "text": "work:",
+              "startMs": 915,
+              "endMs": 1250
+            },
+            {
+              "text": "recruiting",
+              "startMs": 1546,
+              "endMs": 2049
+            },
+            {
+              "text": "answers",
+              "startMs": 2062,
+              "endMs": 2461
+            },
+            {
+              "text": "from",
+              "startMs": 2474,
+              "endMs": 2629
+            },
+            {
+              "text": "your",
+              "startMs": 2642,
+              "endMs": 2732
+            },
+            {
+              "text": "policy,",
+              "startMs": 2745,
+              "endMs": 3325
+            },
+            {
+              "text": "support",
+              "startMs": 3686,
+              "endMs": 4098
+            },
+            {
+              "text": "from",
+              "startMs": 4111,
+              "endMs": 4253
+            },
+            {
+              "text": "the",
+              "startMs": 4265,
+              "endMs": 4330
+            },
+            {
+              "text": "manual,",
+              "startMs": 4343,
+              "endMs": 4871
+            },
+            {
+              "text": "logistics",
+              "startMs": 5155,
+              "endMs": 5709
+            },
+            {
+              "text": "from",
+              "startMs": 5722,
+              "endMs": 5902
+            },
+            {
+              "text": "live",
+              "startMs": 5915,
+              "endMs": 6160
+            },
+            {
+              "text": "data.",
+              "startMs": 6173,
+              "endMs": 6521
+            },
+            {
+              "text": "Always",
+              "startMs": 6946,
+              "endMs": 7229
+            },
+            {
+              "text": "with",
+              "startMs": 7242,
+              "endMs": 7358
+            },
+            {
+              "text": "the",
+              "startMs": 7371,
+              "endMs": 7461
+            },
+            {
+              "text": "source.",
+              "startMs": 7474,
+              "endMs": 8003
+            }
+          ]
+        }
+      ],
+      "index": 4,
+      "startMs": 43424,
+      "durationMs": 8956
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Add to your next question:",
+        "emphasis": "\"Tell me where this comes from.\"",
+        "cta": "Build it to work reliably."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ask AI anything, then add: tell me where this comes from. Don't just use AI. Build it to work reliably.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep002-short/audio/outro-0-0f6fbe5020.mp3",
+          "startMs": 52580,
+          "durationMs": 7152,
+          "words": [
+            {
+              "text": "Ask",
+              "startMs": 103,
+              "endMs": 412
+            },
+            {
+              "text": "AI",
+              "startMs": 515,
+              "endMs": 889
+            },
+            {
+              "text": "anything,",
+              "startMs": 902,
+              "endMs": 1417
+            },
+            {
+              "text": "then",
+              "startMs": 1817,
+              "endMs": 1972
+            },
+            {
+              "text": "add:",
+              "startMs": 1985,
+              "endMs": 2320
+            },
+            {
+              "text": "tell",
+              "startMs": 2693,
+              "endMs": 2848
+            },
+            {
+              "text": "me",
+              "startMs": 2861,
+              "endMs": 2964
+            },
+            {
+              "text": "where",
+              "startMs": 2977,
+              "endMs": 3093
+            },
+            {
+              "text": "this",
+              "startMs": 3106,
+              "endMs": 3247
+            },
+            {
+              "text": "comes",
+              "startMs": 3260,
+              "endMs": 3518
+            },
+            {
+              "text": "from.",
+              "startMs": 3531,
+              "endMs": 3802
+            },
+            {
+              "text": "Don't",
+              "startMs": 4227,
+              "endMs": 4369
+            },
+            {
+              "text": "just",
+              "startMs": 4381,
+              "endMs": 4575
+            },
+            {
+              "text": "use",
+              "startMs": 4588,
+              "endMs": 4755
+            },
+            {
+              "text": "AI.",
+              "startMs": 4768,
+              "endMs": 5090
+            },
+            {
+              "text": "Build",
+              "startMs": 5515,
+              "endMs": 5670
+            },
+            {
+              "text": "it",
+              "startMs": 5683,
+              "endMs": 5747
+            },
+            {
+              "text": "to",
+              "startMs": 5760,
+              "endMs": 5850
+            },
+            {
+              "text": "work",
+              "startMs": 5863,
+              "endMs": 6147
+            },
+            {
+              "text": "reliably.",
+              "startMs": 6160,
+              "endMs": 6765
+            }
+          ]
+        }
+      ],
+      "index": 5,
+      "startMs": 52380,
+      "durationMs": 7732
+    }
+  ],
+  "captions": [
+    {
+      "text": "Your",
+      "startMs": 303,
+      "endMs": 380,
+      "timestampMs": 342,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 393,
+      "endMs": 870,
+      "timestampMs": 632,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 922,
+      "endMs": 1012,
+      "timestampMs": 967,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " not",
+      "startMs": 1025,
+      "endMs": 1283,
+      "timestampMs": 1154,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " looking",
+      "startMs": 1295,
+      "endMs": 1579,
+      "timestampMs": 1437,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " anything",
+      "startMs": 1592,
+      "endMs": 1965,
+      "timestampMs": 1779,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " up.",
+      "startMs": 1978,
+      "endMs": 2210,
+      "timestampMs": 2094,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 2636,
+      "endMs": 2713,
+      "timestampMs": 2675,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 2726,
+      "endMs": 2829,
+      "timestampMs": 2778,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " guessing",
+      "startMs": 2842,
+      "endMs": 3125,
+      "timestampMs": 2984,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 3138,
+      "endMs": 3203,
+      "timestampMs": 3171,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " next",
+      "startMs": 3215,
+      "endMs": 3473,
+      "timestampMs": 3344,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " word.",
+      "startMs": 3486,
+      "endMs": 3795,
+      "timestampMs": 3641,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Spray",
+      "startMs": 4862,
+      "endMs": 5207,
+      "timestampMs": 5035,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " product",
+      "startMs": 5219,
+      "endMs": 5635,
+      "timestampMs": 5427,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " X",
+      "startMs": 5659,
+      "endMs": 5862,
+      "timestampMs": 5761,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " at",
+      "startMs": 5885,
+      "endMs": 5957,
+      "timestampMs": 5921,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " dose",
+      "startMs": 5981,
+      "endMs": 6266,
+      "timestampMs": 6124,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Y",
+      "startMs": 6290,
+      "endMs": 6457,
+      "timestampMs": 6374,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " every",
+      "startMs": 6481,
+      "endMs": 6743,
+      "timestampMs": 6612,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " week.",
+      "startMs": 6766,
+      "endMs": 7112,
+      "timestampMs": 6939,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Problem",
+      "startMs": 7943,
+      "endMs": 8407,
+      "timestampMs": 8175,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " solved.",
+      "startMs": 8431,
+      "endMs": 8990,
+      "timestampMs": 8711,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " It",
+      "startMs": 10143,
+      "endMs": 10291,
+      "timestampMs": 10217,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " never",
+      "startMs": 10303,
+      "endMs": 10712,
+      "timestampMs": 10508,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " asked",
+      "startMs": 10723,
+      "endMs": 11087,
+      "timestampMs": 10905,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " where",
+      "startMs": 11098,
+      "endMs": 11268,
+      "timestampMs": 11183,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " her",
+      "startMs": 11280,
+      "endMs": 11428,
+      "timestampMs": 11354,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " farm",
+      "startMs": 11439,
+      "endMs": 11780,
+      "timestampMs": 11610,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " is,",
+      "startMs": 11791,
+      "endMs": 12098,
+      "timestampMs": 11945,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " and",
+      "startMs": 12382,
+      "endMs": 12530,
+      "timestampMs": 12456,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " it",
+      "startMs": 12541,
+      "endMs": 12643,
+      "timestampMs": 12592,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " has",
+      "startMs": 12655,
+      "endMs": 12905,
+      "timestampMs": 12780,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " no",
+      "startMs": 12916,
+      "endMs": 13132,
+      "timestampMs": 13024,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " source.",
+      "startMs": 13143,
+      "endMs": 13678,
+      "timestampMs": 13411,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Your",
+      "startMs": 15160,
+      "endMs": 15289,
+      "timestampMs": 15225,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " question",
+      "startMs": 15302,
+      "endMs": 15804,
+      "timestampMs": 15553,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " becomes",
+      "startMs": 15817,
+      "endMs": 16242,
+      "timestampMs": 16030,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tokens,",
+      "startMs": 16255,
+      "endMs": 16861,
+      "timestampMs": 16558,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 17119,
+      "endMs": 17209,
+      "timestampMs": 17164,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 17222,
+      "endMs": 17299,
+      "timestampMs": 17261,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " model",
+      "startMs": 17312,
+      "endMs": 17647,
+      "timestampMs": 17480,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " predicts",
+      "startMs": 17660,
+      "endMs": 18175,
+      "timestampMs": 17918,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 18188,
+      "endMs": 18291,
+      "timestampMs": 18240,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " next",
+      "startMs": 18304,
+      "endMs": 18691,
+      "timestampMs": 18498,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " word",
+      "startMs": 18704,
+      "endMs": 18962,
+      "timestampMs": 18833,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " from",
+      "startMs": 18974,
+      "endMs": 19142,
+      "timestampMs": 19058,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " patterns.",
+      "startMs": 19155,
+      "endMs": 19773,
+      "timestampMs": 19464,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 20479,
+      "endMs": 20556,
+      "timestampMs": 20518,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 20569,
+      "endMs": 20672,
+      "timestampMs": 20621,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " not",
+      "startMs": 20685,
+      "endMs": 20930,
+      "timestampMs": 20808,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " on",
+      "startMs": 20943,
+      "endMs": 21033,
+      "timestampMs": 20988,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 21046,
+      "endMs": 21123,
+      "timestampMs": 21085,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " internet.",
+      "startMs": 21136,
+      "endMs": 21665,
+      "timestampMs": 21401,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 22090,
+      "endMs": 22193,
+      "timestampMs": 22142,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " only",
+      "startMs": 22206,
+      "endMs": 22438,
+      "timestampMs": 22322,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " knows",
+      "startMs": 22451,
+      "endMs": 22760,
+      "timestampMs": 22606,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " what",
+      "startMs": 22773,
+      "endMs": 22915,
+      "timestampMs": 22844,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 22928,
+      "endMs": 23044,
+      "timestampMs": 22986,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 23056,
+      "endMs": 23134,
+      "timestampMs": 23095,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " its",
+      "startMs": 23147,
+      "endMs": 23263,
+      "timestampMs": 23205,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " context.",
+      "startMs": 23276,
+      "endMs": 23971,
+      "timestampMs": 23624,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " A",
+      "startMs": 24683,
+      "endMs": 24735,
+      "timestampMs": 24709,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tool",
+      "startMs": 24748,
+      "endMs": 24992,
+      "timestampMs": 24870,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 25005,
+      "endMs": 25147,
+      "timestampMs": 25076,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " fetch",
+      "startMs": 25160,
+      "endMs": 25456,
+      "timestampMs": 25308,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 25469,
+      "endMs": 25521,
+      "timestampMs": 25495,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " checked",
+      "startMs": 25534,
+      "endMs": 25882,
+      "timestampMs": 25708,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " page",
+      "startMs": 25894,
+      "endMs": 26307,
+      "timestampMs": 26101,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " into",
+      "startMs": 26320,
+      "endMs": 26487,
+      "timestampMs": 26404,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " that",
+      "startMs": 26500,
+      "endMs": 26680,
+      "timestampMs": 26590,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " context.",
+      "startMs": 26693,
+      "endMs": 27389,
+      "timestampMs": 27041,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Nothing",
+      "startMs": 27815,
+      "endMs": 28046,
+      "timestampMs": 27931,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " else",
+      "startMs": 28059,
+      "endMs": 28201,
+      "timestampMs": 28130,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " gets",
+      "startMs": 28214,
+      "endMs": 28433,
+      "timestampMs": 28324,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in.",
+      "startMs": 28446,
+      "endMs": 28639,
+      "timestampMs": 28543,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " So",
+      "startMs": 29695,
+      "endMs": 29923,
+      "timestampMs": 29809,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " the",
+      "startMs": 29934,
+      "endMs": 30048,
+      "timestampMs": 29991,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " cooperative's",
+      "startMs": 30059,
+      "endMs": 30832,
+      "timestampMs": 30446,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " assistant",
+      "startMs": 30843,
+      "endMs": 31400,
+      "timestampMs": 31122,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " asks",
+      "startMs": 31411,
+      "endMs": 31786,
+      "timestampMs": 31599,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " first,",
+      "startMs": 31798,
+      "endMs": 32241,
+      "timestampMs": 32020,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " and",
+      "startMs": 32502,
+      "endMs": 32673,
+      "timestampMs": 32588,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " answers",
+      "startMs": 32684,
+      "endMs": 33218,
+      "timestampMs": 32951,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " only",
+      "startMs": 33230,
+      "endMs": 33559,
+      "timestampMs": 33395,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " from",
+      "startMs": 33570,
+      "endMs": 33775,
+      "timestampMs": 33673,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Njume's",
+      "startMs": 33786,
+      "endMs": 34491,
+      "timestampMs": 34139,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " checked",
+      "startMs": 34502,
+      "endMs": 34820,
+      "timestampMs": 34661,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " sheet,",
+      "startMs": 34832,
+      "endMs": 35184,
+      "timestampMs": 35008,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " with",
+      "startMs": 35457,
+      "endMs": 35616,
+      "timestampMs": 35537,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " the",
+      "startMs": 35627,
+      "endMs": 35718,
+      "timestampMs": 35673,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " source.",
+      "startMs": 35730,
+      "endMs": 36252,
+      "timestampMs": 35991,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Products",
+      "startMs": 37361,
+      "endMs": 37953,
+      "timestampMs": 37657,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " and",
+      "startMs": 37967,
+      "endMs": 38111,
+      "timestampMs": 38039,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " doses?",
+      "startMs": 38124,
+      "endMs": 38901,
+      "timestampMs": 38513,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " Never",
+      "startMs": 39326,
+      "endMs": 39773,
+      "timestampMs": 39550,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " from",
+      "startMs": 39786,
+      "endMs": 40023,
+      "timestampMs": 39905,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " the",
+      "startMs": 40036,
+      "endMs": 40128,
+      "timestampMs": 40082,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " model.",
+      "startMs": 40142,
+      "endMs": 40668,
+      "timestampMs": 40405,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " Those",
+      "startMs": 41048,
+      "endMs": 41429,
+      "timestampMs": 41239,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " go",
+      "startMs": 41442,
+      "endMs": 41692,
+      "timestampMs": 41567,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " to",
+      "startMs": 41705,
+      "endMs": 41890,
+      "timestampMs": 41798,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " Njume.",
+      "startMs": 41903,
+      "endMs": 42626,
+      "timestampMs": 42265,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " Same",
+      "startMs": 43740,
+      "endMs": 44036,
+      "timestampMs": 43888,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " fix",
+      "startMs": 44049,
+      "endMs": 44397,
+      "timestampMs": 44223,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " at",
+      "startMs": 44410,
+      "endMs": 44526,
+      "timestampMs": 44468,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work:",
+      "startMs": 44539,
+      "endMs": 44874,
+      "timestampMs": 44707,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " recruiting",
+      "startMs": 45170,
+      "endMs": 45673,
+      "timestampMs": 45422,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answers",
+      "startMs": 45686,
+      "endMs": 46085,
+      "timestampMs": 45886,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " from",
+      "startMs": 46098,
+      "endMs": 46253,
+      "timestampMs": 46176,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " your",
+      "startMs": 46266,
+      "endMs": 46356,
+      "timestampMs": 46311,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " policy,",
+      "startMs": 46369,
+      "endMs": 46949,
+      "timestampMs": 46659,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " support",
+      "startMs": 47310,
+      "endMs": 47722,
+      "timestampMs": 47516,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " from",
+      "startMs": 47735,
+      "endMs": 47877,
+      "timestampMs": 47806,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 47889,
+      "endMs": 47954,
+      "timestampMs": 47922,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " manual,",
+      "startMs": 47967,
+      "endMs": 48495,
+      "timestampMs": 48231,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " logistics",
+      "startMs": 48779,
+      "endMs": 49333,
+      "timestampMs": 49056,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " from",
+      "startMs": 49346,
+      "endMs": 49526,
+      "timestampMs": 49436,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " live",
+      "startMs": 49539,
+      "endMs": 49784,
+      "timestampMs": 49662,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " data.",
+      "startMs": 49797,
+      "endMs": 50145,
+      "timestampMs": 49971,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Always",
+      "startMs": 50570,
+      "endMs": 50853,
+      "timestampMs": 50712,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " with",
+      "startMs": 50866,
+      "endMs": 50982,
+      "timestampMs": 50924,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 50995,
+      "endMs": 51085,
+      "timestampMs": 51040,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " source.",
+      "startMs": 51098,
+      "endMs": 51627,
+      "timestampMs": 51363,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Ask",
+      "startMs": 52683,
+      "endMs": 52992,
+      "timestampMs": 52838,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI",
+      "startMs": 53095,
+      "endMs": 53469,
+      "timestampMs": 53282,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " anything,",
+      "startMs": 53482,
+      "endMs": 53997,
+      "timestampMs": 53740,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " then",
+      "startMs": 54397,
+      "endMs": 54552,
+      "timestampMs": 54475,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " add:",
+      "startMs": 54565,
+      "endMs": 54900,
+      "timestampMs": 54733,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tell",
+      "startMs": 55273,
+      "endMs": 55428,
+      "timestampMs": 55351,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " me",
+      "startMs": 55441,
+      "endMs": 55544,
+      "timestampMs": 55493,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " where",
+      "startMs": 55557,
+      "endMs": 55673,
+      "timestampMs": 55615,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " this",
+      "startMs": 55686,
+      "endMs": 55827,
+      "timestampMs": 55757,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " comes",
+      "startMs": 55840,
+      "endMs": 56098,
+      "timestampMs": 55969,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " from.",
+      "startMs": 56111,
+      "endMs": 56382,
+      "timestampMs": 56247,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Don't",
+      "startMs": 56807,
+      "endMs": 56949,
+      "timestampMs": 56878,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " just",
+      "startMs": 56961,
+      "endMs": 57155,
+      "timestampMs": 57058,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " use",
+      "startMs": 57168,
+      "endMs": 57335,
+      "timestampMs": 57252,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 57348,
+      "endMs": 57670,
+      "timestampMs": 57509,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Build",
+      "startMs": 58095,
+      "endMs": 58250,
+      "timestampMs": 58173,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 58263,
+      "endMs": 58327,
+      "timestampMs": 58295,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 58340,
+      "endMs": 58430,
+      "timestampMs": 58385,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work",
+      "startMs": 58443,
+      "endMs": 58727,
+      "timestampMs": 58585,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reliably.",
+      "startMs": 58740,
+      "endMs": 59345,
+      "timestampMs": 59043,
+      "confidence": null,
+      "speaker": "tanyi"
+    }
+  ],
+  "characters": {
+    "tanyi": {
+      "name": "Tanyi",
+      "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+      "voice": "en-US-AndrewNeural",
+      "rate": 0.97,
+      "pitch": "+0Hz",
+      "color": "#F5B700",
+      "kind": "human",
+      "look": {
+        "skin": "#6B3F1D",
+        "hair": "#2B2B2B",
+        "hairGrey": "#8A8A8A",
+        "shirt": "#2563EB",
+        "glasses": true,
+        "beard": true,
+        "height": 1
+      },
+      "captionColor": "#B45309",
+      "engine": "edge",
+      "id": "tanyi",
+      "files": []
+    },
+    "amara": {
+      "name": "Amara",
+      "role": "Curious learner who asks the questions beginners are thinking.",
+      "voice": "en-ZA-LeahNeural",
+      "rate": 1.05,
+      "pitch": "+10Hz",
+      "color": "#2DD4BF",
+      "kind": "human",
+      "look": {
+        "skin": "#8D5524",
+        "hair": "#1A1A1A",
+        "hairGrey": null,
+        "shirt": "#F97316",
+        "glasses": false,
+        "beard": false,
+        "height": 0.92
+      },
+      "captionColor": "#0D9488",
+      "id": "amara",
+      "files": []
+    },
+    "kito": {
+      "name": "Kito",
+      "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+      "voice": "en-US-AnaNeural",
+      "rate": 1.1,
+      "pitch": "+15Hz",
+      "color": "#60A5FA",
+      "kind": "robot",
+      "captionColor": "#2563EB",
+      "id": "kito",
+      "files": []
+    },
+    "hallucinator": {
+      "name": "The Hallucinator",
+      "role": "Mischievous. Represents confident but incorrect AI output.",
+      "voice": "en-US-GuyNeural",
+      "rate": 1.05,
+      "pitch": "-20Hz",
+      "color": "#C084FC",
+      "kind": "wisp",
+      "captionColor": "#7C3AED",
+      "id": "hallucinator",
+      "files": []
+    },
+    "gatekeeper": {
+      "name": "The Gatekeeper",
+      "role": "Represents security, privacy, governance and human approval.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": 0.95,
+      "pitch": "-5Hz",
+      "color": "#F87171",
+      "kind": "shield",
+      "captionColor": "#E11D48",
+      "id": "gatekeeper",
+      "files": []
+    }
+  }
+}

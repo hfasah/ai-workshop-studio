@@ -1,0 +1,1782 @@
+{
+  "id": "ep003",
+  "fps": 30,
+  "builtAt": "2026-09-04T18:36:26.721Z",
+  "episode": {
+    "id": "ep003",
+    "series": "AI With Hippolyte",
+    "tagline": "Complex AI. Explained visually. Built practically.",
+    "episode": 3,
+    "title": "API or MCP: How an AI Tutor Reaches the School's Lessons",
+    "disclosure": "Fictional teaching scenario based on researched conditions",
+    "background": "workshop",
+    "cuts": [
+      {
+        "id": "short1",
+        "targetSec": 45,
+        "scenes": [
+          "hook",
+          "api-vs-mcp",
+          "outro"
+        ]
+      }
+    ]
+  },
+  "totalMs": 49120,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "40 exercises to mark. Every evening.",
+        "emphasis": "Can an AI tutor follow the teacher's lessons, not the whole internet?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mrs Wanjiru teaches Kiswahili at a secondary school in Nairobi. Every evening she marks forty exercises by hand.",
+          "expression": "neutral",
+          "gesture": "explain",
+          "audio": "episodes/ep003/audio/hook-0-f5edfa9588.mp3",
+          "startMs": 400,
+          "durationMs": 8208,
+          "words": [
+            {
+              "text": "Mrs",
+              "startMs": 103,
+              "endMs": 399
+            },
+            {
+              "text": "Wanjiru",
+              "startMs": 412,
+              "endMs": 954
+            },
+            {
+              "text": "teaches",
+              "startMs": 967,
+              "endMs": 1366
+            },
+            {
+              "text": "Kiswahili",
+              "startMs": 1379,
+              "endMs": 2152
+            },
+            {
+              "text": "at",
+              "startMs": 2165,
+              "endMs": 2242
+            },
+            {
+              "text": "a",
+              "startMs": 2255,
+              "endMs": 2294
+            },
+            {
+              "text": "secondary",
+              "startMs": 2307,
+              "endMs": 2887
+            },
+            {
+              "text": "school",
+              "startMs": 2900,
+              "endMs": 3260
+            },
+            {
+              "text": "in",
+              "startMs": 3467,
+              "endMs": 3557
+            },
+            {
+              "text": "Nairobi.",
+              "startMs": 3570,
+              "endMs": 4137
+            },
+            {
+              "text": "Every",
+              "startMs": 4562,
+              "endMs": 4884
+            },
+            {
+              "text": "evening",
+              "startMs": 4897,
+              "endMs": 5309
+            },
+            {
+              "text": "she",
+              "startMs": 5541,
+              "endMs": 5696
+            },
+            {
+              "text": "marks",
+              "startMs": 5709,
+              "endMs": 6070
+            },
+            {
+              "text": "forty",
+              "startMs": 6082,
+              "endMs": 6533
+            },
+            {
+              "text": "exercises",
+              "startMs": 6546,
+              "endMs": 7242
+            },
+            {
+              "text": "by",
+              "startMs": 7255,
+              "endMs": 7410
+            },
+            {
+              "text": "hand.",
+              "startMs": 7423,
+              "endMs": 7835
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "She wants an AI tutor that follows her lessons, not the whole internet.",
+          "expression": "confident",
+          "gesture": "point_left",
+          "audio": "episodes/ep003/audio/hook-1-2913cc87e8.mp3",
+          "startMs": 8958,
+          "durationMs": 4368,
+          "words": [
+            {
+              "text": "She",
+              "startMs": 116,
+              "endMs": 258
+            },
+            {
+              "text": "wants",
+              "startMs": 271,
+              "endMs": 528
+            },
+            {
+              "text": "an",
+              "startMs": 541,
+              "endMs": 657
+            },
+            {
+              "text": "AI",
+              "startMs": 670,
+              "endMs": 992
+            },
+            {
+              "text": "tutor",
+              "startMs": 1005,
+              "endMs": 1392
+            },
+            {
+              "text": "that",
+              "startMs": 1405,
+              "endMs": 1546
+            },
+            {
+              "text": "follows",
+              "startMs": 1559,
+              "endMs": 1959
+            },
+            {
+              "text": "her",
+              "startMs": 1972,
+              "endMs": 2088
+            },
+            {
+              "text": "lessons,",
+              "startMs": 2101,
+              "endMs": 2668
+            },
+            {
+              "text": "not",
+              "startMs": 2964,
+              "endMs": 3157
+            },
+            {
+              "text": "the",
+              "startMs": 3170,
+              "endMs": 3247
+            },
+            {
+              "text": "whole",
+              "startMs": 3260,
+              "endMs": 3479
+            },
+            {
+              "text": "internet.",
+              "startMs": 3492,
+              "endMs": 3995
+            }
+          ]
+        }
+      ],
+      "index": 0,
+      "startMs": 0,
+      "durationMs": 14026
+    },
+    {
+      "id": "api-vs-mcp",
+      "type": "compare",
+      "label": "Decide",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "API",
+          "items": [
+            "One door into one service",
+            "Fixed requests, written by a developer",
+            "The program must know them in advance",
+            "Built for programs"
+          ]
+        },
+        "right": {
+          "title": "MCP (Model Context Protocol)",
+          "items": [
+            "One open standard for AI tools",
+            "Tools describe themselves in plain language",
+            "The AI reads, chooses, asks permission",
+            "Sits on top of the API"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The notes live in the school's lesson folder. Software reaches it through an API: the service's own counter, with its own form. A developer fills the form in code, and the program repeats it exactly.",
+          "expression": "neutral",
+          "gesture": "point_left",
+          "audio": "episodes/ep003/audio/api-vs-mcp-0-0db1a17aca.mp3",
+          "startMs": 14426,
+          "durationMs": 12648,
+          "words": [
+            {
+              "text": "The",
+              "startMs": 116,
+              "endMs": 168
+            },
+            {
+              "text": "notes",
+              "startMs": 180,
+              "endMs": 477
+            },
+            {
+              "text": "live",
+              "startMs": 490,
+              "endMs": 812
+            },
+            {
+              "text": "in",
+              "startMs": 825,
+              "endMs": 902
+            },
+            {
+              "text": "the",
+              "startMs": 915,
+              "endMs": 1005
+            },
+            {
+              "text": "school's",
+              "startMs": 1018,
+              "endMs": 1443
+            },
+            {
+              "text": "lesson",
+              "startMs": 1456,
+              "endMs": 1765
+            },
+            {
+              "text": "folder.",
+              "startMs": 1778,
+              "endMs": 2216
+            },
+            {
+              "text": "Software",
+              "startMs": 2655,
+              "endMs": 3144
+            },
+            {
+              "text": "reaches",
+              "startMs": 3157,
+              "endMs": 3518
+            },
+            {
+              "text": "it",
+              "startMs": 3531,
+              "endMs": 3660
+            },
+            {
+              "text": "through",
+              "startMs": 3724,
+              "endMs": 3969
+            },
+            {
+              "text": "an",
+              "startMs": 3982,
+              "endMs": 4098
+            },
+            {
+              "text": "API:",
+              "startMs": 4240,
+              "endMs": 4820
+            },
+            {
+              "text": "the",
+              "startMs": 5245,
+              "endMs": 5322
+            },
+            {
+              "text": "service's",
+              "startMs": 5335,
+              "endMs": 5902
+            },
+            {
+              "text": "own",
+              "startMs": 5915,
+              "endMs": 6108
+            },
+            {
+              "text": "counter,",
+              "startMs": 6121,
+              "endMs": 6585
+            },
+            {
+              "text": "with",
+              "startMs": 6869,
+              "endMs": 7010
+            },
+            {
+              "text": "its",
+              "startMs": 7023,
+              "endMs": 7152
+            },
+            {
+              "text": "own",
+              "startMs": 7165,
+              "endMs": 7307
+            },
+            {
+              "text": "form.",
+              "startMs": 7320,
+              "endMs": 7706
+            },
+            {
+              "text": "A",
+              "startMs": 8131,
+              "endMs": 8183
+            },
+            {
+              "text": "developer",
+              "startMs": 8196,
+              "endMs": 8737
+            },
+            {
+              "text": "fills",
+              "startMs": 8750,
+              "endMs": 9085
+            },
+            {
+              "text": "the",
+              "startMs": 9098,
+              "endMs": 9201
+            },
+            {
+              "text": "form",
+              "startMs": 9214,
+              "endMs": 9549
+            },
+            {
+              "text": "in",
+              "startMs": 9562,
+              "endMs": 9665
+            },
+            {
+              "text": "code,",
+              "startMs": 9678,
+              "endMs": 10103
+            },
+            {
+              "text": "and",
+              "startMs": 10425,
+              "endMs": 10477
+            },
+            {
+              "text": "the",
+              "startMs": 10490,
+              "endMs": 10567
+            },
+            {
+              "text": "program",
+              "startMs": 10580,
+              "endMs": 11057
+            },
+            {
+              "text": "repeats",
+              "startMs": 11070,
+              "endMs": 11572
+            },
+            {
+              "text": "it",
+              "startMs": 11585,
+              "endMs": 11649
+            },
+            {
+              "text": "exactly.",
+              "startMs": 11662,
+              "endMs": 12255
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "MCP, the Model Context Protocol, is an open standard for AI. The service describes its tools in plain language. The AI reads them, picks one, and asks permission. It does not replace the API. It sits on top.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep003/audio/api-vs-mcp-1-fb036c03a4.mp3",
+          "startMs": 27424,
+          "durationMs": 15240,
+          "words": [
+            {
+              "text": "MCP,",
+              "startMs": 103,
+              "endMs": 838
+            },
+            {
+              "text": "the",
+              "startMs": 1134,
+              "endMs": 1224
+            },
+            {
+              "text": "Model",
+              "startMs": 1237,
+              "endMs": 1559
+            },
+            {
+              "text": "Context",
+              "startMs": 1572,
+              "endMs": 2088
+            },
+            {
+              "text": "Protocol,",
+              "startMs": 2101,
+              "endMs": 2655
+            },
+            {
+              "text": "is",
+              "startMs": 2964,
+              "endMs": 3041
+            },
+            {
+              "text": "an",
+              "startMs": 3054,
+              "endMs": 3170
+            },
+            {
+              "text": "open",
+              "startMs": 3273,
+              "endMs": 3570
+            },
+            {
+              "text": "standard",
+              "startMs": 3582,
+              "endMs": 4033
+            },
+            {
+              "text": "for",
+              "startMs": 4046,
+              "endMs": 4227
+            },
+            {
+              "text": "AI.",
+              "startMs": 4240,
+              "endMs": 4678
+            },
+            {
+              "text": "The",
+              "startMs": 5116,
+              "endMs": 5167
+            },
+            {
+              "text": "service",
+              "startMs": 5180,
+              "endMs": 5606
+            },
+            {
+              "text": "describes",
+              "startMs": 5619,
+              "endMs": 6198
+            },
+            {
+              "text": "its",
+              "startMs": 6211,
+              "endMs": 6353
+            },
+            {
+              "text": "tools",
+              "startMs": 6366,
+              "endMs": 6869
+            },
+            {
+              "text": "in",
+              "startMs": 6881,
+              "endMs": 6972
+            },
+            {
+              "text": "plain",
+              "startMs": 6985,
+              "endMs": 7332
+            },
+            {
+              "text": "language.",
+              "startMs": 7345,
+              "endMs": 7938
+            },
+            {
+              "text": "The",
+              "startMs": 8363,
+              "endMs": 8454
+            },
+            {
+              "text": "AI",
+              "startMs": 8467,
+              "endMs": 8905
+            },
+            {
+              "text": "reads",
+              "startMs": 8918,
+              "endMs": 9291
+            },
+            {
+              "text": "them,",
+              "startMs": 9304,
+              "endMs": 9536
+            },
+            {
+              "text": "picks",
+              "startMs": 9897,
+              "endMs": 10155
+            },
+            {
+              "text": "one,",
+              "startMs": 10168,
+              "endMs": 10490
+            },
+            {
+              "text": "and",
+              "startMs": 10812,
+              "endMs": 10915
+            },
+            {
+              "text": "asks",
+              "startMs": 10928,
+              "endMs": 11186
+            },
+            {
+              "text": "permission.",
+              "startMs": 11198,
+              "endMs": 11675
+            },
+            {
+              "text": "It",
+              "startMs": 12101,
+              "endMs": 12165
+            },
+            {
+              "text": "does",
+              "startMs": 12178,
+              "endMs": 12307
+            },
+            {
+              "text": "not",
+              "startMs": 12320,
+              "endMs": 12513
+            },
+            {
+              "text": "replace",
+              "startMs": 12526,
+              "endMs": 12951
+            },
+            {
+              "text": "the",
+              "startMs": 12964,
+              "endMs": 13067
+            },
+            {
+              "text": "API.",
+              "startMs": 13080,
+              "endMs": 13634
+            },
+            {
+              "text": "It",
+              "startMs": 14072,
+              "endMs": 14149
+            },
+            {
+              "text": "sits",
+              "startMs": 14162,
+              "endMs": 14369
+            },
+            {
+              "text": "on",
+              "startMs": 14381,
+              "endMs": 14497
+            },
+            {
+              "text": "top.",
+              "startMs": 14510,
+              "endMs": 14845
+            }
+          ]
+        }
+      ],
+      "index": 1,
+      "startMs": 14026,
+      "durationMs": 29338
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next episode: From Chatbot to AI Agent"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. See you in the next episode.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep003/audio/outro-0-01bade4c1b.mp3",
+          "startMs": 43764,
+          "durationMs": 4656,
+          "words": [
+            {
+              "text": "Don't",
+              "startMs": 103,
+              "endMs": 245
+            },
+            {
+              "text": "just",
+              "startMs": 258,
+              "endMs": 451
+            },
+            {
+              "text": "use",
+              "startMs": 464,
+              "endMs": 631
+            },
+            {
+              "text": "AI.",
+              "startMs": 644,
+              "endMs": 966
+            },
+            {
+              "text": "Build",
+              "startMs": 1392,
+              "endMs": 1546
+            },
+            {
+              "text": "it",
+              "startMs": 1559,
+              "endMs": 1624
+            },
+            {
+              "text": "to",
+              "startMs": 1637,
+              "endMs": 1727
+            },
+            {
+              "text": "work",
+              "startMs": 1740,
+              "endMs": 2023
+            },
+            {
+              "text": "reliably.",
+              "startMs": 2036,
+              "endMs": 2642
+            },
+            {
+              "text": "See",
+              "startMs": 3080,
+              "endMs": 3247
+            },
+            {
+              "text": "you",
+              "startMs": 3260,
+              "endMs": 3363
+            },
+            {
+              "text": "in",
+              "startMs": 3376,
+              "endMs": 3441
+            },
+            {
+              "text": "the",
+              "startMs": 3454,
+              "endMs": 3518
+            },
+            {
+              "text": "next",
+              "startMs": 3531,
+              "endMs": 3802
+            },
+            {
+              "text": "episode.",
+              "startMs": 3814,
+              "endMs": 4265
+            }
+          ]
+        }
+      ],
+      "index": 2,
+      "startMs": 43364,
+      "durationMs": 5756
+    }
+  ],
+  "captions": [
+    {
+      "text": "Mrs",
+      "startMs": 503,
+      "endMs": 799,
+      "timestampMs": 651,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Wanjiru",
+      "startMs": 812,
+      "endMs": 1354,
+      "timestampMs": 1083,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " teaches",
+      "startMs": 1367,
+      "endMs": 1766,
+      "timestampMs": 1567,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Kiswahili",
+      "startMs": 1779,
+      "endMs": 2552,
+      "timestampMs": 2166,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " at",
+      "startMs": 2565,
+      "endMs": 2642,
+      "timestampMs": 2604,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 2655,
+      "endMs": 2694,
+      "timestampMs": 2675,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " secondary",
+      "startMs": 2707,
+      "endMs": 3287,
+      "timestampMs": 2997,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " school",
+      "startMs": 3300,
+      "endMs": 3660,
+      "timestampMs": 3480,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 3867,
+      "endMs": 3957,
+      "timestampMs": 3912,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Nairobi.",
+      "startMs": 3970,
+      "endMs": 4537,
+      "timestampMs": 4254,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Every",
+      "startMs": 4962,
+      "endMs": 5284,
+      "timestampMs": 5123,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " evening",
+      "startMs": 5297,
+      "endMs": 5709,
+      "timestampMs": 5503,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " she",
+      "startMs": 5941,
+      "endMs": 6096,
+      "timestampMs": 6019,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " marks",
+      "startMs": 6109,
+      "endMs": 6470,
+      "timestampMs": 6290,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " forty",
+      "startMs": 6482,
+      "endMs": 6933,
+      "timestampMs": 6708,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " exercises",
+      "startMs": 6946,
+      "endMs": 7642,
+      "timestampMs": 7294,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " by",
+      "startMs": 7655,
+      "endMs": 7810,
+      "timestampMs": 7733,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " hand.",
+      "startMs": 7823,
+      "endMs": 8235,
+      "timestampMs": 8029,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " She",
+      "startMs": 9074,
+      "endMs": 9216,
+      "timestampMs": 9145,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " wants",
+      "startMs": 9229,
+      "endMs": 9486,
+      "timestampMs": 9358,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " an",
+      "startMs": 9499,
+      "endMs": 9615,
+      "timestampMs": 9557,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI",
+      "startMs": 9628,
+      "endMs": 9950,
+      "timestampMs": 9789,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tutor",
+      "startMs": 9963,
+      "endMs": 10350,
+      "timestampMs": 10157,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " that",
+      "startMs": 10363,
+      "endMs": 10504,
+      "timestampMs": 10434,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " follows",
+      "startMs": 10517,
+      "endMs": 10917,
+      "timestampMs": 10717,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " her",
+      "startMs": 10930,
+      "endMs": 11046,
+      "timestampMs": 10988,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " lessons,",
+      "startMs": 11059,
+      "endMs": 11626,
+      "timestampMs": 11343,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " not",
+      "startMs": 11922,
+      "endMs": 12115,
+      "timestampMs": 12019,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 12128,
+      "endMs": 12205,
+      "timestampMs": 12167,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " whole",
+      "startMs": 12218,
+      "endMs": 12437,
+      "timestampMs": 12328,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " internet.",
+      "startMs": 12450,
+      "endMs": 12953,
+      "timestampMs": 12702,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " The",
+      "startMs": 14542,
+      "endMs": 14594,
+      "timestampMs": 14568,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " notes",
+      "startMs": 14606,
+      "endMs": 14903,
+      "timestampMs": 14755,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " live",
+      "startMs": 14916,
+      "endMs": 15238,
+      "timestampMs": 15077,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 15251,
+      "endMs": 15328,
+      "timestampMs": 15290,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 15341,
+      "endMs": 15431,
+      "timestampMs": 15386,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " school's",
+      "startMs": 15444,
+      "endMs": 15869,
+      "timestampMs": 15657,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " lesson",
+      "startMs": 15882,
+      "endMs": 16191,
+      "timestampMs": 16037,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " folder.",
+      "startMs": 16204,
+      "endMs": 16642,
+      "timestampMs": 16423,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Software",
+      "startMs": 17081,
+      "endMs": 17570,
+      "timestampMs": 17326,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reaches",
+      "startMs": 17583,
+      "endMs": 17944,
+      "timestampMs": 17764,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 17957,
+      "endMs": 18086,
+      "timestampMs": 18022,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " through",
+      "startMs": 18150,
+      "endMs": 18395,
+      "timestampMs": 18273,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " an",
+      "startMs": 18408,
+      "endMs": 18524,
+      "timestampMs": 18466,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " API:",
+      "startMs": 18666,
+      "endMs": 19246,
+      "timestampMs": 18956,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 19671,
+      "endMs": 19748,
+      "timestampMs": 19710,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " service's",
+      "startMs": 19761,
+      "endMs": 20328,
+      "timestampMs": 20045,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " own",
+      "startMs": 20341,
+      "endMs": 20534,
+      "timestampMs": 20438,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " counter,",
+      "startMs": 20547,
+      "endMs": 21011,
+      "timestampMs": 20779,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " with",
+      "startMs": 21295,
+      "endMs": 21436,
+      "timestampMs": 21366,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " its",
+      "startMs": 21449,
+      "endMs": 21578,
+      "timestampMs": 21514,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " own",
+      "startMs": 21591,
+      "endMs": 21733,
+      "timestampMs": 21662,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " form.",
+      "startMs": 21746,
+      "endMs": 22132,
+      "timestampMs": 21939,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " A",
+      "startMs": 22557,
+      "endMs": 22609,
+      "timestampMs": 22583,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " developer",
+      "startMs": 22622,
+      "endMs": 23163,
+      "timestampMs": 22893,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " fills",
+      "startMs": 23176,
+      "endMs": 23511,
+      "timestampMs": 23344,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 23524,
+      "endMs": 23627,
+      "timestampMs": 23576,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " form",
+      "startMs": 23640,
+      "endMs": 23975,
+      "timestampMs": 23808,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 23988,
+      "endMs": 24091,
+      "timestampMs": 24040,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " code,",
+      "startMs": 24104,
+      "endMs": 24529,
+      "timestampMs": 24317,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 24851,
+      "endMs": 24903,
+      "timestampMs": 24877,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 24916,
+      "endMs": 24993,
+      "timestampMs": 24955,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " program",
+      "startMs": 25006,
+      "endMs": 25483,
+      "timestampMs": 25245,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " repeats",
+      "startMs": 25496,
+      "endMs": 25998,
+      "timestampMs": 25747,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 26011,
+      "endMs": 26075,
+      "timestampMs": 26043,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " exactly.",
+      "startMs": 26088,
+      "endMs": 26681,
+      "timestampMs": 26385,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " MCP,",
+      "startMs": 27527,
+      "endMs": 28262,
+      "timestampMs": 27895,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 28558,
+      "endMs": 28648,
+      "timestampMs": 28603,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Model",
+      "startMs": 28661,
+      "endMs": 28983,
+      "timestampMs": 28822,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Context",
+      "startMs": 28996,
+      "endMs": 29512,
+      "timestampMs": 29254,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Protocol,",
+      "startMs": 29525,
+      "endMs": 30079,
+      "timestampMs": 29802,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 30388,
+      "endMs": 30465,
+      "timestampMs": 30427,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " an",
+      "startMs": 30478,
+      "endMs": 30594,
+      "timestampMs": 30536,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " open",
+      "startMs": 30697,
+      "endMs": 30994,
+      "timestampMs": 30846,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " standard",
+      "startMs": 31006,
+      "endMs": 31457,
+      "timestampMs": 31232,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " for",
+      "startMs": 31470,
+      "endMs": 31651,
+      "timestampMs": 31561,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 31664,
+      "endMs": 32102,
+      "timestampMs": 31883,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " The",
+      "startMs": 32540,
+      "endMs": 32591,
+      "timestampMs": 32566,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " service",
+      "startMs": 32604,
+      "endMs": 33030,
+      "timestampMs": 32817,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " describes",
+      "startMs": 33043,
+      "endMs": 33622,
+      "timestampMs": 33333,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " its",
+      "startMs": 33635,
+      "endMs": 33777,
+      "timestampMs": 33706,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tools",
+      "startMs": 33790,
+      "endMs": 34293,
+      "timestampMs": 34042,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 34305,
+      "endMs": 34396,
+      "timestampMs": 34351,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " plain",
+      "startMs": 34409,
+      "endMs": 34756,
+      "timestampMs": 34583,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " language.",
+      "startMs": 34769,
+      "endMs": 35362,
+      "timestampMs": 35066,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " The",
+      "startMs": 35787,
+      "endMs": 35878,
+      "timestampMs": 35833,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI",
+      "startMs": 35891,
+      "endMs": 36329,
+      "timestampMs": 36110,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reads",
+      "startMs": 36342,
+      "endMs": 36715,
+      "timestampMs": 36529,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " them,",
+      "startMs": 36728,
+      "endMs": 36960,
+      "timestampMs": 36844,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " picks",
+      "startMs": 37321,
+      "endMs": 37579,
+      "timestampMs": 37450,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " one,",
+      "startMs": 37592,
+      "endMs": 37914,
+      "timestampMs": 37753,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 38236,
+      "endMs": 38339,
+      "timestampMs": 38288,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " asks",
+      "startMs": 38352,
+      "endMs": 38610,
+      "timestampMs": 38481,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " permission.",
+      "startMs": 38622,
+      "endMs": 39099,
+      "timestampMs": 38861,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 39525,
+      "endMs": 39589,
+      "timestampMs": 39557,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " does",
+      "startMs": 39602,
+      "endMs": 39731,
+      "timestampMs": 39667,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " not",
+      "startMs": 39744,
+      "endMs": 39937,
+      "timestampMs": 39841,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " replace",
+      "startMs": 39950,
+      "endMs": 40375,
+      "timestampMs": 40163,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 40388,
+      "endMs": 40491,
+      "timestampMs": 40440,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " API.",
+      "startMs": 40504,
+      "endMs": 41058,
+      "timestampMs": 40781,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 41496,
+      "endMs": 41573,
+      "timestampMs": 41535,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " sits",
+      "startMs": 41586,
+      "endMs": 41793,
+      "timestampMs": 41690,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " on",
+      "startMs": 41805,
+      "endMs": 41921,
+      "timestampMs": 41863,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " top.",
+      "startMs": 41934,
+      "endMs": 42269,
+      "timestampMs": 42102,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Don't",
+      "startMs": 43867,
+      "endMs": 44009,
+      "timestampMs": 43938,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " just",
+      "startMs": 44022,
+      "endMs": 44215,
+      "timestampMs": 44119,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " use",
+      "startMs": 44228,
+      "endMs": 44395,
+      "timestampMs": 44312,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 44408,
+      "endMs": 44730,
+      "timestampMs": 44569,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Build",
+      "startMs": 45156,
+      "endMs": 45310,
+      "timestampMs": 45233,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 45323,
+      "endMs": 45388,
+      "timestampMs": 45356,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 45401,
+      "endMs": 45491,
+      "timestampMs": 45446,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work",
+      "startMs": 45504,
+      "endMs": 45787,
+      "timestampMs": 45646,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reliably.",
+      "startMs": 45800,
+      "endMs": 46406,
+      "timestampMs": 46103,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " See",
+      "startMs": 46844,
+      "endMs": 47011,
+      "timestampMs": 46928,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " you",
+      "startMs": 47024,
+      "endMs": 47127,
+      "timestampMs": 47076,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 47140,
+      "endMs": 47205,
+      "timestampMs": 47173,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 47218,
+      "endMs": 47282,
+      "timestampMs": 47250,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " next",
+      "startMs": 47295,
+      "endMs": 47566,
+      "timestampMs": 47431,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " episode.",
+      "startMs": 47578,
+      "endMs": 48029,
+      "timestampMs": 47804,
+      "confidence": null,
+      "speaker": "tanyi"
+    }
+  ],
+  "characters": {
+    "tanyi": {
+      "name": "Tanyi",
+      "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+      "voice": "en-US-AndrewNeural",
+      "rate": 0.97,
+      "pitch": "+0Hz",
+      "color": "#F5B700",
+      "kind": "human",
+      "look": {
+        "skin": "#6B3F1D",
+        "hair": "#2B2B2B",
+        "hairGrey": "#8A8A8A",
+        "shirt": "#2563EB",
+        "glasses": true,
+        "beard": true,
+        "height": 1
+      },
+      "captionColor": "#B45309",
+      "engine": "edge",
+      "id": "tanyi",
+      "files": []
+    },
+    "amara": {
+      "name": "Amara",
+      "role": "Curious learner who asks the questions beginners are thinking.",
+      "voice": "en-ZA-LeahNeural",
+      "rate": 1.05,
+      "pitch": "+10Hz",
+      "color": "#2DD4BF",
+      "kind": "human",
+      "look": {
+        "skin": "#8D5524",
+        "hair": "#1A1A1A",
+        "hairGrey": null,
+        "shirt": "#F97316",
+        "glasses": false,
+        "beard": false,
+        "height": 0.92
+      },
+      "captionColor": "#0D9488",
+      "id": "amara",
+      "files": []
+    },
+    "kito": {
+      "name": "Kito",
+      "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+      "voice": "en-US-AnaNeural",
+      "rate": 1.1,
+      "pitch": "+15Hz",
+      "color": "#60A5FA",
+      "kind": "robot",
+      "captionColor": "#2563EB",
+      "id": "kito",
+      "files": []
+    },
+    "hallucinator": {
+      "name": "The Hallucinator",
+      "role": "Mischievous. Represents confident but incorrect AI output.",
+      "voice": "en-US-GuyNeural",
+      "rate": 1.05,
+      "pitch": "-20Hz",
+      "color": "#C084FC",
+      "kind": "wisp",
+      "captionColor": "#7C3AED",
+      "id": "hallucinator",
+      "files": []
+    },
+    "gatekeeper": {
+      "name": "The Gatekeeper",
+      "role": "Represents security, privacy, governance and human approval.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": 0.95,
+      "pitch": "-5Hz",
+      "color": "#F87171",
+      "kind": "shield",
+      "captionColor": "#E11D48",
+      "id": "gatekeeper",
+      "files": []
+    }
+  },
+  "cut": "short1"
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Animation Quality Editor"
+  short_description: "Review animated episodes before release"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-animation-quality-editor to perform a release review of this AI With Hippolyte episode."

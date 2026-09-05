@@ -1,0 +1,1621 @@
+{
+  "id": "ep002",
+  "fps": 30,
+  "builtAt": "2026-09-05T00:42:28.936Z",
+  "episode": {
+    "id": "ep002",
+    "series": "AI With Hippolyte",
+    "tagline": "Complex AI. Explained visually. Built practically.",
+    "episode": 2,
+    "title": "What Really Happens When You Ask AI a Question?",
+    "disclosure": "Fictional teaching scenario based on researched conditions in Cameroon's South-West cocoa region",
+    "background": "workshop",
+    "cuts": [
+      {
+        "id": "short1",
+        "targetSec": 45,
+        "scenes": [
+          "hook",
+          "constraint-fix",
+          "outro"
+        ]
+      }
+    ]
+  },
+  "totalMs": 46950,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Brown cocoa pods near Kumba. The chatbot: “Spray product X at dose Y.”",
+        "emphasis": "No question about her farm. No source."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ebot grows cocoa near Kumba, in Cameroon's South-West. After heavy rains, her pods turn brown.",
+          "expression": "serious",
+          "gesture": "explain",
+          "audio": "episodes/ep002/audio/hook-0-9d5bbab025.mp3",
+          "startMs": 400,
+          "durationMs": 7224,
+          "words": [
+            {
+              "text": "Ebot",
+              "startMs": 103,
+              "endMs": 412
+            },
+            {
+              "text": "grows",
+              "startMs": 425,
+              "endMs": 747
+            },
+            {
+              "text": "cocoa",
+              "startMs": 760,
+              "endMs": 1211
+            },
+            {
+              "text": "near",
+              "startMs": 1224,
+              "endMs": 1495
+            },
+            {
+              "text": "Kumba,",
+              "startMs": 1508,
+              "endMs": 2088
+            },
+            {
+              "text": "in",
+              "startMs": 2410,
+              "endMs": 2539
+            },
+            {
+              "text": "Cameroon's",
+              "startMs": 2552,
+              "endMs": 3093
+            },
+            {
+              "text": "South-West.",
+              "startMs": 3106,
+              "endMs": 3879
+            },
+            {
+              "text": "After",
+              "startMs": 4304,
+              "endMs": 4601
+            },
+            {
+              "text": "heavy",
+              "startMs": 4613,
+              "endMs": 4884
+            },
+            {
+              "text": "rains,",
+              "startMs": 4897,
+              "endMs": 5412
+            },
+            {
+              "text": "her",
+              "startMs": 5606,
+              "endMs": 5722
+            },
+            {
+              "text": "pods",
+              "startMs": 5735,
+              "endMs": 6211
+            },
+            {
+              "text": "turn",
+              "startMs": 6224,
+              "endMs": 6456
+            },
+            {
+              "text": "brown.",
+              "startMs": 6469,
+              "endMs": 6843
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot on her phone answers: spray product X at dose Y. Nobody asked where her farm is.",
+          "expression": "surprised",
+          "gesture": "warning",
+          "audio": "episodes/ep002/audio/hook-1-6bba45da38.mp3",
+          "startMs": 7974,
+          "durationMs": 6600,
+          "words": [
+            {
+              "text": "A",
+              "startMs": 103,
+              "endMs": 155
+            },
+            {
+              "text": "chatbot",
+              "startMs": 168,
+              "endMs": 670
+            },
+            {
+              "text": "on",
+              "startMs": 683,
+              "endMs": 773
+            },
+            {
+              "text": "her",
+              "startMs": 786,
+              "endMs": 902
+            },
+            {
+              "text": "phone",
+              "startMs": 915,
+              "endMs": 1186
+            },
+            {
+              "text": "answers:",
+              "startMs": 1198,
+              "endMs": 1727
+            },
+            {
+              "text": "spray",
+              "startMs": 2113,
+              "endMs": 2436
+            },
+            {
+              "text": "product",
+              "startMs": 2448,
+              "endMs": 2887
+            },
+            {
+              "text": "X",
+              "startMs": 2900,
+              "endMs": 3196
+            },
+            {
+              "text": "at",
+              "startMs": 3402,
+              "endMs": 3582
+            },
+            {
+              "text": "dose",
+              "startMs": 3595,
+              "endMs": 3892
+            },
+            {
+              "text": "Y.",
+              "startMs": 3905,
+              "endMs": 4201
+            },
+            {
+              "text": "Nobody",
+              "startMs": 4626,
+              "endMs": 5000
+            },
+            {
+              "text": "asked",
+              "startMs": 5013,
+              "endMs": 5296
+            },
+            {
+              "text": "where",
+              "startMs": 5309,
+              "endMs": 5412
+            },
+            {
+              "text": "her",
+              "startMs": 5425,
+              "endMs": 5541
+            },
+            {
+              "text": "farm",
+              "startMs": 5554,
+              "endMs": 5902
+            },
+            {
+              "text": "is.",
+              "startMs": 5915,
+              "endMs": 6198
+            }
+          ]
+        }
+      ],
+      "index": 0,
+      "startMs": 0,
+      "durationMs": 15274
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix: the confident guess",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same question, two answers",
+        "app": "Assistant · test run",
+        "steps": [
+          {
+            "title": "The confident guess",
+            "detail": "No source, no question about her farm",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Which product and what dose should I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Spray product X at dose Y every week. Problem solved."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the sheet",
+            "detail": "Not covered: escalate, never guess",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Which product and what dose should I spray?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Product and dose: not covered by the guidance sheet. Sent to Njume, who will reply."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Why the guess sounds sure",
+            "detail": "Confidence is style, not evidence",
+            "ui": {
+              "kind": "text",
+              "title": "Why a wrong answer can sound so sure",
+              "lines": [
+                "Rewarded in training: a confident guess",
+                "“I don't know” scores nothing",
+                "Registered products, labels, safety: unchecked",
+                "Fluent is not the same as right"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Simple. Spray product X at dose Y every week, and your problem is solved.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep002/audio/constraint-fix-0-109554bb06.mp3",
+          "startMs": 15674,
+          "durationMs": 5832,
+          "words": [
+            {
+              "text": "Simple.",
+              "startMs": 98,
+              "endMs": 729
+            },
+            {
+              "text": "Spray",
+              "startMs": 1536,
+              "endMs": 1881
+            },
+            {
+              "text": "product",
+              "startMs": 1893,
+              "endMs": 2286
+            },
+            {
+              "text": "X",
+              "startMs": 2310,
+              "endMs": 2476
+            },
+            {
+              "text": "at",
+              "startMs": 2500,
+              "endMs": 2571
+            },
+            {
+              "text": "dose",
+              "startMs": 2595,
+              "endMs": 2845
+            },
+            {
+              "text": "Y",
+              "startMs": 2869,
+              "endMs": 3012
+            },
+            {
+              "text": "every",
+              "startMs": 3036,
+              "endMs": 3286
+            },
+            {
+              "text": "week,",
+              "startMs": 3310,
+              "endMs": 3595
+            },
+            {
+              "text": "and",
+              "startMs": 3810,
+              "endMs": 3881
+            },
+            {
+              "text": "your",
+              "startMs": 3905,
+              "endMs": 4036
+            },
+            {
+              "text": "problem",
+              "startMs": 4060,
+              "endMs": 4405
+            },
+            {
+              "text": "is",
+              "startMs": 4417,
+              "endMs": 4512
+            },
+            {
+              "text": "solved.",
+              "startMs": 4536,
+              "endMs": 4988
+            }
+          ]
+        },
+        {
+          "speaker": "kito",
+          "text": "No product entry in my sheet, so I will not guess. Not covered, sent to Njume.",
+          "expression": "serious",
+          "gesture": "point_left",
+          "audio": "episodes/ep002/audio/constraint-fix-1-a24b46f808.mp3",
+          "startMs": 21856,
+          "durationMs": 6912,
+          "words": [
+            {
+              "text": "No",
+              "startMs": 95,
+              "endMs": 334
+            },
+            {
+              "text": "product",
+              "startMs": 345,
+              "endMs": 845
+            },
+            {
+              "text": "entry",
+              "startMs": 857,
+              "endMs": 1220
+            },
+            {
+              "text": "in",
+              "startMs": 1232,
+              "endMs": 1334
+            },
+            {
+              "text": "my",
+              "startMs": 1345,
+              "endMs": 1493
+            },
+            {
+              "text": "sheet,",
+              "startMs": 1505,
+              "endMs": 1834
+            },
+            {
+              "text": "so",
+              "startMs": 2107,
+              "endMs": 2323
+            },
+            {
+              "text": "I",
+              "startMs": 2334,
+              "endMs": 2448
+            },
+            {
+              "text": "will",
+              "startMs": 2459,
+              "endMs": 2630
+            },
+            {
+              "text": "not",
+              "startMs": 2641,
+              "endMs": 2891
+            },
+            {
+              "text": "guess.",
+              "startMs": 2902,
+              "endMs": 3311
+            },
+            {
+              "text": "Not",
+              "startMs": 4091,
+              "endMs": 4398
+            },
+            {
+              "text": "covered,",
+              "startMs": 4409,
+              "endMs": 4841
+            },
+            {
+              "text": "sent",
+              "startMs": 5091,
+              "endMs": 5386
+            },
+            {
+              "text": "to",
+              "startMs": 5398,
+              "endMs": 5500
+            },
+            {
+              "text": "Njume.",
+              "startMs": 5511,
+              "endMs": 6102
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "That is a hallucination: a fluent answer that is wrong. OpenAI researchers showed that training and testing reward a confident guess over saying I don't know.",
+          "expression": "serious",
+          "gesture": "explain",
+          "audio": "episodes/ep002/audio/constraint-fix-2-47afa31abf.mp3",
+          "startMs": 29118,
+          "durationMs": 9840,
+          "words": [
+            {
+              "text": "That",
+              "startMs": 116,
+              "endMs": 219
+            },
+            {
+              "text": "is",
+              "startMs": 232,
+              "endMs": 322
+            },
+            {
+              "text": "a",
+              "startMs": 335,
+              "endMs": 399
+            },
+            {
+              "text": "hallucination:",
+              "startMs": 412,
+              "endMs": 1302
+            },
+            {
+              "text": "a",
+              "startMs": 1701,
+              "endMs": 1740
+            },
+            {
+              "text": "fluent",
+              "startMs": 1753,
+              "endMs": 2178
+            },
+            {
+              "text": "answer",
+              "startMs": 2191,
+              "endMs": 2539
+            },
+            {
+              "text": "that",
+              "startMs": 2552,
+              "endMs": 2680
+            },
+            {
+              "text": "is",
+              "startMs": 2693,
+              "endMs": 2809
+            },
+            {
+              "text": "wrong.",
+              "startMs": 2822,
+              "endMs": 3196
+            },
+            {
+              "text": "OpenAI",
+              "startMs": 3621,
+              "endMs": 4201
+            },
+            {
+              "text": "researchers",
+              "startMs": 4214,
+              "endMs": 4897
+            },
+            {
+              "text": "showed",
+              "startMs": 4910,
+              "endMs": 5193
+            },
+            {
+              "text": "that",
+              "startMs": 5206,
+              "endMs": 5348
+            },
+            {
+              "text": "training",
+              "startMs": 5361,
+              "endMs": 5966
+            },
+            {
+              "text": "and",
+              "startMs": 5979,
+              "endMs": 6070
+            },
+            {
+              "text": "testing",
+              "startMs": 6082,
+              "endMs": 6559
+            },
+            {
+              "text": "reward",
+              "startMs": 6572,
+              "endMs": 6959
+            },
+            {
+              "text": "a",
+              "startMs": 6972,
+              "endMs": 7010
+            },
+            {
+              "text": "confident",
+              "startMs": 7023,
+              "endMs": 7629
+            },
+            {
+              "text": "guess",
+              "startMs": 7642,
+              "endMs": 8003
+            },
+            {
+              "text": "over",
+              "startMs": 8119,
+              "endMs": 8299
+            },
+            {
+              "text": "saying",
+              "startMs": 8312,
+              "endMs": 8711
+            },
+            {
+              "text": "I",
+              "startMs": 8827,
+              "endMs": 8918
+            },
+            {
+              "text": "don't",
+              "startMs": 8930,
+              "endMs": 9188
+            },
+            {
+              "text": "know.",
+              "startMs": 9201,
+              "endMs": 9446
+            }
+          ]
+        }
+      ],
+      "index": 1,
+      "startMs": 15274,
+      "durationMs": 24384
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next episode: Prompting vs. Context Engineering"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: prompting versus context engineering.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep002/audio/outro-0-6beed70d04.mp3",
+          "startMs": 40058,
+          "durationMs": 6192,
+          "words": [
+            {
+              "text": "Don't",
+              "startMs": 103,
+              "endMs": 245
+            },
+            {
+              "text": "just",
+              "startMs": 258,
+              "endMs": 451
+            },
+            {
+              "text": "use",
+              "startMs": 464,
+              "endMs": 631
+            },
+            {
+              "text": "AI.",
+              "startMs": 644,
+              "endMs": 966
+            },
+            {
+              "text": "Build",
+              "startMs": 1392,
+              "endMs": 1546
+            },
+            {
+              "text": "it",
+              "startMs": 1559,
+              "endMs": 1624
+            },
+            {
+              "text": "to",
+              "startMs": 1637,
+              "endMs": 1727
+            },
+            {
+              "text": "work",
+              "startMs": 1740,
+              "endMs": 2023
+            },
+            {
+              "text": "reliably.",
+              "startMs": 2036,
+              "endMs": 2642
+            },
+            {
+              "text": "Next:",
+              "startMs": 3067,
+              "endMs": 3531
+            },
+            {
+              "text": "prompting",
+              "startMs": 3802,
+              "endMs": 4227
+            },
+            {
+              "text": "versus",
+              "startMs": 4240,
+              "endMs": 4601
+            },
+            {
+              "text": "context",
+              "startMs": 4613,
+              "endMs": 5245
+            },
+            {
+              "text": "engineering.",
+              "startMs": 5258,
+              "endMs": 5786
+            }
+          ]
+        }
+      ],
+      "index": 2,
+      "startMs": 39658,
+      "durationMs": 7292
+    }
+  ],
+  "captions": [
+    {
+      "text": "Ebot",
+      "startMs": 503,
+      "endMs": 812,
+      "timestampMs": 658,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " grows",
+      "startMs": 825,
+      "endMs": 1147,
+      "timestampMs": 986,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " cocoa",
+      "startMs": 1160,
+      "endMs": 1611,
+      "timestampMs": 1386,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " near",
+      "startMs": 1624,
+      "endMs": 1895,
+      "timestampMs": 1760,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Kumba,",
+      "startMs": 1908,
+      "endMs": 2488,
+      "timestampMs": 2198,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 2810,
+      "endMs": 2939,
+      "timestampMs": 2875,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Cameroon's",
+      "startMs": 2952,
+      "endMs": 3493,
+      "timestampMs": 3223,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " South-West.",
+      "startMs": 3506,
+      "endMs": 4279,
+      "timestampMs": 3893,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " After",
+      "startMs": 4704,
+      "endMs": 5001,
+      "timestampMs": 4853,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " heavy",
+      "startMs": 5013,
+      "endMs": 5284,
+      "timestampMs": 5149,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " rains,",
+      "startMs": 5297,
+      "endMs": 5812,
+      "timestampMs": 5555,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " her",
+      "startMs": 6006,
+      "endMs": 6122,
+      "timestampMs": 6064,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " pods",
+      "startMs": 6135,
+      "endMs": 6611,
+      "timestampMs": 6373,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " turn",
+      "startMs": 6624,
+      "endMs": 6856,
+      "timestampMs": 6740,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " brown.",
+      "startMs": 6869,
+      "endMs": 7243,
+      "timestampMs": 7056,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " A",
+      "startMs": 8077,
+      "endMs": 8129,
+      "timestampMs": 8103,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 8142,
+      "endMs": 8644,
+      "timestampMs": 8393,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " on",
+      "startMs": 8657,
+      "endMs": 8747,
+      "timestampMs": 8702,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " her",
+      "startMs": 8760,
+      "endMs": 8876,
+      "timestampMs": 8818,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " phone",
+      "startMs": 8889,
+      "endMs": 9160,
+      "timestampMs": 9025,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answers:",
+      "startMs": 9172,
+      "endMs": 9701,
+      "timestampMs": 9437,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " spray",
+      "startMs": 10087,
+      "endMs": 10410,
+      "timestampMs": 10249,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " product",
+      "startMs": 10422,
+      "endMs": 10861,
+      "timestampMs": 10642,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " X",
+      "startMs": 10874,
+      "endMs": 11170,
+      "timestampMs": 11022,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " at",
+      "startMs": 11376,
+      "endMs": 11556,
+      "timestampMs": 11466,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " dose",
+      "startMs": 11569,
+      "endMs": 11866,
+      "timestampMs": 11718,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Y.",
+      "startMs": 11879,
+      "endMs": 12175,
+      "timestampMs": 12027,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Nobody",
+      "startMs": 12600,
+      "endMs": 12974,
+      "timestampMs": 12787,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " asked",
+      "startMs": 12987,
+      "endMs": 13270,
+      "timestampMs": 13129,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " where",
+      "startMs": 13283,
+      "endMs": 13386,
+      "timestampMs": 13335,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " her",
+      "startMs": 13399,
+      "endMs": 13515,
+      "timestampMs": 13457,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " farm",
+      "startMs": 13528,
+      "endMs": 13876,
+      "timestampMs": 13702,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is.",
+      "startMs": 13889,
+      "endMs": 14172,
+      "timestampMs": 14031,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Simple.",
+      "startMs": 15772,
+      "endMs": 16403,
+      "timestampMs": 16088,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Spray",
+      "startMs": 17210,
+      "endMs": 17555,
+      "timestampMs": 17383,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " product",
+      "startMs": 17567,
+      "endMs": 17960,
+      "timestampMs": 17764,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " X",
+      "startMs": 17984,
+      "endMs": 18150,
+      "timestampMs": 18067,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " at",
+      "startMs": 18174,
+      "endMs": 18245,
+      "timestampMs": 18210,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " dose",
+      "startMs": 18269,
+      "endMs": 18519,
+      "timestampMs": 18394,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Y",
+      "startMs": 18543,
+      "endMs": 18686,
+      "timestampMs": 18615,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " every",
+      "startMs": 18710,
+      "endMs": 18960,
+      "timestampMs": 18835,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " week,",
+      "startMs": 18984,
+      "endMs": 19269,
+      "timestampMs": 19127,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " and",
+      "startMs": 19484,
+      "endMs": 19555,
+      "timestampMs": 19520,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " your",
+      "startMs": 19579,
+      "endMs": 19710,
+      "timestampMs": 19645,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " problem",
+      "startMs": 19734,
+      "endMs": 20079,
+      "timestampMs": 19907,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " is",
+      "startMs": 20091,
+      "endMs": 20186,
+      "timestampMs": 20139,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " solved.",
+      "startMs": 20210,
+      "endMs": 20662,
+      "timestampMs": 20436,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " No",
+      "startMs": 21951,
+      "endMs": 22190,
+      "timestampMs": 22071,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " product",
+      "startMs": 22201,
+      "endMs": 22701,
+      "timestampMs": 22451,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " entry",
+      "startMs": 22713,
+      "endMs": 23076,
+      "timestampMs": 22895,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " in",
+      "startMs": 23088,
+      "endMs": 23190,
+      "timestampMs": 23139,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " my",
+      "startMs": 23201,
+      "endMs": 23349,
+      "timestampMs": 23275,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " sheet,",
+      "startMs": 23361,
+      "endMs": 23690,
+      "timestampMs": 23526,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " so",
+      "startMs": 23963,
+      "endMs": 24179,
+      "timestampMs": 24071,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " I",
+      "startMs": 24190,
+      "endMs": 24304,
+      "timestampMs": 24247,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " will",
+      "startMs": 24315,
+      "endMs": 24486,
+      "timestampMs": 24401,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " not",
+      "startMs": 24497,
+      "endMs": 24747,
+      "timestampMs": 24622,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " guess.",
+      "startMs": 24758,
+      "endMs": 25167,
+      "timestampMs": 24963,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Not",
+      "startMs": 25947,
+      "endMs": 26254,
+      "timestampMs": 26101,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " covered,",
+      "startMs": 26265,
+      "endMs": 26697,
+      "timestampMs": 26481,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " sent",
+      "startMs": 26947,
+      "endMs": 27242,
+      "timestampMs": 27095,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " to",
+      "startMs": 27254,
+      "endMs": 27356,
+      "timestampMs": 27305,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Njume.",
+      "startMs": 27367,
+      "endMs": 27958,
+      "timestampMs": 27663,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " That",
+      "startMs": 29234,
+      "endMs": 29337,
+      "timestampMs": 29286,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 29350,
+      "endMs": 29440,
+      "timestampMs": 29395,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 29453,
+      "endMs": 29517,
+      "timestampMs": 29485,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " hallucination:",
+      "startMs": 29530,
+      "endMs": 30420,
+      "timestampMs": 29975,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 30819,
+      "endMs": 30858,
+      "timestampMs": 30839,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " fluent",
+      "startMs": 30871,
+      "endMs": 31296,
+      "timestampMs": 31084,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answer",
+      "startMs": 31309,
+      "endMs": 31657,
+      "timestampMs": 31483,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " that",
+      "startMs": 31670,
+      "endMs": 31798,
+      "timestampMs": 31734,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 31811,
+      "endMs": 31927,
+      "timestampMs": 31869,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " wrong.",
+      "startMs": 31940,
+      "endMs": 32314,
+      "timestampMs": 32127,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " OpenAI",
+      "startMs": 32739,
+      "endMs": 33319,
+      "timestampMs": 33029,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " researchers",
+      "startMs": 33332,
+      "endMs": 34015,
+      "timestampMs": 33674,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " showed",
+      "startMs": 34028,
+      "endMs": 34311,
+      "timestampMs": 34170,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " that",
+      "startMs": 34324,
+      "endMs": 34466,
+      "timestampMs": 34395,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " training",
+      "startMs": 34479,
+      "endMs": 35084,
+      "timestampMs": 34782,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 35097,
+      "endMs": 35188,
+      "timestampMs": 35143,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " testing",
+      "startMs": 35200,
+      "endMs": 35677,
+      "timestampMs": 35439,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reward",
+      "startMs": 35690,
+      "endMs": 36077,
+      "timestampMs": 35884,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 36090,
+      "endMs": 36128,
+      "timestampMs": 36109,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " confident",
+      "startMs": 36141,
+      "endMs": 36747,
+      "timestampMs": 36444,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " guess",
+      "startMs": 36760,
+      "endMs": 37121,
+      "timestampMs": 36941,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " over",
+      "startMs": 37237,
+      "endMs": 37417,
+      "timestampMs": 37327,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " saying",
+      "startMs": 37430,
+      "endMs": 37829,
+      "timestampMs": 37630,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " I",
+      "startMs": 37945,
+      "endMs": 38036,
+      "timestampMs": 37991,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " don't",
+      "startMs": 38048,
+      "endMs": 38306,
+      "timestampMs": 38177,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " know.",
+      "startMs": 38319,
+      "endMs": 38564,
+      "timestampMs": 38442,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Don't",
+      "startMs": 40161,
+      "endMs": 40303,
+      "timestampMs": 40232,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " just",
+      "startMs": 40316,
+      "endMs": 40509,
+      "timestampMs": 40413,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " use",
+      "startMs": 40522,
+      "endMs": 40689,
+      "timestampMs": 40606,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 40702,
+      "endMs": 41024,
+      "timestampMs": 40863,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Build",
+      "startMs": 41450,
+      "endMs": 41604,
+      "timestampMs": 41527,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 41617,
+      "endMs": 41682,
+      "timestampMs": 41650,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 41695,
+      "endMs": 41785,
+      "timestampMs": 41740,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work",
+      "startMs": 41798,
+      "endMs": 42081,
+      "timestampMs": 41940,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reliably.",
+      "startMs": 42094,
+      "endMs": 42700,
+      "timestampMs": 42397,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Next:",
+      "startMs": 43125,
+      "endMs": 43589,
+      "timestampMs": 43357,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " prompting",
+      "startMs": 43860,
+      "endMs": 44285,
+      "timestampMs": 44073,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " versus",
+      "startMs": 44298,
+      "endMs": 44659,
+      "timestampMs": 44479,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " context",
+      "startMs": 44671,
+      "endMs": 45303,
+      "timestampMs": 44987,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " engineering.",
+      "startMs": 45316,
+      "endMs": 45844,
+      "timestampMs": 45580,
+      "confidence": null,
+      "speaker": "tanyi"
+    }
+  ],
+  "characters": {
+    "tanyi": {
+      "name": "Tanyi",
+      "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+      "voice": "en-US-AndrewNeural",
+      "rate": 0.97,
+      "pitch": "+0Hz",
+      "color": "#F5B700",
+      "kind": "human",
+      "look": {
+        "skin": "#6B3F1D",
+        "hair": "#2B2B2B",
+        "hairGrey": "#8A8A8A",
+        "shirt": "#2563EB",
+        "glasses": true,
+        "beard": true,
+        "height": 1
+      },
+      "captionColor": "#B45309",
+      "engine": "edge",
+      "id": "tanyi",
+      "files": []
+    },
+    "amara": {
+      "name": "Amara",
+      "role": "Curious learner who asks the questions beginners are thinking.",
+      "voice": "en-ZA-LeahNeural",
+      "rate": 1.05,
+      "pitch": "+10Hz",
+      "color": "#2DD4BF",
+      "kind": "human",
+      "look": {
+        "skin": "#8D5524",
+        "hair": "#1A1A1A",
+        "hairGrey": null,
+        "shirt": "#F97316",
+        "glasses": false,
+        "beard": false,
+        "height": 0.92
+      },
+      "captionColor": "#0D9488",
+      "id": "amara",
+      "files": []
+    },
+    "kito": {
+      "name": "Kito",
+      "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+      "voice": "en-US-AnaNeural",
+      "rate": 1.1,
+      "pitch": "+15Hz",
+      "color": "#60A5FA",
+      "kind": "robot",
+      "captionColor": "#2563EB",
+      "id": "kito",
+      "files": []
+    },
+    "hallucinator": {
+      "name": "The Hallucinator",
+      "role": "Mischievous. Represents confident but incorrect AI output.",
+      "voice": "en-US-GuyNeural",
+      "rate": 1.05,
+      "pitch": "-20Hz",
+      "color": "#C084FC",
+      "kind": "wisp",
+      "captionColor": "#7C3AED",
+      "id": "hallucinator",
+      "files": []
+    },
+    "gatekeeper": {
+      "name": "The Gatekeeper",
+      "role": "Represents security, privacy, governance and human approval.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": 0.95,
+      "pitch": "-5Hz",
+      "color": "#F87171",
+      "kind": "shield",
+      "captionColor": "#E11D48",
+      "id": "gatekeeper",
+      "files": []
+    }
+  },
+  "cut": "short1"
+}

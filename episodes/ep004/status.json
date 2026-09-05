@@ -1,0 +1,43 @@
+{
+  "id": "ep004",
+  "title": "How an API Makes Your Chatbot Smarter",
+  "version": 1,
+  "format": "build",
+  "gates": {
+    "brief": "pending",
+    "story": "pending",
+    "script": "pending",
+    "storyboard": "pending",
+    "preview": "pending",
+    "publication": "pending"
+  },
+  "disclosure": "fictional",
+  "setting": {
+    "country": "",
+    "place": "",
+    "community": "",
+    "languages": [],
+    "reviewer": ""
+  },
+  "approvals": [],
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ],
+  "auto": true,
+  "engine": {
+    "name": "ollama",
+    "model": "qwen2.5:14b"
+  }
+}

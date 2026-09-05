@@ -1,17 +1,22 @@
 {
-  "name": "faceless-studio",
+  "name": "ai-workshop-studio",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "AI With Hippolyte — episode renderer",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@remotion/captions": "^4.0.520",
     "@remotion/cli": "4.0.520",
+    "@remotion/google-fonts": "^4.0.520",
+    "@remotion/media": "^4.0.520",
+    "@remotion/media-utils": "^4.0.520",
+    "@remotion/transitions": "^4.0.520",
+    "lucide-react": "^1.41.0",
+    "msedge-tts": "^2.0.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.520",
-    "@remotion/tailwind-v4": "4.0.520",
-    "tailwindcss": "4.0.0"
+    "remotion": "4.0.520"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.520",
@@ -23,9 +28,14 @@
   },
   "scripts": {
     "dev": "remotion studio",
-    "build": "remotion bundle",
-    "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "script": "node scripts/script.mjs",
+    "voice": "node scripts/voice.mjs",
+    "render": "node scripts/render.mjs",
+    "make": "node scripts/make.mjs",
+    "lint": "eslint src && tsc",
+    "api": "node scripts/api.mjs",
+    "studio": "npm --prefix studio run dev",
+    "studio:build": "npm --prefix studio run build"
   },
   "sideEffects": [
     "*.css"

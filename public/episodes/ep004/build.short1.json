@@ -1,0 +1,2277 @@
+{
+  "id": "ep004",
+  "fps": 30,
+  "builtAt": "2026-09-05T00:10:41.954Z",
+  "episode": {
+    "id": "ep004",
+    "series": "AI With Hippolyte",
+    "tagline": "Complex AI. Explained visually. Built practically.",
+    "episode": 4,
+    "title": "How an API Makes Your Chatbot Smarter",
+    "disclosure": "Fictional teaching scenario based on researched conditions",
+    "background": "workshop",
+    "cuts": [
+      {
+        "id": "short1",
+        "targetSec": 45,
+        "scenes": [
+          "hook",
+          "decide",
+          "constraint_and_fix",
+          "build_challenge_and_closing"
+        ]
+      }
+    ],
+    "format": "build"
+  },
+  "totalMs": 62252,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "An AI agent can answer questions about your business.",
+        "emphasis": "But it needs an API to do that."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Imagine you have a chatbot for customer service. It can answer basic questions, but it doesn't know anything specific about your company's products or services.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep004/audio/hook-0-22d9bcecbd.mp3",
+          "startMs": 400,
+          "durationMs": 9264,
+          "words": [
+            {
+              "text": "Imagine",
+              "startMs": 90,
+              "endMs": 438
+            },
+            {
+              "text": "you",
+              "startMs": 451,
+              "endMs": 528
+            },
+            {
+              "text": "have",
+              "startMs": 541,
+              "endMs": 670
+            },
+            {
+              "text": "a",
+              "startMs": 683,
+              "endMs": 735
+            },
+            {
+              "text": "chatbot",
+              "startMs": 747,
+              "endMs": 1302
+            },
+            {
+              "text": "for",
+              "startMs": 1314,
+              "endMs": 1443
+            },
+            {
+              "text": "customer",
+              "startMs": 1456,
+              "endMs": 1856
+            },
+            {
+              "text": "service.",
+              "startMs": 1869,
+              "endMs": 2436
+            },
+            {
+              "text": "It",
+              "startMs": 2861,
+              "endMs": 2925
+            },
+            {
+              "text": "can",
+              "startMs": 2938,
+              "endMs": 3054
+            },
+            {
+              "text": "answer",
+              "startMs": 3067,
+              "endMs": 3363
+            },
+            {
+              "text": "basic",
+              "startMs": 3376,
+              "endMs": 3724
+            },
+            {
+              "text": "questions,",
+              "startMs": 3737,
+              "endMs": 4420
+            },
+            {
+              "text": "but",
+              "startMs": 4652,
+              "endMs": 4781
+            },
+            {
+              "text": "it",
+              "startMs": 4794,
+              "endMs": 4910
+            },
+            {
+              "text": "doesn't",
+              "startMs": 4923,
+              "endMs": 5258
+            },
+            {
+              "text": "know",
+              "startMs": 5271,
+              "endMs": 5528
+            },
+            {
+              "text": "anything",
+              "startMs": 5606,
+              "endMs": 6018
+            },
+            {
+              "text": "specific",
+              "startMs": 6031,
+              "endMs": 6714
+            },
+            {
+              "text": "about",
+              "startMs": 6727,
+              "endMs": 6972
+            },
+            {
+              "text": "your",
+              "startMs": 6985,
+              "endMs": 7101
+            },
+            {
+              "text": "company's",
+              "startMs": 7113,
+              "endMs": 7564
+            },
+            {
+              "text": "products",
+              "startMs": 7577,
+              "endMs": 8080
+            },
+            {
+              "text": "or",
+              "startMs": 8093,
+              "endMs": 8183
+            },
+            {
+              "text": "services.",
+              "startMs": 8196,
+              "endMs": 8879
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "But what if you could make it smarter? What if it could answer detailed questions and even help with tasks?",
+          "expression": "serious",
+          "gesture": "point_right",
+          "audio": "episodes/ep004/audio/hook-1-33ecc52653.mp3",
+          "startMs": 10014,
+          "durationMs": 5640,
+          "words": [
+            {
+              "text": "But",
+              "startMs": 116,
+              "endMs": 193
+            },
+            {
+              "text": "what",
+              "startMs": 206,
+              "endMs": 322
+            },
+            {
+              "text": "if",
+              "startMs": 335,
+              "endMs": 412
+            },
+            {
+              "text": "you",
+              "startMs": 425,
+              "endMs": 515
+            },
+            {
+              "text": "could",
+              "startMs": 528,
+              "endMs": 657
+            },
+            {
+              "text": "make",
+              "startMs": 670,
+              "endMs": 838
+            },
+            {
+              "text": "it",
+              "startMs": 851,
+              "endMs": 928
+            },
+            {
+              "text": "smarter?",
+              "startMs": 941,
+              "endMs": 1392
+            },
+            {
+              "text": "What",
+              "startMs": 1817,
+              "endMs": 1907
+            },
+            {
+              "text": "if",
+              "startMs": 1920,
+              "endMs": 2010
+            },
+            {
+              "text": "it",
+              "startMs": 2023,
+              "endMs": 2113
+            },
+            {
+              "text": "could",
+              "startMs": 2126,
+              "endMs": 2294
+            },
+            {
+              "text": "answer",
+              "startMs": 2307,
+              "endMs": 2616
+            },
+            {
+              "text": "detailed",
+              "startMs": 2629,
+              "endMs": 3054
+            },
+            {
+              "text": "questions",
+              "startMs": 3067,
+              "endMs": 3686
+            },
+            {
+              "text": "and",
+              "startMs": 3905,
+              "endMs": 4046
+            },
+            {
+              "text": "even",
+              "startMs": 4059,
+              "endMs": 4253
+            },
+            {
+              "text": "help",
+              "startMs": 4265,
+              "endMs": 4459
+            },
+            {
+              "text": "with",
+              "startMs": 4472,
+              "endMs": 4588
+            },
+            {
+              "text": "tasks?",
+              "startMs": 4601,
+              "endMs": 5258
+            }
+          ]
+        }
+      ],
+      "index": 0,
+      "startMs": 0,
+      "durationMs": 16354
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Chatbot without API",
+          "items": [
+            "Answers basic questions only",
+            "No business data access"
+          ]
+        },
+        "right": {
+          "title": "Chatbot with API",
+          "items": [
+            "Accesses product details",
+            "Helps with tasks and support"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot without an API can answer basic questions but doesn't have access to your business data.",
+          "expression": "neutral",
+          "gesture": "point_left",
+          "audio": "episodes/ep004/audio/decide-0-28e301ee7b.mp3",
+          "startMs": 16754,
+          "durationMs": 5952,
+          "words": [
+            {
+              "text": "A",
+              "startMs": 103,
+              "endMs": 142
+            },
+            {
+              "text": "chatbot",
+              "startMs": 155,
+              "endMs": 696
+            },
+            {
+              "text": "without",
+              "startMs": 709,
+              "endMs": 1095
+            },
+            {
+              "text": "an",
+              "startMs": 1108,
+              "endMs": 1250
+            },
+            {
+              "text": "API",
+              "startMs": 1263,
+              "endMs": 1830
+            },
+            {
+              "text": "can",
+              "startMs": 1843,
+              "endMs": 2010
+            },
+            {
+              "text": "answer",
+              "startMs": 2023,
+              "endMs": 2320
+            },
+            {
+              "text": "basic",
+              "startMs": 2332,
+              "endMs": 2655
+            },
+            {
+              "text": "questions",
+              "startMs": 2668,
+              "endMs": 3299
+            },
+            {
+              "text": "but",
+              "startMs": 3479,
+              "endMs": 3634
+            },
+            {
+              "text": "doesn't",
+              "startMs": 3647,
+              "endMs": 3969
+            },
+            {
+              "text": "have",
+              "startMs": 3982,
+              "endMs": 4124
+            },
+            {
+              "text": "access",
+              "startMs": 4137,
+              "endMs": 4626
+            },
+            {
+              "text": "to",
+              "startMs": 4639,
+              "endMs": 4729
+            },
+            {
+              "text": "your",
+              "startMs": 4742,
+              "endMs": 4871
+            },
+            {
+              "text": "business",
+              "startMs": 4884,
+              "endMs": 5245
+            },
+            {
+              "text": "data.",
+              "startMs": 5258,
+              "endMs": 5567
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "With an API, the chatbot can connect to your CRM or knowledge base and provide detailed answers and even help with tasks.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep004/audio/decide-1-780e382dd9.mp3",
+          "startMs": 23056,
+          "durationMs": 7992,
+          "words": [
+            {
+              "text": "With",
+              "startMs": 116,
+              "endMs": 245
+            },
+            {
+              "text": "an",
+              "startMs": 258,
+              "endMs": 361
+            },
+            {
+              "text": "API,",
+              "startMs": 374,
+              "endMs": 966
+            },
+            {
+              "text": "the",
+              "startMs": 1250,
+              "endMs": 1340
+            },
+            {
+              "text": "chatbot",
+              "startMs": 1353,
+              "endMs": 1830
+            },
+            {
+              "text": "can",
+              "startMs": 1843,
+              "endMs": 1972
+            },
+            {
+              "text": "connect",
+              "startMs": 1985,
+              "endMs": 2332
+            },
+            {
+              "text": "to",
+              "startMs": 2345,
+              "endMs": 2423
+            },
+            {
+              "text": "your",
+              "startMs": 2436,
+              "endMs": 2552
+            },
+            {
+              "text": "CRM",
+              "startMs": 2564,
+              "endMs": 3222
+            },
+            {
+              "text": "or",
+              "startMs": 3338,
+              "endMs": 3415
+            },
+            {
+              "text": "knowledge",
+              "startMs": 3428,
+              "endMs": 3827
+            },
+            {
+              "text": "base",
+              "startMs": 3840,
+              "endMs": 4201
+            },
+            {
+              "text": "and",
+              "startMs": 4356,
+              "endMs": 4472
+            },
+            {
+              "text": "provide",
+              "startMs": 4485,
+              "endMs": 4871
+            },
+            {
+              "text": "detailed",
+              "startMs": 4884,
+              "endMs": 5335
+            },
+            {
+              "text": "answers",
+              "startMs": 5348,
+              "endMs": 5889
+            },
+            {
+              "text": "and",
+              "startMs": 6198,
+              "endMs": 6366
+            },
+            {
+              "text": "even",
+              "startMs": 6379,
+              "endMs": 6585
+            },
+            {
+              "text": "help",
+              "startMs": 6598,
+              "endMs": 6804
+            },
+            {
+              "text": "with",
+              "startMs": 6817,
+              "endMs": 6933
+            },
+            {
+              "text": "tasks.",
+              "startMs": 6946,
+              "endMs": 7603
+            }
+          ]
+        }
+      ],
+      "index": 1,
+      "startMs": 16354,
+      "durationMs": 15394
+    },
+    {
+      "id": "constraint_and_fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Securing the API connection",
+        "app": "Kito · Customer Support Assistant",
+        "steps": [
+          {
+            "title": "Amara asks about a customer's order status",
+            "detail": "What is the status of Order 1234?",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What is the status of Order 1234?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking the API..."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito queries the order database",
+            "detail": "Tool: api.query",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Gatekeeper checks permissions",
+            "detail": "Tool: gatekeeper.checkPermissions",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "I need to verify your permissions before I can share this information."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito waits for human approval",
+            "detail": "Nothing is shared until a person says yes.",
+            "ui": {
+              "kind": "approval",
+              "title": "Kito wants to send an email",
+              "summary": [
+                "To: customer@example.com",
+                "Order 1234, in transit"
+              ],
+              "approve": "Approve and share",
+              "reject": "Reject",
+              "clickAt": 2.2
+            }
+          },
+          {
+            "title": "Kito provides the answer",
+            "detail": "Tool: chatbot.respond",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Order 1234 is currently in transit."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, what's the status of Order 1234?",
+          "expression": "neutral",
+          "gesture": "point_right",
+          "audio": "episodes/ep004/audio/constraint_and_fix-0-2e33ecb9c8.mp3",
+          "startMs": 32148,
+          "durationMs": 3840,
+          "words": [
+            {
+              "text": "Kito,",
+              "startMs": 98,
+              "endMs": 538
+            },
+            {
+              "text": "what's",
+              "startMs": 800,
+              "endMs": 1050
+            },
+            {
+              "text": "the",
+              "startMs": 1098,
+              "endMs": 1157
+            },
+            {
+              "text": "status",
+              "startMs": 1217,
+              "endMs": 1621
+            },
+            {
+              "text": "of",
+              "startMs": 1645,
+              "endMs": 1764
+            },
+            {
+              "text": "Order",
+              "startMs": 1800,
+              "endMs": 2038
+            },
+            {
+              "text": "1234?",
+              "startMs": 2074,
+              "endMs": 2967
+            }
+          ]
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking the API...",
+          "expression": "neutral",
+          "gesture": "explain",
+          "audio": "episodes/ep004/audio/constraint_and_fix-1-3aa4120bd2.mp3",
+          "startMs": 36338,
+          "durationMs": 2016,
+          "words": [
+            {
+              "text": "Checking",
+              "startMs": 95,
+              "endMs": 505
+            },
+            {
+              "text": "the",
+              "startMs": 516,
+              "endMs": 641
+            },
+            {
+              "text": "API...",
+              "startMs": 652,
+              "endMs": 1232
+            }
+          ]
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "I need to verify your permissions before I can share this information.",
+          "expression": "serious",
+          "gesture": "warning",
+          "audio": "episodes/ep004/audio/constraint_and_fix-2-c2099a24d3.mp3",
+          "startMs": 38704,
+          "durationMs": 4560,
+          "words": [
+            {
+              "text": "I",
+              "startMs": 142,
+              "endMs": 247
+            },
+            {
+              "text": "need",
+              "startMs": 261,
+              "endMs": 524
+            },
+            {
+              "text": "to",
+              "startMs": 537,
+              "endMs": 629
+            },
+            {
+              "text": "verify",
+              "startMs": 642,
+              "endMs": 1155
+            },
+            {
+              "text": "your",
+              "startMs": 1168,
+              "endMs": 1339
+            },
+            {
+              "text": "permissions",
+              "startMs": 1353,
+              "endMs": 2089
+            },
+            {
+              "text": "before",
+              "startMs": 2103,
+              "endMs": 2511
+            },
+            {
+              "text": "I",
+              "startMs": 2524,
+              "endMs": 2603
+            },
+            {
+              "text": "can",
+              "startMs": 2616,
+              "endMs": 2813
+            },
+            {
+              "text": "share",
+              "startMs": 2826,
+              "endMs": 3089
+            },
+            {
+              "text": "this",
+              "startMs": 3103,
+              "endMs": 3326
+            },
+            {
+              "text": "information.",
+              "startMs": 3339,
+              "endMs": 4168
+            }
+          ]
+        },
+        {
+          "speaker": "kito",
+          "text": "Order 1234 is currently in transit. Approved by a human.",
+          "expression": "happy",
+          "gesture": "neutral",
+          "audio": "episodes/ep004/audio/constraint_and_fix-3-6e9e64e6e8.mp3",
+          "startMs": 43614,
+          "durationMs": 5976,
+          "words": [
+            {
+              "text": "Order",
+              "startMs": 95,
+              "endMs": 425
+            },
+            {
+              "text": "1234",
+              "startMs": 436,
+              "endMs": 1527
+            },
+            {
+              "text": "is",
+              "startMs": 1539,
+              "endMs": 1743
+            },
+            {
+              "text": "currently",
+              "startMs": 1755,
+              "endMs": 2311
+            },
+            {
+              "text": "in",
+              "startMs": 2323,
+              "endMs": 2470
+            },
+            {
+              "text": "transit.",
+              "startMs": 2482,
+              "endMs": 3084
+            },
+            {
+              "text": "Approved",
+              "startMs": 3864,
+              "endMs": 4420
+            },
+            {
+              "text": "by",
+              "startMs": 4432,
+              "endMs": 4591
+            },
+            {
+              "text": "a",
+              "startMs": 4602,
+              "endMs": 4648
+            },
+            {
+              "text": "human.",
+              "startMs": 4659,
+              "endMs": 5170
+            }
+          ]
+        }
+      ],
+      "index": 2,
+      "startMs": 31748,
+      "durationMs": 18542
+    },
+    {
+      "id": "build_challenge_and_closing",
+      "type": "outro",
+      "label": "Build challenge and closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Try this today",
+        "emphasis": "Connect your chatbot to a business API. Start with product details or order status.",
+        "cta": "Don't just use AI."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Here's one thing you can try today: Connect your chatbot to a business API. Start with product details or order status.",
+          "expression": "happy",
+          "gesture": "explain",
+          "audio": "episodes/ep004/audio/build_challenge_and_closing-0-8424b24253.mp3",
+          "startMs": 50690,
+          "durationMs": 7488,
+          "words": [
+            {
+              "text": "Here's",
+              "startMs": 129,
+              "endMs": 322
+            },
+            {
+              "text": "one",
+              "startMs": 335,
+              "endMs": 515
+            },
+            {
+              "text": "thing",
+              "startMs": 528,
+              "endMs": 709
+            },
+            {
+              "text": "you",
+              "startMs": 722,
+              "endMs": 812
+            },
+            {
+              "text": "can",
+              "startMs": 825,
+              "endMs": 928
+            },
+            {
+              "text": "try",
+              "startMs": 941,
+              "endMs": 1160
+            },
+            {
+              "text": "today:",
+              "startMs": 1173,
+              "endMs": 1495
+            },
+            {
+              "text": "Connect",
+              "startMs": 1894,
+              "endMs": 2216
+            },
+            {
+              "text": "your",
+              "startMs": 2229,
+              "endMs": 2332
+            },
+            {
+              "text": "chatbot",
+              "startMs": 2345,
+              "endMs": 2887
+            },
+            {
+              "text": "to",
+              "startMs": 2951,
+              "endMs": 3067
+            },
+            {
+              "text": "a",
+              "startMs": 3080,
+              "endMs": 3157
+            },
+            {
+              "text": "business",
+              "startMs": 3170,
+              "endMs": 3570
+            },
+            {
+              "text": "API.",
+              "startMs": 3582,
+              "endMs": 4085
+            },
+            {
+              "text": "Start",
+              "startMs": 4510,
+              "endMs": 4794
+            },
+            {
+              "text": "with",
+              "startMs": 4807,
+              "endMs": 4936
+            },
+            {
+              "text": "product",
+              "startMs": 4948,
+              "endMs": 5335
+            },
+            {
+              "text": "details",
+              "startMs": 5348,
+              "endMs": 5979
+            },
+            {
+              "text": "or",
+              "startMs": 6186,
+              "endMs": 6302
+            },
+            {
+              "text": "order",
+              "startMs": 6314,
+              "endMs": 6508
+            },
+            {
+              "text": "status.",
+              "startMs": 6521,
+              "endMs": 7101
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep004/audio/build_challenge_and_closing-1-e10bef64f0.mp3",
+          "startMs": 58528,
+          "durationMs": 3024,
+          "words": [
+            {
+              "text": "Don't",
+              "startMs": 103,
+              "endMs": 245
+            },
+            {
+              "text": "just",
+              "startMs": 258,
+              "endMs": 451
+            },
+            {
+              "text": "use",
+              "startMs": 464,
+              "endMs": 631
+            },
+            {
+              "text": "AI.",
+              "startMs": 644,
+              "endMs": 966
+            },
+            {
+              "text": "Build",
+              "startMs": 1392,
+              "endMs": 1546
+            },
+            {
+              "text": "it",
+              "startMs": 1559,
+              "endMs": 1624
+            },
+            {
+              "text": "to",
+              "startMs": 1637,
+              "endMs": 1727
+            },
+            {
+              "text": "work",
+              "startMs": 1740,
+              "endMs": 2023
+            },
+            {
+              "text": "reliably.",
+              "startMs": 2036,
+              "endMs": 2642
+            }
+          ]
+        }
+      ],
+      "index": 3,
+      "startMs": 50290,
+      "durationMs": 11962
+    }
+  ],
+  "captions": [
+    {
+      "text": "Imagine",
+      "startMs": 490,
+      "endMs": 838,
+      "timestampMs": 664,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " you",
+      "startMs": 851,
+      "endMs": 928,
+      "timestampMs": 890,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " have",
+      "startMs": 941,
+      "endMs": 1070,
+      "timestampMs": 1006,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 1083,
+      "endMs": 1135,
+      "timestampMs": 1109,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 1147,
+      "endMs": 1702,
+      "timestampMs": 1425,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " for",
+      "startMs": 1714,
+      "endMs": 1843,
+      "timestampMs": 1779,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " customer",
+      "startMs": 1856,
+      "endMs": 2256,
+      "timestampMs": 2056,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " service.",
+      "startMs": 2269,
+      "endMs": 2836,
+      "timestampMs": 2553,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " It",
+      "startMs": 3261,
+      "endMs": 3325,
+      "timestampMs": 3293,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 3338,
+      "endMs": 3454,
+      "timestampMs": 3396,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answer",
+      "startMs": 3467,
+      "endMs": 3763,
+      "timestampMs": 3615,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " basic",
+      "startMs": 3776,
+      "endMs": 4124,
+      "timestampMs": 3950,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " questions,",
+      "startMs": 4137,
+      "endMs": 4820,
+      "timestampMs": 4479,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " but",
+      "startMs": 5052,
+      "endMs": 5181,
+      "timestampMs": 5117,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 5194,
+      "endMs": 5310,
+      "timestampMs": 5252,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " doesn't",
+      "startMs": 5323,
+      "endMs": 5658,
+      "timestampMs": 5491,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " know",
+      "startMs": 5671,
+      "endMs": 5928,
+      "timestampMs": 5800,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " anything",
+      "startMs": 6006,
+      "endMs": 6418,
+      "timestampMs": 6212,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " specific",
+      "startMs": 6431,
+      "endMs": 7114,
+      "timestampMs": 6773,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " about",
+      "startMs": 7127,
+      "endMs": 7372,
+      "timestampMs": 7250,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " your",
+      "startMs": 7385,
+      "endMs": 7501,
+      "timestampMs": 7443,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " company's",
+      "startMs": 7513,
+      "endMs": 7964,
+      "timestampMs": 7739,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " products",
+      "startMs": 7977,
+      "endMs": 8480,
+      "timestampMs": 8229,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " or",
+      "startMs": 8493,
+      "endMs": 8583,
+      "timestampMs": 8538,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " services.",
+      "startMs": 8596,
+      "endMs": 9279,
+      "timestampMs": 8938,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " But",
+      "startMs": 10130,
+      "endMs": 10207,
+      "timestampMs": 10169,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " what",
+      "startMs": 10220,
+      "endMs": 10336,
+      "timestampMs": 10278,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " if",
+      "startMs": 10349,
+      "endMs": 10426,
+      "timestampMs": 10388,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " you",
+      "startMs": 10439,
+      "endMs": 10529,
+      "timestampMs": 10484,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " could",
+      "startMs": 10542,
+      "endMs": 10671,
+      "timestampMs": 10607,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " make",
+      "startMs": 10684,
+      "endMs": 10852,
+      "timestampMs": 10768,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 10865,
+      "endMs": 10942,
+      "timestampMs": 10904,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " smarter?",
+      "startMs": 10955,
+      "endMs": 11406,
+      "timestampMs": 11181,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " What",
+      "startMs": 11831,
+      "endMs": 11921,
+      "timestampMs": 11876,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " if",
+      "startMs": 11934,
+      "endMs": 12024,
+      "timestampMs": 11979,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 12037,
+      "endMs": 12127,
+      "timestampMs": 12082,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " could",
+      "startMs": 12140,
+      "endMs": 12308,
+      "timestampMs": 12224,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answer",
+      "startMs": 12321,
+      "endMs": 12630,
+      "timestampMs": 12476,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " detailed",
+      "startMs": 12643,
+      "endMs": 13068,
+      "timestampMs": 12856,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " questions",
+      "startMs": 13081,
+      "endMs": 13700,
+      "timestampMs": 13391,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 13919,
+      "endMs": 14060,
+      "timestampMs": 13990,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " even",
+      "startMs": 14073,
+      "endMs": 14267,
+      "timestampMs": 14170,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " help",
+      "startMs": 14279,
+      "endMs": 14473,
+      "timestampMs": 14376,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " with",
+      "startMs": 14486,
+      "endMs": 14602,
+      "timestampMs": 14544,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tasks?",
+      "startMs": 14615,
+      "endMs": 15272,
+      "timestampMs": 14944,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " A",
+      "startMs": 16857,
+      "endMs": 16896,
+      "timestampMs": 16877,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 16909,
+      "endMs": 17450,
+      "timestampMs": 17180,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " without",
+      "startMs": 17463,
+      "endMs": 17849,
+      "timestampMs": 17656,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " an",
+      "startMs": 17862,
+      "endMs": 18004,
+      "timestampMs": 17933,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " API",
+      "startMs": 18017,
+      "endMs": 18584,
+      "timestampMs": 18301,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 18597,
+      "endMs": 18764,
+      "timestampMs": 18681,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answer",
+      "startMs": 18777,
+      "endMs": 19074,
+      "timestampMs": 18926,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " basic",
+      "startMs": 19086,
+      "endMs": 19409,
+      "timestampMs": 19248,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " questions",
+      "startMs": 19422,
+      "endMs": 20053,
+      "timestampMs": 19738,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " but",
+      "startMs": 20233,
+      "endMs": 20388,
+      "timestampMs": 20311,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " doesn't",
+      "startMs": 20401,
+      "endMs": 20723,
+      "timestampMs": 20562,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " have",
+      "startMs": 20736,
+      "endMs": 20878,
+      "timestampMs": 20807,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " access",
+      "startMs": 20891,
+      "endMs": 21380,
+      "timestampMs": 21136,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 21393,
+      "endMs": 21483,
+      "timestampMs": 21438,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " your",
+      "startMs": 21496,
+      "endMs": 21625,
+      "timestampMs": 21561,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " business",
+      "startMs": 21638,
+      "endMs": 21999,
+      "timestampMs": 21819,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " data.",
+      "startMs": 22012,
+      "endMs": 22321,
+      "timestampMs": 22167,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " With",
+      "startMs": 23172,
+      "endMs": 23301,
+      "timestampMs": 23237,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " an",
+      "startMs": 23314,
+      "endMs": 23417,
+      "timestampMs": 23366,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " API,",
+      "startMs": 23430,
+      "endMs": 24022,
+      "timestampMs": 23726,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 24306,
+      "endMs": 24396,
+      "timestampMs": 24351,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 24409,
+      "endMs": 24886,
+      "timestampMs": 24648,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 24899,
+      "endMs": 25028,
+      "timestampMs": 24964,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " connect",
+      "startMs": 25041,
+      "endMs": 25388,
+      "timestampMs": 25215,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 25401,
+      "endMs": 25479,
+      "timestampMs": 25440,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " your",
+      "startMs": 25492,
+      "endMs": 25608,
+      "timestampMs": 25550,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " CRM",
+      "startMs": 25620,
+      "endMs": 26278,
+      "timestampMs": 25949,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " or",
+      "startMs": 26394,
+      "endMs": 26471,
+      "timestampMs": 26433,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " knowledge",
+      "startMs": 26484,
+      "endMs": 26883,
+      "timestampMs": 26684,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " base",
+      "startMs": 26896,
+      "endMs": 27257,
+      "timestampMs": 27077,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 27412,
+      "endMs": 27528,
+      "timestampMs": 27470,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " provide",
+      "startMs": 27541,
+      "endMs": 27927,
+      "timestampMs": 27734,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " detailed",
+      "startMs": 27940,
+      "endMs": 28391,
+      "timestampMs": 28166,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answers",
+      "startMs": 28404,
+      "endMs": 28945,
+      "timestampMs": 28675,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 29254,
+      "endMs": 29422,
+      "timestampMs": 29338,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " even",
+      "startMs": 29435,
+      "endMs": 29641,
+      "timestampMs": 29538,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " help",
+      "startMs": 29654,
+      "endMs": 29860,
+      "timestampMs": 29757,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " with",
+      "startMs": 29873,
+      "endMs": 29989,
+      "timestampMs": 29931,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tasks.",
+      "startMs": 30002,
+      "endMs": 30659,
+      "timestampMs": 30331,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Kito,",
+      "startMs": 32246,
+      "endMs": 32686,
+      "timestampMs": 32466,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " what's",
+      "startMs": 32948,
+      "endMs": 33198,
+      "timestampMs": 33073,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " the",
+      "startMs": 33246,
+      "endMs": 33305,
+      "timestampMs": 33276,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " status",
+      "startMs": 33365,
+      "endMs": 33769,
+      "timestampMs": 33567,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " of",
+      "startMs": 33793,
+      "endMs": 33912,
+      "timestampMs": 33853,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " Order",
+      "startMs": 33948,
+      "endMs": 34186,
+      "timestampMs": 34067,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " 1234?",
+      "startMs": 34222,
+      "endMs": 35115,
+      "timestampMs": 34669,
+      "confidence": null,
+      "speaker": "amara"
+    },
+    {
+      "text": " Checking",
+      "startMs": 36433,
+      "endMs": 36843,
+      "timestampMs": 36638,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " the",
+      "startMs": 36854,
+      "endMs": 36979,
+      "timestampMs": 36917,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " API...",
+      "startMs": 36990,
+      "endMs": 37570,
+      "timestampMs": 37280,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " I",
+      "startMs": 38846,
+      "endMs": 38951,
+      "timestampMs": 38899,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " need",
+      "startMs": 38965,
+      "endMs": 39228,
+      "timestampMs": 39097,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " to",
+      "startMs": 39241,
+      "endMs": 39333,
+      "timestampMs": 39287,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " verify",
+      "startMs": 39346,
+      "endMs": 39859,
+      "timestampMs": 39603,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " your",
+      "startMs": 39872,
+      "endMs": 40043,
+      "timestampMs": 39958,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " permissions",
+      "startMs": 40057,
+      "endMs": 40793,
+      "timestampMs": 40425,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " before",
+      "startMs": 40807,
+      "endMs": 41215,
+      "timestampMs": 41011,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " I",
+      "startMs": 41228,
+      "endMs": 41307,
+      "timestampMs": 41268,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " can",
+      "startMs": 41320,
+      "endMs": 41517,
+      "timestampMs": 41419,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " share",
+      "startMs": 41530,
+      "endMs": 41793,
+      "timestampMs": 41662,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " this",
+      "startMs": 41807,
+      "endMs": 42030,
+      "timestampMs": 41919,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " information.",
+      "startMs": 42043,
+      "endMs": 42872,
+      "timestampMs": 42458,
+      "confidence": null,
+      "speaker": "gatekeeper"
+    },
+    {
+      "text": " Order",
+      "startMs": 43709,
+      "endMs": 44039,
+      "timestampMs": 43874,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " 1234",
+      "startMs": 44050,
+      "endMs": 45141,
+      "timestampMs": 44596,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " is",
+      "startMs": 45153,
+      "endMs": 45357,
+      "timestampMs": 45255,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " currently",
+      "startMs": 45369,
+      "endMs": 45925,
+      "timestampMs": 45647,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " in",
+      "startMs": 45937,
+      "endMs": 46084,
+      "timestampMs": 46011,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " transit.",
+      "startMs": 46096,
+      "endMs": 46698,
+      "timestampMs": 46397,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Approved",
+      "startMs": 47478,
+      "endMs": 48034,
+      "timestampMs": 47756,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " by",
+      "startMs": 48046,
+      "endMs": 48205,
+      "timestampMs": 48126,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " a",
+      "startMs": 48216,
+      "endMs": 48262,
+      "timestampMs": 48239,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " human.",
+      "startMs": 48273,
+      "endMs": 48784,
+      "timestampMs": 48529,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Here's",
+      "startMs": 50819,
+      "endMs": 51012,
+      "timestampMs": 50916,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " one",
+      "startMs": 51025,
+      "endMs": 51205,
+      "timestampMs": 51115,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " thing",
+      "startMs": 51218,
+      "endMs": 51399,
+      "timestampMs": 51309,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " you",
+      "startMs": 51412,
+      "endMs": 51502,
+      "timestampMs": 51457,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 51515,
+      "endMs": 51618,
+      "timestampMs": 51567,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " try",
+      "startMs": 51631,
+      "endMs": 51850,
+      "timestampMs": 51741,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " today:",
+      "startMs": 51863,
+      "endMs": 52185,
+      "timestampMs": 52024,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Connect",
+      "startMs": 52584,
+      "endMs": 52906,
+      "timestampMs": 52745,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " your",
+      "startMs": 52919,
+      "endMs": 53022,
+      "timestampMs": 52971,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " chatbot",
+      "startMs": 53035,
+      "endMs": 53577,
+      "timestampMs": 53306,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 53641,
+      "endMs": 53757,
+      "timestampMs": 53699,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 53770,
+      "endMs": 53847,
+      "timestampMs": 53809,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " business",
+      "startMs": 53860,
+      "endMs": 54260,
+      "timestampMs": 54060,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " API.",
+      "startMs": 54272,
+      "endMs": 54775,
+      "timestampMs": 54524,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Start",
+      "startMs": 55200,
+      "endMs": 55484,
+      "timestampMs": 55342,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " with",
+      "startMs": 55497,
+      "endMs": 55626,
+      "timestampMs": 55562,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " product",
+      "startMs": 55638,
+      "endMs": 56025,
+      "timestampMs": 55832,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " details",
+      "startMs": 56038,
+      "endMs": 56669,
+      "timestampMs": 56354,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " or",
+      "startMs": 56876,
+      "endMs": 56992,
+      "timestampMs": 56934,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " order",
+      "startMs": 57004,
+      "endMs": 57198,
+      "timestampMs": 57101,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " status.",
+      "startMs": 57211,
+      "endMs": 57791,
+      "timestampMs": 57501,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Don't",
+      "startMs": 58631,
+      "endMs": 58773,
+      "timestampMs": 58702,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " just",
+      "startMs": 58786,
+      "endMs": 58979,
+      "timestampMs": 58883,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " use",
+      "startMs": 58992,
+      "endMs": 59159,
+      "timestampMs": 59076,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 59172,
+      "endMs": 59494,
+      "timestampMs": 59333,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Build",
+      "startMs": 59920,
+      "endMs": 60074,
+      "timestampMs": 59997,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 60087,
+      "endMs": 60152,
+      "timestampMs": 60120,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 60165,
+      "endMs": 60255,
+      "timestampMs": 60210,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work",
+      "startMs": 60268,
+      "endMs": 60551,
+      "timestampMs": 60410,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reliably.",
+      "startMs": 60564,
+      "endMs": 61170,
+      "timestampMs": 60867,
+      "confidence": null,
+      "speaker": "tanyi"
+    }
+  ],
+  "characters": {
+    "tanyi": {
+      "name": "Tanyi",
+      "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+      "voice": "en-US-AndrewNeural",
+      "rate": 0.97,
+      "pitch": "+0Hz",
+      "color": "#F5B700",
+      "kind": "human",
+      "look": {
+        "skin": "#6B3F1D",
+        "hair": "#2B2B2B",
+        "hairGrey": "#8A8A8A",
+        "shirt": "#2563EB",
+        "glasses": true,
+        "beard": true,
+        "height": 1
+      },
+      "captionColor": "#B45309",
+      "engine": "edge",
+      "id": "tanyi",
+      "files": []
+    },
+    "amara": {
+      "name": "Amara",
+      "role": "Curious learner who asks the questions beginners are thinking.",
+      "voice": "en-ZA-LeahNeural",
+      "rate": 1.05,
+      "pitch": "+10Hz",
+      "color": "#2DD4BF",
+      "kind": "human",
+      "look": {
+        "skin": "#8D5524",
+        "hair": "#1A1A1A",
+        "hairGrey": null,
+        "shirt": "#F97316",
+        "glasses": false,
+        "beard": false,
+        "height": 0.92
+      },
+      "captionColor": "#0D9488",
+      "id": "amara",
+      "files": []
+    },
+    "kito": {
+      "name": "Kito",
+      "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+      "voice": "en-US-AnaNeural",
+      "rate": 1.1,
+      "pitch": "+15Hz",
+      "color": "#60A5FA",
+      "kind": "robot",
+      "captionColor": "#2563EB",
+      "id": "kito",
+      "files": []
+    },
+    "hallucinator": {
+      "name": "The Hallucinator",
+      "role": "Mischievous. Represents confident but incorrect AI output.",
+      "voice": "en-US-GuyNeural",
+      "rate": 1.05,
+      "pitch": "-20Hz",
+      "color": "#C084FC",
+      "kind": "wisp",
+      "captionColor": "#7C3AED",
+      "id": "hallucinator",
+      "files": []
+    },
+    "gatekeeper": {
+      "name": "The Gatekeeper",
+      "role": "Represents security, privacy, governance and human approval.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": 0.95,
+      "pitch": "-5Hz",
+      "color": "#F87171",
+      "kind": "shield",
+      "captionColor": "#E11D48",
+      "id": "gatekeeper",
+      "files": []
+    }
+  },
+  "cut": "short1"
+}

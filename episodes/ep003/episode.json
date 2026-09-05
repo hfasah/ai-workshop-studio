@@ -1,0 +1,640 @@
+{
+  "id": "ep003",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 3,
+  "title": "API or MCP: How an AI Tutor Reaches the School's Lessons",
+  "disclosure": "Fictional teaching scenario based on researched conditions",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "40 exercises to mark. Every evening.",
+        "emphasis": "Can an AI tutor follow the teacher's lessons, not the whole internet?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mrs Wanjiru teaches Kiswahili at a secondary school in Nairobi. Every evening she marks forty exercises by hand.",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "She wants an AI tutor that follows her lessons, not the whole internet.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "onScreen": {
+        "title": "API or MCP?",
+        "subtitle": "How an AI tutor reaches the school's lessons"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Welcome to the AI Workshop. Today: API, or MCP. What is the difference?",
+          "expression": "happy",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "type": "dialogue",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "caption": "Listening to the teacher and her students"
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, I spoke with Mrs Wanjiru and her students. Here is what they said.",
+          "expression": "neutral",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "what-they-said",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Their words, before our ideas",
+        "app": "Amara · Interview notes",
+        "steps": [
+          {
+            "title": "The teacher",
+            "detail": "Mrs Wanjiru, Kiswahili teacher",
+            "ui": {
+              "kind": "list",
+              "title": "What Mrs Wanjiru asked for",
+              "items": [
+                {
+                  "text": "Follow my scheme of work, week by week",
+                  "done": true
+                },
+                {
+                  "text": "Never write the essay for a student",
+                  "done": true
+                },
+                {
+                  "text": "Mark practice exercises with my marking guide",
+                  "done": true
+                }
+              ]
+            }
+          },
+          {
+            "title": "The students",
+            "detail": "Computer lab, shared tablets",
+            "ui": {
+              "kind": "list",
+              "title": "What the students said",
+              "items": [
+                {
+                  "text": "We share the lab tablets, 2 or 3 to a screen",
+                  "done": false
+                },
+                {
+                  "text": "We want it to explain, not just give answers",
+                  "done": false
+                },
+                {
+                  "text": "We only use it on the school Wi-Fi",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "What the crew heard",
+            "detail": "Three design rules",
+            "ui": {
+              "kind": "text",
+              "title": "Design rules",
+              "lines": [
+                "1. The teacher's notes are the only source",
+                "2. Shared devices: no names, no personal logins",
+                "3. Explain and mark. Never do the homework."
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Mrs Wanjiru was clear. Follow my scheme of work. Never write the essay for them. Mark with my guide.",
+          "expression": "confident",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And the students?",
+          "expression": "neutral",
+          "gesture": "neutral"
+        },
+        {
+          "speaker": "amara",
+          "text": "They share lab tablets, two or three to a screen. And they want explanations, not answers.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "api-vs-mcp",
+      "type": "compare",
+      "label": "Decide",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "API",
+          "items": [
+            "One door into one service",
+            "Fixed requests, written by a developer",
+            "The program must know them in advance",
+            "Built for programs"
+          ]
+        },
+        "right": {
+          "title": "MCP (Model Context Protocol)",
+          "items": [
+            "One open standard for AI tools",
+            "Tools describe themselves in plain language",
+            "The AI reads, chooses, asks permission",
+            "Sits on top of the API"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The notes live in the school's lesson folder. Software reaches it through an API: the service's own counter, with its own form. A developer fills the form in code, and the program repeats it exactly.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "MCP, the Model Context Protocol, is an open standard for AI. The service describes its tools in plain language. The AI reads them, picks one, and asks permission. It does not replace the API. It sits on top.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "where-it-sits",
+      "type": "flow",
+      "label": "Decide",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Where each piece sits",
+        "nodes": [
+          {
+            "label": "AI tutor",
+            "icon": "🧠",
+            "sub": "Reads the tool list",
+            "color": "blue"
+          },
+          {
+            "label": "MCP server",
+            "icon": "🔌",
+            "sub": "get_lesson_notes, mark_exercise",
+            "color": "amber"
+          },
+          {
+            "label": "API",
+            "icon": "🚪",
+            "sub": "The school's lesson folder",
+            "color": "blue"
+          },
+          {
+            "label": "Teacher",
+            "icon": "✅",
+            "sub": "Approves what students see",
+            "color": "amber"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The tutor sees a short list of tools, and what each one is for.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "The MCP server holds those tools. It is the adapter.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Behind it, the same API into the lesson folder. Nothing magical.",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "And the tutor only reads notes. Publishing to students stays with the teacher.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "build-v1",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Version 1: one connector per API",
+        "app": "Kito · Tutor build, v1",
+        "steps": [
+          {
+            "title": "Connect the lesson folder",
+            "detail": "One API, one connector",
+            "ui": {
+              "kind": "text",
+              "title": "connector: lessons",
+              "lines": [
+                "GET /lessons?subject=kiswahili&week=6",
+                "returns: title, notes, exercises",
+                "auth: school API key"
+              ]
+            }
+          },
+          {
+            "title": "Connect the exercise bank",
+            "detail": "Different API, different rules",
+            "ui": {
+              "kind": "text",
+              "title": "connector: exercises",
+              "lines": [
+                "POST /exercises/search",
+                "body: { topic, level }",
+                "returns: id, question, answer_key"
+              ]
+            }
+          },
+          {
+            "title": "Decide when to fetch",
+            "detail": "Kito hard-codes a rule",
+            "ui": {
+              "kind": "text",
+              "title": "rule.txt",
+              "lines": [
+                "if question mentions a week → fetch notes",
+                "else → answer from memory"
+              ]
+            }
+          },
+          {
+            "title": "First student question",
+            "detail": "It works... for this question",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What is in week 6?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Week 6 is noun classes. Source: Mrs Wanjiru's notes, week 6. Want a short explanation?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Version one. The lesson folder API wants a subject and a week number. I write a connector.",
+          "expression": "happy",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Next, the exercise bank. A different API, with different rules. So, a second connector.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Now a rule. If the question mentions a week, fetch the notes. Otherwise, answer from memory.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "amara",
+          "text": "What is in week six? It found the notes on noun classes. Nice.",
+          "expression": "happy",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "type": "dialogue",
+      "label": "Constraint",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "caption": "A believable failure"
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "A student asked what they learned about nouns yesterday. No week number, so no notes. So I answered. Beautifully. From a textbook that does not exist.",
+          "expression": "happy",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "The rule never fired. That is the difference. With a plain API, the developer decides when to call it, in code. The model cannot see it.",
+          "expression": "serious",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "build-v2",
+      "type": "demo",
+      "label": "Fix",
+      "characters": [
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Version 2: the same API, behind MCP",
+        "app": "Kito · Tutor build, v2 (MCP)",
+        "steps": [
+          {
+            "title": "Wrap the API in an MCP server",
+            "detail": "The tool describes itself",
+            "ui": {
+              "kind": "text",
+              "title": "tool: get_lesson_notes",
+              "lines": [
+                "Returns Mrs Wanjiru's notes for a topic or week.",
+                "Use before answering any question about a lesson.",
+                "If nothing is found, say: ask your teacher."
+              ]
+            }
+          },
+          {
+            "title": "Add the marking tool",
+            "detail": "Teacher's guide only",
+            "ui": {
+              "kind": "text",
+              "title": "tool: mark_exercise",
+              "lines": [
+                "Marks a student answer with the teacher's guide.",
+                "Never writes the essay. Hints only."
+              ]
+            }
+          },
+          {
+            "title": "The model chooses the tool",
+            "detail": "Same question, no week number",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What did we learn about nouns yesterday?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking Mrs Wanjiru's notes... Week 6, noun classes. Here is a short explanation and 1 practice question."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Version two. Same API, wrapped in an MCP server. The tool describes itself: what it returns, when to use it, and what to say when nothing is found.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Second tool: mark exercise. Teacher's guide only. Never writes the essay.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Same question, no week number. Now the model reads the description, sees it needs the notes, and calls the tool. MCP is not magic. It made the tool visible, and the rule enforceable.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "The class tries it",
+        "app": "School tutor · Lab tablet 3",
+        "steps": [
+          {
+            "title": "Shared tablet, class code",
+            "detail": "No names, no personal logins",
+            "ui": {
+              "kind": "text",
+              "title": "Start session",
+              "lines": [
+                "Class code: KISW-B",
+                "No name. No phone number.",
+                "Session clears after 40 minutes"
+              ]
+            }
+          },
+          {
+            "title": "The homework trick",
+            "detail": "Teacher's rule holds",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Write my essay about my school for tomorrow."
+                },
+                {
+                  "from": "agent",
+                  "text": "I can't write it for you. Here is an outline with 3 questions to answer in your own words."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Teacher approval",
+            "detail": "Nothing reaches students without her",
+            "ui": {
+              "kind": "approval",
+              "title": "Tutor wants to publish 10 practice questions to class KISW-B",
+              "summary": [
+                "Source: Mrs Wanjiru's notes, week 6",
+                "Topic: noun classes",
+                "Marked with her marking guide"
+              ],
+              "approve": "Publish to class",
+              "reject": "Send back",
+              "clickAt": 2.2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Shared tablet, so no names. Enter the class code, and the session clears after forty minutes.",
+          "expression": "neutral",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "One student tries it: write my essay. The tutor refuses, and hands back an outline.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "The tutor drafted ten practice questions. It cannot publish them. The teacher reads, then approves. Approved.",
+          "expression": "confident",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this tutor?",
+        "items": [
+          "Maintains: the school's ICT teacher runs the MCP server",
+          "Content: notes and marking guide stay Mrs Wanjiru's work",
+          "Data: sessions stay on the school's server, no names",
+          "Value: evenings back, and a question bank the school keeps",
+          "Accountable: the teacher approves everything students see"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The notes and marking guide stay the teacher's work. Student sessions stay with the school, with no names attached.",
+          "expression": "serious",
+          "gesture": "warning"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "The school's ICT teacher maintains the MCP server. Mrs Wanjiru keeps the notes current, and approves everything students see. So she catches the tutor when it is wrong.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "statement",
+      "label": "Build challenge",
+      "characters": [
+        "tanyi",
+        "amara"
+      ],
+      "onScreen": {
+        "text": "Build challenge",
+        "emphasis": "Pick one thing your AI needs to look up. Write 2 sentences: what the tool returns, and when to use it. That is an MCP tool description."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your build challenge. Pick one thing your AI needs to look up. Write two sentences: what the tool returns, and when to use it. That is an MCP tool description.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next episode: From Chatbot to AI Agent"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. See you in the next episode.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 45,
+      "scenes": [
+        "hook",
+        "api-vs-mcp",
+        "outro"
+      ]
+    }
+  ]
+}

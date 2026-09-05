@@ -1,0 +1,209 @@
+{
+  "id": "ep005",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 5,
+  "title": "What Is MCP?",
+  "disclosure": "Fictional teaching scenario based on researched conditions",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "An AI model can reason, write and analyze.",
+        "emphasis": "But without tools, it's limited."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "An AI model can reason, write, and analyze. But without access to your business tools, it’s limited in the real world.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "explanation",
+      "type": "statement",
+      "label": "Explanation",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "MCP is a standard way for AI to connect with tools.",
+        "emphasis": "Think of it as a universal adapter."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "That’s where MCP, or Model Context Protocol, comes in. It’s a standard way for AI systems to securely connect with external tools and information.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Think of MCP as a universal adapter for AI. Through MCP, an AI agent can find documents, check customer records, query databases, or schedule meetings—depending on the permissions it has.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "type": "demo",
+      "label": "Practical Example",
+      "characters": [
+        "kito"
+      ],
+      "onScreen": {
+        "title": "Kito uses MCP to find a document",
+        "app": "Kito · Document Assistant",
+        "steps": [
+          {
+            "title": "Amara asks Kito for a report",
+            "detail": "Find the latest sales report.",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Kito, find me the latest sales report."
+                },
+                {
+                  "from": "agent",
+                  "text": "Checking Google Drive now."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks Google Drive",
+            "detail": "Tool: google_drive.read",
+            "ui": {
+              "kind": "list",
+              "title": "Sales Reports",
+              "items": [
+                {
+                  "text": "Q1 Sales Report.pdf",
+                  "done": true
+                },
+                {
+                  "text": "Q2 Sales Report.pdf"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito sends the document to Amara",
+            "detail": "Tool: email.send",
+            "ui": {
+              "kind": "email",
+              "to": "amara@example.com",
+              "subject": "Latest Sales Report",
+              "body": [
+                "Here is the latest Q2 sales report.",
+                "Please review."
+              ]
+            }
+          },
+          {
+            "title": "Waits for human approval",
+            "detail": "Nothing goes out until a person says yes.",
+            "ui": {
+              "kind": "approval",
+              "title": "Kito wants to send an email",
+              "summary": [
+                "To: amara@example.com",
+                "Latest Sales Report"
+              ],
+              "approve": "Approve and send",
+              "reject": "Reject",
+              "clickAt": 2.5
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, find me the latest sales report.",
+          "expression": "neutral",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking Google Drive now. Found it.",
+          "expression": "happy",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Nothing goes out until a human approves it. Approved.",
+          "expression": "confident",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "action-step",
+      "type": "statement",
+      "label": "Action step",
+      "characters": [
+        "tanyi",
+        "amara"
+      ],
+      "onScreen": {
+        "text": "Try this today",
+        "emphasis": "Identify one task that uses MCP."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Here is one thing to try today. Identify one task in your workflow that could use MCP to connect with a tool or information source.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Subscribe for the next episode: Why AI Hallucinates"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don’t just use AI. Build it to work reliably. See you in the next episode.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 45,
+      "scenes": [
+        "hook",
+        "explanation",
+        "demo",
+        "action-step",
+        "outro"
+      ]
+    }
+  ],
+  "format": "short"
+}

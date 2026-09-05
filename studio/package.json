@@ -1,0 +1,29 @@
+{
+  "name": "ai-workshop-studio-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Workshop Studio — local web interface for the episode pipeline",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@remotion/player": "4.0.520",
+    "express": "^4.21.2",
+    "marked": "^15.0.7",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-router-dom": "^7.1.5",
+    "remotion": "4.0.520"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "5.9.3",
+    "vite": "^6.1.0"
+  }
+}

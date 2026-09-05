@@ -1,0 +1,80 @@
+{
+  "tanyi": {
+    "name": "Tanyi",
+    "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+    "voice": "en-US-AndrewNeural",
+    "rate": 0.97,
+    "pitch": "+0Hz",
+    "color": "#F5B700",
+    "kind": "human",
+    "look": {
+      "skin": "#6B3F1D",
+      "hair": "#2B2B2B",
+      "hairGrey": "#8A8A8A",
+      "shirt": "#2563EB",
+      "glasses": true,
+      "beard": true,
+      "height": 1.0
+    },
+    "captionColor": "#B45309",
+    "engine": "edge"
+  },
+  "amara": {
+    "name": "Amara",
+    "role": "Curious learner who asks the questions beginners are thinking.",
+    "voice": "en-ZA-LeahNeural",
+    "rate": 1.05,
+    "pitch": "+10Hz",
+    "color": "#2DD4BF",
+    "kind": "human",
+    "look": {
+      "skin": "#8D5524",
+      "hair": "#1A1A1A",
+      "hairGrey": null,
+      "shirt": "#F97316",
+      "glasses": false,
+      "beard": false,
+      "height": 0.92
+    },
+    "captionColor": "#0D9488"
+  },
+  "kito": {
+    "name": "Kito",
+    "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+    "voice": "en-US-AnaNeural",
+    "rate": 1.1,
+    "pitch": "+15Hz",
+    "color": "#60A5FA",
+    "kind": "robot",
+    "captionColor": "#2563EB"
+  },
+  "hallucinator": {
+    "name": "The Hallucinator",
+    "role": "Mischievous. Represents confident but incorrect AI output.",
+    "voice": "en-US-GuyNeural",
+    "rate": 1.05,
+    "pitch": "-20Hz",
+    "color": "#C084FC",
+    "kind": "wisp",
+    "captionColor": "#7C3AED"
+  },
+  "gatekeeper": {
+    "name": "The Gatekeeper",
+    "role": "Represents security, privacy, governance and human approval.",
+    "voice": "en-GB-SoniaNeural",
+    "rate": 0.95,
+    "pitch": "-5Hz",
+    "color": "#F87171",
+    "kind": "shield",
+    "captionColor": "#E11D48"
+  },
+  "_pronunciations": {
+    "Tanyi": "Tang-yee",
+    "Kito": "Kee-toh",
+    "Amara": "Ah-mah-rah",
+    "Ebot": "Eh-bot",
+    "Njume": "n-Joo-meh",
+    "Kumba": "Koom-bah",
+    "Meme": "Meh-meh"
+  }
+}

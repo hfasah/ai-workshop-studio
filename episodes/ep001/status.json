@@ -1,0 +1,44 @@
+{
+  "id": "ep001",
+  "title": "Chatbot or AI Agent: What Is the Difference?",
+  "version": 3,
+  "gates": {
+    "brief": "approved",
+    "story": "n/a (concept format, made before the Story Director existed)",
+    "script": "approved",
+    "storyboard": "approved",
+    "preview": "approved",
+    "publication": "pending"
+  },
+  "approvals": [
+    {
+      "gate": "preview",
+      "by": "Hippolyte",
+      "at": "2026-09-04T00:00:00Z",
+      "note": "\"It looks good, this is better\" after the white-style redesign; voice changed to Andrew afterwards"
+    }
+  ],
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ],
+  "disclosure": "fictional",
+  "setting": {
+    "country": "",
+    "place": "",
+    "community": "",
+    "languages": [],
+    "reviewer": "none (concept episode)"
+  }
+}

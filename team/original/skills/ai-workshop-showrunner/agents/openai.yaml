@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Workshop Showrunner"
+  short_description: "Coordinate an animated AI episode end to end"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-workshop-showrunner to coordinate a new AI With Hippolyte episode and stop at each approval gate."

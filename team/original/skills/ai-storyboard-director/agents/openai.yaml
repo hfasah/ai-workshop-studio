@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Storyboard Director"
+  short_description: "Create timed storyboards and scene manifests"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-storyboard-director to convert this approved script into a timed storyboard and JSON scene manifest."

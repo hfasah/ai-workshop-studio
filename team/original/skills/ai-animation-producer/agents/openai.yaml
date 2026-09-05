@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Animation Producer"
+  short_description: "Prepare consistent animation assets and renders"
+  brand_color: "#1957A6"
+  default_prompt: "Use $ai-animation-producer to prepare a cost-aware preview render from this approved storyboard."

@@ -1,0 +1,396 @@
+{
+  "id": "ep001",
+  "series": "AI With Hippolyte",
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 1,
+  "title": "Chatbot or AI Agent: What Is the Difference?",
+  "disclosure": "Fictional teaching scenario",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "An AI agent can send 500 emails while you sleep.",
+        "emphasis": "But what if it sends the wrong information?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "An AI agent can send five hundred emails while you sleep.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "But what happens when it sends the wrong information?",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "onScreen": {
+        "title": "Chatbot or AI Agent?",
+        "subtitle": "What is the difference, and why it matters for your business"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Welcome to the AI Workshop. Today: chatbot, or AI agent. What is the difference?",
+          "expression": "happy",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "type": "dialogue",
+      "label": "Problem",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "caption": "A familiar situation"
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, I asked our chatbot to schedule an interview with a candidate. It gave me a nice list of steps. But nothing happened.",
+          "expression": "confused",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Right. That is the whole difference in one sentence. The chatbot answered you. It did not act for you.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "chatbot",
+      "type": "compare",
+      "label": "Visual explanation",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Chatbot",
+          "items": [
+            "Reads your message",
+            "Writes an answer",
+            "Stops"
+          ]
+        },
+        "right": {
+          "title": "AI Agent",
+          "items": [
+            "Understands the goal",
+            "Reasons about steps",
+            "Uses tools",
+            "Takes action, with permission"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot reads your message, writes an answer, and stops. That is useful, but it is passive.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An AI agent works toward a goal. It can reason, use tools, remember context, and take actions. But only within the permissions you give it.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "byte-demo",
+      "type": "demo",
+      "label": "Practical example",
+      "characters": [
+        "kito"
+      ],
+      "onScreen": {
+        "title": "Same request, given to an agent",
+        "app": "Kito · Recruiting assistant",
+        "steps": [
+          {
+            "title": "Amara gives the goal",
+            "detail": "One sentence. No instructions.",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Schedule a 30 minute interview with Amina next week."
+                },
+                {
+                  "from": "agent",
+                  "text": "On it. Checking the calendar first."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the calendar",
+            "detail": "Tool: calendar.read",
+            "ui": {
+              "kind": "calendar",
+              "days": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri"
+              ],
+              "slots": [
+                {
+                  "day": 0,
+                  "hour": 9,
+                  "label": "Standup"
+                },
+                {
+                  "day": 0,
+                  "hour": 11,
+                  "label": "Client"
+                },
+                {
+                  "day": 1,
+                  "hour": 10,
+                  "label": "Free ✓",
+                  "highlight": true
+                },
+                {
+                  "day": 2,
+                  "hour": 13,
+                  "label": "Review"
+                },
+                {
+                  "day": 3,
+                  "hour": 9,
+                  "label": "Standup"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito drafts the invitation",
+            "detail": "Tool: email.draft",
+            "ui": {
+              "kind": "email",
+              "to": "amina@example.com",
+              "subject": "Interview: Tuesday 10:00",
+              "body": [
+                "Hi Amina,",
+                "Could you join us Tuesday at 10:00 for a 30 minute interview?",
+                "A calendar invitation is attached.",
+                "Best, Amara"
+              ]
+            }
+          },
+          {
+            "title": "Waits for human approval",
+            "detail": "Nothing is sent until a person says yes.",
+            "ui": {
+              "kind": "approval",
+              "title": "Kito wants to send an email",
+              "summary": [
+                "To: amina@example.com",
+                "Interview, Tuesday 10:00, 30 minutes",
+                "Calendar invite attached"
+              ],
+              "approve": "Approve and send",
+              "reject": "Reject",
+              "clickAt": 2.2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Kito, schedule a thirty minute interview with Amina next week.",
+          "expression": "neutral",
+          "gesture": "point_right"
+        },
+        {
+          "speaker": "kito",
+          "text": "Checking the calendar. Tuesday at ten is free.",
+          "expression": "happy",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Drafting the invitation to Amina now. Interview, Tuesday at ten, thirty minutes.",
+          "expression": "neutral",
+          "gesture": "neutral"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Nothing goes out until a human approves it. Approved. That is how it should be.",
+          "expression": "confident",
+          "gesture": "neutral"
+        }
+      ]
+    },
+    {
+      "id": "four-parts",
+      "type": "flow",
+      "label": "The four parts",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What makes it an agent",
+        "nodes": [
+          {
+            "label": "Goal",
+            "icon": "target",
+            "sub": "What you want done"
+          },
+          {
+            "label": "Reasoning",
+            "icon": "brain",
+            "sub": "Plans the steps"
+          },
+          {
+            "label": "Tools",
+            "icon": "wrench",
+            "sub": "Calendar, email, CRM"
+          },
+          {
+            "label": "Action",
+            "icon": "zap",
+            "sub": "With permission"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Notice what Kito did. First, a goal.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Then reasoning: it planned the steps.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Then tools: the calendar and the email.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Then action, but only with permission. Those four parts turn a chatbot into an agent.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "type": "bullets",
+      "label": "Safety lesson",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Before an agent acts, ask:",
+        "items": [
+          "What is it allowed to do?",
+          "What data can it see?",
+          "Who approves the risky steps?"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "An agent that can act, can also act wrongly. Give it the smallest permissions it needs.",
+          "expression": "serious",
+          "gesture": "warning"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And keep a human in the loop for anything that sends, pays, or deletes.",
+          "expression": "serious",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "type": "statement",
+      "label": "Action step",
+      "characters": [
+        "tanyi",
+        "amara"
+      ],
+      "onScreen": {
+        "text": "Try this today",
+        "emphasis": "Pick one task you repeat every week. Write down its goal, the tools it needs, and who should approve the result."
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Here is one thing to try today. Pick one task you repeat every week. Write down its goal, the tools it needs, and who should approve the result. That is your first agent design.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Subscribe for the next episode: Why AI Hallucinates"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. See you in the next episode.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 45,
+      "scenes": [
+        "hook",
+        "four-parts",
+        "safety",
+        "outro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "African AI Story Director"
+  short_description: "Create authentic African AI build stories"
+  brand_color: "#D18B28"
+  default_prompt: "Use $african-ai-story-director to shape this lesson around Africans building a useful, locally grounded AI solution."

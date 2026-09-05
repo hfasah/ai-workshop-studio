@@ -1,0 +1,6 @@
+{
+  "engine": "ollama",
+  "ollamaModel": "qwen2.5:14b",
+  "ollamaUrl": "http://localhost:11434",
+  "claudeModel": ""
+}
