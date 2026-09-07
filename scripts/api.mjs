@@ -10,6 +10,7 @@ import {CHARACTERS, EPISODES, PUBLIC, ROOT, readJson, writeJson} from "./lib.mjs
 import {generateCaptions} from "./captions.mjs";
 import {ENGINES, claudeAvailable, generate, getEngine, ollamaStatus, writeSettings} from "./llm.mjs";
 import * as pub from "./publish.mjs";
+import {buildKit, kitIsCurrent} from "./kit.mjs";
 
 // Express lives in studio/node_modules so the renderer's own package.json stays untouched.
 const requireStudio = createRequire(path.join(ROOT, "studio", "package.json"));
@@ -283,7 +284,23 @@ const captionStage = (episodeId) => ({
   },
 });
 
-// Voice → captions → render (both formats) → each cut. `preview` picks half-resolution previews or finals.
+// Publishing kit stage: titles, descriptions, hashtags and tags for every platform, written by the text engine so nobody
+// types them by hand. Skipped when publish.json is already newer than episode.json (force = rewrite anyway).
+const kitStage = (episodeId, {force = false} = {}) => ({
+  label: "Publishing kit (titles, descriptions, hashtags)",
+  fn: async (job) => {
+    if (!force && kitIsCurrent(episodeId)) return log(job, "publish.json is up to date with episode.json, kept.");
+    const ac = new AbortController();
+    job.abort = () => ac.abort();
+    try {
+      await buildKit(episodeId, {force: true, onLog: (l) => log(job, l)});
+    } finally {
+      job.abort = null;
+    }
+  },
+});
+
+// Voice → captions → render (both formats) → each cut → publishing kit. `preview` picks half-resolution previews or finals.
 const produceStages = (episodeId, {preview, voice}) => {
   const stages = [];
   if (voice) stages.push(pipelineArgs(episodeId, "voice"));
@@ -291,6 +308,7 @@ const produceStages = (episodeId, {preview, voice}) => {
   stages.push(pipelineArgs(episodeId, preview ? "preview" : "final"));
   const ep = safeJson(path.join(episodeDir(episodeId), "episode.json"));
   for (const c of ep.cuts ?? []) if (c.id) stages.push(pipelineArgs(episodeId, "cut", c.id, preview));
+  stages.push(kitStage(episodeId));
   return stages;
 };
 
@@ -682,23 +700,7 @@ Write publish.md for this episode with the seven sections in the required order.
 const startPublishKitJob = (id) => {
   const job = createJob(id, "publish-kit", `Publishing kit for ${id}`);
   (async () => {
-    const engine = getEngine();
-    log(job, `Writing episodes/${id}/publish.json (YouTube, Shorts, Instagram, Facebook, TikTok, LinkedIn) with ${engineLabel(engine)}…`);
-    const {system, prompt, context} = pub.kitPrompt(id);
-    const a = await askModel(job, {system, prompt, json: true, maxTokens: 4096});
-    if (!a) return;
-    if (!a.json || typeof a.json !== "object") return finish(job, 1, `The model did not return a JSON object:\n${a.text.slice(0, 500)}`);
-    const kit = pub.finalizeKit(a.json, context);
-    const missing = ["youtube", "shorts", "instagram", "facebook", "tiktok", "linkedin"].filter((k) => !a.json[k]);
-    if (missing.length) log(job, `The model skipped ${missing.join(", ")}; those sections were filled with fallbacks. Regenerate or edit them in the Publish tab.`, "stderr");
-    pub.writeKit(id, kit, {engine: a.engine, model: a.model});
-    const ep = safeJson(path.join(episodeDir(id), "episode.json"));
-    const status = readStatus(id, ep);
-    addCost(status, "publish_usd", a.costUsd);
-    status.engine = {name: a.engine, model: a.model};
-    writeJson(path.join(episodeDir(id), "status.json"), status);
-    log(job, `Wrote episodes/${id}/publish.json and publish.md. Titles: ${kit.youtube.titles.map((t) => `"${t}"`).join(" · ")}. Cost: ${costNote(a)}`);
-    finish(job, 0);
+    if (await runStages(job, [kitStage(id, {force: true})])) finish(job, 0);
   })().catch((e) => finish(job, 1, String(e.stack ?? e)));
   return job;
 };

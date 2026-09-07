@@ -1124,3 +1124,12 @@ details.downloads > summary.btn.disabled {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 }
+
+/* Accounts page: one row per platform with its posting route */
+.acct-grid { display: grid; gap: 6px; }
+.acct-row { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "badge name chip" "badge how chip"; align-items: center; column-gap: 12px; padding: 8px 10px; border: 1px solid var(--line, #e5e7eb); border-radius: 12px; background: var(--panel, #fff); }
+.acct-row > :first-child { grid-area: badge; }
+.acct-row .acct-name { grid-area: name; font-weight: 700; }
+.acct-row .acct-how { grid-area: how; color: var(--muted, #64748b); }
+.acct-row .chip { grid-area: chip; }
+.acct-row.ready { border-color: #99f6e4; }

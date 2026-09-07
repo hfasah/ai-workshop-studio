@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import {api, engineLabel, fromLocalInput, PLANS, splitTags, toLocalInput, type Asset, type Connections, type EngineInfo, type Job, type Plan, type PlatformId, type PublishKit, type ScheduleEntry, type Status, type Via} from "../api";
 import {Doc} from "./Markdown";
@@ -140,6 +140,15 @@ export const PublishTab = ({episodeId, status, publishKit, schedule, publishMd, 
     }
   };
 
+  // No kit yet? Write it without being asked, once per visit, as soon as the engine is ready and nothing else is running.
+  const autoStarted = useRef(false);
+  useEffect(() => {
+    if (publishKit || !hasBuild || running || !engine?.ready || autoStarted.current) return;
+    autoStarted.current = true;
+    generate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [publishKit, hasBuild, running, engine?.ready]);
+
   const saveKit = async () => {
     if (!kitDraft) return;
     setBusy(true);
@@ -207,7 +216,7 @@ export const PublishTab = ({episodeId, status, publishKit, schedule, publishMd, 
           <div>
             <h3>Publishing kit</h3>
             <div className="small muted">
-              Titles, YouTube description with chapters, tags, Shorts, Instagram, Facebook, TikTok and LinkedIn text, thumbnail text and a hashtag bank, written by the text engine from the script and build.json timestamps into episodes/{episodeId}/publish.json (and publish.md). Limits are enforced in code; every field below is editable before scheduling.
+              Titles, YouTube description with chapters, tags, Shorts, Instagram, Facebook, TikTok and LinkedIn text, thumbnail text and a hashtag bank, written automatically by the text engine from the script and build.json timestamps (at the end of every production run, and here if it is missing) into episodes/{episodeId}/publish.json. The cards below are filled from it; edit anything before scheduling, or regenerate.
               {status.cost?.publish_usd ? ` Spent so far: $${status.cost.publish_usd.toFixed(2)}.` : ""}
               {publishKit?.generatedAt ? ` Last generated ${new Date(publishKit.generatedAt).toLocaleString()} with ${publishKit.engine ?? "?"} ${publishKit.model ?? ""}.` : status.engine ? ` Engine: ${engineLabel(status.engine)}.` : ""}
             </div>
@@ -264,7 +273,7 @@ export const PublishTab = ({episodeId, status, publishKit, schedule, publishMd, 
 
       {showKit && publishMd ? <Doc name="publish.md" content={publishMd} open /> : null}
 
-      {!publishKit && !running && <div className="notice">No kit yet. Generate it, or fill the cards by hand: they still work without a kit.</div>}
+      {!publishKit && !running && <div className="notice">{hasBuild ? "Writing the titles and descriptions now; the cards fill in when the text engine finishes (a few minutes on the local model)." : "No kit yet: build voice first, then the titles and descriptions are written automatically."}</div>}
 
       <div className="pcards">
         {CARDS.map((c) => {
@@ -380,7 +389,7 @@ export const PublishTab = ({episodeId, status, publishKit, schedule, publishMd, 
                 {vias.find((v) => v.value === s.via)?.hint}
               </div>
               <div className="btn-row">
-                <button className="accent sm" disabled={adding === c.platform || !s.asset || !s.when || titleOver || textOver} onClick={() => add(c.platform)} title={s.via === "blotato" ? "Sends to Blotato right away for the chosen time" : "Adds the entry; the scheduler uploads it at the slot (or it becomes due for manual)"}>
+                <button className="accent sm" disabled={adding === c.platform || !s.asset || !s.when || titleOver || textOver} onClick={() => add(c.platform)} title={s.via === "blotato" ? "Sends to Blotato right away for the chosen time" : s.via === "direct" ? "Uploads now as private; the platform publishes it at the chosen time" : "Adds the entry; it becomes due at the slot for you to post"}>
                   {adding === c.platform ? "Adding…" : "Add to schedule"}
                 </button>
                 <button className="sm ghost" disabled={adding === c.platform || !s.asset || !s.when} onClick={() => add(c.platform, true)} title="Saved on the calendar as a draft; never published until you edit it out of draft">

@@ -1,10 +1,11 @@
 import {useCallback, useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 import {api, type Connections, type LogLine, type ScheduleEntry} from "../api";
-import {ConnectionsPanel} from "../components/Connections";
 import {ScheduleList} from "../components/Schedule";
 import {WeekCalendar, mondayOf} from "../components/WeekCalendar";
+import {AccountGrid} from "./Accounts";
 
-// /publishing: week calendar (left), connections (right), upcoming list and the publish log below.
+// /publishing: week calendar (left), account readiness (right), upcoming list and the publish log below.
 export const Publishing = () => {
   const [entries, setEntries] = useState<ScheduleEntry[] | null>(null);
   const [conns, setConns] = useState<Connections | null>(null);
@@ -48,7 +49,7 @@ export const Publishing = () => {
         <div>
           <div className="kicker">AI With Hippolyte · The AI Workshop</div>
           <h1>Publishing</h1>
-          <div className="muted">Connect platforms, put finished assets on the calendar, and let the Studio upload them at the slot. Only entries you add here are ever published.</div>
+          <div className="muted">Put finished episodes on the calendar. YouTube and Facebook entries are uploaded right away and held by the platform until the slot, so this computer does not need to stay on. Only entries you add are ever published.</div>
         </div>
         <div className="btn-row">
           {attention.length > 0 && <span className="chip pending">{attention.length} need attention</span>}
@@ -62,18 +63,21 @@ export const Publishing = () => {
         <div className="card" style={{padding: 14}}>
           {entries ? <WeekCalendar entries={entries} week={week} onWeek={setWeek} onSelect={select} selectedId={selected} /> : <div className="muted">Loading schedule…</div>}
         </div>
-        <div>
-          <div className="kicker" style={{margin: "4px 0 8px"}}>
-            Connections
+        <div className="card" style={{padding: 14}}>
+          <div className="conn-head">
+            <h3 style={{margin: 0}}>Accounts</h3>
+            <Link to="/accounts" className="small">
+              Connect or manage
+            </Link>
           </div>
-          {conns ? <ConnectionsPanel conns={conns} onChange={setConns} /> : <div className="muted small">Loading connections…</div>}
+          {conns ? <AccountGrid conns={conns} /> : <div className="muted small">Loading accounts…</div>}
         </div>
       </div>
 
       <div className="card" style={{marginTop: 16}}>
         <h3>Upcoming</h3>
         <div className="small muted" style={{marginBottom: 10}}>
-          Direct entries are uploaded 10 minutes before the slot (Facebook: 20) with the platform's own scheduling; Blotato entries were handed to Blotato when added; manual entries become due at the slot. The scheduler checks every minute while the API runs.
+          YouTube and Facebook entries are uploaded as soon as they are added, private, with the platform's own publish time, and go live at the slot whether or not this computer is on (Facebook only accepts slots within 30 days; later ones wait for the scheduler). Blotato entries were handed to Blotato when added. Manual entries become due at the slot. The scheduler checks every minute while the Studio runs, as a fallback.
         </div>
         {entries ? <ScheduleList entries={entries} conns={conns} onChanged={load} selectedId={selected} /> : null}
       </div>

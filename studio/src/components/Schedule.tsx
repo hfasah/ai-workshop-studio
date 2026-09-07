@@ -22,8 +22,8 @@ export const viaOptions = (platform: PlatformId, conns: Connections | null): {va
   const blAcc = p?.blotato ? conns?.blotato.accounts.find((a) => a.platform === p.blotato) : undefined;
   const blotatoOk = Boolean(p?.blotato && conns?.blotato.status === "connected");
   const out: {value: Via; label: string; enabled: boolean; hint: string}[] = [];
-  if (p?.direct) out.push({value: "direct", label: `Direct (${p.direct === "youtube" ? "YouTube" : "Facebook Page"}${directName ? `: ${directName}` : ""})`, enabled: directOk, hint: directOk ? "Uploaded by the Studio at the scheduled time, free" : `Connect ${p.direct === "youtube" ? "YouTube" : "the Facebook Page"} on the Publishing page`});
-  if (p?.blotato) out.push({value: "blotato", label: `Blotato${blAcc ? ` (@${blAcc.username || blAcc.fullname})` : ""}`, enabled: blotatoOk, hint: blotatoOk ? "Sent to Blotato now; needs a public video URL" : "Paste a Blotato API key on the Publishing page"});
+  if (p?.direct) out.push({value: "direct", label: `Direct (${p.direct === "youtube" ? "YouTube" : "Facebook Page"}${directName ? `: ${directName}` : ""})`, enabled: directOk, hint: directOk ? "Uploaded now, private; the platform publishes it at the slot, free" : `Connect ${p.direct === "youtube" ? "YouTube" : "the Facebook Page"} on the Accounts page`});
+  if (p?.blotato) out.push({value: "blotato", label: `Blotato${blAcc ? ` (@${blAcc.username || blAcc.fullname})` : ""}`, enabled: blotatoOk, hint: blotatoOk ? "Sent to Blotato now; needs a public video URL" : "Paste a Blotato API key on the Accounts page"});
   out.push({value: "manual", label: "Manual (copy the caption, post yourself)", enabled: true, hint: "The entry becomes due at the slot; mark it posted with the URL"});
   return out;
 };

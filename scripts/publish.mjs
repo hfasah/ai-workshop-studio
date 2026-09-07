@@ -592,7 +592,24 @@ export const publishEntry = async (id, {now = false, onLog} = {}) => {
   }
 };
 
-// Creation: Blotato entries are sent right away (Blotato holds the slot); direct entries wait for the scheduler; manual entries wait for the slot.
+// Facebook's scheduled_publish_time must be 10 minutes to 30 days ahead; YouTube's publishAt takes any future time.
+const FB_MAX_AHEAD_MS = 30 * 24 * 3600000;
+
+// True when the platform can hold the video itself until the slot, so the upload can happen right now and this
+// computer no longer needs to be on at publish time. YouTube: any future slot. Facebook: the 10 min–30 day window.
+export const nativeSchedulable = (entry, now = Date.now()) => {
+  if (entry.via !== "direct") return false;
+  const at = Date.parse(entry.scheduledAt);
+  if (Number.isNaN(at) || at <= now + 60000) return false;
+  const direct = PLATFORMS[entry.platform]?.direct;
+  if (direct === "youtube") return true;
+  if (direct === "facebook") return at - now >= 10 * 60000 + 60000 && at - now <= FB_MAX_AHEAD_MS;
+  return false;
+};
+
+// Creation: entries the platform can schedule itself (YouTube, Facebook within 30 days) are uploaded right away, private,
+// with the platform's own publish time, so nothing depends on this computer being on later. Blotato entries are sent
+// right away (Blotato holds the slot). Other direct entries wait for the scheduler; manual entries wait for the slot.
 export const createEntry = async (body, {port}) => {
   const e = validateEntry(body, null, {port});
   const draft = body.status === "draft";
@@ -601,6 +618,7 @@ export const createEntry = async (body, {port}) => {
   const entry = saveEntry({id: crypto.randomUUID().slice(0, 8), ...e, status: draft ? "draft" : "scheduled", createdAt: new Date().toISOString()});
   appendLog({action: "create", entryId: entry.id, episodeId: entry.episodeId, platform: entry.platform, via: entry.via, scheduledAt: entry.scheduledAt, status: entry.status});
   if (!draft && entry.via === "blotato") return publishEntry(entry.id);
+  if (!draft && nativeSchedulable(entry)) return publishEntry(entry.id);
   return entry;
 };
 
@@ -623,6 +641,7 @@ export const updateEntry = async (id, body, {port}) => {
   const entry = saveEntry({...v, status, error: status === "scheduled" ? undefined : existing.error});
   appendLog({action: "update", entryId: id, episodeId: entry.episodeId, platform: entry.platform, via: entry.via, scheduledAt: entry.scheduledAt, status: entry.status});
   if (entry.status === "scheduled" && entry.via === "blotato" && !entry.remoteId) return publishEntry(entry.id);
+  if (entry.status === "scheduled" && !entry.remoteId && nativeSchedulable(entry)) return publishEntry(entry.id);
   return entry;
 };
 
@@ -657,7 +676,9 @@ export const nextForEpisode = (episodeId, entries = readSchedule()) => {
 };
 
 // ---------- scheduler loop ----------
-// Every minute: direct entries within their lead time are uploaded with native scheduling; manual entries past their slot become "due".
+// Every minute, as a fallback: direct entries that could not be handed to the platform at creation (for example a Facebook
+// slot more than 30 days out, or an entry added while the connection was down) are uploaded within their lead time with
+// native scheduling; manual entries past their slot become "due".
 export const schedulerTick = async () => {
   const now = Date.now();
   for (const e of readSchedule()) {
@@ -739,15 +760,16 @@ export const kitSystemPrompt = () => {
 ${bible.trim()}
 
 === PLATFORM RULES ===
-- youtube: "titles": 3 options, each at most ${KIT_LIMITS.youtube.title} characters, the claim or question first, no clickbait. "description": two short paragraphs (what happens, what the viewer learns), then a line "Chapters" followed by the chapter list given in the task exactly as provided (one per line, "m:ss Title"), then the disclosure line verbatim on its own line, then the series tagline. "tags": ${KIT_LIMITS.youtube.tags} lowercase tags without #, including "ai with hippolyte" and "africa ai moment".
-- shorts: "titles": 3 options, each at most ${KIT_LIMITS.shorts.title} characters, the claim first. "description": at most ${KIT_LIMITS.shorts.description} characters, one or two sentences. "hashtags": 3 hashtags (with #), relevant to the topic.
-- instagram: "caption": a hook line, then 2 short paragraphs, then one question to the reader; at most 1,800 characters; no hashtags inside (they are added on the last line). "hashtags": 5 hashtags.
-- facebook: "caption": at most ${KIT_LIMITS.facebook.caption} characters, conversational, ends with a question. "hashtags": at most 2.
-- tiktok: "caption": at most ${KIT_LIMITS.tiktok.caption} characters, punchy. "hashtags": 4 hashtags.
-- linkedin: "post": 120 to 180 words in the host's first-person voice (an AI engineer who has run production systems; direct, warm, practical), no hashtags, no links, no emojis, ending with one question.
+- youtube: "titles": 3 options, each at most ${KIT_LIMITS.youtube.title} characters, the claim or question first, no clickbait, no brackets, no company names. "description": two short paragraphs only: first what happens in the story, second what the viewer learns and can try. Do NOT write the chapters, the disclosure or the tagline: the Studio appends them itself. "tags": ${KIT_LIMITS.youtube.tags} lowercase topic tags without # (concepts a viewer would search for, such as "ai agents", "machine learning basics"), including "ai with hippolyte" and "africa ai moment".
+- shorts: "titles": 3 options, each at most ${KIT_LIMITS.shorts.title} characters, the claim first. "description": ONE complete sentence of at most 110 characters that states the claim. "hashtags": 3 topic hashtags (with #).
+- instagram: "caption": a hook line, then 2 short paragraphs, then one question to the reader; at most 1,800 characters; no hashtags inside (they are added on the last line). "hashtags": 5 topic hashtags.
+- facebook: "caption": at most ${KIT_LIMITS.facebook.caption} characters, conversational, ends with a question, no hashtags inside. "hashtags": at most 2.
+- tiktok: "caption": at most ${KIT_LIMITS.tiktok.caption} characters, punchy, no hashtags inside. "hashtags": 4 topic hashtags.
+- linkedin: "post": 120 to 180 words in the host's first-person voice (an AI engineer who has run production systems; direct, warm, practical), about the lesson itself rather than the characters, no hashtags, no links, no emojis, ending with one question.
 - "thumbnailText": at most ${KIT_LIMITS.thumbnailWords} words for the thumbnail.
-- "hashtagBank": ${KIT_LIMITS.bank} relevant hashtags (with #), starting with #AIWithHippolyte and #AfricaAIMoment.
-Rules: no invented statistics, no claims the episode does not make, the host's real name only in the series name, characters named only as in the episode. Return ONLY one JSON object with exactly these keys: youtube, shorts, instagram, facebook, tiktok, linkedin, thumbnailText, hashtagBank.`;
+- "hashtagBank": ${KIT_LIMITS.bank} topic hashtags (with #), starting with #AIWithHippolyte and #AfricaAIMoment.
+Hashtags and tags are TOPICS (for example #AIAgents, #GenerativeAI, #SmallBusiness, #Logistics, #Cameroon). Never turn a character, a person, or a fictional company into a hashtag or a tag.
+Rules: no invented statistics, no claims the episode does not make, the host's real name only in the series name, characters named only as in the episode, never write the disclosure sentence yourself. Return ONLY one JSON object with exactly these keys: youtube, shorts, instagram, facebook, tiktok, linkedin, thumbnailText, hashtagBank.`;
 };
 
 export const kitPrompt = (id) => {
@@ -756,14 +778,14 @@ export const kitPrompt = (id) => {
   const cuts = (c.ep.cuts ?? []).map((x) => `- ${x.id}: target ${x.targetSec ?? "?"} s, scenes ${x.scenes.join(", ")}`).join("\n");
   const prompt = `=== EPISODE ===
 Episode ${c.ep.episode ?? Number(id.slice(2))} (${id}): "${c.title}"
-Disclosure line (must appear verbatim in the YouTube description): ${c.disclosure}
+Disclosure line (appended by the Studio; do not write it): ${c.disclosure}
 Total running time: ${c.total}
 Setting: ${c.setting || "none stated"}
 Cast in this episode: ${c.cast || "tanyi"}
 Vertical cuts (the Shorts, Reels and TikTok asset):
 ${cuts || "- none"}
 
-=== CHAPTERS (copy into the YouTube description exactly) ===
+=== CHAPTERS (for your information; the Studio appends them to the YouTube description) ===
 ${chapters || "(no build yet)"}
 
 === SPOKEN LINES WITH SCENE TIMESTAMPS ===
@@ -792,39 +814,87 @@ const clipText = (s, n) => {
   return (br > n * 0.5 ? cut.slice(0, br + 1) : clip(cut, n)).trim();
 };
 const asList = (v) => (Array.isArray(v) ? v : typeof v === "string" ? v.split(/\n|,/) : []).map((x) => String(x).trim()).filter(Boolean);
-const withFixed = (tags, n, first = []) => cleanTags([...first, ...FIXED_TAGS, ...cleanTags(tags)]).slice(0, n);
 const tagWord = (t) => String(t).replace(/^#/, "").replace(/[^\p{L}\p{N} ]/gu, "").toLowerCase().trim();
+
+// Names that must never become hashtags or tags: the cast, plus capitalised names from the episode's setting line
+// (the fictional company, the town) so a small model's "#Mbella" or "#WouriExpress" is dropped.
+const nameBlocklist = (ctx) => {
+  const words = new Set();
+  const allow = new Set(["ai", "mcp", "llm", "rag", "api"]);
+  for (const w of String(ctx?.status?.setting?.country ?? "").match(/\p{L}+/gu) ?? []) allow.add(w.toLowerCase());
+  for (const c of Object.values(CHARACTERS)) if (c && typeof c === "object" && c.name) for (const w of String(c.name).split(/\s+/)) if (w.toLowerCase() !== "the") words.add(w.toLowerCase());
+  for (const w of String(ctx?.status?.setting?.community ?? "").match(/\b\p{Lu}\p{L}+/gu) ?? []) words.add(w.toLowerCase());
+  // Capitalised words that are not at the start of a sentence are names (people, places, the fictional company).
+  for (const line of (ctx?.ep?.scenes ?? []).flatMap((s) => s.lines ?? [])) {
+    for (const m of String(line.text).matchAll(/(^|[.!?:]\s+|\s)(\p{Lu}\p{L}{2,})\b/gu)) {
+      if (m[1] === "" || /[.!?:]\s+$/.test(m[1])) continue;
+      const w = m[2].toLowerCase();
+      if (!/^(monday|tuesday|wednesday|thursday|friday|saturday|sunday)$/.test(w)) words.add(w);
+    }
+  }
+  // Joined forms too ("Wouri Express" → "wouriexpress"), so a hashtag made from a two-word name is caught.
+  const community = String(ctx?.status?.setting?.community ?? "").match(/\b\p{Lu}\p{L}+(?:\s+\p{Lu}\p{L}+)+/gu) ?? [];
+  for (const n of community) words.add(n.replace(/\s+/g, "").toLowerCase());
+  for (const w of allow) words.delete(w);
+  return words;
+};
+const dropNames = (tags, block) =>
+  tags.filter((t) => {
+    const w = String(t).replace(/^#/, "").toLowerCase();
+    if (block.has(w)) return false;
+    for (const b of block) if (b.length >= 4 && (w.startsWith(b) || w.endsWith(b))) return false;
+    return true;
+  });
+// A caption the model cut off mid-sentence loses the dangling fragment.
+const wholeSentences = (s) => {
+  const t = String(s ?? "").trim();
+  if (!t || /[.!?…"”)]$/.test(t)) return t;
+  const m = t.match(/^(.*[.!?…])\s+[^.!?]*$/s);
+  return m ? m[1] : t;
+};
+const withFixed = (tags, n, first = [], block = new Set()) => cleanTags([...first, ...FIXED_TAGS, ...dropNames(cleanTags(tags), block)]).slice(0, n);
+const stripInlineTags = (s) => String(s ?? "").replace(/(^|\s)#[\p{L}\p{N}_]+/gu, "$1").replace(/[ \t]{2,}/g, " ").trim();
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 // Enforces every platform limit in code; the model's output is a draft.
 export const finalizeKit = (raw, ctx) => {
   const r = raw && typeof raw === "object" ? raw : {};
+  const block = nameBlocklist(ctx);
   const y = r.youtube ?? {};
-  const titles = asList(y.titles).map((t) => clip(t, KIT_LIMITS.youtube.title)).filter(Boolean);
+  const titles = asList(y.titles).map((t) => clip(t.replace(/\s*[([].*?[)\]]\s*$/, ""), KIT_LIMITS.youtube.title)).filter(Boolean);
   while (titles.length < 3) titles.push(clip(ctx.title, KIT_LIMITS.youtube.title));
-  let desc = String(y.description ?? "").trim();
-  if (ctx.chapters.length && !/(^|\n)0:00 /.test(desc)) desc += `\n\nChapters\n${ctx.chapters.map((ch) => `${ch.at} ${ch.label}`).join("\n")}`;
-  if (!desc.includes(ctx.disclosure)) desc += `\n\n${ctx.disclosure}`;
+  // The model writes the two paragraphs only; chapters, disclosure and tagline are appended here, exactly once.
   const tagline = ctx.ep.tagline ?? "Complex AI. Explained visually. Built practically.";
-  if (!desc.includes(tagline)) desc += `\n${tagline}`;
+  let body = stripInlineTags(String(y.description ?? ""))
+    .replace(/(^|\n)\s*chapters:?\s*\n(?:\s*\d+:\d\d[^\n]*\n?)+/gi, "$1")
+    .replace(/(^|\n)\s*\d+:\d\d [^\n]*\n?/g, "$1")
+    .replace(new RegExp(escapeRe(ctx.disclosure), "g"), "")
+    .replace(/Fictional teaching scenario\.?[^\n]*/g, "")
+    .replace(new RegExp(escapeRe(tagline), "g"), "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+  let desc = body;
+  if (ctx.chapters.length) desc += `\n\nChapters\n${ctx.chapters.map((ch) => `${ch.at} ${ch.label}`).join("\n")}`;
+  desc += `\n\n${ctx.disclosure}\n${tagline}`;
   desc = clipText(desc, 4800);
   const ytTags = [];
-  for (const t of ["ai with hippolyte", "africa ai moment", ...asList(y.tags).map(tagWord)]) if (t && !ytTags.includes(t) && t.length <= 30) ytTags.push(t);
+  for (const t of ["ai with hippolyte", "africa ai moment", ...asList(y.tags).map(tagWord)]) if (t && !ytTags.includes(t) && t.length <= 30 && !t.split(" ").some((w) => block.has(w))) ytTags.push(t);
   const youtube = {titles: titles.slice(0, 3), description: desc, tags: ytTags.slice(0, KIT_LIMITS.youtube.tags), hashtags: [...FIXED_TAGS]};
 
   const s = r.shorts ?? {};
   const sTitles = asList(s.titles).map((t) => clip(t, KIT_LIMITS.shorts.title)).filter(Boolean);
   while (sTitles.length < 3) sTitles.push(clip(titles[sTitles.length] ?? ctx.title, KIT_LIMITS.shorts.title));
-  const shorts = {titles: sTitles.slice(0, 3), description: clip(String(s.description ?? "").replace(/#\w+/g, "").trim(), KIT_LIMITS.shorts.description), hashtags: withFixed(s.hashtags, KIT_LIMITS.shorts.hashtags + 1, ["#Shorts"])};
+  const shorts = {titles: sTitles.slice(0, 3), description: wholeSentences(clipText(stripInlineTags(s.description).replace(/Fictional teaching(?: scenario)?\.?[^\n]*/g, "").trim(), KIT_LIMITS.shorts.description)), hashtags: withFixed(s.hashtags, KIT_LIMITS.shorts.hashtags + 1, ["#Shorts"], block)};
 
   const ig = r.instagram ?? {};
-  const igTags = withFixed(ig.hashtags, KIT_LIMITS.instagram.hashtags);
-  const instagram = {caption: clipText(String(ig.caption ?? "").replace(/(^|\s)#[\p{L}\p{N}_]+/gu, "$1").trim(), KIT_LIMITS.instagram.caption - igTags.join(" ").length - 2), hashtags: igTags};
+  const igTags = withFixed(ig.hashtags, KIT_LIMITS.instagram.hashtags, [], block);
+  const instagram = {caption: clipText(stripInlineTags(ig.caption), KIT_LIMITS.instagram.caption - igTags.join(" ").length - 2), hashtags: igTags};
 
   const fb = r.facebook ?? {};
-  const facebook = {caption: clipText(String(fb.caption ?? "").trim(), KIT_LIMITS.facebook.caption), hashtags: withFixed(fb.hashtags, KIT_LIMITS.facebook.hashtags)};
+  const facebook = {caption: wholeSentences(clipText(stripInlineTags(fb.caption), KIT_LIMITS.facebook.caption)), hashtags: withFixed(fb.hashtags, KIT_LIMITS.facebook.hashtags, [], block)};
 
   const tt = r.tiktok ?? {};
-  const tiktok = {caption: clip(String(tt.caption ?? "").replace(/#\w+/g, "").trim(), KIT_LIMITS.tiktok.caption), hashtags: withFixed(tt.hashtags, KIT_LIMITS.tiktok.hashtags)};
+  const tiktok = {caption: wholeSentences(clip(stripInlineTags(tt.caption), KIT_LIMITS.tiktok.caption)), hashtags: withFixed(tt.hashtags, KIT_LIMITS.tiktok.hashtags, [], block)};
 
   const li = r.linkedin ?? {};
   const linkedin = {post: clipText(String(li.post ?? "").replace(/https?:\/\/\S+/g, "").replace(/(^|\s)#[\p{L}\p{N}_]+/gu, "$1").replace(/[ \t]+\n/g, "\n").trim(), KIT_LIMITS.linkedin.post), hashtags: []};
@@ -836,7 +906,7 @@ export const finalizeKit = (raw, ctx) => {
     .filter(Boolean)
     .slice(0, KIT_LIMITS.thumbnailWords)
     .join(" ");
-  const hashtagBank = withFixed(r.hashtagBank, KIT_LIMITS.bank);
+  const hashtagBank = withFixed(r.hashtagBank, KIT_LIMITS.bank, [], block);
   return {youtube, shorts, instagram, facebook, tiktok, linkedin, thumbnailText: thumbnailText || clip(ctx.title, 24), hashtagBank};
 };
 

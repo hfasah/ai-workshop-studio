@@ -13,6 +13,7 @@ export const App = () => (
         </NavLink>
         <NavLink to="/new">New episode</NavLink>
         <NavLink to="/publishing">Publishing</NavLink>
+        <NavLink to="/accounts">Accounts</NavLink>
       </nav>
     </header>
     <main className="page">
