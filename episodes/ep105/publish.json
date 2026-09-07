@@ -1,0 +1,154 @@
+{
+  "youtube": {
+    "titles": [
+      "What Is an AI Agent?",
+      "AI Agents vs Chatbots",
+      "How AI Agents Work"
+    ],
+    "description": "Every Friday, Ndedi at Wouri Express exports messages, strips numbers, and pastes them in to get a summary. Tanyi explains how an AI agent can automate these steps itself, with clear boundaries for safety. Learn the difference between chatbots and agents.\n\nChapters\n0:00 Hook\n0:23 Listening\n0:40 Decide: chatbot or agent\n1:02 Understand: the agent loop\n1:26 Build\n1:52 Constraint and fix\n2:22 User test\n2:38 Where this applies\n2:52 Ownership\n\nFictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "aiagents",
+      "machinelearningbasics",
+      "aiautomation",
+      "cameroon",
+      "reliableai",
+      "smallbusiness",
+      "logistics",
+      "weeklyreport"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "AI Agents Automate Tasks",
+      "Chatbot vs Agent",
+      "What Is an AI Agent?"
+    ],
+    "description": "An AI agent automates tasks itself, unlike a chatbot. Tanyi explains the difference with Wouri Express's Friday report system.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents"
+    ]
+  },
+  "instagram": {
+    "caption": "Every Friday, Ndedi at Wouri Express does six steps to get a summary. Tanyi explains how an AI agent can do them itself, with clear boundaries for safety.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents",
+      "#MachineLearningBasics",
+      "#AIAutomation"
+    ]
+  },
+  "facebook": {
+    "caption": "Every Friday, Ndedi at Wouri Express does six steps to get a summary. Tanyi explains how an AI agent can do them itself, with clear boundaries for safety.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "An AI agent automates tasks itself. Tanyi explains the difference with Wouri Express's Friday report system.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents",
+      "#MachineLearningBasics"
+    ]
+  },
+  "linkedin": {
+    "post": "An AI agent automates tasks itself, unlike a chatbot. In this episode, I explain the difference with Wouri Express's Friday report system, showing how an agent can handle repeated workflows safely and reliably.",
+    "hashtags": []
+  },
+  "thumbnailText": "AI Agent",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#AIAgents",
+    "#MachineLearningBasics",
+    "#AIAutomation",
+    "#Cameroon",
+    "#ReliableAI",
+    "#SmallBusiness",
+    "#Logistics",
+    "#WeeklyReport",
+    "#ResponsibleDesign"
+  ],
+  "generatedAt": "2026-09-07T15:57:39.171Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:23",
+      "label": "Listening"
+    },
+    {
+      "at": "0:40",
+      "label": "Decide: chatbot or agent"
+    },
+    {
+      "at": "1:02",
+      "label": "Understand: the agent loop"
+    },
+    {
+      "at": "1:26",
+      "label": "Build"
+    },
+    {
+      "at": "1:52",
+      "label": "Constraint and fix"
+    },
+    {
+      "at": "2:22",
+      "label": "User test"
+    },
+    {
+      "at": "2:38",
+      "label": "Where this applies"
+    },
+    {
+      "at": "2:52",
+      "label": "Ownership"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}

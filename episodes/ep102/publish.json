@@ -1,0 +1,156 @@
+{
+  "youtube": {
+    "titles": [
+      "Generative AI Explained Simply",
+      "How Generative AI Works in Practice",
+      "Wouri Express Uses AI for Weekly Reports"
+    ],
+    "description": "Friday at Wouri Express, Mbella needs to write a weekly report from messy driver notes. Tanyi shows how generative AI can draft the report based on given facts and numbers. Learn what generative AI is, how it works, and why accuracy matters.\n\nChapters\n0:00 Hook\n0:23 Listening\n0:40 Decide: what generative means\n1:05 How the draft is made\n1:29 Build\n1:54 Constraint and fix\n2:22 User test\n2:36 Where this applies\n2:47 Ownership\n\nFictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "ai agents",
+      "generative ai",
+      "machine learning basics",
+      "cameroon",
+      "small business",
+      "logistics",
+      "weekly reports",
+      "data drafting"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "Generative AI Drafts Reports",
+      "AI Writes from Given Facts",
+      "Accuracy in Generative AI"
+    ],
+    "description": "Friday at Wouri Express, generative AI drafts weekly reports based on given facts and numbers. Learn how it works and why accuracy matters.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#GenerativeAI"
+    ]
+  },
+  "instagram": {
+    "caption": "Friday at Wouri Express, Mbella needs to write a weekly report from messy driver notes. Tanyi shows how generative AI can draft the report based on given facts and numbers. Learn what generative AI is, how it works, and why accuracy matters.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#GenerativeAI",
+      "#AIAgents",
+      "#TextGeneration"
+    ]
+  },
+  "facebook": {
+    "caption": "Friday at Wouri Express, Mbella needs to write a weekly report from messy driver notes. Tanyi shows how generative AI can draft the report based on given facts and numbers. Learn what generative AI is, how it works, and why accuracy matters.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "Friday at Wouri Express, Mbella needs to write a weekly report from messy driver notes.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#GenerativeAI",
+      "#AIAgents"
+    ]
+  },
+  "linkedin": {
+    "post": "Friday at Wouri Express, Mbella needs to write a weekly report from messy driver notes. Tanyi shows how generative AI can draft the report based on given facts and numbers. Learn what generative AI is, how it works, and why accuracy matters.",
+    "hashtags": []
+  },
+  "thumbnailText": "Generative AI",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#GenerativeAI",
+    "#AIAgents",
+    "#TextGeneration",
+    "#Logistics",
+    "#Cameroon",
+    "#WeeklyReports",
+    "#DataDrafting",
+    "#MachineLearningBasics",
+    "#SmallBusiness",
+    "#AccuracyMatters",
+    "#FridayReport"
+  ],
+  "generatedAt": "2026-09-07T15:52:01.497Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:23",
+      "label": "Listening"
+    },
+    {
+      "at": "0:40",
+      "label": "Decide: what generative means"
+    },
+    {
+      "at": "1:05",
+      "label": "How the draft is made"
+    },
+    {
+      "at": "1:29",
+      "label": "Build"
+    },
+    {
+      "at": "1:54",
+      "label": "Constraint and fix"
+    },
+    {
+      "at": "2:22",
+      "label": "User test"
+    },
+    {
+      "at": "2:36",
+      "label": "Where this applies"
+    },
+    {
+      "at": "2:47",
+      "label": "Ownership"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "youtube": {
+    "titles": [
+      "MCP Simplifies AI Connections",
+      "Why MCP Matters for Wouri Express",
+      "AI Integration with MCP Explained"
+    ],
+    "description": "Wouri Express has three systems and two AI models that need them. Tanyi explains how the Model Context Protocol (MCP) simplifies connections, making it easier to switch providers without rebuilding. Learn why this standard matters for reliable AI integration.\n\nChapters\n0:00 Hook\n0:24 Listening\n0:42 Decide: custom code or a standard\n1:08 Understand: how MCP connects\n1:35 Build\n2:02 Constraint and fix\n2:34 User test\n2:54 Where this applies\n3:05 Ownership\n\nFictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon. MCP facts: the Model Context Protocol is an open standard published by Anthropic in November 2024.\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "mcp",
+      "cameroon logistics",
+      "small business ai",
+      "ai integration",
+      "open standards",
+      "reliable ai"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "MCP Simplifies Connections",
+      "Why MCP Matters",
+      "AI Integration with MCP"
+    ],
+    "description": "Wouri Express uses Model Context Protocol (MCP) to simplify AI connections. Learn how it works and why it matters for reliable integration.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents"
+    ]
+  },
+  "instagram": {
+    "caption": "Wouri Express uses Model Context Protocol (MCP) to simplify AI connections. Learn how this standard makes switching providers easier and keeps control in your hands.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents",
+      "#ReliableAI",
+      "#CameroonLogistics"
+    ]
+  },
+  "facebook": {
+    "caption": "Wouri Express uses Model Context Protocol (MCP) to simplify AI connections. Learn how this standard makes switching providers easier and keeps control in your hands.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "Wouri Express uses Model Context Protocol (MCP) to simplify AI connections. Learn how it works and why it matters for reliable integration.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#AIAgents",
+      "#ReliableAI"
+    ]
+  },
+  "linkedin": {
+    "post": "At Wouri Express, we use the Model Context Protocol (MCP) to simplify AI connections. MCP makes it easier to switch providers without rebuilding and keeps control in our hands. Learn how this standard works for reliable integration.",
+    "hashtags": []
+  },
+  "thumbnailText": "MCP Simplifies",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#AIAgents",
+    "#ReliableAI",
+    "#CameroonLogistics",
+    "#SmallBusinessAI",
+    "#OpenStandards",
+    "#MCP",
+    "#AIIntegration",
+    "#DataSecurity",
+    "#EnterpriseAI",
+    "#TechInAfrica",
+    "#ResponsibleAI"
+  ],
+  "generatedAt": "2026-09-07T16:03:31.423Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:24",
+      "label": "Listening"
+    },
+    {
+      "at": "0:42",
+      "label": "Decide: custom code or a standard"
+    },
+    {
+      "at": "1:08",
+      "label": "Understand: how MCP connects"
+    },
+    {
+      "at": "1:35",
+      "label": "Build"
+    },
+    {
+      "at": "2:02",
+      "label": "Constraint and fix"
+    },
+    {
+      "at": "2:34",
+      "label": "User test"
+    },
+    {
+      "at": "2:54",
+      "label": "Where this applies"
+    },
+    {
+      "at": "3:05",
+      "label": "Ownership"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon. MCP facts: the Model Context Protocol is an open standard published by Anthropic in November 2024.",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}

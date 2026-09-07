@@ -1,0 +1,152 @@
+{
+  "youtube": {
+    "titles": [
+      "ML vs Generative AI: Wouri Express",
+      "Predict and Write with AI",
+      "AI for Predictions & Content"
+    ],
+    "description": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions. Learn how machine learning predicts outcomes based on past data while generative AI creates new content.\n\nChapters\n0:00 Hook\n0:19 Listening\n0:36 Decide: which AI for which question\n1:03 Two machines\n1:27 Build\n1:58 Constraint and fix\n2:27 User test\n2:47 Where this applies\n2:59 Ownership\n\nFictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "machinelearningbasics",
+      "generativeai",
+      "aifundamentals",
+      "predictiveanalytics",
+      "contentgeneration",
+      "cameroonlogistics",
+      "smallbusiness",
+      "africait"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "ML vs Generative AI: Wouri Express",
+      "Predict and Write with AI",
+      "AI for Predictions & Content"
+    ],
+    "description": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MachineLearningBasics"
+    ]
+  },
+  "instagram": {
+    "caption": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions. Learn how machine learning predicts outcomes based on past data while generative AI creates new content.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MachineLearningBasics",
+      "#GenerativeAI",
+      "#AIFundamentals"
+    ]
+  },
+  "facebook": {
+    "caption": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions. Learn how machine learning predicts outcomes based on past data while generative AI creates new content.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MachineLearningBasics",
+      "#GenerativeAI"
+    ]
+  },
+  "linkedin": {
+    "post": "At Wouri Express, Mbella needs two different kinds of AI to answer her questions. Learn how machine learning predicts outcomes based on past data while generative AI creates new content. What are your thoughts on using these types of AI in business?",
+    "hashtags": []
+  },
+  "thumbnailText": "ML vs Generative",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#MachineLearningBasics",
+    "#GenerativeAI",
+    "#AIFundamentals",
+    "#CameroonLogistics",
+    "#SmallBusiness",
+    "#PredictiveAnalytics",
+    "#ContentGeneration"
+  ],
+  "generatedAt": "2026-09-07T15:53:54.562Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:19",
+      "label": "Listening"
+    },
+    {
+      "at": "0:36",
+      "label": "Decide: which AI for which question"
+    },
+    {
+      "at": "1:03",
+      "label": "Two machines"
+    },
+    {
+      "at": "1:27",
+      "label": "Build"
+    },
+    {
+      "at": "1:58",
+      "label": "Constraint and fix"
+    },
+    {
+      "at": "2:27",
+      "label": "User test"
+    },
+    {
+      "at": "2:47",
+      "label": "Where this applies"
+    },
+    {
+      "at": "2:59",
+      "label": "Ownership"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}

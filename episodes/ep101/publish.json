@@ -1,0 +1,147 @@
+{
+  "youtube": {
+    "titles": [
+      "Sorting Delivery Reports with AI",
+      "AI vs Rules: What's the Difference?",
+      "How AI Can Help Small Businesses"
+    ],
+    "description": "Mbella runs Wouri Express, a small delivery company in Douala. She wants an AI system to sort through 150 weekly driver messages and find recurring delays without creating new apps for drivers. Tanyi explains how artificial intelligence differs from rule-based software by learning patterns from examples and reading messy human text.\n\nChapters\n0:00 Hook\n0:22 Listening\n0:40 Decide: rules or AI?\n1:05 What AI is\n1:26 Build\n1:53 Constraint and fix\n2:22 User test\n2:42 Where this applies\n2:52 Ownership\n\nFictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "artificial intelligence",
+      "machine learning basics",
+      "small business",
+      "logistics",
+      "cameroon"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "AI vs Rules: What's the Difference?",
+      "Sorting Delivery Reports with AI",
+      "How AI Can Help Small Businesses"
+    ],
+    "description": "Tanyi explains how artificial intelligence differs from rule-based software by learning patterns from examples and reading messy human text.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ArtificialIntelligence"
+    ]
+  },
+  "instagram": {
+    "caption": "Mbella runs Wouri Express, a small delivery company in Douala. She wants an AI system to sort through 150 weekly driver messages and find recurring delays without creating new apps for drivers. Tanyi explains how artificial intelligence differs from rule-based software by learning patterns from examples and reading messy human text.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ArtificialIntelligence",
+      "#MachineLearningBasics",
+      "#SmallBusinessAI"
+    ]
+  },
+  "facebook": {
+    "caption": "Mbella runs Wouri Express, a small delivery company in Douala. She wants an AI system to sort through 150 weekly driver messages and find recurring delays without creating new apps for drivers. Tanyi explains how artificial intelligence differs from rule-based software by learning patterns from examples and reading messy human text.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "Tanyi explains: AI learns patterns from examples, while rules follow instructions.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#ArtificialIntelligence",
+      "#MachineLearningBasics"
+    ]
+  },
+  "linkedin": {
+    "post": "At Wouri Express, Mbella wants an AI system to sort through 150 weekly driver messages and find recurring delays without creating new apps for drivers. Tanyi explains how artificial intelligence differs from rule-based software by learning patterns from examples and reading messy human text. How can you apply this in your business?",
+    "hashtags": []
+  },
+  "thumbnailText": "Sorting Reports",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#ArtificialIntelligence",
+    "#MachineLearningBasics",
+    "#SmallBusinessAI",
+    "#LogisticsInnovation",
+    "#Cameroon"
+  ],
+  "generatedAt": "2026-09-07T15:50:01.873Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:22",
+      "label": "Listening"
+    },
+    {
+      "at": "0:40",
+      "label": "Decide: rules or AI?"
+    },
+    {
+      "at": "1:05",
+      "label": "What AI is"
+    },
+    {
+      "at": "1:26",
+      "label": "Build"
+    },
+    {
+      "at": "1:53",
+      "label": "Constraint and fix"
+    },
+    {
+      "at": "2:22",
+      "label": "User test"
+    },
+    {
+      "at": "2:42",
+      "label": "Where this applies"
+    },
+    {
+      "at": "2:52",
+      "label": "Ownership"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}
