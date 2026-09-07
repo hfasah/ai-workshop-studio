@@ -73,7 +73,8 @@
   },
   "cost": {
     "script_usd": 0,
-    "other_usd": 0
+    "other_usd": 0,
+    "publish_usd": 0
   },
   "cuts": [
     "short1"

@@ -1,0 +1,128 @@
+{
+  "youtube": {
+    "titles": [
+      "What Is MCP? | AI With Hippolyte",
+      "MCP Explained Simply | AI Fundamentals",
+      "AI Model Context Protocol Simplified"
+    ],
+    "description": "Tanyi explains how the Model Context Protocol (MCP) allows AI models to securely connect with external business tools and information. Kito demonstrates a practical example of an AI agent using MCP to find documents in Google Drive, with human approval required before any action is taken.\n\nChapters\n0:00 Hook\n0:08 Explanation\n0:32 Practical Example\n\nFictional teaching scenario based on researched conditions\nComplex AI. Explained visually. Built practically.",
+    "tags": [
+      "ai with hippolyte",
+      "africa ai moment",
+      "aiwithhippolyte",
+      "africaimoment",
+      "machinelearningbasics",
+      "generativeai",
+      "mcp",
+      "modelcontextprotocol",
+      "businessai",
+      "aiautomation"
+    ],
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "shorts": {
+    "titles": [
+      "What Is MCP?",
+      "MCP Explained",
+      "AI Model Context Protocol"
+    ],
+    "description": "An AI model can reason, write, and analyze.",
+    "hashtags": [
+      "#Shorts",
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MCP"
+    ]
+  },
+  "instagram": {
+    "caption": "An AI model can reason, write, and analyze. But without access to your business tools, it’s limited in the real world.\n\nTanyi explains how Model Context Protocol (MCP) allows AI models to securely connect with external business tools and information. Kito demonstrates a practical example of an AI agent using MCP to find documents in Google Drive, with human approval required before any action is taken.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MCP",
+      "#BusinessAI",
+      "#TechEducation"
+    ]
+  },
+  "facebook": {
+    "caption": "An AI model can reason, write, and analyze. But without access to your business tools, it’s limited in the real world.\n\nIn this episode of , Tanyi explains how Model Context Protocol (MCP) allows AI models to securely connect with external business tools and information.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment"
+    ]
+  },
+  "tiktok": {
+    "caption": "An AI model can reason, write, and analyze. But without access to your business tools, it’s limited in the real world.",
+    "hashtags": [
+      "#AIWithHippolyte",
+      "#AfricaAIMoment",
+      "#MCP",
+      "#BusinessAI"
+    ]
+  },
+  "linkedin": {
+    "post": "An AI model can reason, write, and analyze. But without access to your business tools, it’s limited in the real world.\n\nIn this episode of , I explain how Model Context Protocol (MCP) allows AI models to securely connect with external business tools and information. MCP is a standard way for AI systems to interact with databases, documents, and other critical resources.",
+    "hashtags": []
+  },
+  "thumbnailText": "MCP",
+  "hashtagBank": [
+    "#AIWithHippolyte",
+    "#AfricaAIMoment",
+    "#MCP",
+    "#BusinessAI",
+    "#TechEducation",
+    "#ArtificialIntelligence",
+    "#MachineLearningBasics",
+    "#GenerativeAI",
+    "#AIAutomation"
+  ],
+  "generatedAt": "2026-09-07T17:10:05.819Z",
+  "engine": "ollama",
+  "model": "qwen2.5:14b",
+  "chapters": [
+    {
+      "at": "0:00",
+      "label": "Hook"
+    },
+    {
+      "at": "0:08",
+      "label": "Explanation"
+    },
+    {
+      "at": "0:32",
+      "label": "Practical Example"
+    }
+  ],
+  "disclosure": "Fictional teaching scenario based on researched conditions",
+  "limits": {
+    "youtube": {
+      "title": 60,
+      "tags": 10
+    },
+    "shorts": {
+      "title": 40,
+      "description": 150,
+      "hashtags": 3
+    },
+    "instagram": {
+      "caption": 2200,
+      "hashtags": 5
+    },
+    "facebook": {
+      "caption": 500,
+      "hashtags": 2
+    },
+    "tiktok": {
+      "caption": 150,
+      "hashtags": 4
+    },
+    "linkedin": {
+      "post": 3000
+    },
+    "thumbnailWords": 4,
+    "bank": 15
+  }
+}
