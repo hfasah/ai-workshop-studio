@@ -884,7 +884,8 @@ export const finalizeKit = (raw, ctx) => {
   const s = r.shorts ?? {};
   const sTitles = asList(s.titles).map((t) => clip(t, KIT_LIMITS.shorts.title)).filter(Boolean);
   while (sTitles.length < 3) sTitles.push(clip(titles[sTitles.length] ?? ctx.title, KIT_LIMITS.shorts.title));
-  const shorts = {titles: sTitles.slice(0, 3), description: wholeSentences(clipText(stripInlineTags(s.description).replace(/Fictional teaching(?: scenario)?\.?[^\n]*/g, "").trim(), KIT_LIMITS.shorts.description)), hashtags: withFixed(s.hashtags, KIT_LIMITS.shorts.hashtags + 1, ["#Shorts"], block)};
+  const shortTags = withFixed(s.hashtags, KIT_LIMITS.shorts.hashtags + 1, ["#Shorts"], block);
+  const shorts = {titles: sTitles.slice(0, 3), description: wholeSentences(clipText(stripInlineTags(s.description).replace(/Fictional teaching(?: scenario)?\.?[^\n]*/g, "").trim(), KIT_LIMITS.shorts.description - shortTags.join(" ").length - 2)), hashtags: shortTags};
 
   const ig = r.instagram ?? {};
   const igTags = withFixed(ig.hashtags, KIT_LIMITS.instagram.hashtags, [], block);
