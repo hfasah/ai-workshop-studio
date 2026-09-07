@@ -1,1 +1,71 @@
-{"id":"ep002-short","title":"Your chatbot is not looking anything up","version":1,"format":"short","gates":{"brief":"approved","story":"approved","script":"pending","storyboard":"pending","preview":"pending","publication":"pending"},"approvals":[],"disclosure":"fictional","setting":{"country":"Cameroon","place":"Kumba, South-West","community":"Meme Cocoa Farmers Cooperative Society (fictional)","languages":["English"],"reviewer":"Hippolyte (names confirmed at ep002 gate 3)"},"assets":[],"voices":{"tanyi":"en-US-AndrewNeural (stock)","kito":"en-US-AnaNeural (stock)","hallucinator":"en-US-GuyNeural (stock)","gatekeeper":"en-GB-SoniaNeural (stock)"},"cost":{"script_usd":0,"other_usd":0},"engine":{"name":"crew (Claude Code session)","model":""},"cuts":[],"note":"Short-format sample derived from ep002 (same approved story, claims and names)."}
+{
+  "id": "ep002-short",
+  "title": "Your chatbot is not looking anything up",
+  "version": 1,
+  "format": "short",
+  "gates": {
+    "brief": "approved",
+    "story": "approved",
+    "script": "approved",
+    "storyboard": "approved",
+    "preview": "approved",
+    "publication": "approved"
+  },
+  "approvals": [
+    {
+      "gate": "script",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T03:08:07.547Z",
+      "note": ""
+    },
+    {
+      "gate": "storyboard",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T03:08:10.199Z",
+      "note": ""
+    },
+    {
+      "gate": "preview",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T03:08:12.750Z",
+      "note": ""
+    },
+    {
+      "gate": "publication",
+      "decision": "approved",
+      "by": "Hippolyte",
+      "at": "2026-09-05T03:08:15.833Z",
+      "note": ""
+    }
+  ],
+  "disclosure": "fictional",
+  "setting": {
+    "country": "Cameroon",
+    "place": "Kumba, South-West",
+    "community": "Meme Cocoa Farmers Cooperative Society (fictional)",
+    "languages": [
+      "English"
+    ],
+    "reviewer": "Hippolyte (names confirmed at ep002 gate 3)"
+  },
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "engine": {
+    "name": "crew (Claude Code session)",
+    "model": ""
+  },
+  "cuts": [],
+  "note": "Short-format sample derived from ep002 (same approved story, claims and names)."
+}

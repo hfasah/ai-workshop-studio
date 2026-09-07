@@ -1,0 +1,602 @@
+{
+  "id": "ep102",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 2,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 102,
+  "format": "build",
+  "title": "Generative AI Explained Simply",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Friday, six in the evening. Mbella still has to write the weekly report.",
+        "emphasis": "Same report, every week, from the same messy notes.",
+        "illustration": "document"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Friday, six in the evening at Wouri Express. The deliveries are done. Mbella still has to write the weekly report for her customers.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Same report every week, from the same messy driver notes. This is exactly what generative AI is for. Let me show you what it is.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "Generative AI Explained Simply",
+        "subtitle": "AI Fundamentals · Lesson 2 · The weekly report at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Mbella",
+            "detail": "Friday evening",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Mbella: I have the delay counts from last lesson. Writing them up nicely takes me an hour."
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: My customers want plain words, not a spreadsheet."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ndedi, dispatcher",
+            "detail": "Her rule",
+            "ui": {
+              "kind": "text",
+              "title": "Ndedi's rule",
+              "lines": [
+                "Every number in the report comes from my sheet",
+                "The words can be drafted; the numbers cannot"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, Mbella has the counts. Writing them into a report her customers can read takes her an hour every Friday.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And Ndedi, her dispatcher, has one rule: every number comes from her sheet. Words can be drafted. Numbers cannot.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: what generative means",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "AI that sorts",
+          "items": [
+            "Reads a message",
+            "Picks a label: port, road, customer",
+            "Output: a category"
+          ]
+        },
+        "right": {
+          "title": "AI that generates",
+          "items": [
+            "Reads the counts and notes",
+            "Writes new sentences",
+            "Output: a draft report"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Last lesson, AI sorted messages into causes. It chose from a list. Generative AI is different: it produces something new.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Give it the counts and the notes, and it writes sentences that did not exist before. A draft report in plain words.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "New words, yes. New numbers, never. Ndedi's rule is now our rule.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "How the draft is made",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "From data to draft",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "sheet",
+            "label": "Ndedi's sheet",
+            "sub": "the numbers",
+            "icon": "table",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "notes",
+            "label": "Driver notes",
+            "sub": "the causes",
+            "icon": "message-square",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "model",
+            "label": "Generative model",
+            "sub": "learned how reports read",
+            "icon": "sparkles",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "draft",
+            "label": "Draft report",
+            "sub": "new sentences",
+            "icon": "file-text",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "person",
+            "label": "Mbella",
+            "sub": "edits and sends",
+            "icon": "user-check",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "sheet",
+            "to": "model"
+          },
+          {
+            "from": "notes",
+            "to": "model"
+          },
+          {
+            "from": "model",
+            "to": "draft",
+            "label": "generates"
+          },
+          {
+            "from": "draft",
+            "to": "person",
+            "label": "review"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A generative model was trained on huge amounts of text. It learned how reports, emails and summaries usually read.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "You give it your numbers and your notes. It generates sentences that fit them, one word after another.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "It is a draft. A person reads it, fixes it, and sends it. The same machine can generate images, code or audio the same way.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito drafts the Friday report",
+        "app": "Wouri Express · Report writer",
+        "steps": [
+          {
+            "title": "Input: the numbers",
+            "detail": "Copied from Ndedi's sheet",
+            "ui": {
+              "kind": "text",
+              "title": "This week",
+              "lines": [
+                "Deliveries: 212",
+                "On time: 181",
+                "Port gate queue: 11 late",
+                "Flooded road: 6 late"
+              ]
+            }
+          },
+          {
+            "title": "Instruction",
+            "detail": "Voice and limits",
+            "ui": {
+              "kind": "text",
+              "title": "Kito's instruction",
+              "lines": [
+                "Write for pharmacy and shop customers",
+                "Plain English, under one hundred words",
+                "Use only the numbers given"
+              ]
+            }
+          },
+          {
+            "title": "Output: the draft",
+            "detail": "Ready for Mbella",
+            "ui": {
+              "kind": "email",
+              "to": "Customers",
+              "subject": "Wouri Express · Week 36",
+              "body": [
+                "This week we completed 212 deliveries, 181 on time.",
+                "Port gate queues on Tuesday and Thursday mornings caused 11 late deliveries.",
+                "Rain flooded the Bonabéri road and delayed 6 more."
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I take the numbers from Ndedi's sheet. Two hundred and twelve deliveries, one hundred and eighty-one on time.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "And the instruction tells you who reads it and how long it should be. Like briefing a new assistant.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Then I generate the draft. Plain sentences, the causes from the notes, only the numbers I was given.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "The polished lie",
+        "app": "Report writer · test run",
+        "steps": [
+          {
+            "title": "Fluent, and invented",
+            "detail": "A number nobody gave",
+            "ui": {
+              "kind": "email",
+              "to": "Customers",
+              "subject": "Wouri Express · Week 36",
+              "body": [
+                "Another excellent week with a ninety-eight percent on-time rate.",
+                "Our fleet of modern trucks handled every route smoothly."
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the sheet",
+            "detail": "181 of 212 is not 98 percent",
+            "ui": {
+              "kind": "text",
+              "title": "Check against the sheet",
+              "lines": [
+                "On time: 181 of 212",
+                "That is about 85 percent",
+                "Modern fleet: not in any note",
+                "Verdict: rewrite"
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "Numbers pasted, never generated",
+            "ui": {
+              "kind": "list",
+              "title": "Report rules",
+              "items": [
+                {
+                  "text": "Numbers are copied from the sheet by code",
+                  "done": false
+                },
+                {
+                  "text": "The model writes only the sentences",
+                  "done": false
+                },
+                {
+                  "text": "Every sentence checked before sending",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Another excellent week with a ninety-eight percent on-time rate. Our modern fleet handled every route smoothly.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "One hundred and eighty-one of two hundred and twelve is about eighty-five percent. And nobody wrote modern fleet. I rewrite it.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Generative AI makes text that sounds right. Sounding right is not being right. So the numbers are pasted in by code, and the model only writes around them.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Mbella reviews the draft",
+        "app": "Wouri Express · Report writer",
+        "steps": [
+          {
+            "title": "Edit in two minutes",
+            "detail": "Her words, her tone",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Draft ready. Numbers from the sheet, causes from the notes. Two hundred and twelve deliveries, one hundred and eighty-one on time."
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: Add that Thursday port runs move to the afternoon from next week."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Send",
+            "detail": "A person presses send",
+            "ui": {
+              "kind": "approval",
+              "title": "Send Week 36 report to 40 customers?",
+              "summary": [
+                "Numbers verified against the sheet",
+                "Edited by Mbella"
+              ],
+              "approve": "Send",
+              "reject": "Keep editing",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Mbella reads the draft, adds one line about the new Thursday schedule, and the hour becomes two minutes.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Forty customers receive this. A person presses send. Never the model.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Generate the words, keep the facts",
+        "items": [
+          {
+            "icon": "briefcase",
+            "label": "Recruiting",
+            "text": "Draft a job post from the role's requirements",
+            "illustration": "person"
+          },
+          {
+            "icon": "stethoscope",
+            "label": "Clinic",
+            "text": "Turn a doctor's notes into patient instructions",
+            "illustration": "clinic"
+          },
+          {
+            "icon": "store",
+            "label": "Market seller",
+            "text": "Write product descriptions from a price list",
+            "illustration": "storefront"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same pattern elsewhere: a job post drafted from the requirements, patient instructions from a doctor's notes, product descriptions from a price list.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Ndedi's sheet stays the single source of numbers",
+          "Mbella signs every report that goes out",
+          "Customer names never leave the company's tools",
+          "Accountable: Wouri Express, not the model"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Ndedi's sheet stays the only source of numbers. Mbella signs every report. Customer names never leave the company's own tools.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Generative AI: a model that learned how text reads, producing new drafts from your facts. Your facts, its words, your signature.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Take one report you write every week",
+          "List the facts it must contain",
+          "Let AI draft only the sentences",
+          "Check every number before sending"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: take one report you write every week. List the facts it must contain, and let AI draft only the sentences.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: Machine Learning vs Generative AI"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: machine learning versus generative AI.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

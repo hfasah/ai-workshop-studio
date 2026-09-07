@@ -1,0 +1,652 @@
+{
+  "id": "ep108",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 8,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 108,
+  "format": "build",
+  "title": "What Is MCP, and Why Does It Matter?",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon. MCP facts: the Model Context Protocol is an open standard published by Anthropic in November 2024.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Three systems. Two AI models. Six custom connections to maintain.",
+        "emphasis": "MCP turns that into three.",
+        "illustration": "server"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Wouri Express has three systems: the delivery sheet, the driver messages, and a map service. And two AI models that need them.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "That is six custom connections to build and maintain. The Model Context Protocol, MCP, turns six into three. Here is how.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "What Is MCP, and Why Does It Matter?",
+        "subtitle": "AI Fundamentals · Lesson 8 · One connector per system at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Ndedi",
+            "detail": "The maintenance problem",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: The sheet changed one column and the Delay Analyst broke. Then the risk model broke too. Same column."
+                },
+                {
+                  "from": "user",
+                  "text": "Ndedi: Every model has its own way of reading my sheet. I fix the same thing twice."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Mbella",
+            "detail": "Her condition",
+            "ui": {
+              "kind": "text",
+              "title": "Mbella's rule",
+              "lines": [
+                "I want to switch AI providers without rebuilding everything",
+                "And I want to see exactly what each model is allowed to touch"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "One column changed, Tanyi, and both AI systems broke. Ndedi fixed the same thing twice, once for each model.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Mbella wants to switch providers without rebuilding, and to see what each model may touch. Both are what MCP is for.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: custom code or a standard",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Custom integrations",
+          "items": [
+            "One connection per model, per system",
+            "Each breaks on its own",
+            "Permissions hidden in code"
+          ]
+        },
+        "right": {
+          "title": "MCP",
+          "items": [
+            "One server per system, any model connects",
+            "Fix once, everyone benefits",
+            "Tools and permissions listed in one place"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Custom integrations mean one connection per model, per system. Each breaks on its own, and permissions hide inside the code.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "MCP is an open standard. You build one MCP server per system, and any model that speaks the protocol can connect.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "A standard connector is not a safe connector. The server decides which tools exist. That is where I look first.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: how MCP connects",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Models, MCP servers, and the company's systems",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "analyst",
+            "label": "Delay Analyst",
+            "sub": "model A",
+            "icon": "brain",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "risk",
+            "label": "Risk explainer",
+            "sub": "model B",
+            "icon": "brain",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "sheet",
+            "label": "Sheet server",
+            "sub": "tools: read_week, read_delivery",
+            "icon": "table",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "msgs",
+            "label": "Messages server",
+            "sub": "tools: export_week (stripped)",
+            "icon": "message-square",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "map",
+            "label": "Map server",
+            "sub": "tools: distance",
+            "icon": "map-pin",
+            "col": 1,
+            "row": 2
+          },
+          {
+            "id": "systems",
+            "label": "Company systems",
+            "sub": "sheet, chat export, map",
+            "icon": "server",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "analyst",
+            "to": "sheet",
+            "label": "MCP"
+          },
+          {
+            "from": "analyst",
+            "to": "msgs",
+            "label": "MCP"
+          },
+          {
+            "from": "risk",
+            "to": "sheet",
+            "label": "MCP"
+          },
+          {
+            "from": "risk",
+            "to": "map",
+            "label": "MCP"
+          },
+          {
+            "from": "sheet",
+            "to": "systems"
+          },
+          {
+            "from": "msgs",
+            "to": "systems"
+          },
+          {
+            "from": "map",
+            "to": "systems"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "On the left, the models. On the right, the company's systems. In the middle, one MCP server per system.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Each server publishes a short list of tools. Read a week. Export messages, already stripped. Measure a distance. Nothing else exists.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Any model connects the same way. Change the sheet, fix one server. Change the model, the servers stay. That is why it matters.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito builds the sheet server",
+        "app": "Wouri Express · MCP servers",
+        "steps": [
+          {
+            "title": "Define the tools",
+            "detail": "Short, named, described",
+            "ui": {
+              "kind": "list",
+              "title": "sheet server · tools",
+              "items": [
+                {
+                  "text": "read_week(week): deliveries and delays for one week",
+                  "done": false
+                },
+                {
+                  "text": "read_delivery(id): one delivery, no customer phone",
+                  "done": false
+                },
+                {
+                  "text": "That is all. No write, no delete",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Connect a model",
+            "detail": "The model asks what tools exist",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Delay Analyst: list tools"
+                },
+                {
+                  "from": "user",
+                  "text": "sheet server: read_week, read_delivery"
+                },
+                {
+                  "from": "agent",
+                  "text": "Delay Analyst: read_week(36)"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Switch the model",
+            "detail": "Same server, different provider",
+            "ui": {
+              "kind": "text",
+              "title": "Test",
+              "lines": [
+                "Model A calls read_week(36): 212 rows",
+                "Model B calls read_week(36): 212 rows",
+                "No code changed"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "The sheet server has two tools. Read a week. Read one delivery, without the customer's phone. No write, no delete.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "So the model asks the server what it can do, then calls a tool by name. It never touches the sheet directly.",
+          "expression": "surprised",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "When Mbella tries a second provider, the same server answers the same way. No code changed.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "The helpful server",
+        "app": "MCP servers · test run",
+        "steps": [
+          {
+            "title": "Too many tools",
+            "detail": "Convenience becomes risk",
+            "ui": {
+              "kind": "list",
+              "title": "Proposed sheet server",
+              "items": [
+                {
+                  "text": "read_week",
+                  "done": false
+                },
+                {
+                  "text": "update_delivery",
+                  "done": false
+                },
+                {
+                  "text": "delete_week",
+                  "done": false
+                },
+                {
+                  "text": "send_customer_sms",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito's review",
+            "detail": "Every tool is a permission",
+            "ui": {
+              "kind": "text",
+              "title": "Review",
+              "lines": [
+                "delete_week: one wrong call erases a week",
+                "send_customer_sms: the never list says no",
+                "update_delivery: only with approval",
+                "Keep: read_week, read_delivery"
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "Read servers and approval servers",
+            "ui": {
+              "kind": "list",
+              "title": "Final tool list",
+              "items": [
+                {
+                  "text": "sheet: read_week, read_delivery",
+                  "done": false
+                },
+                {
+                  "text": "sheet-write: propose_update (needs Ndedi's click)",
+                  "done": false
+                },
+                {
+                  "text": "No delete tool exists anywhere",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Why stop at reading? Give the server update, delete and send SMS. One connector, unlimited power. Efficient.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Every tool is a permission. Delete week erases a week with one wrong call. Send SMS breaks the never list. I keep read only.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "MCP makes connecting easy. That is exactly why you list tools carefully. Read tools for the agent. Write tools behind a person's click.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "The column changes again",
+        "app": "Wouri Express · MCP servers",
+        "steps": [
+          {
+            "title": "Fix once",
+            "detail": "Both models keep working",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: I renamed the “late” column to “delayed”."
+                },
+                {
+                  "from": "agent",
+                  "text": "Sheet server updated once. Delay Analyst and risk explainer both read week 39 correctly."
+                }
+              ]
+            }
+          },
+          {
+            "title": "A write goes through a person",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Apply proposed update: delivery 88 cause = road?",
+              "summary": [
+                "Proposed by the Delay Analyst via sheet-write",
+                "Ndedi approves the change"
+              ],
+              "approve": "Apply",
+              "reject": "Reject",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Ndedi renames a column. I update the sheet server once, and both models read week thirty-nine correctly.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "When the analyst wants to correct the sheet, it proposes. Ndedi applies. MCP carries the request. She holds the pen.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "One server per system",
+        "items": [
+          {
+            "icon": "folder",
+            "label": "Any office",
+            "text": "A documents server: search and read, never delete",
+            "illustration": "document"
+          },
+          {
+            "icon": "calendar",
+            "label": "Clinic",
+            "text": "An appointments server: read slots, propose bookings",
+            "illustration": "calendar"
+          },
+          {
+            "icon": "banknote",
+            "label": "Accounting",
+            "text": "An invoices server: read and flag, payments stay human",
+            "illustration": "envelope"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "One server per system, anywhere: documents to search but never delete, appointments to read and propose, invoices to flag while payments stay human.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Wouri Express owns its MCP servers and their tool lists",
+          "The provider can change; the servers stay",
+          "Every tool call is logged with the model that made it",
+          "Accountable: whoever approves a write"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The company owns its servers and their tool lists. The provider can change; the servers stay. Every call is logged. Whoever approves a write is accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "MCP: an open standard so any model reaches your systems through one connector each. It matters because the tool list, and the power, stay in your hands.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "List the three systems your AI would need",
+          "For each, write the read tools",
+          "Then the write tools that need a click",
+          "No delete tool"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: list the three systems your AI would need. For each, write the read tools, then the write tools that need a click.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: Why AI Sometimes Hallucinates"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: why AI sometimes hallucinates.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

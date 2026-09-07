@@ -1,0 +1,1754 @@
+{
+  "id": "ep101",
+  "fps": 30,
+  "builtAt": "2026-09-07T05:28:12.554Z",
+  "episode": {
+    "id": "ep101",
+    "series": "AI With Hippolyte",
+    "course": "Series 1: AI Fundamentals",
+    "lesson": 1,
+    "tagline": "Complex AI. Explained visually. Built practically.",
+    "episode": 101,
+    "format": "build",
+    "title": "What Is Artificial Intelligence?",
+    "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+    "background": "workshop",
+    "cuts": [
+      {
+        "id": "short1",
+        "targetSec": 50,
+        "scenes": [
+          "hook",
+          "constraint-fix",
+          "outro"
+        ]
+      }
+    ]
+  },
+  "totalMs": 53598,
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Thirty drivers. One hundred and fifty messages a week.",
+        "emphasis": "Nobody knows why Thursdays run late.",
+        "illustration": "truck"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mbella runs Wouri Express, a small delivery company in Douala. Thirty drivers send her one hundred and fifty messages a week.",
+          "expression": "serious",
+          "gesture": "explain",
+          "audio": "episodes/ep101/audio/hook-0-50236d4454.mp3",
+          "startMs": 400,
+          "durationMs": 8184,
+          "words": [
+            {
+              "text": "Mbella",
+              "startMs": 103,
+              "endMs": 477
+            },
+            {
+              "text": "runs",
+              "startMs": 490,
+              "endMs": 786
+            },
+            {
+              "text": "Wouri",
+              "startMs": 799,
+              "endMs": 1173
+            },
+            {
+              "text": "Express,",
+              "startMs": 1186,
+              "endMs": 1869
+            },
+            {
+              "text": "a",
+              "startMs": 2075,
+              "endMs": 2113
+            },
+            {
+              "text": "small",
+              "startMs": 2126,
+              "endMs": 2500
+            },
+            {
+              "text": "delivery",
+              "startMs": 2513,
+              "endMs": 2912
+            },
+            {
+              "text": "company",
+              "startMs": 2925,
+              "endMs": 3441
+            },
+            {
+              "text": "in",
+              "startMs": 3570,
+              "endMs": 3647
+            },
+            {
+              "text": "Douala.",
+              "startMs": 3660,
+              "endMs": 4175
+            },
+            {
+              "text": "Thirty",
+              "startMs": 4652,
+              "endMs": 4884
+            },
+            {
+              "text": "drivers",
+              "startMs": 4897,
+              "endMs": 5374
+            },
+            {
+              "text": "send",
+              "startMs": 5387,
+              "endMs": 5606
+            },
+            {
+              "text": "her",
+              "startMs": 5619,
+              "endMs": 5786
+            },
+            {
+              "text": "one",
+              "startMs": 5799,
+              "endMs": 5979
+            },
+            {
+              "text": "hundred",
+              "startMs": 5992,
+              "endMs": 6314
+            },
+            {
+              "text": "and",
+              "startMs": 6327,
+              "endMs": 6418
+            },
+            {
+              "text": "fifty",
+              "startMs": 6430,
+              "endMs": 6817
+            },
+            {
+              "text": "messages",
+              "startMs": 6830,
+              "endMs": 7307
+            },
+            {
+              "text": "a",
+              "startMs": 7320,
+              "endMs": 7384
+            },
+            {
+              "text": "week.",
+              "startMs": 7397,
+              "endMs": 7809
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Every Thursday, deliveries run late. Nobody can say why. The answer is in those messages, and nobody has time to read them.",
+          "expression": "confident",
+          "gesture": "warning",
+          "audio": "episodes/ep101/audio/hook-1-d3cab6668e.mp3",
+          "startMs": 8934,
+          "durationMs": 7992,
+          "words": [
+            {
+              "text": "Every",
+              "startMs": 103,
+              "endMs": 322
+            },
+            {
+              "text": "Thursday,",
+              "startMs": 335,
+              "endMs": 941
+            },
+            {
+              "text": "deliveries",
+              "startMs": 1160,
+              "endMs": 1727
+            },
+            {
+              "text": "run",
+              "startMs": 1740,
+              "endMs": 1997
+            },
+            {
+              "text": "late.",
+              "startMs": 2010,
+              "endMs": 2345
+            },
+            {
+              "text": "Nobody",
+              "startMs": 2771,
+              "endMs": 3093
+            },
+            {
+              "text": "can",
+              "startMs": 3106,
+              "endMs": 3235
+            },
+            {
+              "text": "say",
+              "startMs": 3247,
+              "endMs": 3492
+            },
+            {
+              "text": "why.",
+              "startMs": 3505,
+              "endMs": 3840
+            },
+            {
+              "text": "The",
+              "startMs": 4265,
+              "endMs": 4356
+            },
+            {
+              "text": "answer",
+              "startMs": 4369,
+              "endMs": 4742
+            },
+            {
+              "text": "is",
+              "startMs": 4755,
+              "endMs": 4897
+            },
+            {
+              "text": "in",
+              "startMs": 4910,
+              "endMs": 5000
+            },
+            {
+              "text": "those",
+              "startMs": 5013,
+              "endMs": 5232
+            },
+            {
+              "text": "messages,",
+              "startMs": 5245,
+              "endMs": 5941
+            },
+            {
+              "text": "and",
+              "startMs": 6147,
+              "endMs": 6289
+            },
+            {
+              "text": "nobody",
+              "startMs": 6302,
+              "endMs": 6675
+            },
+            {
+              "text": "has",
+              "startMs": 6688,
+              "endMs": 6791
+            },
+            {
+              "text": "time",
+              "startMs": 6804,
+              "endMs": 7062
+            },
+            {
+              "text": "to",
+              "startMs": 7075,
+              "endMs": 7165
+            },
+            {
+              "text": "read",
+              "startMs": 7178,
+              "endMs": 7397
+            },
+            {
+              "text": "them.",
+              "startMs": 7410,
+              "endMs": 7590
+            }
+          ]
+        }
+      ],
+      "index": 0,
+      "startMs": 0,
+      "durationMs": 17626
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What AI cannot know",
+        "app": "Delay finder · test run",
+        "steps": [
+          {
+            "title": "The confident claim",
+            "detail": "A cause nobody wrote",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Why was delivery 88 late?"
+                },
+                {
+                  "from": "agent",
+                  "text": "The truck broke down on the Bonabéri road."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks",
+            "detail": "The message says nothing",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Why was delivery 88 late?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Reason not stated. Driver message 88 only says: late, sorry."
+                }
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "One word from the driver",
+            "ui": {
+              "kind": "list",
+              "title": "Driver reply buttons",
+              "items": [
+                {
+                  "text": "Port",
+                  "done": false
+                },
+                {
+                  "text": "Road",
+                  "done": false
+                },
+                {
+                  "text": "Customer",
+                  "done": false
+                },
+                {
+                  "text": "Other",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Delivery eighty-eight? Obviously the truck broke down on the Bonabéri road. Case closed.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep101/audio/constraint-fix-0-1116760ca6.mp3",
+          "startMs": 18026,
+          "durationMs": 7392,
+          "words": [
+            {
+              "text": "Delivery",
+              "startMs": 98,
+              "endMs": 705
+            },
+            {
+              "text": "eighty-eight?",
+              "startMs": 717,
+              "endMs": 1383
+            },
+            {
+              "text": "Obviously",
+              "startMs": 2226,
+              "endMs": 2774
+            },
+            {
+              "text": "the",
+              "startMs": 2798,
+              "endMs": 2917
+            },
+            {
+              "text": "truck",
+              "startMs": 2940,
+              "endMs": 3202
+            },
+            {
+              "text": "broke",
+              "startMs": 3214,
+              "endMs": 3440
+            },
+            {
+              "text": "down",
+              "startMs": 3452,
+              "endMs": 3690
+            },
+            {
+              "text": "on",
+              "startMs": 3714,
+              "endMs": 3786
+            },
+            {
+              "text": "the",
+              "startMs": 3810,
+              "endMs": 3905
+            },
+            {
+              "text": "Bonabéri",
+              "startMs": 3917,
+              "endMs": 4845
+            },
+            {
+              "text": "road.",
+              "startMs": 4845,
+              "endMs": 5679
+            },
+            {
+              "text": "Case",
+              "startMs": 5679,
+              "endMs": 6000
+            },
+            {
+              "text": "closed.",
+              "startMs": 6012,
+              "endMs": 6560
+            }
+          ]
+        },
+        {
+          "speaker": "kito",
+          "text": "Nobody wrote that. Message eighty-eight only says late, sorry. So my answer is: reason not stated.",
+          "expression": "serious",
+          "gesture": "point_left",
+          "audio": "episodes/ep101/audio/constraint-fix-1-22b61027b8.mp3",
+          "startMs": 25768,
+          "durationMs": 8952,
+          "words": [
+            {
+              "text": "Nobody",
+              "startMs": 95,
+              "endMs": 595
+            },
+            {
+              "text": "wrote",
+              "startMs": 607,
+              "endMs": 891
+            },
+            {
+              "text": "that.",
+              "startMs": 902,
+              "endMs": 1232
+            },
+            {
+              "text": "Message",
+              "startMs": 2011,
+              "endMs": 2489
+            },
+            {
+              "text": "eighty-eight",
+              "startMs": 2500,
+              "endMs": 2977
+            },
+            {
+              "text": "only",
+              "startMs": 2989,
+              "endMs": 3307
+            },
+            {
+              "text": "says",
+              "startMs": 3318,
+              "endMs": 3648
+            },
+            {
+              "text": "late,",
+              "startMs": 3659,
+              "endMs": 3966
+            },
+            {
+              "text": "sorry.",
+              "startMs": 4193,
+              "endMs": 4705
+            },
+            {
+              "text": "So",
+              "startMs": 5489,
+              "endMs": 5750
+            },
+            {
+              "text": "my",
+              "startMs": 5761,
+              "endMs": 5943
+            },
+            {
+              "text": "answer",
+              "startMs": 5955,
+              "endMs": 6386
+            },
+            {
+              "text": "is:",
+              "startMs": 6398,
+              "endMs": 6682
+            },
+            {
+              "text": "reason",
+              "startMs": 6955,
+              "endMs": 7341
+            },
+            {
+              "text": "not",
+              "startMs": 7352,
+              "endMs": 7580
+            },
+            {
+              "text": "stated.",
+              "startMs": 7591,
+              "endMs": 8148
+            }
+          ]
+        },
+        {
+          "speaker": "tanyi",
+          "text": "AI finds patterns in what people recorded. If the drivers never wrote it, it cannot know it. So Mbella adds one tap: port, road, customer, other.",
+          "expression": "confident",
+          "gesture": "explain",
+          "audio": "episodes/ep101/audio/constraint-fix-2-08d07bd027.mp3",
+          "startMs": 35070,
+          "durationMs": 10608,
+          "words": [
+            {
+              "text": "AI",
+              "startMs": 103,
+              "endMs": 399
+            },
+            {
+              "text": "finds",
+              "startMs": 412,
+              "endMs": 735
+            },
+            {
+              "text": "patterns",
+              "startMs": 747,
+              "endMs": 1237
+            },
+            {
+              "text": "in",
+              "startMs": 1250,
+              "endMs": 1340
+            },
+            {
+              "text": "what",
+              "startMs": 1353,
+              "endMs": 1508
+            },
+            {
+              "text": "people",
+              "startMs": 1521,
+              "endMs": 1843
+            },
+            {
+              "text": "recorded.",
+              "startMs": 1856,
+              "endMs": 2371
+            },
+            {
+              "text": "If",
+              "startMs": 2796,
+              "endMs": 2899
+            },
+            {
+              "text": "the",
+              "startMs": 2912,
+              "endMs": 2990
+            },
+            {
+              "text": "drivers",
+              "startMs": 3003,
+              "endMs": 3466
+            },
+            {
+              "text": "never",
+              "startMs": 3479,
+              "endMs": 3802
+            },
+            {
+              "text": "wrote",
+              "startMs": 3814,
+              "endMs": 4033
+            },
+            {
+              "text": "it,",
+              "startMs": 4046,
+              "endMs": 4175
+            },
+            {
+              "text": "it",
+              "startMs": 4420,
+              "endMs": 4484
+            },
+            {
+              "text": "cannot",
+              "startMs": 4497,
+              "endMs": 4845
+            },
+            {
+              "text": "know",
+              "startMs": 4858,
+              "endMs": 5116
+            },
+            {
+              "text": "it.",
+              "startMs": 5129,
+              "endMs": 5284
+            },
+            {
+              "text": "So",
+              "startMs": 5722,
+              "endMs": 5966
+            },
+            {
+              "text": "Mbella",
+              "startMs": 5979,
+              "endMs": 6392
+            },
+            {
+              "text": "adds",
+              "startMs": 6405,
+              "endMs": 6637
+            },
+            {
+              "text": "one",
+              "startMs": 6650,
+              "endMs": 6894
+            },
+            {
+              "text": "tap:",
+              "startMs": 6907,
+              "endMs": 7345
+            },
+            {
+              "text": "port,",
+              "startMs": 7732,
+              "endMs": 8144
+            },
+            {
+              "text": "road,",
+              "startMs": 8531,
+              "endMs": 8956
+            },
+            {
+              "text": "customer,",
+              "startMs": 9214,
+              "endMs": 9716
+            },
+            {
+              "text": "other.",
+              "startMs": 9897,
+              "endMs": 10206
+            }
+          ]
+        }
+      ],
+      "index": 1,
+      "startMs": 17626,
+      "durationMs": 28752
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: Generative AI Explained Simply"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: generative AI, explained simply.",
+          "expression": "confident",
+          "gesture": "point_right",
+          "audio": "episodes/ep101/audio/outro-0-09d9188b0f.mp3",
+          "startMs": 46778,
+          "durationMs": 6120,
+          "words": [
+            {
+              "text": "Don't",
+              "startMs": 103,
+              "endMs": 245
+            },
+            {
+              "text": "just",
+              "startMs": 258,
+              "endMs": 451
+            },
+            {
+              "text": "use",
+              "startMs": 464,
+              "endMs": 631
+            },
+            {
+              "text": "AI.",
+              "startMs": 644,
+              "endMs": 966
+            },
+            {
+              "text": "Build",
+              "startMs": 1392,
+              "endMs": 1546
+            },
+            {
+              "text": "it",
+              "startMs": 1559,
+              "endMs": 1624
+            },
+            {
+              "text": "to",
+              "startMs": 1637,
+              "endMs": 1727
+            },
+            {
+              "text": "work",
+              "startMs": 1740,
+              "endMs": 2023
+            },
+            {
+              "text": "reliably.",
+              "startMs": 2036,
+              "endMs": 2642
+            },
+            {
+              "text": "Next:",
+              "startMs": 3067,
+              "endMs": 3505
+            },
+            {
+              "text": "generative",
+              "startMs": 3763,
+              "endMs": 4214
+            },
+            {
+              "text": "AI,",
+              "startMs": 4227,
+              "endMs": 4665
+            },
+            {
+              "text": "explained",
+              "startMs": 4923,
+              "endMs": 5322
+            },
+            {
+              "text": "simply.",
+              "startMs": 5335,
+              "endMs": 5722
+            }
+          ]
+        }
+      ],
+      "index": 2,
+      "startMs": 46378,
+      "durationMs": 7220
+    }
+  ],
+  "captions": [
+    {
+      "text": "Mbella",
+      "startMs": 503,
+      "endMs": 877,
+      "timestampMs": 690,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " runs",
+      "startMs": 890,
+      "endMs": 1186,
+      "timestampMs": 1038,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Wouri",
+      "startMs": 1199,
+      "endMs": 1573,
+      "timestampMs": 1386,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Express,",
+      "startMs": 1586,
+      "endMs": 2269,
+      "timestampMs": 1928,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 2475,
+      "endMs": 2513,
+      "timestampMs": 2494,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " small",
+      "startMs": 2526,
+      "endMs": 2900,
+      "timestampMs": 2713,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " delivery",
+      "startMs": 2913,
+      "endMs": 3312,
+      "timestampMs": 3113,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " company",
+      "startMs": 3325,
+      "endMs": 3841,
+      "timestampMs": 3583,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 3970,
+      "endMs": 4047,
+      "timestampMs": 4009,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Douala.",
+      "startMs": 4060,
+      "endMs": 4575,
+      "timestampMs": 4318,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Thirty",
+      "startMs": 5052,
+      "endMs": 5284,
+      "timestampMs": 5168,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " drivers",
+      "startMs": 5297,
+      "endMs": 5774,
+      "timestampMs": 5536,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " send",
+      "startMs": 5787,
+      "endMs": 6006,
+      "timestampMs": 5897,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " her",
+      "startMs": 6019,
+      "endMs": 6186,
+      "timestampMs": 6103,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " one",
+      "startMs": 6199,
+      "endMs": 6379,
+      "timestampMs": 6289,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " hundred",
+      "startMs": 6392,
+      "endMs": 6714,
+      "timestampMs": 6553,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 6727,
+      "endMs": 6818,
+      "timestampMs": 6773,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " fifty",
+      "startMs": 6830,
+      "endMs": 7217,
+      "timestampMs": 7024,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " messages",
+      "startMs": 7230,
+      "endMs": 7707,
+      "timestampMs": 7469,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " a",
+      "startMs": 7720,
+      "endMs": 7784,
+      "timestampMs": 7752,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " week.",
+      "startMs": 7797,
+      "endMs": 8209,
+      "timestampMs": 8003,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Every",
+      "startMs": 9037,
+      "endMs": 9256,
+      "timestampMs": 9147,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Thursday,",
+      "startMs": 9269,
+      "endMs": 9875,
+      "timestampMs": 9572,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " deliveries",
+      "startMs": 10094,
+      "endMs": 10661,
+      "timestampMs": 10378,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " run",
+      "startMs": 10674,
+      "endMs": 10931,
+      "timestampMs": 10803,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " late.",
+      "startMs": 10944,
+      "endMs": 11279,
+      "timestampMs": 11112,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Nobody",
+      "startMs": 11705,
+      "endMs": 12027,
+      "timestampMs": 11866,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " can",
+      "startMs": 12040,
+      "endMs": 12169,
+      "timestampMs": 12105,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " say",
+      "startMs": 12181,
+      "endMs": 12426,
+      "timestampMs": 12304,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " why.",
+      "startMs": 12439,
+      "endMs": 12774,
+      "timestampMs": 12607,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " The",
+      "startMs": 13199,
+      "endMs": 13290,
+      "timestampMs": 13245,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " answer",
+      "startMs": 13303,
+      "endMs": 13676,
+      "timestampMs": 13490,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " is",
+      "startMs": 13689,
+      "endMs": 13831,
+      "timestampMs": 13760,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 13844,
+      "endMs": 13934,
+      "timestampMs": 13889,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " those",
+      "startMs": 13947,
+      "endMs": 14166,
+      "timestampMs": 14057,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " messages,",
+      "startMs": 14179,
+      "endMs": 14875,
+      "timestampMs": 14527,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " and",
+      "startMs": 15081,
+      "endMs": 15223,
+      "timestampMs": 15152,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " nobody",
+      "startMs": 15236,
+      "endMs": 15609,
+      "timestampMs": 15423,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " has",
+      "startMs": 15622,
+      "endMs": 15725,
+      "timestampMs": 15674,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " time",
+      "startMs": 15738,
+      "endMs": 15996,
+      "timestampMs": 15867,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 16009,
+      "endMs": 16099,
+      "timestampMs": 16054,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " read",
+      "startMs": 16112,
+      "endMs": 16331,
+      "timestampMs": 16222,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " them.",
+      "startMs": 16344,
+      "endMs": 16524,
+      "timestampMs": 16434,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Delivery",
+      "startMs": 18124,
+      "endMs": 18731,
+      "timestampMs": 18428,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " eighty-eight?",
+      "startMs": 18743,
+      "endMs": 19409,
+      "timestampMs": 19076,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Obviously",
+      "startMs": 20252,
+      "endMs": 20800,
+      "timestampMs": 20526,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " the",
+      "startMs": 20824,
+      "endMs": 20943,
+      "timestampMs": 20884,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " truck",
+      "startMs": 20966,
+      "endMs": 21228,
+      "timestampMs": 21097,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " broke",
+      "startMs": 21240,
+      "endMs": 21466,
+      "timestampMs": 21353,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " down",
+      "startMs": 21478,
+      "endMs": 21716,
+      "timestampMs": 21597,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " on",
+      "startMs": 21740,
+      "endMs": 21812,
+      "timestampMs": 21776,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " the",
+      "startMs": 21836,
+      "endMs": 21931,
+      "timestampMs": 21884,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Bonabéri",
+      "startMs": 21943,
+      "endMs": 22871,
+      "timestampMs": 22407,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " road.",
+      "startMs": 22871,
+      "endMs": 23705,
+      "timestampMs": 23288,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Case",
+      "startMs": 23705,
+      "endMs": 24026,
+      "timestampMs": 23866,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " closed.",
+      "startMs": 24038,
+      "endMs": 24586,
+      "timestampMs": 24312,
+      "confidence": null,
+      "speaker": "hallucinator"
+    },
+    {
+      "text": " Nobody",
+      "startMs": 25863,
+      "endMs": 26363,
+      "timestampMs": 26113,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " wrote",
+      "startMs": 26375,
+      "endMs": 26659,
+      "timestampMs": 26517,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " that.",
+      "startMs": 26670,
+      "endMs": 27000,
+      "timestampMs": 26835,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " Message",
+      "startMs": 27779,
+      "endMs": 28257,
+      "timestampMs": 28018,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " eighty-eight",
+      "startMs": 28268,
+      "endMs": 28745,
+      "timestampMs": 28507,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " only",
+      "startMs": 28757,
+      "endMs": 29075,
+      "timestampMs": 28916,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " says",
+      "startMs": 29086,
+      "endMs": 29416,
+      "timestampMs": 29251,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " late,",
+      "startMs": 29427,
+      "endMs": 29734,
+      "timestampMs": 29581,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " sorry.",
+      "startMs": 29961,
+      "endMs": 30473,
+      "timestampMs": 30217,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " So",
+      "startMs": 31257,
+      "endMs": 31518,
+      "timestampMs": 31388,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " my",
+      "startMs": 31529,
+      "endMs": 31711,
+      "timestampMs": 31620,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " answer",
+      "startMs": 31723,
+      "endMs": 32154,
+      "timestampMs": 31939,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " is:",
+      "startMs": 32166,
+      "endMs": 32450,
+      "timestampMs": 32308,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " reason",
+      "startMs": 32723,
+      "endMs": 33109,
+      "timestampMs": 32916,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " not",
+      "startMs": 33120,
+      "endMs": 33348,
+      "timestampMs": 33234,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " stated.",
+      "startMs": 33359,
+      "endMs": 33916,
+      "timestampMs": 33638,
+      "confidence": null,
+      "speaker": "kito"
+    },
+    {
+      "text": " AI",
+      "startMs": 35173,
+      "endMs": 35469,
+      "timestampMs": 35321,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " finds",
+      "startMs": 35482,
+      "endMs": 35805,
+      "timestampMs": 35644,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " patterns",
+      "startMs": 35817,
+      "endMs": 36307,
+      "timestampMs": 36062,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " in",
+      "startMs": 36320,
+      "endMs": 36410,
+      "timestampMs": 36365,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " what",
+      "startMs": 36423,
+      "endMs": 36578,
+      "timestampMs": 36501,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " people",
+      "startMs": 36591,
+      "endMs": 36913,
+      "timestampMs": 36752,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " recorded.",
+      "startMs": 36926,
+      "endMs": 37441,
+      "timestampMs": 37184,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " If",
+      "startMs": 37866,
+      "endMs": 37969,
+      "timestampMs": 37918,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " the",
+      "startMs": 37982,
+      "endMs": 38060,
+      "timestampMs": 38021,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " drivers",
+      "startMs": 38073,
+      "endMs": 38536,
+      "timestampMs": 38305,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " never",
+      "startMs": 38549,
+      "endMs": 38872,
+      "timestampMs": 38711,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " wrote",
+      "startMs": 38884,
+      "endMs": 39103,
+      "timestampMs": 38994,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it,",
+      "startMs": 39116,
+      "endMs": 39245,
+      "timestampMs": 39181,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 39490,
+      "endMs": 39554,
+      "timestampMs": 39522,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " cannot",
+      "startMs": 39567,
+      "endMs": 39915,
+      "timestampMs": 39741,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " know",
+      "startMs": 39928,
+      "endMs": 40186,
+      "timestampMs": 40057,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it.",
+      "startMs": 40199,
+      "endMs": 40354,
+      "timestampMs": 40277,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " So",
+      "startMs": 40792,
+      "endMs": 41036,
+      "timestampMs": 40914,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Mbella",
+      "startMs": 41049,
+      "endMs": 41462,
+      "timestampMs": 41256,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " adds",
+      "startMs": 41475,
+      "endMs": 41707,
+      "timestampMs": 41591,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " one",
+      "startMs": 41720,
+      "endMs": 41964,
+      "timestampMs": 41842,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " tap:",
+      "startMs": 41977,
+      "endMs": 42415,
+      "timestampMs": 42196,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " port,",
+      "startMs": 42802,
+      "endMs": 43214,
+      "timestampMs": 43008,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " road,",
+      "startMs": 43601,
+      "endMs": 44026,
+      "timestampMs": 43814,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " customer,",
+      "startMs": 44284,
+      "endMs": 44786,
+      "timestampMs": 44535,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " other.",
+      "startMs": 44967,
+      "endMs": 45276,
+      "timestampMs": 45122,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Don't",
+      "startMs": 46881,
+      "endMs": 47023,
+      "timestampMs": 46952,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " just",
+      "startMs": 47036,
+      "endMs": 47229,
+      "timestampMs": 47133,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " use",
+      "startMs": 47242,
+      "endMs": 47409,
+      "timestampMs": 47326,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI.",
+      "startMs": 47422,
+      "endMs": 47744,
+      "timestampMs": 47583,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Build",
+      "startMs": 48170,
+      "endMs": 48324,
+      "timestampMs": 48247,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " it",
+      "startMs": 48337,
+      "endMs": 48402,
+      "timestampMs": 48370,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " to",
+      "startMs": 48415,
+      "endMs": 48505,
+      "timestampMs": 48460,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " work",
+      "startMs": 48518,
+      "endMs": 48801,
+      "timestampMs": 48660,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " reliably.",
+      "startMs": 48814,
+      "endMs": 49420,
+      "timestampMs": 49117,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Next:",
+      "startMs": 49845,
+      "endMs": 50283,
+      "timestampMs": 50064,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " generative",
+      "startMs": 50541,
+      "endMs": 50992,
+      "timestampMs": 50767,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI,",
+      "startMs": 51005,
+      "endMs": 51443,
+      "timestampMs": 51224,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " explained",
+      "startMs": 51701,
+      "endMs": 52100,
+      "timestampMs": 51901,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " simply.",
+      "startMs": 52113,
+      "endMs": 52500,
+      "timestampMs": 52307,
+      "confidence": null,
+      "speaker": "tanyi"
+    }
+  ],
+  "characters": {
+    "tanyi": {
+      "name": "Tanyi",
+      "role": "AI engineer and instructor, the animated host. Middle-aged Black African man. Calm, direct, practical. Has built and operated real systems.",
+      "voice": "en-US-AndrewNeural",
+      "rate": 0.97,
+      "pitch": "+0Hz",
+      "color": "#F5B700",
+      "kind": "human",
+      "look": {
+        "skin": "#6B3F1D",
+        "hair": "#2B2B2B",
+        "hairGrey": "#8A8A8A",
+        "shirt": "#2563EB",
+        "glasses": true,
+        "beard": true,
+        "height": 1
+      },
+      "captionColor": "#B45309",
+      "engine": "edge",
+      "id": "tanyi",
+      "files": []
+    },
+    "amara": {
+      "name": "Amara",
+      "role": "Curious learner who asks the questions beginners are thinking.",
+      "voice": "en-ZA-LeahNeural",
+      "rate": 1.05,
+      "pitch": "+10Hz",
+      "color": "#2DD4BF",
+      "kind": "human",
+      "look": {
+        "skin": "#8D5524",
+        "hair": "#1A1A1A",
+        "hairGrey": null,
+        "shirt": "#F97316",
+        "glasses": false,
+        "beard": false,
+        "height": 0.92
+      },
+      "captionColor": "#0D9488",
+      "id": "amara",
+      "files": []
+    },
+    "kito": {
+      "name": "Kito",
+      "role": "Small AI assistant who demonstrates concepts and occasionally makes believable mistakes.",
+      "voice": "en-US-AnaNeural",
+      "rate": 1.1,
+      "pitch": "+15Hz",
+      "color": "#60A5FA",
+      "kind": "robot",
+      "captionColor": "#2563EB",
+      "id": "kito",
+      "files": []
+    },
+    "hallucinator": {
+      "name": "The Hallucinator",
+      "role": "Mischievous. Represents confident but incorrect AI output.",
+      "voice": "en-US-GuyNeural",
+      "rate": 1.05,
+      "pitch": "-20Hz",
+      "color": "#C084FC",
+      "kind": "wisp",
+      "captionColor": "#7C3AED",
+      "id": "hallucinator",
+      "files": []
+    },
+    "gatekeeper": {
+      "name": "The Gatekeeper",
+      "role": "Represents security, privacy, governance and human approval.",
+      "voice": "en-GB-SoniaNeural",
+      "rate": 0.95,
+      "pitch": "-5Hz",
+      "color": "#F87171",
+      "kind": "shield",
+      "captionColor": "#E11D48",
+      "id": "gatekeeper",
+      "files": []
+    }
+  },
+  "cut": "short1"
+}

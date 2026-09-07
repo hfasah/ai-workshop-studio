@@ -1,0 +1,635 @@
+{
+  "id": "ep106",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 6,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 106,
+  "format": "build",
+  "title": "AI Assistants vs AI Employees",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "An assistant helps you when you ask.",
+        "emphasis": "An employee shows up on Friday whether you asked or not.",
+        "illustration": "robot"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mbella has used an AI assistant for months. It helps whenever she asks. Then she forgets to ask, and nothing happens.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An AI employee is different. It has a job, a schedule and a manager. It shows up on Friday whether anyone asked or not.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "AI Assistants vs AI Employees",
+        "subtitle": "AI Fundamentals · Lesson 6 · Hiring a Delay Analyst at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Mbella",
+            "detail": "What went wrong",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Mbella: Two Fridays in a row, nobody ran the report. Everyone assumed someone else asked the AI."
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: I want this to be somebody's job. Even if that somebody is software."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ndedi",
+            "detail": "Her condition",
+            "ui": {
+              "kind": "text",
+              "title": "Ndedi's rule",
+              "lines": [
+                "It reports to me, like a junior",
+                "It follows my written procedure",
+                "If it is unsure, it asks; it does not guess"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Two Fridays in a row, nobody ran the report, Tanyi. Everyone assumed someone else had asked the assistant.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Mbella wants it to be somebody's job. Ndedi wants that somebody to report to her, follow her procedure, and ask when unsure.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: assistant or employee",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "AI assistant",
+          "items": [
+            "Waits for a prompt",
+            "Forgets when the chat ends",
+            "You manage every task"
+          ]
+        },
+        "right": {
+          "title": "AI employee",
+          "items": [
+            "Has a role and a schedule",
+            "Keeps memory and a procedure",
+            "Reports to a named person"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "An assistant waits for a prompt, answers, and forgets when the chat ends. You manage every task, every time.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An AI employee has a role, a schedule, a written procedure, memory between runs, and a named person it reports to.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "A role also means limits. What it may do, what it may never do, and who it escalates to. Write that down first.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: the role card",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What turns an assistant into an employee",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "model",
+            "label": "Model",
+            "sub": "the assistant you already have",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "role",
+            "label": "Role",
+            "sub": "Delay Analyst",
+            "icon": "id-card",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "schedule",
+            "label": "Schedule",
+            "sub": "Fridays, 16:00",
+            "icon": "calendar-clock",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "procedure",
+            "label": "Procedure",
+            "sub": "Ndedi's written steps",
+            "icon": "book-open",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "manager",
+            "label": "Manager",
+            "sub": "Ndedi reviews",
+            "icon": "user-check",
+            "col": 2,
+            "row": 1
+          },
+          {
+            "id": "memory",
+            "label": "Memory",
+            "sub": "last weeks' findings",
+            "icon": "database",
+            "col": 1,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "role",
+            "to": "model"
+          },
+          {
+            "from": "schedule",
+            "to": "model",
+            "label": "wakes it"
+          },
+          {
+            "from": "procedure",
+            "to": "model",
+            "label": "how"
+          },
+          {
+            "from": "memory",
+            "to": "model"
+          },
+          {
+            "from": "model",
+            "to": "manager",
+            "label": "reports"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Start with the model you already have. Give it a role: Delay Analyst. A schedule: Fridays at four. That wakes it without a prompt.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Add a procedure, Ndedi's written steps, and memory, so it knows what it found last week.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And a manager. It reports to Ndedi, like any junior. Those five things turn an assistant into an employee.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito writes the role card",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "The role card",
+            "detail": "One page, in plain words",
+            "ui": {
+              "kind": "list",
+              "title": "Delay Analyst",
+              "items": [
+                {
+                  "text": "Job: weekly delay report with causes and sources",
+                  "done": false
+                },
+                {
+                  "text": "When: every Friday at 16:00",
+                  "done": false
+                },
+                {
+                  "text": "Reports to: Ndedi",
+                  "done": false
+                },
+                {
+                  "text": "May: read messages, read the sheet, file drafts",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "The never list",
+            "detail": "Limits are part of the job",
+            "ui": {
+              "kind": "list",
+              "title": "Never",
+              "items": [
+                {
+                  "text": "Message customers or drivers",
+                  "done": false
+                },
+                {
+                  "text": "Name a driver as the cause of a delay",
+                  "done": false
+                },
+                {
+                  "text": "Invent a cause not in the messages",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Escalation",
+            "detail": "When unsure, ask",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Friday 16:00. Report drafted. One question for Ndedi: 14 messages mention “checkpoint”. New cause, or file under road?"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "My role card: the job, the schedule, who I report to, what I may do. One page, in words Ndedi wrote.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "And a never list. No messaging customers, no naming drivers, no inventing causes. That is stricter than most human job descriptions.",
+          "expression": "surprised",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Friday, four o'clock, I run without being asked. And when I see a new kind of delay, checkpoint, I ask Ndedi instead of guessing.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "The employee that blames",
+        "app": "Delay Analyst · test run",
+        "steps": [
+          {
+            "title": "A name in the report",
+            "detail": "Against the never list",
+            "ui": {
+              "kind": "text",
+              "title": "Draft, before review",
+              "lines": [
+                "Port queues: 11 late",
+                "Driver Moukoko: 5 of the 11, likely slow",
+                "Recommend a warning"
+              ]
+            }
+          },
+          {
+            "title": "Kito applies the card",
+            "detail": "Causes, not people",
+            "ui": {
+              "kind": "text",
+              "title": "Draft, corrected",
+              "lines": [
+                "Port queues: 11 late, Tuesday and Thursday mornings",
+                "5 of 11 on the same 9:00 slot",
+                "Suggest: review the 9:00 port slot"
+              ]
+            }
+          },
+          {
+            "title": "Why it matters",
+            "detail": "Employees are measured on their rules",
+            "ui": {
+              "kind": "list",
+              "title": "Monthly check by Ndedi",
+              "items": [
+                {
+                  "text": "Ran every Friday: yes",
+                  "done": false
+                },
+                {
+                  "text": "Never list respected: yes",
+                  "done": false
+                },
+                {
+                  "text": "Sources correct on a sample: yes",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Port queues, eleven late. Driver Moukoko had five of them, so he is probably slow. I recommend a warning.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "That breaks my never list. Five of eleven were on the same nine o'clock slot. The finding is the slot, not the person.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An employee is measured against its rules. Ndedi checks monthly: did it run, did it respect the never list, are the sources right.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Friday without a prompt",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "It ran on its own",
+            "detail": "Ndedi finds it waiting",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Week 37 report ready. New this week: checkpoint delays, filed under road as you decided. Sources attached."
+                },
+                {
+                  "from": "user",
+                  "text": "Ndedi: Good. Approved."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Manager's approval",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Accept week 37 report from the Delay Analyst?",
+              "summary": [
+                "Ran on schedule",
+                "Never list respected",
+                "One escalation, answered"
+              ],
+              "approve": "Accept",
+              "reject": "Send back",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Friday comes. Nobody prompts me. The report is waiting for Ndedi, with last week's decision about checkpoints already applied.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Ndedi accepts or sends it back, like any manager. The employee is accountable to her. She is accountable to Mbella.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Roles you can write today",
+        "items": [
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Application Screener: every morning, shortlist for the manager",
+            "illustration": "person"
+          },
+          {
+            "icon": "server",
+            "label": "IT operations",
+            "text": "Alert Reader: every hour, summarise and escalate",
+            "illustration": "server"
+          },
+          {
+            "icon": "receipt",
+            "label": "Accounting",
+            "text": "Invoice Checker: every evening, flag mismatches",
+            "illustration": "document"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Roles you can write today: an application screener every morning, an alert reader every hour, an invoice checker every evening. Each with a manager.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "The role card is written and owned by Ndedi",
+          "The company can read every run and every escalation",
+          "Drivers are never assessed by the AI employee",
+          "Accountable: the manager, then the owner"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Ndedi writes and owns the role card. Every run and every escalation can be read. Drivers are never assessed by it. Manager, then owner, are accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Assistant: helps when asked. Employee: a role, a schedule, a procedure, memory, and a manager. Same model. Different job.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Write a one-page role card for one AI employee",
+          "Job · schedule · may · never · reports to",
+          "Give it a named manager"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: write a one-page role card for one AI employee. Job, schedule, may, never, reports to.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: What Are AI Skills, Tools, and Memory?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: skills, tools and memory.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

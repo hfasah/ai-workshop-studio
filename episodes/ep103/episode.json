@@ -1,0 +1,632 @@
+{
+  "id": "ep103",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 3,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 103,
+  "format": "build",
+  "title": "Machine Learning vs Generative AI",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Two questions. Two different kinds of AI.",
+        "emphasis": "“Will this delivery be late?” and “Write the report.”",
+        "illustration": "truck"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mbella asks two questions at Wouri Express. Will this delivery be late? And: write me the report.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "They sound similar. They need two different kinds of AI. Mixing them up is the most common mistake I see in businesses.",
+          "expression": "confident",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "Machine Learning vs Generative AI",
+        "subtitle": "AI Fundamentals · Lesson 3 · Predicting late deliveries at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Dispatch",
+        "steps": [
+          {
+            "title": "Ndedi, dispatcher",
+            "detail": "Monday morning",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: I plan forty deliveries a day. I want to know in the morning which ones will run late."
+                },
+                {
+                  "from": "user",
+                  "text": "Ndedi: Then I can warn the customer or change the driver."
+                }
+              ]
+            }
+          },
+          {
+            "title": "What we have",
+            "detail": "Six months of history",
+            "ui": {
+              "kind": "text",
+              "title": "Data on hand",
+              "lines": [
+                "About 5,000 past deliveries in Ndedi's sheet",
+                "Route, time of day, weather, customer, late or not",
+                "Driver notes for each delay"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Ndedi wants to know in the morning which deliveries will run late, so she can warn the customer or change the driver.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And she has six months of history: about five thousand deliveries, with route, time, weather, and whether each was late.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: which AI for which question",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Machine learning",
+          "items": [
+            "Learns from past examples",
+            "Predicts a label or a number",
+            "“Late risk: high”"
+          ]
+        },
+        "right": {
+          "title": "Generative AI",
+          "items": [
+            "Learned how language reads",
+            "Produces new content",
+            "“Here is your report…”"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Machine learning learns from your past examples and predicts: a label or a number. Late or on time. High risk or low.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Generative AI learned from oceans of text and produces new content. Sentences, images, code. Prediction on one side, production on the other.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "A prediction is a probability, not a fact. Nobody gets blamed for a risk score.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Two machines",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Prediction versus generation",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "history",
+            "label": "Past deliveries",
+            "sub": "5,000 examples",
+            "icon": "database",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "ml",
+            "label": "ML model",
+            "sub": "learned late patterns",
+            "icon": "trending-up",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "risk",
+            "label": "Late risk",
+            "sub": "for today's forty",
+            "icon": "triangle-alert",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "text",
+            "label": "Text of the world",
+            "sub": "billions of words",
+            "icon": "library",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "gen",
+            "label": "Generative model",
+            "sub": "learned how text reads",
+            "icon": "sparkles",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "report",
+            "label": "Draft report",
+            "sub": "new sentences",
+            "icon": "file-text",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "history",
+            "to": "ml",
+            "label": "train"
+          },
+          {
+            "from": "ml",
+            "to": "risk",
+            "label": "predict"
+          },
+          {
+            "from": "text",
+            "to": "gen",
+            "label": "train"
+          },
+          {
+            "from": "gen",
+            "to": "report",
+            "label": "generate"
+          },
+          {
+            "from": "risk",
+            "to": "gen",
+            "label": "explain",
+            "style": "dashed"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Top row: a machine learning model trained on Ndedi's five thousand deliveries. It learned which routes, hours and weather go with late.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Bottom row: a generative model trained on the text of the world. It never saw Ndedi's sheet. It knows how to write.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Together they work well. The first predicts the risk. The second explains it in plain words.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito trains the late-risk model",
+        "app": "Wouri Express · Late risk",
+        "steps": [
+          {
+            "title": "Examples in",
+            "detail": "Each row: facts, then the answer",
+            "ui": {
+              "kind": "list",
+              "title": "Training rows",
+              "items": [
+                {
+                  "text": "Port route · Thursday 9:00 · rain · late",
+                  "done": false
+                },
+                {
+                  "text": "Akwa shops · Monday 14:00 · dry · on time",
+                  "done": false
+                },
+                {
+                  "text": "Bonabéri · Tuesday 8:00 · rain · late",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Pattern learned",
+            "detail": "What the model weighs",
+            "ui": {
+              "kind": "text",
+              "title": "Strongest signals",
+              "lines": [
+                "Port route before noon",
+                "Rain on the Bonabéri side",
+                "Customers with past absences"
+              ]
+            }
+          },
+          {
+            "title": "Monday's prediction",
+            "detail": "Forty deliveries scored",
+            "ui": {
+              "kind": "list",
+              "title": "Late risk, this morning",
+              "items": [
+                {
+                  "text": "Delivery 14 · port · 9:00 · risk high",
+                  "done": false
+                },
+                {
+                  "text": "Delivery 22 · Bonabéri · rain · risk high",
+                  "done": false
+                },
+                {
+                  "text": "Delivery 31 · Akwa · 15:00 · risk low",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I feed the model five thousand rows. Each row has the facts, route, hour, weather, and the answer: late or on time.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "So it learns which facts go with late. Port before noon, rain at Bonabéri. Nobody typed those rules.",
+          "expression": "surprised",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Now each Monday morning, I score the day's forty deliveries. Fourteen and twenty-two: high risk. Ndedi sees it before the trucks leave.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "A route with no history",
+        "app": "Late risk · test run",
+        "steps": [
+          {
+            "title": "The confident score",
+            "detail": "New customer in Edéa, first delivery ever",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Delivery 40, new customer in Edéa. Risk?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Risk low. Ninety-two percent on time."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the data",
+            "detail": "Zero past deliveries to Edéa",
+            "ui": {
+              "kind": "text",
+              "title": "History for this route",
+              "lines": [
+                "Deliveries to Edéa: 0",
+                "Similar routes: none",
+                "Verdict: not enough data"
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "Say so, then ask a person",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Delivery 40, new customer in Edéa. Risk?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Not enough history for this route. Ask Ndedi to set the risk by hand."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "New customer in Edéa? Risk low, ninety-two percent on time. Trust me, the model has spoken.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "The model has never seen a delivery to Edéa. Zero rows. That score is noise. I answer: not enough history, ask Ndedi.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Machine learning only knows the past it was shown. Six months of Douala says nothing about a new town. A good system says so.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Ndedi's Monday",
+        "app": "Wouri Express · Late risk",
+        "steps": [
+          {
+            "title": "Risk plus reason",
+            "detail": "Prediction, then plain words",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: Why is delivery 14 high risk?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Port route before noon on a Thursday. Nine of the last twelve similar runs were late."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ndedi decides",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Warn the pharmacy and move delivery 14 to 14:00?",
+              "summary": [
+                "Risk high, reason shown",
+                "Ndedi decides"
+              ],
+              "approve": "Move and warn",
+              "reject": "Keep 9:00",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Ndedi asks why fourteen is high risk. The generative side explains: port route before noon, nine of the last twelve similar runs were late.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Moving the delivery and warning the pharmacy is Ndedi's call. The score informs. It does not decide.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Predict with ML, write with generative AI",
+        "items": [
+          {
+            "icon": "banknote",
+            "label": "Microfinance",
+            "text": "Predict repayment risk; draft the client letter",
+            "illustration": "document"
+          },
+          {
+            "icon": "tractor",
+            "label": "Farm cooperative",
+            "text": "Predict yield from rainfall; write the advice",
+            "illustration": "farm"
+          },
+          {
+            "icon": "headset",
+            "label": "Support desk",
+            "text": "Predict which tickets escalate; draft the reply",
+            "illustration": "chat"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same split everywhere: predict repayment risk, then draft the letter. Predict the yield, then write the advice. Predict which tickets escalate, then draft the reply.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "The model is trained on Wouri Express data and belongs to it",
+          "Ndedi checks the scores against reality every month",
+          "No driver is scored; only routes, hours and weather",
+          "Accountable: the dispatcher who acts on it"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The model is trained on the company's own data and belongs to it. Ndedi checks the scores against what really happened every month. No driver is scored.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Machine learning predicts from your past. Generative AI writes from the world's text. Know which question you are asking.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Write two questions from your work",
+          "One that predicts, one that writes",
+          "Label which kind of AI each one needs"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: write two questions from your work, one that predicts and one that writes. Label which AI each one needs.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: How Large Language Models Work"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: how large language models work.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

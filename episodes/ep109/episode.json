@@ -1,0 +1,613 @@
+{
+  "id": "ep109",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 9,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 109,
+  "format": "build",
+  "title": "Why AI Sometimes Hallucinates",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "The report said a truck broke down on the Bonabéri road.",
+        "emphasis": "No truck broke down. No driver wrote it. The AI made it up.",
+        "illustration": "truck"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The week thirty-nine report said a truck broke down on the Bonabéri road. Mbella called the mechanic. No truck had broken down.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "No driver wrote it. The AI made it up, fluently, with confidence. That is a hallucination. Here is why it happens.",
+          "expression": "confident",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "Why AI Sometimes Hallucinates",
+        "subtitle": "AI Fundamentals · Lesson 9 · The breakdown that never happened at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Mbella",
+            "detail": "After the mechanic's call",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Mbella: If one sentence in the report can be invented, how do I trust the other twenty?"
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: I do not want it to stop. I want to know which sentences are real."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ndedi",
+            "detail": "What she found",
+            "ui": {
+              "kind": "text",
+              "title": "Ndedi's check",
+              "lines": [
+                "Delivery 88: driver wrote only “late, sorry”",
+                "Report: “truck breakdown on the Bonabéri road”",
+                "The gap was filled with a plausible story"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Mbella's question is fair, Tanyi. If one sentence can be invented, how does she trust the other twenty? Which ones are real?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Ndedi found the gap. The driver wrote late, sorry. The model filled it with a plausible story. Understanding why is the first fix.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: where the story comes from",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "How a gap becomes a confident sentence",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "msg",
+            "label": "Message 88",
+            "sub": "“late, sorry”",
+            "icon": "message-square",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "gap",
+            "label": "No cause",
+            "sub": "the gap",
+            "icon": "circle-question-mark",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "model",
+            "label": "Model",
+            "sub": "predicts the likely next words",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "patterns",
+            "label": "Training patterns",
+            "sub": "late deliveries often mean breakdowns",
+            "icon": "library",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "story",
+            "label": "“Truck broke down”",
+            "sub": "fluent, unsourced",
+            "icon": "triangle-alert",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "honest",
+            "label": "“Reason not stated”",
+            "sub": "only if allowed",
+            "icon": "circle-check",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "msg",
+            "to": "model"
+          },
+          {
+            "from": "patterns",
+            "to": "model",
+            "label": "fills gaps"
+          },
+          {
+            "from": "model",
+            "to": "story",
+            "label": "default"
+          },
+          {
+            "from": "gap",
+            "to": "honest",
+            "label": "with a rule",
+            "style": "dashed"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The model predicts the most likely next words. In the text it learned from, a late delivery is often followed by a reason. Breakdown is common.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "When message eighty-eight has a gap, the model fills it with what usually goes there. Completing a pattern, not reporting a fact.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Reason not stated is rare in ordinary text, so it rarely comes out on its own. You have to make it allowed, and expected.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: what we change",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Before",
+          "items": [
+            "“Summarise the delays”",
+            "Any sentence allowed",
+            "No way to check a claim"
+          ]
+        },
+        "right": {
+          "title": "After",
+          "items": [
+            "“Every cause cites a message number”",
+            "“Not stated” is a valid answer",
+            "Numbers pasted by code, not written"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Three changes. Every cause must cite a message number. Not stated is a valid answer, written into the instruction. Numbers come from code.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "And one rule for people. Any claim about a driver, a customer or money is checked against its source before it leaves the building.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito rebuilds the summary step",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "The new instruction",
+            "detail": "Sources required, gaps allowed",
+            "ui": {
+              "kind": "list",
+              "title": "skills/summarise.md",
+              "items": [
+                {
+                  "text": "For every cause, cite the message numbers",
+                  "done": false
+                },
+                {
+                  "text": "If no message states a cause, write: reason not stated",
+                  "done": false
+                },
+                {
+                  "text": "Never add a cause that is not in a message",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "The check",
+            "detail": "Code verifies every citation",
+            "ui": {
+              "kind": "text",
+              "title": "Citation check",
+              "lines": [
+                "Port queues: messages 12, 15, 27, 40 · found",
+                "Floods: messages 19, 33 · found",
+                "Breakdown: no message · rejected"
+              ]
+            }
+          },
+          {
+            "title": "The honest report",
+            "detail": "Gaps shown as gaps",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Delivery 88: late, reason not stated (message 88). Four deliveries this week have no stated reason."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "The instruction now says: cite a message for every cause. If no message states one, write reason not stated. Those exact words.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "And then ordinary code checks each citation? So a cause with no real message behind it is rejected before anyone reads it.",
+          "expression": "surprised",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Exactly. Breakdown had no message, so it was rejected. Delivery eighty-eight now reads: late, reason not stated. Four this week.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "A hallucination with a fake source",
+        "app": "Delay Analyst · test run",
+        "steps": [
+          {
+            "title": "It cites a message that says something else",
+            "detail": "Harder to catch",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Customer absent at the pharmacy, source: message 27."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito reads message 27",
+            "detail": "The source does not support the claim",
+            "ui": {
+              "kind": "text",
+              "title": "Message 27",
+              "lines": [
+                "“Port gate queue again. Two hours.”",
+                "Says nothing about the pharmacy",
+                "Citation exists, claim does not match"
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "Quote, do not just cite",
+            "ui": {
+              "kind": "list",
+              "title": "Stronger rule",
+              "items": [
+                {
+                  "text": "Quote the words from the message next to the cause",
+                  "done": false
+                },
+                {
+                  "text": "Code checks the quote appears in that message",
+                  "done": false
+                },
+                {
+                  "text": "Ndedi spot-checks five claims every week",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Customer absent at the pharmacy. Source: message twenty-seven. See, I cite my sources now. Fully reliable.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Message twenty-seven says port gate queue again, two hours. Nothing about a pharmacy. A citation is not proof. I require the quote.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A model can hallucinate a source as easily as a fact. So: quote the words, code checks the quote, and a person spot-checks five claims a week.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Mbella reads week 40",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "Every claim carries its words",
+            "detail": "She can check any line in seconds",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Floods, 6 late. Message 19: “Road at Bonabéri flooded. Turning back.” Message 33: “Water on the road at Bonabéri.”"
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: Now I can trust the other twenty."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Before it leaves the building",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Send week 40 report? 5 claims spot-checked by Ndedi.",
+              "summary": [
+                "All citations verified by code",
+                "4 deliveries marked reason not stated"
+              ],
+              "approve": "Send",
+              "reject": "Hold",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Week forty. Every cause carries the driver's own words. Mbella can check any line in seconds.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Ndedi spot-checked five claims. Only then does it go out. Trust is built by checking, not by hoping.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same fix, higher stakes",
+        "items": [
+          {
+            "icon": "scale",
+            "label": "Law office",
+            "text": "Every cited case must be quoted and found",
+            "illustration": "document"
+          },
+          {
+            "icon": "stethoscope",
+            "label": "Clinic",
+            "text": "Dosages come from the formulary, never from the model",
+            "illustration": "clinic"
+          },
+          {
+            "icon": "banknote",
+            "label": "Finance",
+            "text": "Figures pasted from the ledger, sentences drafted around them",
+            "illustration": "envelope"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Higher stakes, same fix. A law office quotes and finds every cited case. A clinic takes dosages from the formulary. Finance pastes figures from the ledger.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "The citation check is company code, not a model promise",
+          "Ndedi's weekly spot-check is part of her job",
+          "A wrong claim that goes out is the company's error",
+          "Accountable: the person who sends"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The citation check is company code, not a model's promise. Ndedi's weekly spot-check is her job. A wrong claim that goes out is the company's error.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "AI hallucinates because it completes patterns, and a fluent guess is more likely than an honest gap. Allow the gap, demand the quote, check with code.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Add one line to your next prompt:",
+          "“Quote your source for every claim.”",
+          "“If there is none, say so.”",
+          "Check one quote yourself"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: add one line to your next prompt. Quote your source for every claim, and if there is none, say so.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: AI Automation vs Traditional Automation"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: AI automation versus traditional automation.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

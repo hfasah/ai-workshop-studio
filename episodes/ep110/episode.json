@@ -1,0 +1,639 @@
+{
+  "id": "ep110",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 10,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 110,
+  "format": "build",
+  "title": "AI Automation vs Traditional Automation",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "“If delivered, send the SMS.” That is automation.",
+        "emphasis": "“Read what the driver wrote and decide.” That needs AI.",
+        "illustration": "phone"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Delivery marked done? Send the customer an SMS. Wouri Express automated that years ago, with no AI at all.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Read what the driver wrote and decide what it means: that needs AI. This last lesson is about knowing which is which.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "AI Automation vs Traditional Automation",
+        "subtitle": "AI Fundamentals · Lesson 10 · The whole Friday pipeline at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Mbella",
+            "detail": "A vendor's pitch",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Mbella: A vendor says I should replace all my automation with AI. Even the SMS. Should I?"
+                },
+                {
+                  "from": "user",
+                  "text": "Mbella: The SMS has worked every day for three years. Why would I touch it?"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ndedi",
+            "detail": "What still needs a person",
+            "ui": {
+              "kind": "text",
+              "title": "Ndedi's list",
+              "lines": [
+                "Reading driver notes: slow by hand, wrong by rule",
+                "Sending SMS: a rule, never fails",
+                "Refunds: a person, always"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "A vendor told Mbella to replace all her automation with AI, Tanyi. Even the SMS that has worked for three years.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Ndedi's list says it better. Driver notes: wrong by rule, slow by hand. SMS: a rule, never fails. Refunds: a person.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: rule or model",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Traditional automation",
+          "items": [
+            "Fixed rules, same input, same output",
+            "Structured data: a status, a number",
+            "Cheap, fast, testable, predictable"
+          ]
+        },
+        "right": {
+          "title": "AI automation",
+          "items": [
+            "Learned judgment, can vary between runs",
+            "Messy input: text, photos, speech",
+            "Handles what no rule could list"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Traditional automation follows fixed rules. Same input, same output, every time. Cheap, fast, easy to test.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "AI automation uses learned judgment. It reads messy text and photos, handles cases no rule could list, and can vary between runs.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Money, deletion, safety: rules with a human click. Reading and drafting: AI. Never the other way around.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: the Friday pipeline",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Rules around the AI, not instead of it",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "trigger",
+            "label": "Friday 16:00",
+            "sub": "rule: schedule",
+            "icon": "calendar-clock",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "export",
+            "label": "Export and strip",
+            "sub": "rule: code",
+            "icon": "file-down",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "read",
+            "label": "Read the notes",
+            "sub": "AI: sort causes, quote sources",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "check",
+            "label": "Check citations",
+            "sub": "rule: code",
+            "icon": "shield-check",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "draft",
+            "label": "Draft report",
+            "sub": "AI: sentences only",
+            "icon": "sparkles",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "approve",
+            "label": "Ndedi approves",
+            "sub": "person",
+            "icon": "user-check",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "trigger",
+            "to": "export"
+          },
+          {
+            "from": "export",
+            "to": "read"
+          },
+          {
+            "from": "read",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "draft"
+          },
+          {
+            "from": "draft",
+            "to": "approve",
+            "label": "send"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Here is the Friday pipeline we built across this series. The schedule and the export are rules. Plain code.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Reading the notes and drafting the sentences are AI. That is where judgment is needed. The citation check is code.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "And the send is a person. Rules around the AI, not instead of it. Each part does what it is best at.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito labels every step",
+        "app": "Wouri Express · Friday pipeline",
+        "steps": [
+          {
+            "title": "Rule steps",
+            "detail": "Deterministic, tested once",
+            "ui": {
+              "kind": "list",
+              "title": "Rules",
+              "items": [
+                {
+                  "text": "Run every Friday at 16:00",
+                  "done": false
+                },
+                {
+                  "text": "Export week, strip phone numbers",
+                  "done": false
+                },
+                {
+                  "text": "Paste the sheet's numbers into the draft",
+                  "done": false
+                },
+                {
+                  "text": "Delivered = done: send the SMS",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "AI steps",
+            "detail": "Judgment, checked afterwards",
+            "ui": {
+              "kind": "list",
+              "title": "AI",
+              "items": [
+                {
+                  "text": "Sort each note into a cause, with a quote",
+                  "done": false
+                },
+                {
+                  "text": "Write the report sentences",
+                  "done": false
+                },
+                {
+                  "text": "Suggest what to change next week",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Human steps",
+            "detail": "Decisions with consequences",
+            "ui": {
+              "kind": "list",
+              "title": "People",
+              "items": [
+                {
+                  "text": "Ndedi approves the report",
+                  "done": false
+                },
+                {
+                  "text": "Mbella decides schedule changes",
+                  "done": false
+                },
+                {
+                  "text": "Refunds and discounts: a person, always",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I label every step. Schedule, export, pasting numbers, the delivered SMS: rules. Same way every time.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "Sorting notes and writing sentences: AI. And the vendor's idea of replacing the SMS with AI?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "No. A rule that never fails stays a rule. AI goes where a rule cannot read the input. People keep every decision with money in it.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "AI is not deterministic",
+        "app": "Friday pipeline · test run",
+        "steps": [
+          {
+            "title": "Same note, two runs",
+            "detail": "Different answers",
+            "ui": {
+              "kind": "text",
+              "title": "Message 41: “Gate locked, came back at 4”",
+              "lines": [
+                "Run 1: customer",
+                "Run 2: other",
+                "Same input, different label"
+              ]
+            }
+          },
+          {
+            "title": "Kito's fix",
+            "detail": "Fixed list, examples, tests",
+            "ui": {
+              "kind": "list",
+              "title": "Make the AI step testable",
+              "items": [
+                {
+                  "text": "Fixed cause list: port, road, customer, other, not stated",
+                  "done": false
+                },
+                {
+                  "text": "Ten example notes with the right answer in the skill",
+                  "done": false
+                },
+                {
+                  "text": "Fifty test notes run every week; drift is reported",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Result",
+            "detail": "Consistent within a tolerance",
+            "ui": {
+              "kind": "text",
+              "title": "Weekly test",
+              "lines": [
+                "50 test notes, 49 matched",
+                "1 mismatch flagged for Ndedi",
+                "Below 45: pipeline pauses"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Gate locked, came back at four. Customer. Or other. Or road. Each run I feel differently. Variety is creativity.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Not in a pipeline. I fix the cause list, add ten worked examples to the skill, and run fifty test notes weekly. Forty-nine matched.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "AI automation can vary between runs. So surround it with rules: a fixed list, examples, weekly tests, a pause if the score drops.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Mbella answers the vendor",
+        "app": "Wouri Express · Office",
+        "steps": [
+          {
+            "title": "Her decision",
+            "detail": "Rules, AI, people",
+            "ui": {
+              "kind": "email",
+              "to": "Vendor",
+              "subject": "Re: replacing our automation with AI",
+              "body": [
+                "Thank you. Our SMS rule stays; it has never failed.",
+                "We use AI where a rule cannot read the input: driver notes and report drafts.",
+                "Refunds and schedule changes stay with people."
+              ]
+            }
+          },
+          {
+            "title": "The pipeline runs",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Friday pipeline, week 41: send the report?",
+              "summary": [
+                "Rules ran, AI steps tested, 49 of 50",
+                "Ndedi reviewed"
+              ],
+              "approve": "Send",
+              "reject": "Hold",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Mbella writes back. The SMS rule stays. AI reads the notes and drafts. People keep refunds and schedule changes.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Week forty-one runs: rules, then AI, then Ndedi's click. That click is the most important automation she never automated.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Rule, AI, or person?",
+        "items": [
+          {
+            "icon": "receipt",
+            "label": "Accounting",
+            "text": "Rule: match invoice totals. AI: read the supplier's email. Person: pay",
+            "illustration": "envelope"
+          },
+          {
+            "icon": "stethoscope",
+            "label": "Clinic",
+            "text": "Rule: send reminders. AI: sort patient messages. Person: diagnose",
+            "illustration": "clinic"
+          },
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Rule: check required documents. AI: summarise CVs. Person: hire",
+            "illustration": "person"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same three labels anywhere. Rule: match totals, send reminders, check documents. AI: read emails, sort messages, summarise CVs. Person: pay, diagnose, hire.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Wouri Express owns the pipeline, the rules and the tests",
+          "Ndedi maintains the skill and the example notes",
+          "The AI provider can be swapped; the rules stay",
+          "Accountable: the person whose click sends"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The company owns the pipeline, rules and tests. Ndedi maintains the skill. The provider can be swapped. Whoever clicks send is accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Ten lessons, one company, one Friday report. Rules for the predictable, AI for the messy, people for the consequences. That is the foundation.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Take one process at work",
+          "Label each step: rule, AI, or person",
+          "Build only the AI steps",
+          "Keep the click with a person"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: take one process at work and label each step: rule, AI, or person. Then build only the AI steps.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "End of Series 1 · Next: Building AI Employees"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. That was Series One. Next series: building AI employees.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

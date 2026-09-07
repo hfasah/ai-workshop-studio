@@ -1,0 +1,622 @@
+{
+  "id": "ep101",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 1,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 101,
+  "format": "build",
+  "title": "What Is Artificial Intelligence?",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Thirty drivers. One hundred and fifty messages a week.",
+        "emphasis": "Nobody knows why Thursdays run late.",
+        "illustration": "truck"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Mbella runs Wouri Express, a small delivery company in Douala. Thirty drivers send her one hundred and fifty messages a week.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Every Thursday, deliveries run late. Nobody can say why. The answer is in those messages, and nobody has time to read them.",
+          "expression": "confident",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "What Is Artificial Intelligence?",
+        "subtitle": "AI Fundamentals · Lesson 1 · Built with a delivery company in Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Driver group",
+        "steps": [
+          {
+            "title": "Ekambi, driver",
+            "detail": "Thursday, 11:40",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ekambi: Port gate queue again. Two hours. Pharmacy delivery will be late."
+                },
+                {
+                  "from": "user",
+                  "text": "Moukoko: Road at Bonabéri flooded after the rain. Turning back."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Mbella, owner",
+            "detail": "What she needs",
+            "ui": {
+              "kind": "text",
+              "title": "Mbella's ask",
+              "lines": [
+                "A weekly summary of the delivery reports",
+                "The delays that keep coming back",
+                "No new app for the drivers"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Tanyi, the drivers already write everything: port queues, flooded roads, customers not there. It is all in the group chat.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Mbella wants two things: a weekly summary, and the delays that keep coming back. And no new app for her drivers.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: rules or AI?",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Ordinary software",
+          "items": [
+            "Follows rules a person wrote",
+            "Late = more than two hours",
+            "Cannot read “port gate queue again”"
+          ]
+        },
+        "right": {
+          "title": "Artificial intelligence",
+          "items": [
+            "Learned patterns from many examples",
+            "Reads messy human text",
+            "Groups delays by their cause"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ordinary software follows rules a person wrote. Late means more than two hours. It cannot read port gate queue again.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Artificial intelligence is software that learned patterns from many examples. So it can read messy human text and sort it by cause.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "It finds patterns. It does not decide who is at fault. That stays with Mbella.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "What AI is",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Rules versus learned patterns",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "rules",
+            "label": "Rules",
+            "sub": "written by a person",
+            "icon": "list-checks",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "examples",
+            "label": "Examples",
+            "sub": "thousands of messages",
+            "icon": "database",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "software",
+            "label": "Software",
+            "sub": "does exactly the rule",
+            "icon": "cpu",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "model",
+            "label": "AI model",
+            "sub": "learned the pattern",
+            "icon": "brain",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "output",
+            "label": "Sorted delays",
+            "sub": "by cause",
+            "icon": "chart-column",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "rules",
+            "to": "software"
+          },
+          {
+            "from": "examples",
+            "to": "model",
+            "label": "training"
+          },
+          {
+            "from": "model",
+            "to": "output"
+          },
+          {
+            "from": "software",
+            "to": "output",
+            "kind": "x",
+            "style": "dashed"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ordinary software takes rules from a person and does exactly that. Nothing more.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An AI model is built differently. It was shown thousands of examples, and it learned the patterns inside them.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "So when a new message arrives, it can recognise: this is a port delay, this is a flood, this is a customer problem.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito sorts one week of messages",
+        "app": "Wouri Express · Delay finder",
+        "steps": [
+          {
+            "title": "Read the messages",
+            "detail": "One week, one hundred and fifty lines",
+            "ui": {
+              "kind": "list",
+              "title": "Driver messages",
+              "items": [
+                {
+                  "text": "Port gate queue again. Two hours.",
+                  "done": false
+                },
+                {
+                  "text": "Road at Bonabéri flooded. Turning back.",
+                  "done": false
+                },
+                {
+                  "text": "Customer not at the shop. Waited forty minutes.",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Sort by cause",
+            "detail": "Fixed list of causes",
+            "ui": {
+              "kind": "text",
+              "title": "This week",
+              "lines": [
+                "Port gate queue: 11 deliveries",
+                "Flooded road: 6 deliveries",
+                "Customer absent: 5 deliveries",
+                "Not stated: 4 deliveries"
+              ]
+            }
+          },
+          {
+            "title": "Find the pattern",
+            "detail": "When and where",
+            "ui": {
+              "kind": "text",
+              "title": "Recurring",
+              "lines": [
+                "Port gate: Tuesday and Thursday mornings",
+                "Floods: Bonabéri side, after rain",
+                "Source: messages 12, 15, 27, 40 and more"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I read every message from the week. No new app, the drivers keep writing the way they do.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "And you put each one under a cause. Port, flood, customer. What if a message fits none of them?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Then it goes under not stated. I never invent a cause. Now the pattern shows: port gate queues, Tuesday and Thursday mornings.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What AI cannot know",
+        "app": "Delay finder · test run",
+        "steps": [
+          {
+            "title": "The confident claim",
+            "detail": "A cause nobody wrote",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Why was delivery 88 late?"
+                },
+                {
+                  "from": "agent",
+                  "text": "The truck broke down on the Bonabéri road."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks",
+            "detail": "The message says nothing",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Why was delivery 88 late?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Reason not stated. Driver message 88 only says: late, sorry."
+                }
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "One word from the driver",
+            "ui": {
+              "kind": "list",
+              "title": "Driver reply buttons",
+              "items": [
+                {
+                  "text": "Port",
+                  "done": false
+                },
+                {
+                  "text": "Road",
+                  "done": false
+                },
+                {
+                  "text": "Customer",
+                  "done": false
+                },
+                {
+                  "text": "Other",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Delivery eighty-eight? Obviously the truck broke down on the Bonabéri road. Case closed.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "Nobody wrote that. Message eighty-eight only says late, sorry. So my answer is: reason not stated.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "AI finds patterns in what people recorded. If the drivers never wrote it, it cannot know it. So Mbella adds one tap: port, road, customer, other.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Mbella tries it on Friday",
+        "app": "Wouri Express · Delay finder",
+        "steps": [
+          {
+            "title": "Ask a plain question",
+            "detail": "Answer with sources",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "What delayed us most this week?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Port gate queues, eleven deliveries, Tuesday and Thursday mornings. Source: driver messages 12, 15, 27, 40."
+                }
+              ]
+            }
+          },
+          {
+            "title": "A person decides",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Move Thursday port runs to the afternoon?",
+              "summary": [
+                "Suggested from the pattern",
+                "Mbella decides, not the model"
+              ],
+              "approve": "Try it next week",
+              "reject": "Keep the schedule",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Mbella asks what delayed us most. I answer: port gate queues, eleven deliveries, Tuesday and Thursday mornings, with the message numbers.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Moving the port runs to the afternoon? That is a business decision. Mbella clicks, not the model.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same idea, other jobs",
+        "items": [
+          {
+            "icon": "stethoscope",
+            "label": "Clinic",
+            "text": "Sort patient messages by urgency",
+            "illustration": "clinic"
+          },
+          {
+            "icon": "store",
+            "label": "Shop",
+            "text": "Group customer complaints by cause",
+            "illustration": "storefront"
+          },
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Match applications to the job's needs",
+            "illustration": "person"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same idea elsewhere: a clinic sorting patient messages by urgency, a shop grouping complaints, a recruiter matching applications.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Wouri Express owns the messages and the results",
+          "Drivers are never named in a blame line",
+          "Mbella reviews every summary before acting",
+          "Accountable: the company, not the model"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Wouri Express owns its messages and its results. No driver is named in a blame line. Mbella reads every summary before she acts.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "That is artificial intelligence: software that learned patterns, reading what your people already write, with a person deciding.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Find one pile of messy text at work",
+          "Write the three causes you would sort it into",
+          "That list is the start of an AI system"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: find one pile of messy text at your work, and write the three causes you would sort it into.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: Generative AI Explained Simply"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: generative AI, explained simply.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

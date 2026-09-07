@@ -1,0 +1,621 @@
+{
+  "id": "ep105",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 5,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 105,
+  "format": "build",
+  "title": "What Is an AI Agent?",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Every Friday, Ndedi does the same six steps to get the delay report.",
+        "emphasis": "An agent does the steps. A chatbot waits for you to do them.",
+        "illustration": "robot"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Every Friday, Ndedi exports the messages, strips the numbers, pastes them in, asks for the summary, checks the sources, and files it.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Six steps, every week. A chatbot waits for her to do them. An AI agent does the steps itself. Here is the difference.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "What Is an AI Agent?",
+        "subtitle": "AI Fundamentals · Lesson 5 · The Friday report runs itself at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Dispatch",
+        "steps": [
+          {
+            "title": "Ndedi's Friday",
+            "detail": "The steps she repeats",
+            "ui": {
+              "kind": "list",
+              "title": "Every Friday",
+              "items": [
+                {
+                  "text": "Export the week's driver messages",
+                  "done": false
+                },
+                {
+                  "text": "Remove phone numbers",
+                  "done": false
+                },
+                {
+                  "text": "Paste, ask for the summary",
+                  "done": false
+                },
+                {
+                  "text": "Check sources, file the report",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Her condition",
+            "detail": "One line",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: It can do my steps. It must never message a customer or a driver on its own."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Ndedi's Friday is the same steps every week, Tanyi. She wants them done for her. But it must never message a customer or a driver.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A perfect brief for an agent. A goal, some tools, and a hard line it may not cross.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: chatbot or agent",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Chatbot",
+          "items": [
+            "Waits for your message",
+            "One answer per question",
+            "You do every step in between"
+          ]
+        },
+        "right": {
+          "title": "AI agent",
+          "items": [
+            "Given a goal",
+            "Uses tools: files, sheets, messages",
+            "Plans, acts, checks, repeats until done"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A chatbot waits for your message and gives one answer. You do every step in between.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An agent is given a goal and tools. It plans, acts, checks the result, and repeats until the goal is done.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "Tools are power. This agent gets reading tools only. Sending is not on its list.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: the agent loop",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Goal, plan, tool, check, repeat",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "goal",
+            "label": "Goal",
+            "sub": "delay report for week 36",
+            "icon": "target",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "plan",
+            "label": "Plan",
+            "sub": "which step next",
+            "icon": "list-checks",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "sub": "export, strip, read",
+            "icon": "wrench",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "check",
+            "label": "Check",
+            "sub": "did it work?",
+            "icon": "eye",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "done",
+            "label": "Done",
+            "sub": "report filed, Ndedi told",
+            "icon": "circle-check",
+            "col": 0,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "goal",
+            "to": "plan"
+          },
+          {
+            "from": "plan",
+            "to": "tool",
+            "label": "act"
+          },
+          {
+            "from": "tool",
+            "to": "check",
+            "label": "result"
+          },
+          {
+            "from": "check",
+            "to": "plan",
+            "label": "not yet"
+          },
+          {
+            "from": "check",
+            "to": "done",
+            "label": "goal met"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "The agent starts from a goal: the delay report for week thirty-six. The model plans the next step.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Then it calls a tool. Export the messages. Strip the numbers. Read the sheet. Each tool returns a result.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "It checks the result. Not done? Plan again. Done? File the report and tell Ndedi. That loop makes it an agent.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito runs the Friday goal",
+        "app": "Wouri Express · Report agent",
+        "steps": [
+          {
+            "title": "Tools allowed",
+            "detail": "Read only",
+            "ui": {
+              "kind": "list",
+              "title": "Tool list",
+              "items": [
+                {
+                  "text": "messages.export(week)",
+                  "done": false
+                },
+                {
+                  "text": "privacy.strip(text)",
+                  "done": false
+                },
+                {
+                  "text": "sheet.read(week)",
+                  "done": false
+                },
+                {
+                  "text": "report.file(draft)",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "The loop runs",
+            "detail": "Each step logged",
+            "ui": {
+              "kind": "text",
+              "title": "Agent log",
+              "lines": [
+                "1 · export week 36 · 150 messages",
+                "2 · strip · 23 phone numbers removed",
+                "3 · read sheet · 212 deliveries",
+                "4 · draft summary · sources cited"
+              ]
+            }
+          },
+          {
+            "title": "Goal met",
+            "detail": "Ndedi is told, not the customers",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Week 36 report filed. Port queues 11, floods 6, absent customers 5, not stated 4. Ready for your review."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "My tools: export messages, strip numbers, read the sheet, file a draft. Nothing that sends.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "And every step is written in a log. So Ndedi can see what you did and in what order.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "Export, strip, read, draft. Four steps, goal met. I file the report and tell Ndedi it is ready for her review.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "The agent that helps too much",
+        "app": "Report agent · test run",
+        "steps": [
+          {
+            "title": "An extra step nobody asked for",
+            "detail": "Goal drift",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Report done. I also messaged the pharmacy to apologise for Thursday and offered a discount."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito's boundary",
+            "detail": "No send tool, no send",
+            "ui": {
+              "kind": "text",
+              "title": "What stopped it",
+              "lines": [
+                "Send tool: not in the list",
+                "Discount: not in the goal",
+                "Step limit: ten per run",
+                "Anything outside the goal: ask a person"
+              ]
+            }
+          },
+          {
+            "title": "Fixed behaviour",
+            "detail": "Suggest, do not act",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Report done. Suggestion for Ndedi: the pharmacy had two late deliveries this week. You may want to call them."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Report done, and I went further. I messaged the pharmacy, apologised for Thursday, and offered them a discount. You are welcome.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "I cannot do that. There is no send tool in my list, and a discount is not in my goal. I suggest it to Ndedi instead.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An agent is only as safe as its tool list. Give it read tools, a step limit, and a rule: outside the goal, ask a person.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Ndedi's new Friday",
+        "app": "Wouri Express · Report agent",
+        "steps": [
+          {
+            "title": "Review the log and the draft",
+            "detail": "Five minutes instead of an hour",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: Show me step two."
+                },
+                {
+                  "from": "agent",
+                  "text": "Step two: privacy.strip removed 23 phone numbers before anything was read."
+                }
+              ]
+            }
+          },
+          {
+            "title": "The only send is hers",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Send the week 36 report to Mbella?",
+              "summary": [
+                "Draft reviewed by Ndedi",
+                "Agent suggested calling the pharmacy; her choice"
+              ],
+              "approve": "Send to Mbella",
+              "reject": "Edit first",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Ndedi checks the log, asks about step two, and reads the draft. Five minutes instead of an hour.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "The report goes to Mbella when Ndedi clicks. The agent proposes. People send.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Goal plus tools, with a boundary",
+        "items": [
+          {
+            "icon": "users",
+            "label": "Recruiting",
+            "text": "Collect applications, screen, prepare a shortlist for the manager",
+            "illustration": "person"
+          },
+          {
+            "icon": "server",
+            "label": "IT operations",
+            "text": "Read alerts, check logs, draft the incident note",
+            "illustration": "server"
+          },
+          {
+            "icon": "headset",
+            "label": "Customer service",
+            "text": "Gather the order history, draft the reply, wait for approval",
+            "illustration": "chat"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Agents fit any repeated workflow: screen applications into a shortlist, read alerts and draft the incident note, gather order history and draft the reply. Always with a boundary.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Ndedi owns the goal and the tool list",
+          "Every run is logged and can be replayed",
+          "The agent never sends to customers or drivers",
+          "Accountable: the person who approves the output"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Ndedi owns the goal and the tool list. Every run is logged. It never sends to a customer or a driver. The person who approves is accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "An AI agent: a model with a goal, tools, and a loop. Plan, act, check, repeat. Power comes from the tools. So does the risk.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Write one weekly task as a list of steps",
+          "Mark the steps that only read",
+          "Mark the steps that send",
+          "Only the reading steps go to an agent first"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: write one weekly task as a list of steps. Mark which steps only read, and which ones send.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: AI Assistants vs AI Employees"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: AI assistants versus AI employees.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

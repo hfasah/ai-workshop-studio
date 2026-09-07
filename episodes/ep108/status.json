@@ -1,0 +1,47 @@
+{
+  "id": "ep108",
+  "title": "What Is MCP, and Why Does It Matter?",
+  "version": 1,
+  "format": "build",
+  "series": "Series 1: AI Fundamentals",
+  "lesson": 8,
+  "gates": {
+    "brief": "pending",
+    "story": "pending",
+    "script": "pending",
+    "storyboard": "pending",
+    "preview": "pending",
+    "publication": "pending"
+  },
+  "disclosure": "fictional",
+  "setting": {
+    "country": "Cameroon",
+    "place": "Douala, Littoral region",
+    "community": "Wouri Express, a small delivery company (fictional)",
+    "languages": [
+      "English"
+    ],
+    "reviewer": "Hippolyte to review names (Mbella, Ndedi, Ekambi, Moukoko) and the company name at gate 3"
+  },
+  "approvals": [],
+  "assets": [],
+  "voices": {
+    "tanyi": "en-US-AndrewNeural (stock)",
+    "amara": "en-ZA-LeahNeural (stock)",
+    "kito": "en-US-AnaNeural (stock)",
+    "hallucinator": "en-US-GuyNeural (stock)",
+    "gatekeeper": "en-GB-SoniaNeural (stock)"
+  },
+  "cost": {
+    "script_usd": 0,
+    "other_usd": 0
+  },
+  "cuts": [
+    "short1"
+  ],
+  "engine": {
+    "name": "crew (Claude Code session)",
+    "model": ""
+  },
+  "note": "Series 1: AI Fundamentals, lesson 8 of 10. Running build story: Wouri Express, Douala."
+}

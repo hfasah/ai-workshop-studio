@@ -1,0 +1,631 @@
+{
+  "id": "ep107",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 7,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 107,
+  "format": "build",
+  "title": "What Are AI Skills, Tools, and Memory?",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "The Delay Analyst forgot everything it learned last week.",
+        "emphasis": "A model alone has no hands and no memory. You add both.",
+        "illustration": "robot"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Last week the Delay Analyst learned that checkpoint delays count as road delays. This week it asked Ndedi the same question again.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A model on its own has no hands and no memory. Skills, tools and memory give it both. Here is what each one is.",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "What Are AI Skills, Tools, and Memory?",
+        "subtitle": "AI Fundamentals · Lesson 7 · Equipping the Delay Analyst at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "Wouri Express · Dispatch",
+        "steps": [
+          {
+            "title": "Ndedi",
+            "detail": "Three complaints",
+            "ui": {
+              "kind": "list",
+              "title": "What Ndedi noticed",
+              "items": [
+                {
+                  "text": "It asked about checkpoints again: no memory",
+                  "done": false
+                },
+                {
+                  "text": "It sorted a message wrongly: no procedure for that case",
+                  "done": false
+                },
+                {
+                  "text": "It could not check the distance to Edéa: no tool",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Mbella",
+            "detail": "One condition",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Mbella: Whatever it remembers must be something I can open and read. No black box."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "Ndedi has three complaints, Tanyi. It forgot the checkpoint decision, sorted one message wrongly, and could not check the distance to Edéa.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Three complaints, three missing parts: memory, a skill, a tool. And Mbella's condition: whatever it remembers, she can open and read.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "diagram",
+      "label": "Understand: the three parts",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Skills, tools and memory around one model",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "model",
+            "label": "Model",
+            "sub": "reasons and writes",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "skills",
+            "label": "Skills",
+            "sub": "written procedures: how to do a task",
+            "icon": "book-open",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "tools",
+            "label": "Tools",
+            "sub": "things it can call: sheet, map, messages",
+            "icon": "wrench",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "memory",
+            "label": "Memory",
+            "sub": "what it keeps between runs",
+            "icon": "database",
+            "col": 1,
+            "row": 1
+          },
+          {
+            "id": "world",
+            "label": "The company's systems",
+            "sub": "where the tools reach",
+            "icon": "server",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "skills",
+            "to": "model",
+            "label": "how"
+          },
+          {
+            "from": "model",
+            "to": "tools",
+            "label": "calls"
+          },
+          {
+            "from": "tools",
+            "to": "world"
+          },
+          {
+            "from": "memory",
+            "to": "model",
+            "label": "recall"
+          },
+          {
+            "from": "model",
+            "to": "memory",
+            "label": "save",
+            "style": "dashed"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "A skill is a written procedure. How to sort a delay. How to write the report. The model follows it like a junior reading a checklist.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A tool is something the model can call: read the sheet, measure a distance, export messages. Its hands into your systems.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Memory is what it keeps between runs: decisions, findings, preferences. Plain files the company can open.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "compare",
+      "label": "Decide: what goes where",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "left": {
+          "title": "Put it in a skill",
+          "items": [
+            "“Checkpoint counts as road”",
+            "“Cite a message for every cause”",
+            "Anything Ndedi would write in a procedure"
+          ]
+        },
+        "right": {
+          "title": "Put it in memory",
+          "items": [
+            "“Week 36: port queues were the top cause”",
+            "“Mbella prefers short reports”",
+            "Anything learned while working"
+          ]
+        }
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "What goes where? Rules Ndedi would write in a procedure go in a skill. Things learned while working go in memory.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Checkpoint counts as road is a rule. Week thirty-six's top cause is a finding. Mbella prefers short reports is a preference.",
+          "expression": "confident",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "And memory has a rule of its own. No customer names, no phone numbers. Findings, not people.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito equips the Delay Analyst",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "Skill: sort a delay",
+            "detail": "A plain text procedure",
+            "ui": {
+              "kind": "list",
+              "title": "skills/sort-delay.md",
+              "items": [
+                {
+                  "text": "Read the message. Pick one cause: port, road, customer, other",
+                  "done": false
+                },
+                {
+                  "text": "Checkpoint, flood, traffic: road",
+                  "done": false
+                },
+                {
+                  "text": "No cause in the text: not stated. Never guess",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "Tool: distance",
+            "detail": "A function it may call",
+            "ui": {
+              "kind": "text",
+              "title": "Tools",
+              "lines": [
+                "sheet.read(week)",
+                "messages.export(week)",
+                "map.distance(from, to) · new",
+                "memory.read() · memory.write(note)"
+              ]
+            }
+          },
+          {
+            "title": "Memory: plain notes",
+            "detail": "A file Mbella can open",
+            "ui": {
+              "kind": "list",
+              "title": "memory/notes.md",
+              "items": [
+                {
+                  "text": "Week 36: top cause port queues, 9:00 slot",
+                  "done": false
+                },
+                {
+                  "text": "Ndedi decided: checkpoints file under road",
+                  "done": false
+                },
+                {
+                  "text": "Mbella prefers reports under 100 words",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "First, a skill: a short text file on how to sort a delay, with Ndedi's cases. Checkpoint means road. No cause means not stated.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "Then a new tool, map distance, to check how far Edéa really is. And memory is just a notes file?",
+          "expression": "surprised",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "A notes file I read at the start of every run and add to at the end. Mbella can open it. No black box.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "When memory goes stale",
+        "app": "Delay Analyst · test run",
+        "steps": [
+          {
+            "title": "An old note, still trusted",
+            "detail": "The port changed its hours",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Why is delivery 14 high risk?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Port queues at 9:00, as always. Memory says so."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito checks the fresh data",
+            "detail": "Memory versus this week",
+            "ui": {
+              "kind": "text",
+              "title": "Check",
+              "lines": [
+                "Memory: port queues at 9:00 (week 36)",
+                "This week's messages: no port queue mentioned",
+                "Ndedi: port gate now opens at 7:00",
+                "Verdict: note outdated"
+              ]
+            }
+          },
+          {
+            "title": "The fix",
+            "detail": "Dated notes, reviewed monthly",
+            "ui": {
+              "kind": "list",
+              "title": "Memory rules",
+              "items": [
+                {
+                  "text": "Every note carries a date",
+                  "done": false
+                },
+                {
+                  "text": "Fresh data beats an old note",
+                  "done": false
+                },
+                {
+                  "text": "Ndedi reviews the notes file monthly",
+                  "done": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Delivery fourteen? Port queues at nine, as always. It is in the memory, so it must be true.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "That note is from week thirty-six. This week's messages mention no port queue, and Ndedi says the gate now opens at seven. Outdated.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Memory helps until it goes stale. So every note carries a date, fresh data beats an old note, and Ndedi reviews the file monthly.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Ndedi's Friday, again",
+        "app": "Wouri Express · Delay Analyst",
+        "steps": [
+          {
+            "title": "Skill, tool and memory at work",
+            "detail": "No repeated questions",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "agent",
+                  "text": "Week 38 report ready. Checkpoints filed under road (your decision, week 37). Edéa run: 62 km by road, first delivery, no history."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Memory review",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Update memory: port gate opens at 7:00 from week 38?",
+              "summary": [
+                "Confirmed by Ndedi",
+                "Old note kept with its date"
+              ],
+              "approve": "Save note",
+              "reject": "Discard",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Friday: checkpoints filed under road from memory, the Edéa distance from the map tool, and no repeated questions.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "A new note about the port hours goes in only when Ndedi confirms it. Memory is written with a person watching.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Skill, tool, memory in other jobs",
+        "items": [
+          {
+            "icon": "headset",
+            "label": "Support desk",
+            "text": "Skill: refund procedure. Tool: order lookup. Memory: open cases",
+            "illustration": "chat"
+          },
+          {
+            "icon": "stethoscope",
+            "label": "Clinic",
+            "text": "Skill: triage checklist. Tool: appointment book. Memory: follow-ups due",
+            "illustration": "clinic"
+          },
+          {
+            "icon": "briefcase",
+            "label": "Recruiting",
+            "text": "Skill: screening criteria. Tool: applications inbox. Memory: roles already filled",
+            "illustration": "person"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "In a support desk: the refund procedure is a skill, order lookup a tool, open cases the memory. A clinic and a recruiter split the same way.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "Skills are written by Ndedi, in files the company keeps",
+          "Tools reach only the company's own systems",
+          "Memory holds findings and decisions, never people's data",
+          "Accountable: the person who reviews the notes"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "Skills are Ndedi's files. Tools reach only the company's systems. Memory holds findings and decisions, never people's data. The reviewer is accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Skills say how. Tools give hands. Memory keeps what was learned. Around one model, in files you can open.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Write one skill as a half-page procedure",
+          "List the tools it needs",
+          "Write what it should remember, with dates"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: write one skill as a half-page procedure. Then list the tools it needs and what it should remember.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: What Is MCP, and Why Does It Matter?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: what is MCP, and why does it matter?",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "id": "ep104",
+  "series": "AI With Hippolyte",
+  "course": "Series 1: AI Fundamentals",
+  "lesson": 4,
+  "tagline": "Complex AI. Explained visually. Built practically.",
+  "episode": 104,
+  "format": "build",
+  "title": "How Large Language Models Work",
+  "disclosure": "Fictional teaching scenario. Wouri Express and its people are invented; the setting draws on documented conditions in Douala, Cameroon.",
+  "background": "workshop",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "statement",
+      "label": "Hook",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "text": "Ndedi asked the chatbot about last month's delays.",
+        "emphasis": "It answered with confidence. It had never seen last month.",
+        "illustration": "chat"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Ndedi pasted this week's driver messages into a chatbot and got a good summary. Then she asked about last month.",
+          "expression": "serious",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "It answered with confidence. It had never seen last month. Here is how a language model actually works.",
+          "expression": "confident",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "type": "title",
+      "label": "Title",
+      "characters": [],
+      "minMs": 5000,
+      "onScreen": {
+        "title": "How Large Language Models Work",
+        "subtitle": "AI Fundamentals · Lesson 4 · Tokens, training and context at Wouri Express, Douala"
+      },
+      "lines": []
+    },
+    {
+      "id": "listening",
+      "type": "demo",
+      "label": "Listening",
+      "characters": [
+        "amara",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "What the crew heard",
+        "app": "General chatbot",
+        "steps": [
+          {
+            "title": "Ndedi's first try",
+            "detail": "This week's messages pasted in",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: Here are this week's driver messages. Summarise the delays."
+                },
+                {
+                  "from": "agent",
+                  "text": "Port gate queues on Tuesday and Thursday mornings, flooding at Bonabéri, three absent customers."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Her second try",
+            "detail": "Nothing pasted",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: And how did last month compare?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Last month was better, with fewer port delays and no flooding."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "amara",
+          "text": "The first answer was right, Tanyi. She pasted the messages. The second answer sounds just as sure, and she pasted nothing.",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "The model can only work with what is in front of it. Let me show you what it does.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "type": "flow",
+      "label": "Understand: what happens when you ask",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "From your words to its answer",
+        "nodes": [
+          {
+            "label": "Tokens",
+            "icon": "type",
+            "sub": "text cut into pieces"
+          },
+          {
+            "label": "Training",
+            "icon": "library",
+            "sub": "patterns from billions of words"
+          },
+          {
+            "label": "Predict",
+            "icon": "dices",
+            "sub": "the most likely next token"
+          },
+          {
+            "label": "Context",
+            "icon": "layers",
+            "sub": "what it can see right now"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "First, tokens. Your text is cut into pieces: words, parts of words, punctuation. The model works on those pieces.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Second, training. The model read billions of words and learned which tokens tend to follow which. Then training stopped.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Third, prediction. It writes its answer one token at a time, each one the most likely next piece given everything before it.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Fourth, context: your message, what you pasted, and the conversation so far. That is all it can see.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "type": "diagram",
+      "label": "Decide: training versus context",
+      "characters": [
+        "tanyi",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Two places knowledge can live",
+        "cols": 3,
+        "nodes": [
+          {
+            "id": "training",
+            "label": "Training",
+            "sub": "frozen, general, in the past",
+            "icon": "library",
+            "col": 0,
+            "row": 0
+          },
+          {
+            "id": "context",
+            "label": "Context",
+            "sub": "now, whatever you give it",
+            "icon": "layers",
+            "col": 0,
+            "row": 1
+          },
+          {
+            "id": "model",
+            "label": "The model",
+            "sub": "predicts the next token",
+            "icon": "brain",
+            "col": 1,
+            "row": 0
+          },
+          {
+            "id": "answer",
+            "label": "Answer",
+            "sub": "fluent either way",
+            "icon": "message-square",
+            "col": 2,
+            "row": 0
+          },
+          {
+            "id": "lastmonth",
+            "label": "Last month",
+            "sub": "in neither place",
+            "icon": "calendar-x",
+            "col": 2,
+            "row": 1
+          }
+        ],
+        "edges": [
+          {
+            "from": "training",
+            "to": "model",
+            "label": "how language works"
+          },
+          {
+            "from": "context",
+            "to": "model",
+            "label": "your facts"
+          },
+          {
+            "from": "model",
+            "to": "answer"
+          },
+          {
+            "from": "lastmonth",
+            "to": "model",
+            "kind": "x",
+            "style": "dashed"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Knowledge lives in two places. Training: general, frozen, from the past. Context: specific, now, whatever you put in front of it.",
+          "expression": "neutral",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Last month's messages were in neither. So the model did what it always does: predicted a fluent answer anyway.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "And one more thing lives in context: whatever you paste. Customer phone numbers do not go into a public chatbot.",
+          "expression": "serious",
+          "gesture": "warning"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "type": "demo",
+      "label": "Build",
+      "characters": [
+        "kito",
+        "amara"
+      ],
+      "onScreen": {
+        "title": "Kito builds the context on purpose",
+        "app": "Wouri Express · Delay summary",
+        "steps": [
+          {
+            "title": "Put the facts in front of it",
+            "detail": "This is the context",
+            "ui": {
+              "kind": "text",
+              "title": "Context sent to the model",
+              "lines": [
+                "Instruction: summarise delays by cause, cite message numbers",
+                "Week 36: 150 driver messages, phone numbers removed",
+                "Week 32 summary, from the archive"
+              ]
+            }
+          },
+          {
+            "title": "Too much for one window",
+            "detail": "The context has a size limit",
+            "ui": {
+              "kind": "list",
+              "title": "Three months of messages",
+              "items": [
+                {
+                  "text": "Week 24 to 36: about 1,900 messages",
+                  "done": false
+                },
+                {
+                  "text": "Does not fit in one context window",
+                  "done": false
+                },
+                {
+                  "text": "Plan: summarise each week, then summarise the summaries",
+                  "done": false
+                }
+              ]
+            }
+          },
+          {
+            "title": "The comparison, grounded",
+            "detail": "Both weeks in context",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Compare week 36 with week 32."
+                },
+                {
+                  "from": "agent",
+                  "text": "Port delays rose from 6 to 11. Flooding appears only in week 36. Sources: week 32 summary; messages 12, 15, 27, 40."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "I decide what goes in the context: the instruction, this week's messages without phone numbers, and the archived week thirty-two summary.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "amara",
+          "text": "Why not paste all three months? The context has a limit, does it not?",
+          "expression": "confused",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "kito",
+          "text": "It does. So I summarise each week first, then compare summaries. Now the comparison is grounded, with sources.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "constraint-fix",
+      "type": "demo",
+      "label": "Constraint and fix",
+      "characters": [
+        "hallucinator",
+        "kito",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Same question, two answers",
+        "app": "Delay summary · test run",
+        "steps": [
+          {
+            "title": "Nothing in context",
+            "detail": "Prediction fills the gap",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "How did last month compare?"
+                },
+                {
+                  "from": "agent",
+                  "text": "Last month was better, with fewer port delays and no flooding."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Kito's rule",
+            "detail": "Not in context: say so",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "How did last month compare?"
+                },
+                {
+                  "from": "agent",
+                  "text": "I have no messages from last month in front of me. Give me the archive and I will compare."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Why the guess sounds sure",
+            "detail": "Fluency is not knowledge",
+            "ui": {
+              "kind": "text",
+              "title": "Remember",
+              "lines": [
+                "The model always predicts a next token",
+                "It has no built-in sense of “I was not told”",
+                "Unless you instruct it to check its context"
+              ]
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "hallucinator",
+          "text": "Last month? Better, obviously. Fewer port delays, no flooding at all. I remember it clearly.",
+          "expression": "confident",
+          "gesture": "explain"
+        },
+        {
+          "speaker": "kito",
+          "text": "You remember nothing. There is no last month in the context. My rule: if it is not in front of me, I say so and ask for it.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "A language model always produces the next token. It has no built-in feeling of I was not told. You build that check in.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "user-test",
+      "type": "demo",
+      "label": "User test",
+      "characters": [
+        "kito",
+        "gatekeeper"
+      ],
+      "onScreen": {
+        "title": "Ndedi tries again",
+        "app": "Wouri Express · Delay summary",
+        "steps": [
+          {
+            "title": "Ask with the archive attached",
+            "detail": "Context built for her",
+            "ui": {
+              "kind": "chat",
+              "messages": [
+                {
+                  "from": "user",
+                  "text": "Ndedi: Compare this week with last month."
+                },
+                {
+                  "from": "agent",
+                  "text": "Loaded weeks 32 to 35 from the archive. Port delays: up from an average of 7 to 11. Sources attached."
+                }
+              ]
+            }
+          },
+          {
+            "title": "Data stays inside",
+            "detail": "Approval card",
+            "ui": {
+              "kind": "approval",
+              "title": "Send messages to the model with phone numbers removed?",
+              "summary": [
+                "Company account, not a public chatbot",
+                "Numbers stripped before sending"
+              ],
+              "approve": "Send stripped",
+              "reject": "Cancel",
+              "clickAt": 2
+            }
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "kito",
+          "text": "Ndedi asks the same question. This time the archive loads into the context first, and the comparison comes with sources.",
+          "expression": "happy",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "gatekeeper",
+          "text": "And the messages go through the company's account, phone numbers stripped. Context is where your data goes. Guard it.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "type": "examples",
+      "label": "Where this applies",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Build the context, get the answer",
+        "items": [
+          {
+            "icon": "scale",
+            "label": "Law office",
+            "text": "Paste the contract, then ask about the clause",
+            "illustration": "document"
+          },
+          {
+            "icon": "graduation-cap",
+            "label": "School",
+            "text": "Give the syllabus before asking for a quiz",
+            "illustration": "laptop"
+          },
+          {
+            "icon": "store",
+            "label": "Shop",
+            "text": "Attach the price list before drafting the offer",
+            "illustration": "storefront"
+          }
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Same rule anywhere: paste the contract before asking about the clause, the syllabus before the quiz, the price list before the offer.",
+          "expression": "confident",
+          "gesture": "point_left"
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "type": "bullets",
+      "label": "Ownership",
+      "characters": [
+        "gatekeeper",
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Who owns this?",
+        "items": [
+          "The context is built by Wouri Express code, not by hand",
+          "Phone numbers and customer names are stripped first",
+          "Archives stay on the company's own storage",
+          "Accountable: whoever sends the data"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "gatekeeper",
+          "text": "The company's own code builds the context. Names and numbers are stripped first. Archives stay on company storage. Whoever sends data is accountable.",
+          "expression": "serious",
+          "gesture": "point_left"
+        },
+        {
+          "speaker": "tanyi",
+          "text": "Tokens, training, prediction, context. The model knows language. You supply the facts. Everything it does not have, it will guess.",
+          "expression": "confident",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "challenge",
+      "type": "bullets",
+      "label": "Take action",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "title": "Your build challenge",
+        "items": [
+          "Ask a chatbot something only you know",
+          "Watch it guess",
+          "Paste the facts and ask again",
+          "Compare the two answers"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Your challenge: ask a chatbot something only you know, and watch it guess. Then paste the facts and ask again.",
+          "expression": "happy",
+          "gesture": "explain"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "label": "Closing",
+      "characters": [
+        "tanyi"
+      ],
+      "onScreen": {
+        "line": "Don't just use AI.",
+        "emphasis": "Build it to work reliably.",
+        "cta": "Next lesson: What Is an AI Agent?"
+      },
+      "lines": [
+        {
+          "speaker": "tanyi",
+          "text": "Don't just use AI. Build it to work reliably. Next: what is an AI agent?",
+          "expression": "confident",
+          "gesture": "point_right"
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "id": "short1",
+      "targetSec": 50,
+      "scenes": [
+        "hook",
+        "constraint-fix",
+        "outro"
+      ]
+    }
+  ]
+}

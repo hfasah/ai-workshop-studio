@@ -70,6 +70,21 @@ Short-format rules: 110–150 spoken words, 5 scenes (never a title scene; the b
 
 **Story bank:** twelve fictional starting points (farmer advisory, classroom tutor, rural clinic support, market business assistant, job opportunity navigator, government document service, power reliability monitor, flood warning service, local logistics planner, African-language service desk, cross-border trade helper, cultural archive assistant) in `team/STORY-BANK.md`. Each needs a researched country, community, language, regulatory setting and user workflow before production.
 
+**Series 1: AI Fundamentals (first public series, 2026-09-07).** Ten build-story lessons of 2 to 4 minutes (target 3:00 to 3:40) that establish a common foundation. All ten are told through one running story: Wouri Express, a fictional small delivery company in Douala, Cameroon, uses AI to summarise driver delivery reports and find recurring delays. Each lesson adds one capability to the same Friday report system. Cast of the story: Mbella (owner), Ndedi (dispatcher), Ekambi and Moukoko (drivers), all fictional. Documented conditions only (port gate queues, rainy-season flooding on the Bonabéri side, road checkpoints); no statistics claimed. Episode ids ep101 to ep110; each carries `course`, `lesson` and a `short1` cut.
+
+| Lesson | Id | Title | Story beat |
+|---|---|---|---|
+| 1 | ep101 | What Is Artificial Intelligence? | Sorting 150 weekly driver messages by cause |
+| 2 | ep102 | Generative AI Explained Simply | Drafting the Friday customer report; numbers from code |
+| 3 | ep103 | Machine Learning vs Generative AI | Predicting late risk from six months of history |
+| 4 | ep104 | How Large Language Models Work | Tokens, training, prediction, context; the last-month invention |
+| 5 | ep105 | What Is an AI Agent? | The Friday steps run themselves with read-only tools |
+| 6 | ep106 | AI Assistants vs AI Employees | Hiring a Delay Analyst with a role card and a never list |
+| 7 | ep107 | What Are AI Skills, Tools, and Memory? | Procedure file, map tool, dated notes file |
+| 8 | ep108 | What Is MCP, and Why Does It Matter? | One MCP server per system; read tools versus write tools |
+| 9 | ep109 | Why AI Sometimes Hallucinates | The breakdown that never happened; quotes checked by code |
+| 10 | ep110 | AI Automation vs Traditional Automation | Labelling every pipeline step: rule, AI or person |
+
 **Season 1 episode list** (each concept episode from 2 onward is told through a build story from the bank):
 1. Chatbot or AI Agent: What Is the Difference? (pilot)
 2. What Really Happens When You Ask AI a Question?
