@@ -237,13 +237,14 @@ export const youtubeTest = async () => {
 };
 
 // Resumable upload. publishAt (Date | null): private + publishAt when in the future, public otherwise.
-const youtubeUpload = async ({file, title, description, tags, publishAt, shorts}) => {
+// privacy ("private" | "unlisted" | "public") overrides that rule, for test uploads that must never go live on their own.
+const youtubeUpload = async ({file, title, description, tags, publishAt, shorts, privacy}) => {
   const token = await youtubeAccessToken();
   const buf = fs.readFileSync(file);
-  const scheduled = publishAt && publishAt.getTime() - Date.now() > 60000;
+  const scheduled = !privacy && publishAt && publishAt.getTime() - Date.now() > 60000;
   const meta = {
     snippet: {title: String(title).slice(0, 100), description: String(description).slice(0, 5000), tags: (tags ?? []).slice(0, 30), categoryId: "27"},
-    status: {privacyStatus: scheduled ? "private" : "public", selfDeclaredMadeForKids: false, ...(scheduled ? {publishAt: publishAt.toISOString()} : {})},
+    status: {privacyStatus: privacy ?? (scheduled ? "private" : "public"), selfDeclaredMadeForKids: false, ...(scheduled ? {publishAt: publishAt.toISOString()} : {})},
   };
   const start = await fetch("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", {
     method: "POST",
@@ -258,6 +259,15 @@ const youtubeUpload = async ({file, title, description, tags, publishAt, shorts}
   const id = up.body?.id;
   if (!id) throw new Error("YouTube returned no video id.");
   return {remoteId: id, remoteUrl: shorts ? `https://www.youtube.com/shorts/${id}` : `https://youtu.be/${id}`, scheduledNatively: Boolean(scheduled)};
+};
+
+// Private test upload of one asset (never public, no publish time). Used by scripts/yt-private-upload.mjs to prove a
+// connection with a real file; the video can be made public or scheduled by hand in YouTube Studio.
+export const youtubePrivateUpload = async ({asset, title, description, tags, shorts = false}) => {
+  const {file, rel} = assetFile(asset);
+  const r = await youtubeUpload({file, title, description, tags, publishAt: null, shorts, privacy: "private"});
+  appendLog({action: "test-upload", platform: shorts ? "shorts" : "youtube", via: "direct", detail: rel, remoteId: r.remoteId, remoteUrl: r.remoteUrl, privacy: "private"});
+  return r;
 };
 
 // ---------- Facebook Page (Graph API, page access token) ----------
