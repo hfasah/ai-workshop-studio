@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, artificial intelligence, machine learning basics, small business, logistics, cameroon
 
 ## Thumbnail text
-Sorting Reports
+What Is AI?
 
 ## Shorts
 Titles:

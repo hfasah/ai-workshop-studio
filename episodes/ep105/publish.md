@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, aiagents, machinelearningbasics, aiautomation, cameroon, reliableai, smallbusiness, logistics, weeklyreport
 
 ## Thumbnail text
-AI Agent
+What Is an AI Agent?
 
 ## Shorts
 Titles:

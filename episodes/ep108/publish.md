@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, mcp, cameroon logistics, small business ai, ai integration, open standards, reliable ai
 
 ## Thumbnail text
-MCP Simplifies
+What Is MCP?
 
 ## Shorts
 Titles:

@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, ai agents, machine learning basics, small business, logistics, cameroon, skills, tools, memory
 
 ## Thumbnail text
-Skills & Tools
+Skills, Tools, Memory
 
 ## Shorts
 Titles:

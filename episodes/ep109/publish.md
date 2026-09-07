@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, ai agents, hallucination control, reliable ai, cameroon, small business, logistics, trustworthy ai
 
 ## Thumbnail text
-AI Hallucination
+Why AI Hallucinates
 
 ## Shorts
 Titles:

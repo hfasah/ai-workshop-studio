@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, ai agents, generative ai, machine learning basics, cameroon, small business, logistics, weekly reports, data drafting
 
 ## Thumbnail text
-Generative AI
+Generative AI, Simply
 
 ## Shorts
 Titles:

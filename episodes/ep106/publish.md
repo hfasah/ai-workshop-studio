@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, ai assistants, ai employees, role cards, responsibility, cameroon, business automation, logistics
 
 ## Thumbnail text
-AI Employee
+Assistant vs Employee
 
 ## Shorts
 Titles:

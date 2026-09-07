@@ -4,6 +4,7 @@ import {fmtBytes, type Output} from "../api";
 export const Downloads = ({outputs}: {outputs: Output[]}) => {
   const videos = outputs.filter((o) => o.type === "video");
   const captions = outputs.filter((o) => o.type === "captions");
+  const images = outputs.filter((o) => o.type === "image");
   const total = outputs.reduce((n, o) => n + o.size, 0);
   return (
     <details className="downloads">
@@ -17,6 +18,13 @@ export const Downloads = ({outputs}: {outputs: Output[]}) => {
               {o.preview ? "preview · " : ""}
               {fmtBytes(o.size)}
             </span>
+          </a>
+        ))}
+        {images.length > 0 && <div className="kicker">Thumbnail</div>}
+        {images.map((o) => (
+          <a key={o.name} href={o.url} download={o.name} className="item">
+            <span className="mono">{o.name}</span>
+            <span className="muted">{fmtBytes(o.size)}</span>
           </a>
         ))}
         {captions.length > 0 && <div className="kicker">Captions</div>}

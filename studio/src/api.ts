@@ -244,7 +244,7 @@ export type BuildSummary = {
   error?: string;
 };
 
-export type Output = {name: string; type: "video" | "captions"; preview: boolean; size: number; mtime: string; url: string};
+export type Output = {name: string; type: "video" | "captions" | "image"; preview: boolean; size: number; mtime: string; url: string};
 
 export type EpisodeDetail = {
   id: string;

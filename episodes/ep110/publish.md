@@ -29,7 +29,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, ai automation, traditional automation, rules vs ai, pipeline design, cameroon logistics, delivery management
 
 ## Thumbnail text
-Automation Choices
+AI vs Rules
 
 ## Shorts
 Titles:

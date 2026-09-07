@@ -261,6 +261,26 @@ const youtubeUpload = async ({file, title, description, tags, publishAt, shorts,
   return {remoteId: id, remoteUrl: shorts ? `https://www.youtube.com/shorts/${id}` : `https://youtu.be/${id}`, scheduledNatively: Boolean(scheduled)};
 };
 
+// Custom thumbnail (JPEG/PNG under 2 MB). Needs a channel that YouTube allows custom thumbnails for (phone-verified);
+// otherwise the API answers 403 and the caller logs it and moves on.
+export const youtubeSetThumbnail = async (videoId, file) => {
+  const token = await youtubeAccessToken();
+  const buf = fs.readFileSync(file);
+  const type = /\.png$/i.test(file) ? "image/png" : "image/jpeg";
+  const r = await fetchJson(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${encodeURIComponent(videoId)}&uploadType=media`, {method: "POST", headers: {Authorization: `Bearer ${token}`, "Content-Type": type, "Content-Length": String(buf.length)}, body: buf});
+  if (!r.ok) throw new Error(`YouTube thumbnails.set: ${errText(r.body, r.status)}`);
+  return r.body?.items?.[0]?.default?.url ?? true;
+};
+
+// The rendered thumbnail for an episode, if scripts/thumbnail.mjs has made one.
+export const thumbnailFor = (episodeId) => {
+  for (const ext of ["jpg", "png"]) {
+    const p = path.join(ROOT, "out", episodeId, `${episodeId}-thumb.${ext}`);
+    if (exists(p)) return p;
+  }
+  return null;
+};
+
 // Private test upload of one asset (never public, no publish time). Used by scripts/yt-private-upload.mjs to prove a
 // connection with a real file; the video can be made public or scheduled by hand in YouTube Studio.
 export const youtubePrivateUpload = async ({asset, title, description, tags, shorts = false}) => {
@@ -561,8 +581,18 @@ export const publishEntry = async (id, {now = false, onLog} = {}) => {
     if (entry.via === "direct") {
       const p = PLATFORMS[entry.platform];
       say(`Uploading ${entry.asset} to ${p.label}${publishAt ? ` for ${publishAt.toLocaleString()}` : " now"}…`);
-      if (p.direct === "youtube") result = await youtubeUpload({file, title: entry.title, description: text, tags: entry.tags, publishAt, shorts: entry.platform === "shorts"});
-      else if (entry.platform === "facebook") result = await facebookVideo({file, title: entry.title, description: text, publishAt});
+      if (p.direct === "youtube") {
+        result = await youtubeUpload({file, title: entry.title, description: text, tags: entry.tags, publishAt, shorts: entry.platform === "shorts"});
+        const thumb = entry.platform === "youtube" ? thumbnailFor(entry.episodeId) : null;
+        if (thumb) {
+          try {
+            await youtubeSetThumbnail(result.remoteId, thumb);
+            say(`Thumbnail set from ${path.relative(ROOT, thumb)}.`);
+          } catch (e) {
+            say(`Thumbnail not set (${e.message ?? e}). Add it by hand in YouTube Studio.`);
+          }
+        }
+      } else if (entry.platform === "facebook") result = await facebookVideo({file, title: entry.title, description: text, publishAt});
       else if (entry.platform === "facebook_reel") result = await facebookReel({file, description: text, publishAt});
       else throw new Error(`${p.label} has no direct connection`);
       const e = patchEntry(id, {status: "published", remoteId: result.remoteId, remoteUrl: result.remoteUrl, publishedAt: new Date().toISOString(), scheduledNatively: result.scheduledNatively, error: undefined});

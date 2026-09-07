@@ -28,7 +28,7 @@ Complex AI. Explained visually. Built practically.
 ai with hippolyte, africa ai moment, large language models, machine learning basics, chatbots explained, llm training, context engineering, cameroon, delivery company
 
 ## Thumbnail text
-LLM Explained
+How LLMs Work
 
 ## Shorts
 Titles:

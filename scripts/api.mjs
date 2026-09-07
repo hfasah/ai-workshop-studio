@@ -31,7 +31,7 @@ const CAST = Object.keys(CHARACTERS).filter((k) => !k.startsWith("_"));
 const DEFAULT_AUDIENCE = "business professionals and curious beginners in Africa and the diaspora, no coding background";
 const FORMATS = ["build", "short"]; // build story (3–4 min) or short lesson (60–90 s, concept format)
 const PLANS = ["YouTube", "Shorts", "LinkedIn", "Hold"];
-const OUTPUT_EXT = /\.(mp4|srt|vtt)$/;
+const OUTPUT_EXT = /\.(mp4|srt|vtt|jpg|png)$/;
 
 // ---------- helpers ----------
 const isEpisodeId = (id) => /^ep\d{3,}(-[a-z0-9-]+)?$/.test(id);
@@ -92,7 +92,7 @@ const listOutputs = (id) => {
     .sort()
     .map((f) => {
       const st = fs.statSync(path.join(dir, f));
-      return {name: f, type: f.endsWith(".mp4") ? "video" : "captions", preview: /-preview\.mp4$/.test(f), size: st.size, mtime: st.mtime.toISOString(), url: `/out/${id}/${f}`};
+      return {name: f, type: f.endsWith(".mp4") ? "video" : /\.(jpg|png)$/.test(f) ? "image" : "captions", preview: /-preview\.mp4$/.test(f), size: st.size, mtime: st.mtime.toISOString(), url: `/out/${id}/${f}`};
     });
 };
 
@@ -309,6 +309,8 @@ const produceStages = (episodeId, {preview, voice}) => {
   const ep = safeJson(path.join(episodeDir(episodeId), "episode.json"));
   for (const c of ep.cuts ?? []) if (c.id) stages.push(pipelineArgs(episodeId, "cut", c.id, preview));
   stages.push(kitStage(episodeId));
+  // The thumbnail uses the kit's thumbnail text, so it comes after the kit; only for finals.
+  if (!preview) stages.push({label: "Thumbnail (1280x720 JPEG)", args: [path.join(ROOT, "scripts", "thumbnail.mjs"), episodeId]});
   return stages;
 };
 
