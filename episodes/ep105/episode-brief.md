@@ -1,7 +1,7 @@
 # Episode brief: ep105
 
 Title: What Is an AI Agent?
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 5 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 5 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: An AI agent is a model with a goal, tools and a plan-act-check loop; power and risk both come from the tool list.

@@ -1,11 +1,11 @@
 {
   "id": "ep110",
   "fps": 30,
-  "builtAt": "2026-09-07T15:31:08.044Z",
+  "builtAt": "2026-09-07T18:05:43.094Z",
   "episode": {
     "id": "ep110",
     "series": "AI With Hippolyte",
-    "course": "Series 1: AI Fundamentals",
+    "course": "AI Fundamentals",
     "lesson": 10,
     "tagline": "Complex AI. Explained visually. Built practically.",
     "episode": 110,
@@ -25,7 +25,7 @@
       }
     ]
   },
-  "totalMs": 236316,
+  "totalMs": 237084,
   "scenes": [
     {
       "id": "hook",
@@ -3018,17 +3018,17 @@
       "onScreen": {
         "line": "Don't just use AI.",
         "emphasis": "Build it to work reliably.",
-        "cta": "End of Series 1 · Next: Building AI Employees"
+        "cta": "End of AI Fundamentals · Next: Building AI Employees"
       },
       "lines": [
         {
           "speaker": "tanyi",
-          "text": "Don't just use AI. Build it to work reliably. That was Series One. Next series: building AI employees.",
+          "text": "Don't just use AI. Build it to work reliably. That was AI Fundamentals. Next series: building AI employees.",
           "expression": "confident",
           "gesture": "point_right",
-          "audio": "episodes/ep110/audio/outro-0-c9882d3e38.mp3",
+          "audio": "episodes/ep110/audio/outro-0-cb7a255633.mp3",
           "startMs": 228008,
-          "durationMs": 7608,
+          "durationMs": 8376,
           "words": [
             {
               "text": "Don't",
@@ -3078,54 +3078,54 @@
             {
               "text": "That",
               "startMs": 3080,
-              "endMs": 3170
+              "endMs": 3196
             },
             {
               "text": "was",
-              "startMs": 3183,
-              "endMs": 3299
-            },
-            {
-              "text": "Series",
-              "startMs": 3312,
-              "endMs": 3673
-            },
-            {
-              "text": "One.",
-              "startMs": 3686,
-              "endMs": 3995
-            },
-            {
-              "text": "Next",
-              "startMs": 4433,
-              "endMs": 4652
-            },
-            {
-              "text": "series:",
-              "startMs": 4665,
-              "endMs": 5232
-            },
-            {
-              "text": "building",
-              "startMs": 5438,
-              "endMs": 5863
+              "startMs": 3209,
+              "endMs": 3428
             },
             {
               "text": "AI",
-              "startMs": 5992,
-              "endMs": 6392
+              "startMs": 3557,
+              "endMs": 3956
+            },
+            {
+              "text": "Fundamentals.",
+              "startMs": 3969,
+              "endMs": 4768
+            },
+            {
+              "text": "Next",
+              "startMs": 5206,
+              "endMs": 5425
+            },
+            {
+              "text": "series:",
+              "startMs": 5438,
+              "endMs": 6005
+            },
+            {
+              "text": "building",
+              "startMs": 6211,
+              "endMs": 6637
+            },
+            {
+              "text": "AI",
+              "startMs": 6765,
+              "endMs": 7165
             },
             {
               "text": "employees.",
-              "startMs": 6405,
-              "endMs": 7204
+              "startMs": 7178,
+              "endMs": 7977
             }
           ]
         }
       ],
       "index": 11,
       "startMs": 227608,
-      "durationMs": 8708
+      "durationMs": 9476
     }
   ],
   "captions": [
@@ -6796,72 +6796,72 @@
     {
       "text": " That",
       "startMs": 231088,
-      "endMs": 231178,
-      "timestampMs": 231133,
+      "endMs": 231204,
+      "timestampMs": 231146,
       "confidence": null,
       "speaker": "tanyi"
     },
     {
       "text": " was",
-      "startMs": 231191,
-      "endMs": 231307,
-      "timestampMs": 231249,
-      "confidence": null,
-      "speaker": "tanyi"
-    },
-    {
-      "text": " Series",
-      "startMs": 231320,
-      "endMs": 231681,
-      "timestampMs": 231501,
-      "confidence": null,
-      "speaker": "tanyi"
-    },
-    {
-      "text": " One.",
-      "startMs": 231694,
-      "endMs": 232003,
-      "timestampMs": 231849,
-      "confidence": null,
-      "speaker": "tanyi"
-    },
-    {
-      "text": " Next",
-      "startMs": 232441,
-      "endMs": 232660,
-      "timestampMs": 232551,
-      "confidence": null,
-      "speaker": "tanyi"
-    },
-    {
-      "text": " series:",
-      "startMs": 232673,
-      "endMs": 233240,
-      "timestampMs": 232957,
-      "confidence": null,
-      "speaker": "tanyi"
-    },
-    {
-      "text": " building",
-      "startMs": 233446,
-      "endMs": 233871,
-      "timestampMs": 233659,
+      "startMs": 231217,
+      "endMs": 231436,
+      "timestampMs": 231327,
       "confidence": null,
       "speaker": "tanyi"
     },
     {
       "text": " AI",
-      "startMs": 234000,
-      "endMs": 234400,
-      "timestampMs": 234200,
+      "startMs": 231565,
+      "endMs": 231964,
+      "timestampMs": 231765,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Fundamentals.",
+      "startMs": 231977,
+      "endMs": 232776,
+      "timestampMs": 232377,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " Next",
+      "startMs": 233214,
+      "endMs": 233433,
+      "timestampMs": 233324,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " series:",
+      "startMs": 233446,
+      "endMs": 234013,
+      "timestampMs": 233730,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " building",
+      "startMs": 234219,
+      "endMs": 234645,
+      "timestampMs": 234432,
+      "confidence": null,
+      "speaker": "tanyi"
+    },
+    {
+      "text": " AI",
+      "startMs": 234773,
+      "endMs": 235173,
+      "timestampMs": 234973,
       "confidence": null,
       "speaker": "tanyi"
     },
     {
       "text": " employees.",
-      "startMs": 234413,
-      "endMs": 235212,
-      "timestampMs": 234813,
+      "startMs": 235186,
+      "endMs": 235985,
+      "timestampMs": 235586,
       "confidence": null,
       "speaker": "tanyi"
     }

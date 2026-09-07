@@ -1,7 +1,7 @@
 # Episode brief: ep103
 
 Title: Machine Learning vs Generative AI
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 3 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 3 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: Machine learning predicts labels or numbers from your past examples; generative AI produces content from the world's text. Different tools for different questions.

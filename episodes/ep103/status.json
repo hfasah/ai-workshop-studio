@@ -3,7 +3,7 @@
   "title": "Machine Learning vs Generative AI",
   "version": 1,
   "format": "build",
-  "series": "Series 1: AI Fundamentals",
+  "series": "AI Fundamentals",
   "lesson": 3,
   "gates": {
     "brief": "pending",
@@ -44,5 +44,5 @@
     "name": "crew (Claude Code session)",
     "model": ""
   },
-  "note": "Series 1: AI Fundamentals, lesson 3 of 10. Running build story: Wouri Express, Douala."
+  "note": "AI Fundamentals, lesson 3 of 10. Running build story: Wouri Express, Douala."
 }

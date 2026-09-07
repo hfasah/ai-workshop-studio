@@ -1,7 +1,7 @@
 # Episode brief: ep109
 
 Title: Why AI Sometimes Hallucinates
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 9 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 9 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: Hallucination happens because the model completes patterns and a fluent guess is more likely than an honest gap; a citation can be hallucinated too, so quotes are checked by code.

@@ -1,7 +1,7 @@
 # Episode brief: ep108
 
 Title: What Is MCP, and Why Does It Matter?
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 8 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 8 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: MCP is an open standard (Anthropic, November 2024): one server per system publishes a tool list any model can use; the provider can change, the servers stay.

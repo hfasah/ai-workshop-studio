@@ -1,7 +1,7 @@
 # Episode brief: ep107
 
 Title: What Are AI Skills, Tools, and Memory?
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 7 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 7 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: Skills are written procedures, tools are functions the model can call, memory is what it keeps between runs, in files the company can open.

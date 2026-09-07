@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import {EPISODES, ROOT, parseArgs, readJson} from "./lib.mjs";
-import {youtubePrivateUpload, youtubeSetThumbnail, thumbnailFor, captionFor} from "./publish.mjs";
+import {youtubePrivateUpload, youtubeSetThumbnail, youtubeFileInSeries, thumbnailFor, captionFor} from "./publish.mjs";
 
 const args = parseArgs(process.argv.slice(2));
 const id = args._[0];
@@ -26,6 +26,8 @@ const setThumb = async (videoId) => {
 };
 if (args["thumbnail-only"]) {
   setThumb(String(args["thumbnail-only"])).then(() => process.exit(0));
+} else if (args["playlist-only"]) {
+  youtubeFileInSeries(id, String(args["playlist-only"]), (m) => console.log(m)).then(() => process.exit(0));
 } else {
 const kitPath = path.join(EPISODES, id, "publish.json");
 if (!fs.existsSync(kitPath)) {
@@ -49,7 +51,10 @@ const t0 = Date.now();
 youtubePrivateUpload({asset, title, description, tags, shorts})
   .then(async (r) => {
     console.log(`Done in ${Math.round((Date.now() - t0) / 1000)} s: ${r.remoteUrl} (video id ${r.remoteId}, private)`);
-    if (!shorts) await setThumb(r.remoteId);
+    if (!shorts) {
+      await setThumb(r.remoteId);
+      await youtubeFileInSeries(id, r.remoteId, (m) => console.log(m));
+    }
   })
   .catch((e) => {
     console.error(`Failed: ${e.message ?? e}`);

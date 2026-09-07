@@ -1,7 +1,7 @@
 # Episode brief: ep101
 
 Title: What Is Artificial Intelligence?
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 1 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 1 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: AI as software that learned patterns from examples, versus rule-based software; it finds patterns only in what people recorded.

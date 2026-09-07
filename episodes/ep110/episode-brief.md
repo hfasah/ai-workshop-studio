@@ -1,7 +1,7 @@
 # Episode brief: ep110
 
 Title: AI Automation vs Traditional Automation
-Series: AI With Hippolyte · Series 1: AI Fundamentals · Lesson 10 of 10
+Series: AI With Hippolyte · AI Fundamentals · Lesson 10 of 10
 Format: build story (target 3 to 3.5 minutes; series rule 2 to 4 minutes)
 Audience: business owners, managers, job seekers and builders establishing a common AI foundation
 Learning goal: Traditional automation is deterministic and testable; AI automation handles messy input with judgment and can vary between runs, so it is surrounded by rules and tests.

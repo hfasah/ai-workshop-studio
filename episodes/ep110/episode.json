@@ -1,7 +1,7 @@
 {
   "id": "ep110",
   "series": "AI With Hippolyte",
-  "course": "Series 1: AI Fundamentals",
+  "course": "AI Fundamentals",
   "lesson": 10,
   "tagline": "Complex AI. Explained visually. Built practically.",
   "episode": 110,
@@ -613,12 +613,12 @@
       "onScreen": {
         "line": "Don't just use AI.",
         "emphasis": "Build it to work reliably.",
-        "cta": "End of Series 1 · Next: Building AI Employees"
+        "cta": "End of AI Fundamentals · Next: Building AI Employees"
       },
       "lines": [
         {
           "speaker": "tanyi",
-          "text": "Don't just use AI. Build it to work reliably. That was Series One. Next series: building AI employees.",
+          "text": "Don't just use AI. Build it to work reliably. That was AI Fundamentals. Next series: building AI employees.",
           "expression": "confident",
           "gesture": "point_right"
         }

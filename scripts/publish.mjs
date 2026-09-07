@@ -19,7 +19,8 @@ const GRAPH_VIDEO = "https://graph-video.facebook.com/v21.0";
 const BLOTATO = "https://backend.blotato.com/v2";
 const GOOGLE_AUTH = "https://accounts.google.com/o/oauth2/v2/auth";
 const GOOGLE_TOKEN = "https://oauth2.googleapis.com/token";
-const YT_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"];
+// "youtube" (full) is needed to create playlists and add videos to them; upload + readonly alone cannot.
+const YT_SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly", "https://www.googleapis.com/auth/youtube"];
 
 // ---------- platforms ----------
 // direct: which connection posts natively; blotato: the Blotato targetType; aspect: the asset orientation the card lists first.
@@ -270,6 +271,49 @@ export const youtubeSetThumbnail = async (videoId, file) => {
   const r = await fetchJson(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${encodeURIComponent(videoId)}&uploadType=media`, {method: "POST", headers: {Authorization: `Bearer ${token}`, "Content-Type": type, "Content-Length": String(buf.length)}, body: buf});
   if (!r.ok) throw new Error(`YouTube thumbnails.set: ${errText(r.body, r.status)}`);
   return r.body?.items?.[0]?.default?.url ?? true;
+};
+
+// Playlist per series: found by title on the channel (or created, public), remembered in connections.json, and the
+// video is appended. Needs the full "youtube" scope; on an older connection the API answers 403 and the caller logs it.
+export const youtubePlaylistFor = async (name) => {
+  const c = readConnections().youtube ?? {};
+  const known = c.playlists?.[name];
+  if (known) return known;
+  const token = await youtubeAccessToken();
+  const mine = await fetchJson("https://www.googleapis.com/youtube/v3/playlists?part=snippet&mine=true&maxResults=50", {headers: {Authorization: `Bearer ${token}`}});
+  if (!mine.ok) throw new Error(`YouTube playlists.list: ${errText(mine.body, mine.status)}`);
+  let id = (mine.body.items ?? []).find((p) => (p.snippet?.title ?? "").trim().toLowerCase() === name.trim().toLowerCase())?.id;
+  if (!id) {
+    const made = await fetchJson("https://www.googleapis.com/youtube/v3/playlists?part=snippet,status", {method: "POST", headers: {Authorization: `Bearer ${token}`, "Content-Type": "application/json"}, body: JSON.stringify({snippet: {title: name, description: `${name} · AI With Hippolyte: The AI Workshop`}, status: {privacyStatus: "public"}})});
+    if (!made.ok) throw new Error(`YouTube playlists.insert: ${errText(made.body, made.status)}`);
+    id = made.body.id;
+    appendLog({action: "playlist-created", platform: "youtube", detail: name, remoteId: id});
+  }
+  patchConnection("youtube", {playlists: {...(c.playlists ?? {}), [name]: id}});
+  return id;
+};
+export const youtubeAddToPlaylist = async (playlistId, videoId) => {
+  const token = await youtubeAccessToken();
+  const r = await fetchJson("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet", {method: "POST", headers: {Authorization: `Bearer ${token}`, "Content-Type": "application/json"}, body: JSON.stringify({snippet: {playlistId, resourceId: {kind: "youtube#video", videoId}}})});
+  if (!r.ok) throw new Error(`YouTube playlistItems.insert: ${errText(r.body, r.status)}`);
+  return r.body?.id;
+};
+// The series an episode belongs to ("course" in episode.json), or null.
+export const courseOf = (episodeId) => {
+  const ep = safeJson(path.join(EPISODES, episodeId, "episode.json"), {});
+  return ep.course ? String(ep.course).trim() : null;
+};
+// Adds a freshly uploaded main video to its series playlist; never throws, reports through say().
+export const youtubeFileInSeries = async (episodeId, videoId, say = () => {}) => {
+  const course = courseOf(episodeId);
+  if (!course) return;
+  try {
+    const pl = await youtubePlaylistFor(course);
+    await youtubeAddToPlaylist(pl, videoId);
+    say(`Added to the "${course}" playlist.`);
+  } catch (e) {
+    say(`Not added to the "${course}" playlist (${e.message ?? e}). If this says insufficient permissions, disconnect and reconnect YouTube on the Accounts page to grant playlist access.`);
+  }
 };
 
 // The rendered thumbnail for an episode, if scripts/thumbnail.mjs has made one.
@@ -592,6 +636,7 @@ export const publishEntry = async (id, {now = false, onLog} = {}) => {
             say(`Thumbnail not set (${e.message ?? e}). Add it by hand in YouTube Studio.`);
           }
         }
+        if (entry.platform === "youtube") await youtubeFileInSeries(entry.episodeId, result.remoteId, say);
       } else if (entry.platform === "facebook") result = await facebookVideo({file, title: entry.title, description: text, publishAt});
       else if (entry.platform === "facebook_reel") result = await facebookReel({file, description: text, publishAt});
       else throw new Error(`${p.label} has no direct connection`);
